@@ -1,4 +1,8 @@
 Cronograma do Desenvolvimento do TCC1
+Link do Overleaf:
+https://www.overleaf.com/read/kmctkmpzcsmh#ef2ddf
+
+Link do Notion: https://www.notion.so/TCC-c1813a43dadb409da10014e7b1622d90?pvs=4
 
 ### Entrega 0 (18/03/24 - 07/04/24):
 - **Pesquisas acerca da história e de conceitos de um mixer:**
