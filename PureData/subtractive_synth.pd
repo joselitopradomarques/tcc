@@ -1,0 +1,13 @@
+#N canvas 0 28 1280 1024 12;
+#X obj 45 40 noise~;
+#X obj 53 130 *~ 0.5;
+#X obj 64 227 dac~;
+#X obj 54 96 bp~ 200 1;
+#X floatatom 113 39 5 0 0 0 - - - 0;
+#X floatatom 169 37 5 0 0 0 - - - 0;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 1 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 2;

@@ -2,27 +2,44 @@
 
 Tema:
 
-Orientador:
+Orientador: **Diogo Caetano**
 
-Faculdade:
+Faculdade do Gama
 
-Universidade
+Universidade de Brasília
 
 Cronograma do Desenvolvimento do TCC1
 
+- Ajustar cronograma para finalizar quatro semanas antes do último dia de aula para dar uma gordura para que ajustes sejam realizados
+- Passar todo esse ajuste para o Diagrama Grant
+- Passar também esse cronograma para o Notion
+
+**Desenvolvimento Projeto**
+
+O desenvolvimento do projeto pode ser dividido em três subáreas:
+
+a) 
+
+b)
+
+c)
+
+
 ### Sprint 0 (18/03/24 - 03/04/24):
 - **Pesquisas acerca da história e de conceitos de um mixer:**
-  - Continuação da pesquisa sobre leitura de saída de CDJs
-  - Aprofundamento na amplificação de sinais de áudio
-  - Investigação mais detalhada sobre processamento de áudio
-  - Exploração mais aprofundada de possíveis formas de interação com o usuário
+  - Contexto histórico da criação de um mixer
+  - Conceituação de sinais e sistemas
+  - Conceituação de música
+  - Levantamento de equipamentos criados e utilizados em mixagens
+  - Definição de subsistemas existentes em um mixer
+  - Levantamento de possíveis processadores de sinais
 
 
 ### Sprint 1 (04/04/24 - 10/04/24):
 
 - **Pesquisa sobre Subpartes da Solução:**
-  - Continuação da pesquisa sobre leitura de saída de CDJs
-  - Aprofundamento na amplificação de sinais de áudio
+  - Pesquisa sobre leitura de saída de CDJs
+  - Estudos sobre a amplificação de sinais de áudio
   - Investigação mais detalhada sobre processamento de áudio
   - Exploração mais aprofundada de possíveis formas de interação com o usuário
 
@@ -30,8 +47,8 @@ Cronograma do Desenvolvimento do TCC1
 
 - **Pesquisa sobre Subpartes da Solução:**
   - Conclusão da pesquisa sobre leitura de saída de CDJs
-  - Elaborçaão de protótipos conceituais para amplificação de sinais de áudio
-  - Desenvolvimento de algoritmos preliminares para processamento de áudio
+  - Elaboração de protótipos conceituais para amplificação de sinais de áudio
+  - Desenvolvimento de algoritmos preliminares para processamento de áudio no PureData
   - Investigação de tecnologias e frameworks para implementação da interface de usuário
 
 ### Sprint 3 (18/04/24 - 24/04/24):
@@ -99,7 +116,7 @@ Cronograma do Desenvolvimento do TCC1
 ### Sprint 13 (26/06/24 - 02/07/24):
 
 - **Escrita do Relatório do TCC1:**
-  - Início da redação do relatório do TCC1, incluindo introdução e revisão bibliográfica
+  - Documentação final do relatório do TCC1, incluindo introdução
   - Documentação detalhada dos resultados obtidos até o momento
 
 ### Sprint 14 (03/07/24 - 09/07/24):
