@@ -25,6 +25,9 @@ Link do Notion: https://www.notion.so/TCC-c1813a43dadb409da10014e7b1622d90?pvs=4
   - Pesquisa sobre leitura de entrada de sinais de áudio
   - Exploração de métodos para interface com CDJs e sinais de áudio
   - Documentação das pesquisas realizadas
+    - Criação de diagrama de Grant
+    - Diagrama de subpartes e de comunicação
+    - Diagrama de integração
 
 - **Revisão do texto produzido:**
   - Análise e revisão do documento produzito até então
