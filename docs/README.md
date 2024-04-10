@@ -4,7 +4,10 @@
    - **Propósito:** Identificar e documentar os requisitos do sistema de mixer digital, incluindo funcionalidades desejadas, restrições técnicas e preferências dos usuários.
    - **Realização:** Análise de um censo aplicado em DJs em 2023, análise de mixers existentes, pesquisa de mercado, estudos de caso.
    - **Recursos necessários:** Ferramentas de documentação.
-   -
+      - Etapas a serem realizadas:
+         1) Levantamento de requisitos gerais; [DONE]
+         2) Análise do questionário
+         3) Análise histórica de equipamentos;
 
 2. **Diagrama de Subpartes:**
    - **Propósito:** Visualizar a estrutura do mixer digital, identificando seus principais componentes, como entradas de áudio, seções de equalização e controles de efeitos.
