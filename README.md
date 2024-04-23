@@ -1,8 +1,7 @@
 Cronograma do Desenvolvimento do TCC1
 
 
-Link do Overleaf:
-https://www.overleaf.com/read/kmctkmpzcsmh#ef2ddf
+Link do texto provisório: 
 
 Link do Notion: https://www.notion.so/TCC-c1813a43dadb409da10014e7b1622d90?pvs=4
 
