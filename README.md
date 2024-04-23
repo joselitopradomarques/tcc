@@ -17,7 +17,7 @@ Link do Notion: https://www.notion.so/TCC-c1813a43dadb409da10014e7b1622d90?pvs=4
 ### Entrega 1 (08/04/24 - 14/04/24):
 
 - **Configuração Inicial do Ambiente de Desenvolvimento:**
-  - Instalação e configuração do PureData na Raspberry Pi
+  - [DONE] Instalação e configuração do PureData na Raspberry Pi
   - Estabelecimento do acesso remoto à Raspberry Pi para desenvolvimento do software
 
 - **Pesquisa sobre Leitura de Sinais de Áudio:**
