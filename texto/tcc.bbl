@@ -1,0 +1,94 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Bartlett e Bartlett 2009]{bartlett}
+\abntrefinfo{Bartlett e Bartlett}{BARTLETT; BARTLETT}{2009}
+{BARTLETT, B.; BARTLETT, J. \emph{Practical Recording Techniques: The
+  Step-by-step Approach to Professional Audio Recording}. Focal Press, 2009.
+ISBN 9780240811444. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=E0uy8adetQoC}.}
+
+\bibitem[Brewster e Broughton 2014]{lastnight}
+\abntrefinfo{Brewster e Broughton}{BREWSTER; BROUGHTON}{2014}
+{BREWSTER, B.; BROUGHTON, F. \emph{Last Night a DJ Saved My Life: The History
+  of the Disc Jockey}. Grove Atlantic, 2014.
+ISBN 9780802194367. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=MxTnBAAAQBAJ}.}
+
+\bibitem[Cage 2019]{cage}
+\abntrefinfo{Cage}{CAGE}{2019}
+{CAGE, J. \emph{Silêncio – Conferências e escritos de John Cage}. [s.n.],
+  2019.  (Literatura / Música).
+ISBN 9788555911026. Dispon{\'\i}vel em:
+  \url{https://www.cobogo.com.br/produto/silencio-conferencias-e-escritos-de-john-cage-633}.}
+
+\bibitem[Farnell 2010]{farnell}
+\abntrefinfo{Farnell}{FARNELL}{2010}
+{FARNELL, A. \emph{Designing Sound}. [S.l.]: The MIT Press, 2010.
+ISBN 0262014416.}
+
+\bibitem[Izhaki 2012]{mixing}
+\abntrefinfo{Izhaki}{IZHAKI}{2012}
+{IZHAKI, R. \emph{Mixing Audio: Concepts, Practices and Tools}. Focal Press,
+  2012.
+ISBN 9780240522227. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=f-Rz8c73xh4C}.}
+
+\bibitem[Nussenzveig 2006]{moyses}
+\abntrefinfo{Nussenzveig}{NUSSENZVEIG}{2006}
+{NUSSENZVEIG, H.~M. \emph{Curso de física básica, 2 : fluídos, oscilações
+  e ondas. calor}. 4.ed.. ed. São Paulo: Edgard Blücher, 2006.
+ISBN 9788521207481.}
+
+\bibitem[Nyquist 1928]{nyquist}
+\abntrefinfo{Nyquist}{NYQUIST}{1928}
+{NYQUIST, H. Certain topics in telegraph transmission theory.
+\emph{Transactions of the American Institute of Electrical Engineers}, v.~47,
+  n.~2, p. 617--644, 1928.}
+
+\bibitem[Oppenheim e Willsky 2010]{oppenheim2010sinais}
+\abntrefinfo{Oppenheim e Willsky}{OPPENHEIM; WILLSKY}{2010}
+{OPPENHEIM, A.; WILLSKY, A. \emph{Sinais e Sistemas}. 2ª. ed. São Paulo:
+  Pearson, 2010. 592p.~p.
+ISBN 857605504X.}
+
+\bibitem[Roads 1996]{roads1996computer}
+\abntrefinfo{Roads}{ROADS}{1996}
+{ROADS, C. \emph{The Computer Music Tutorial}. MIT Press, 1996.  (Mit Press).
+ISBN 9780262680820. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=nZ-TetwzVcIC}.}
+
+\bibitem[Self 2013]{self2013audio}
+\abntrefinfo{Self}{SELF}{2013}
+{SELF, D. \emph{Audio Power Amplifier Design}. Focal Press, 2013.
+ISBN 9780240526133. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=Poh4MAEACAAJ}.}
+
+\bibitem[Shannon 1949]{Shannon}
+\abntrefinfo{Shannon}{SHANNON}{1949}
+{SHANNON, C.~E. Communication in the presence of noise.
+\emph{Proceedings of the IEEE}, v.~37, p. 10--21, 1949.}
+
+\bibitem[Widrow, Kollar e Liu 1996]{widrow}
+\abntrefinfo{Widrow, Kollar e Liu}{WIDROW; KOLLAR; LIU}{1996}
+{WIDROW, B.; KOLLAR, I.; LIU, M.-C. Statistical theory of quantization.
+\emph{IEEE Transactions on Instrumentation and Measurement}, v.~45, n.~2, p.
+  353--361, 1996.}
+
+\bibitem[Winer 2012]{winer}
+\abntrefinfo{Winer}{WINER}{2012}
+{WINER, E. \emph{The Audio Expert: Everything You Need to Know about Audio}.
+  Focal Press, 2012.
+ISBN 9780240821009. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=Hf0YQAUWGfgC}.}
+
+\bibitem[Z{\"o}lzer 2008]{zolzer2008digital}
+\abntrefinfo{Z{\"o}lzer}{Z{\"O}LZER}{2008}
+{Z{\"O}LZER, U. \emph{Digital Audio Signal Processing}. [S.l.]: Wiley, 2008.
+ISBN 9780470997857.}
+
+\end{thebibliography}
