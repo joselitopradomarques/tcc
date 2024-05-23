@@ -9,11 +9,11 @@
 
 \chapter[Fundamentação Teórica e Estado da Arte]{Fundamentação Teórica e Estado da Arte}
 
-Nessa seção, serão abordados conceitos básicos para a compreensão da monografia (teoria, problema e proposta); a começar pela definição de um sinal segundo a literatura, enveredar para o som como um sinal elétrico, tanto analógico quanto digital; conceituar música e a importância da mixagem realizada por \textit{djs}, culminando no equipamento utilizado, dando enfoque ao \textit{mixer}, seja na sua história, evolução e no seu estado da arte.
+Nessa seção, serão abordados conceitos básicos para a compreensão da monografia (teoria, problema e proposta); a começar pela definição de um sinal segundo a literatura,representado por um sinal elétrico, tanto analógico quanto digital; conceituar música e a importância da mixagem realizada por \textit{DJs}, culminando no equipamento utilizado, dando enfoque ao \textit{mixer}, seja na sua história, evolução e no seu estado da arte.
 
 
 \newpage
-\subsection{Sinal: Conceito}
+\section{Sinal: Conceito}
 
 \begin{citacao}
 "Os sinais, que são funções de uma ou mais variáveis independentes, contêm informações sobre o comportamento ou natureza de algum fenômeno, enquanto os sistemas respondem a algum sinal em particular, produzindo outros sinais ou algum comportamento desejado." \cite{oppenheim2010sinais}.
@@ -21,35 +21,41 @@ Nessa seção, serão abordados conceitos básicos para a compreensão da monogr
 
 Como exemplifica \cite{oppenheim2010sinais}, tensões e correntes ao longo do tempo são funções, ou seja, sinais, enquanto o circuito em si pode ser compreendido como um sistema que reage à entrada aplicada, ao produzir sinais de saída.
 
+Sensores são dispositivos capazes de mensurar grandezas físicas através da captação de sinais elétricos. Dessa forma, a criação desse instrumento permitiu a compreensão de fenômenos físicos. Assim, o monitoramento de grandezas permite que se atue em sistemas físicos a fim de se obter um resultado desejado.
+[O intuito do parágrafo acima é simplesmente realizar uma ponte entre sinais elétricos e quais compreensões um sensor permite que sejam realizadas. De forma que a atuação em um sistema seja realizada a fim de se chegar a um resultado esperado.]
+
 Com o desenvolvimento de sensores na história da instrumentação, foi possível a obtenção da quantização de parâmetros físicos através de sinais elétricos. E dessa forma, a compreensão de fenômenos físicos e, consonante a isso, a construção de sistemas que podem alterar os sinais conforme a resposta desejada. 
 
-\subsection{Sinal Contínuo}
-Dentro das possibilidades do que um sinal pode ser, pode-se classificá-lo como contínuo caso a sua variável independente seja contínua, ou seja, que tenha um valor para cada instante de tempo (variável independente). Por exemplo, entre o intervalo de \textit{t} a \textit{t+1}, há infinitos valores tanto de tempo quanto para o parâmetro em função do tempo. \cite{oppenheim2010sinais}. Um exemplo pode ser o valor de corrente em um resistor alimentado por uma tensão ou um som que gera uma pressão acústica no ar captados pelo sistema auditivo. A figura \ref{fig01} é um exemplo de um gráfico para um sinal contínuo no tempo. 
+\section{Sinal Contínuo}
+Dentro das possibilidades do que um sinal pode ser, pode-se classificá-lo como contínuo caso a sua variável independente seja contínua, ou seja, que tenha um valor para cada instante de tempo (variável independente). Por exemplo, entre o intervalo de \textit{t} a \textit{t+1}, há infinitos valores tanto de tempo quanto para o parâmetro em função do tempo, \cite{oppenheim2010sinais}. Um exemplo pode ser o valor de corrente em um resistor alimentado por uma tensão ou um som que gera uma pressão acústica no ar captados pelo sistema auditivo. A Figura \ref{fig01} é um exemplo de um gráfico para um sinal contínuo no tempo. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{figuras/fig01.eps}
-	\caption{Sinal de Tempo Contínuo}
+	\caption{sinal de tempo contínuo}
 	\label{fig01}
 \end{figure}
 \newpage
-\subsection{Sinal Discreto}
-Em contrapartida a um sinal contínuo em relação a sua variável independente, há outra classificação de sinal denominado de discreto. A sua variável independente é o tempo discreto, que pode ser definido por um conjunto de números inteiros. Caso a variável independente não seja inteira, ou seja, \textit{n} não seja inteiro, não há  valor definido. Dessa forma, entre \textit{n} e \textit{n+1}, não há infinitos valores como há no tempo contínuo. Um exemplo desse sinal pode ser a variação semanal de uma bolsa de valores. \cite{oppenheim2010sinais}. A figura \ref{fig02} é um exemplo de um gráfico para um sinal no tempo discreto. 
+
+\section{Sinal Discreto}
+Em contrapartida a um sinal contínuo em relação a sua variável independente, há outra classificação de sinal denominado de discreto. A sua variável independente é o tempo discreto, que pode ser definido por um conjunto de números inteiros. Caso a variável independente não seja inteira, ou seja, \textit{n} não seja inteiro, não há  valor definido. Dessa forma, entre \textit{n} e \textit{n+1}, não há infinitos valores como há no tempo contínuo. Um exemplo dessa classificação de sinal pode ser . \cite{oppenheim2010sinais}. A figura \ref{fig02} é um exemplo de um gráfico para um sinal no tempo discreto. 
+
+[Quando o senhor diz que ao invés de ser um sinal discreto, é um discretizado, o senhor se refere ao exemplo da variação semanal da bolsa de valores. Ou ao conceito explicado na seção?]
 
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.5]{figuras/fig02.eps}
-	\caption{Sinal de Tempo Discreto}
+	\caption{sinal de tempo discreto}
 	\label{fig02}
 \end{figure}
 
-\subsection{Teorema da Amostragem}
+\section{Teorema da Amostragem}
 Devido ao desenvolvimento da computação nas últimas décadas e pela conseguinte diminuição de custos de produção e de aquisição de dispositivos capazes de realizar o processamento digital de sinais, tornou-se muito vantajoso a utilização de sinais no tempo discreto, para que possam ser trabalhados digitalmente, e posteriormente, ou não, serem convertidos novamente para o tempo contínuo, sem a perda da informação inicial. 
 
 O processo de obter um sinal discreto a partir de um sinal contínuo é denominado de amostragem, e para que, a partir do sinal amostrado, reconstrua-se o sinal contínuo original, o sinal e o processo de amostragem devem preencher alguns requisitos.
 
-Para que um sinal seja amostrado, é necessário que o intervalo de amostragem, ou seja, o espaçamento entre duas amostras seja regular. A cada período T, uma amostra é adquirida. Portanto, para dado um período T de amostragem, obtém-se uma frequência de amostragem ao inverter o T. 
+Para que um sinal seja amostrado, é necessário que o intervalo de amostragem, ou seja, o espaçamento entre duas amostras seja regular. A cada período $T$, uma amostra é adquirida, resultando em uma frequência de amostragem $f = 1/T$.
 Ao passar essa função do domínio do tempo para o domínio da frequência, obter-se-á uma banda de frequências que compõe o sinal no domínio do tempo. 
 
 \begin{figure}[h]

@@ -1,20 +1,21 @@
 # Fdb version 3
-["bibtex tcc"] 1713374215 "tcc.aux" "tcc.bbl" "tcc" 1715886099
+["bibtex tcc"] 1716490614 "tcc.aux" "tcc.bbl" "tcc" 1716490615
   "/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1357081713 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1543183680 60064 0819ac8568f9a482510a46e3a8a6f605 ""
   "bibliografia.bib" 1712938854 3853 281325f62600d593f52c94371c3289ad ""
-  "tcc.aux" 1715886098 38664 ca02b8003520849c8c0b333f4e3cb9f4 "pdflatex"
+  "tcc.aux" 1716490614 38203 1165f29d62ab801d4d0c4cf80e2cce9c "pdflatex"
   (generated)
   "tcc.bbl"
   "tcc.blg"
-["makeindex tcc.idx"] 1712943467 "tcc.idx" "tcc.ind" "tcc" 1715886099
-  "tcc.idx" 1715886098 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex tcc.idx"] 1712943467 "tcc.idx" "tcc.ind" "tcc" 1716490615
+  "tcc.idx" 1716490614 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "tcc.ilg"
   "tcc.ind"
-["pdflatex"] 1715886098 "tcc.tex" "tcc.pdf" "tcc" 1715886099
+["pdflatex"] 1716490614 "/home/joselito/git/tcc/texto/tcc.tex" "tcc.pdf" "tcc" 1716490615
   "/etc/texmf/web2c/texmf.cnf" 1712929699 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/joselito/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1712930075 1405654 07c26131251a961f34e5581db826d8da ""
+  "/home/joselito/git/tcc/texto/tcc.tex" 1716230140 953 d3fe35d9f3839e031c9f84a392f20eb3 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -109,7 +110,6 @@
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc" 1254938640 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc" 1254938640 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc" 1254938640 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
-  "/usr/share/texmf/fonts/tfm/public/lm/ec-lmbx10.tfm" 1254938640 12076 b54175e02101bea1addf6b2d0197ed12 ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm" 1254938640 12088 d750ac78274fa7c9f73ba09914c04f8a ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm" 1254938640 12056 7e13df7fe4cbce21b072ba7c4f4deb6e ""
   "/usr/share/texmf/fonts/tfm/public/lm/ec-lmr12.tfm" 1254938640 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
@@ -138,7 +138,6 @@
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr7.tfm" 1254938640 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
   "/usr/share/texmf/fonts/tfm/public/lm/rm-lmr8.tfm" 1254938640 11864 309fd7f43e4a0ba39f6f7644d76e8edf ""
   "/usr/share/texmf/fonts/tfm/public/lm/ts1-lmr12.tfm" 1254938640 1596 1d4548788e389ded56d0b01b28377882 ""
-  "/usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb" 1254938640 121021 1bf809ce4a594679006bd72263eba59b ""
   "/usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb" 1254938640 116908 1fca96723793882c2e0160350c192fc8 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmex10.pfb" 1254938640 23055 2e5b42921de910eaa97b85df04ca4891 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb" 1254938640 30388 702fae6a5f0e6e9c48a1d872b442ffcf ""
@@ -168,10 +167,9 @@
   "editaveis/abreviaturas.tex" 1712938854 197 3288602dd4cbdfefad1bda2ad36cc0c7 ""
   "editaveis/abstract.tex" 1712938854 224 da4fcd23320e73c64e091e00b4c22d38 ""
   "editaveis/agradecimentos.tex" 1712938854 429 8df1463f55c2f849ccf519e81e6c42f2 ""
-  "editaveis/consideracoes.tex" 1712938854 53489 b7ac9c83112a760c0f95aad4f97b052b ""
+  "editaveis/consideracoes.tex" 1716490612 54159 95cf4f161d4daf3217c8c8880279ab11 ""
   "editaveis/dedicatoria.tex" 1712938854 319 b9773138c56cec83c2330f7c1094bec8 ""
   "editaveis/epigrafe.tex" 1712938854 449 49b0dc39f70cc22c6b03cd510abcaf10 ""
-  "editaveis/errata.tex" 1712938854 840 9736dfb1ec6c21db6031c2c7d8c643be ""
   "editaveis/informacoes.tex" 1712938854 663 8994677af366cc85e016573703d68a58 ""
   "editaveis/resumo.tex" 1712938854 834 509a9ee5198999277833c736a7df29cf ""
   "editaveis/simbolos.tex" 1712938854 170 04d69b66c41be80da8dba8fa94a74c0e ""
@@ -198,14 +196,14 @@
   "fixos/listasAutomaticas.tex" 1712938854 140 3d9123a8ba3eeb3da4258aa67285a406 ""
   "fixos/pacotes.tex" 1712943429 414 0b8c3b9b81f07ab1dc541ae93fa49788 ""
   "fixos/setup.tex" 1712937132 641 ad68ffb8f767383eb90edeeb2a1db271 ""
-  "tcc.aux" 1715886098 38664 ca02b8003520849c8c0b333f4e3cb9f4 "pdflatex"
-  "tcc.bbl" 1713374215 3731 83bb374d6f4c04498b7986c9aff3f7d1 "bibtex tcc"
-  "tcc.brf" 1715886098 2215 d509f7b8efa6a3ec0d4e7a636dd209d1 "pdflatex"
+  "tcc.aux" 1716490614 38203 1165f29d62ab801d4d0c4cf80e2cce9c "pdflatex"
+  "tcc.bbl" 1716490614 3731 83bb374d6f4c04498b7986c9aff3f7d1 "bibtex tcc"
+  "tcc.brf" 1716490614 2125 79885cc81bb6afdbfdb5686f300497a6 "pdflatex"
   "tcc.ind" 1712943467 0 d41d8cd98f00b204e9800998ecf8427e "makeindex tcc.idx"
-  "tcc.lof" 1715886098 1292 862e01a5d9134c41d2f704357f188161 "pdflatex"
-  "tcc.lot" 1715886098 29 9a4c7bc9daf7936d0a55d1536c7c4aff "pdflatex"
-  "tcc.tex" 1712938854 952 4f9d689b88d495dd3a915f3ac9b0756f ""
-  "tcc.toc" 1715886098 6126 9c4ddc99d67dd2062a740031a3d2f9e0 "pdflatex"
+  "tcc.lof" 1716490614 1292 90a75938bddf3df5cba5068e3d24f8dd "pdflatex"
+  "tcc.lot" 1716490614 29 9a4c7bc9daf7936d0a55d1536c7c4aff "pdflatex"
+  "tcc.tex" 1716230140 953 d3fe35d9f3839e031c9f84a392f20eb3 ""
+  "tcc.toc" 1716490614 5996 c0eada4e8eacdb0b45b5f1eac5f50fd2 "pdflatex"
   (generated)
   "tcc.aux"
   "tcc.brf"

@@ -1,9 +1,9 @@
-PWD /home/joselito/Downloads/tcc
+PWD /home/joselito/git/tcc/texto
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /home/joselito/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT tcc.tex
+INPUT /home/joselito/git/tcc/texto/tcc.tex
 OUTPUT tcc.log
 INPUT ./fixos/pacotes.tex
 INPUT ./fixos/pacotes.tex
@@ -958,15 +958,6 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi5.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy7.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy5.tfm
-INPUT ./editaveis/errata.tex
-INPUT ./editaveis/errata.tex
-INPUT ./editaveis/errata.tex
-INPUT editaveis/errata.tex
-INPUT ./editaveis/errata.tex
-INPUT ./editaveis/errata.tex
-INPUT editaveis/errata.tex
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT ./fixos/folhaDeAprovacao.tex
 INPUT ./fixos/folhaDeAprovacao.tex
 INPUT ./fixos/folhaDeAprovacao.tex
@@ -989,6 +980,7 @@ INPUT editaveis/agradecimentos.tex
 INPUT ./editaveis/agradecimentos.tex
 INPUT ./editaveis/agradecimentos.tex
 INPUT editaveis/agradecimentos.tex
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm
 INPUT ./editaveis/epigrafe.tex
 INPUT ./editaveis/epigrafe.tex
 INPUT ./editaveis/epigrafe.tex
@@ -1235,7 +1227,6 @@ INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
-INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb
