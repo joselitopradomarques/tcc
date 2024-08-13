@@ -75,7 +75,8 @@ def plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duratio
     # Plotar o sinal no domínio do tempo
     plt.figure(figsize=(14, 6))
     plt.plot(np.arange(len(data)) / sample_rate, data, label='Sinal no Domínio do Tempo')
-    plt.title(f'Sinal no Domínio do Tempo - Case {case_number}')
+    # Remover o título
+    # plt.title(f'Sinal no Domínio do Tempo - Case {case_number}')
     plt.xlabel('Tempo (s)')
     plt.ylabel('Amplitude')
     plt.grid(True)
@@ -93,7 +94,8 @@ def plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duratio
     
     plt.figure(figsize=(14, 6))
     plt.pcolormesh(times, freqs, magnitude_db, shading='gouraud', cmap='inferno', norm=norm)
-    plt.title(f'Heatmap Espectral usando FFT - Case {case_number}')
+    # Remover o título
+    # plt.title(f'Heatmap Espectral usando FFT - Case {case_number}')
     plt.xlabel('Tempo (s)')
     plt.ylabel('Frequência (Hz)')
     plt.colorbar(label='Magnitude (dB)')
@@ -107,7 +109,7 @@ def plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duratio
     plt.close()
 
 # Caminho para os arquivos WAV
-file_paths = [f'/home/joselito/git/tcc/PureData/case{i}_cut.wav' for i in range(1, 5)]
+file_paths = [f'/home/joselito/git/tcc/PureData/case{i}_cut.wav' for i in range(1, 9)]
 
 # Encontrar o intervalo global de amplitude
 global_min_amplitude, global_max_amplitude = calculate_global_amplitude_range(file_paths)
