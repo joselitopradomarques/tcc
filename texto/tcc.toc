@@ -58,6 +58,30 @@
 \contentsline {subsection}{\numberline {2.4.8}Equalização}{51}{subsection.2.4.8}%
 \contentsline {subsection}{\numberline {2.4.9}\textit {Trim} e Volume}{51}{subsection.2.4.9}%
 \contentsline {subsection}{\numberline {2.4.10}Conversão AD/DA}{51}{subsection.2.4.10}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Proposta de Implementação}}{53}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Revisão Teórica}{53}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Processamento de Sinais}{53}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Processamento de Áudio}{53}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Títulos de capítulos e seções}{53}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Notas de rodapé}{54}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Equações}{54}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Figuras e Gráficos}{54}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Tabela}{55}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Citação de Referências}{56}{section.3.7}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resultados de Filtragem}{59}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{59}{section.4.2}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{53}{section*.18}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{61}{section*.18}%
+\cftinsert {AAA}
+\renewcommand *{\cftappendixname }{ANEXO \space }
+\setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
+\cftinsert {A}
+\contentsline {part}{\uppercase {Anexos}}{63}{section*.19}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{65}{appendix.anexochapback.1}%

@@ -46,20 +46,6 @@ def extract_case_number(file_path):
     match = re.search(r'case(\d+)', file_path)
     return match.group(1) if match else 'unknown'
 
-# Função para calcular o intervalo global de amplitude
-def calculate_global_amplitude_range(file_paths):
-    min_amplitude = float('inf')
-    max_amplitude = float('-inf')
-    
-    for file_path in file_paths:
-        sample_rate, data = read_wav(file_path)
-        if len(data.shape) > 1:
-            data = data[:, 0]  # Usar apenas o canal esquerdo se for estéreo
-        min_amplitude = min(min_amplitude, np.min(data))
-        max_amplitude = max(max_amplitude, np.max(data))
-    
-    return min_amplitude, max_amplitude
-
 # Função para plotar o sinal e o heatmap espectral e salvar as imagens
 def plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duration=2, output_folder='./'):
     sample_rate, data = read_wav(file_path)
@@ -72,16 +58,18 @@ def plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duratio
     
     case_number = extract_case_number(file_path)
     
+    # Calcular o intervalo global de amplitude
+    min_amplitude = np.min(data)
+    max_amplitude = np.max(data)
+    
     # Plotar o sinal no domínio do tempo
     plt.figure(figsize=(14, 6))
     plt.plot(np.arange(len(data)) / sample_rate, data, label='Sinal no Domínio do Tempo')
-    # Remover o título
-    # plt.title(f'Sinal no Domínio do Tempo - Case {case_number}')
     plt.xlabel('Tempo (s)')
     plt.ylabel('Amplitude')
     plt.grid(True)
     plt.legend()
-    plt.ylim([global_min_amplitude, global_max_amplitude])  # Manter o intervalo global
+    plt.ylim([min_amplitude, max_amplitude])  # Manter o intervalo do sinal
     plt.savefig(f'{output_folder}signal_time_domain_case_{case_number}.png')  # Salvar como arquivo PNG
     plt.close()
     
@@ -94,8 +82,6 @@ def plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duratio
     
     plt.figure(figsize=(14, 6))
     plt.pcolormesh(times, freqs, magnitude_db, shading='gouraud', cmap='inferno', norm=norm)
-    # Remover o título
-    # plt.title(f'Heatmap Espectral usando FFT - Case {case_number}')
     plt.xlabel('Tempo (s)')
     plt.ylabel('Frequência (Hz)')
     plt.colorbar(label='Magnitude (dB)')
@@ -108,16 +94,11 @@ def plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duratio
     plt.savefig(f'{output_folder}heatmap_spectral_case_{case_number}.png')  # Salvar como arquivo PNG
     plt.close()
 
-# Caminho para os arquivos WAV
-file_paths = [f'/home/joselito/git/tcc/PureData/case{i}_cut.wav' for i in range(1, 9)]
-
-# Encontrar o intervalo global de amplitude
-global_min_amplitude, global_max_amplitude = calculate_global_amplitude_range(file_paths)
-
 # Pasta onde os arquivos serão salvos
 output_folder = './plots/'
 os.makedirs(output_folder, exist_ok=True)  # Criar a pasta se não existir
 
-# Executar o script para cada arquivo
-for file_path in file_paths:
+# Caminho para os arquivos WAV específicos e execução do script
+for i in range(1, 9):
+    file_path = f'/home/joselito/git/tcc/PureData/case{i}_cut.wav'
     plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duration=2, output_folder=output_folder)

@@ -29,4 +29,4 @@ def recortar_silencio(arquivo_entrada, arquivo_saida, duracao_final_ms=8000):
     audio_silencio_removido.export(arquivo_saida, format="wav", parameters=["-ar", str(taxa_amostragem)])
 
 # Exemplo de uso
-recortar_silencio("/home/joselito/git/tcc/PureData/case8.wav", "/home/joselito/git/tcc/PureData/case8_cut.wav")
+recortar_silencio("/home/joselito/git/tcc/PureData/case2.wav", "/home/joselito/git/tcc/PureData/case2_cut.wav")
