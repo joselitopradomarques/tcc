@@ -1,0 +1,46 @@
+- Estruturação pretendida do trabalho
+
+Introdução
+	Contexto [To do]
+	Justificativa [To do]
+	Objetivos [To do]
+		Objetivo Geral [To do]
+		Objetivos Específicos [To do]
+	Estrutura do Documento [To do]
+
+Revisão Bibliográfica
+	Toda parte teórica e histórica
+		De conceito de sinal a Conversão AD/DA
+		[Mover para cá]
+
+Metodologia Proposta
+	- Sistema geral proposto
+		- Diagramas, fluxogramas e tudo mais 
+			 [To do]
+	- PureData (Prova de Conceito)
+		- Implementação de Mixagem
+			- Filtro Implementado
+			 	[To do]
+		- Implementação de Efeitos
+			- Fórmula para implementação do efeito
+				- [Pesquisar como é implementado no PureData]
+				 [To do]
+	
+
+Resultados Preliminares
+	- Resultados de Filtragem
+		 [To do]
+	- Resultados de Efeitos
+		 [To do]
+
+Conclusão e Implementação Final
+	- Proposta de Implementação (detalhada)
+		- Hardware
+			 [To do]
+		- Software
+			 [To do]
+		- Integração
+			 [To do]
+
+------------------------------------------------------------------
+
