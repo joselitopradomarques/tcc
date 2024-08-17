@@ -7,81 +7,86 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{25}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Proposta de Implementação}{25}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Documentação}{25}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Levantamento de Requisitos}{25}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Análise do Questionário}{27}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Informações Demográficas}{27}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Tipo de DJ e Experiência}{28}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.1.6}Setup - Hardware e Software}{28}{subsection.1.1.6}%
-\contentsline {subsection}{\numberline {1.1.7}Estilos musicais e aquisição de músicas}{29}{subsection.1.1.7}%
-\contentsline {subsection}{\numberline {1.1.8}Proposta de Implementação do Protótipo}{29}{subsection.1.1.8}%
-\contentsline {subsection}{\numberline {1.1.9}Diagramas de Subpartes}{30}{subsection.1.1.9}%
-\contentsline {subsection}{\numberline {1.1.10}Diagrama de Integração}{30}{subsection.1.1.10}%
-\contentsline {subsection}{\numberline {1.1.11}Diagrama de Comunicação}{30}{subsection.1.1.11}%
-\contentsline {subsection}{\numberline {1.1.12}Fluxograma}{30}{subsection.1.1.12}%
-\contentsline {subsection}{\numberline {1.1.13}Protótipo de Interface de Usuário}{30}{subsection.1.1.13}%
-\contentsline {subsection}{\numberline {1.1.14}Documento de Especificação Técnica}{30}{subsection.1.1.14}%
-\contentsline {subsection}{\numberline {1.1.15}Documento de Plano de Teste}{30}{subsection.1.1.15}%
-\contentsline {section}{\numberline {1.2}Contextualização}{30}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Definição do Problema e Proposta de Pesquisa}{30}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Objetivos}{30}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Objetivo Geral}{30}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Objetivos Específicos}{30}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}\textbf {Estrutura da Monografia}}{30}{section.1.5}%
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{27}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contexto}{27}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Justificativa}{27}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objetivos}{27}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Objetivo Geral}{27}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Objetivos Específicos}{27}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Estrutura do Documento}{27}{section.1.4}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Fundamentação Teórica e Estado da Arte}}{31}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Sinal: Conceito}{32}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Sinal Contínuo}{32}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Sinal Discreto}{33}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Transformada de Fourier}{33}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Teorema da Amostragem}{34}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Aliasing}{35}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Teorema da Quantização}{35}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Reconstrução do Sinal}{36}{subsection.2.2.6}%
-\contentsline {section}{\numberline {2.3}Som e Música}{37}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Conceito físico}{37}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Audição Humana}{38}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}História da Gravação e Reprodução de Som}{38}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Disc Jockeys \textit {DJs}}{39}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Parâmetros físicos}{45}{subsection.2.3.5}%
-\contentsline {subsubsection}{\numberline {2.3.5.1}Equipamentos}{46}{subsubsection.2.3.5.1}%
-\contentsline {section}{\numberline {2.4}Mixer}{47}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Potência de Sinal de Áudio}{47}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Cabeamento}{47}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Conectores de 1/4”, 1/8” (3,5 mm) e 2,5 mm}{48}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}RCA}{49}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}XLR}{50}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Protocolos Digitais}{50}{subsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.4.7}Amplificação de Potência}{50}{subsection.2.4.7}%
-\contentsline {subsection}{\numberline {2.4.8}Equalização}{51}{subsection.2.4.8}%
-\contentsline {subsection}{\numberline {2.4.9}\textit {Trim} e Volume}{51}{subsection.2.4.9}%
-\contentsline {subsection}{\numberline {2.4.10}Conversão AD/DA}{51}{subsection.2.4.10}%
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Fundamentação Teórica e Estado da Arte}}{29}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sinal: Conceito}{30}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Sinal Contínuo}{30}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Sinal Discreto}{31}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Transformada de Fourier}{31}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Teorema da Amostragem}{32}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Aliasing}{33}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Teorema da Quantização}{33}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Reconstrução do Sinal}{34}{subsection.2.2.6}%
+\contentsline {section}{\numberline {2.3}Som e Música}{35}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Conceito físico}{35}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Audição Humana}{36}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}História da Gravação e Reprodução de Som}{36}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Disc Jockeys \textit {DJs}}{37}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Parâmetros físicos}{43}{subsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.5.1}Equipamentos}{44}{subsubsection.2.3.5.1}%
+\contentsline {section}{\numberline {2.4}Mixer}{45}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Potência de Sinal de Áudio}{45}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Cabeamento}{45}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Conectores de 1/4”, 1/8” (3,5 mm) e 2,5 mm}{46}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}RCA}{47}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}XLR}{48}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Protocolos Digitais}{48}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.7}Amplificação de Potência}{48}{subsection.2.4.7}%
+\contentsline {subsection}{\numberline {2.4.8}Equalização}{49}{subsection.2.4.8}%
+\contentsline {subsection}{\numberline {2.4.9}\textit {Trim} e Volume}{49}{subsection.2.4.9}%
+\contentsline {subsection}{\numberline {2.4.10}Conversão AD/DA}{49}{subsection.2.4.10}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Proposta de Implementação}}{53}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Revisão Teórica}{53}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Processamento de Sinais}{53}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Processamento de Áudio}{53}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Títulos de capítulos e seções}{53}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Notas de rodapé}{54}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Equações}{54}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Figuras e Gráficos}{54}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Tabela}{55}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Citação de Referências}{56}{section.3.7}%
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Proposta Geral}{51}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Prova de Conceito}{51}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}\textit {PureData}}{51}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Implementação de Mixagem}{51}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Implementação de Efeitos}{51}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Proposta de Implementação}{51}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Implementação em \textit {Hardware}}{51}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Implementação em \textit {Software}}{51}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Integração}{51}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Proposta de Implementação - Old Section}{51}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Documentação}{52}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Levantamento de Requisitos}{52}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Análise do Questionário}{54}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Informações Demográficas}{54}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Tipo de DJ e Experiência}{54}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Setup - Hardware e Software}{55}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Estilos musicais e aquisição de músicas}{56}{subsection.3.4.7}%
+\contentsline {subsection}{\numberline {3.4.8}Proposta de Implementação do Protótipo}{56}{subsection.3.4.8}%
+\contentsline {subsection}{\numberline {3.4.9}Diagramas de Subpartes}{57}{subsection.3.4.9}%
+\contentsline {subsection}{\numberline {3.4.10}Diagrama de Integração}{57}{subsection.3.4.10}%
+\contentsline {subsection}{\numberline {3.4.11}Diagrama de Comunicação}{57}{subsection.3.4.11}%
+\contentsline {subsection}{\numberline {3.4.12}Fluxograma}{57}{subsection.3.4.12}%
+\contentsline {subsection}{\numberline {3.4.13}Protótipo de Interface de Usuário}{57}{subsection.3.4.13}%
+\contentsline {subsection}{\numberline {3.4.14}Documento de Especificação Técnica}{57}{subsection.3.4.14}%
+\contentsline {subsection}{\numberline {3.4.15}Documento de Plano de Teste}{57}{subsection.3.4.15}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{59}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Resultados de Filtragem}{59}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{59}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{61}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{61}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{61}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{61}{subsection.4.2.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{63}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{61}{section*.18}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{65}{section*.18}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{63}{section*.19}%
+\contentsline {part}{\uppercase {Anexos}}{67}{section*.19}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{65}{appendix.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{69}{appendix.anexochapback.1}%

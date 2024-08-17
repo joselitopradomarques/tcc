@@ -1,46 +1,48 @@
 - Estruturação pretendida do trabalho
 
-Introdução
-	Contexto [To do]
-	Justificativa [To do]
-	Objetivos [To do]
-		Objetivo Geral [To do]
-		Objetivos Específicos [To do]
-	Estrutura do Documento [To do]
+Introdução [to write]
+	Contexto [to write]
+	Justificativa [to write]
+	Objetivos [to write]
+		Objetivo Geral [to write]
+		Objetivos Específicos [to write]
+	Estrutura do Documento [to write]
 
-Revisão Bibliográfica
-	Toda parte teórica e histórica
-		De conceito de sinal a Conversão AD/DA
-		[Mover para cá]
+Fundamentação Teórica e Estado da Arte [done]
+	Toda parte teórica e histórica [done]
+		De conceito de sinal a Conversão AD/DA [done]
 
 Metodologia Proposta
-	- Sistema geral proposto
-		- Diagramas, fluxogramas e tudo mais 
-			 [To do]
-	- PureData (Prova de Conceito)
-		- Implementação de Mixagem
-			- Filtro Implementado
-			 	[To do]
+	- Proposta Geral [to write]
+	- Prova de Conceito [to write]
+		- PureData [to write]
+		- Implementação de Mixagem [to write]
+			- Filtro Implementado no PureData
+				- Pesquisar janela, polos, decaímento...
 		- Implementação de Efeitos
 			- Fórmula para implementação do efeito
-				- [Pesquisar como é implementado no PureData]
-				 [To do]
-	
-
+				- [Pesquisar como é implementado no PureData] [To do]
+				- Inserir equação de presença de filtro  [to write]
+	- Proposta de Implementação Física  [to write]
+		- Hardware   [to write]
+		- Software   [to write]
+		- Integração [to write]
+		
 Resultados Preliminares
-	- Resultados de Filtragem
-		 [To do]
-	- Resultados de Efeitos
-		 [To do]
+	- Resultados de Mixagem  [done]
+	- Resultados de Efeitos  [to do] [to write]
+		- Automação de Filtros
+			- Escolher um conjunto de fcs e verificar a modulação do volume do filtro
+			- Sinal esperado: amostras de sinais no tempo do efeito isolado em função do fc
+		- Reverb
+			- Escolher um conjunto de valores para parâmetros de FX e verificar qual parâmetro foi gerado no reverb em unidades de dB
+			- Sinal esperado: amostras de sinais no tempo do efeito isolado em função de FX
+		- Delay
+			- Escolher um conjunto de valores para parâmetros de FX e verificar qual parâmetro foi gerado no delay em unidades de ms
+			- Sinal esperado: amostras de sinais no tempo do efeito isolado em função de FX
 
-Conclusão e Implementação Final
-	- Proposta de Implementação (detalhada)
-		- Hardware
-			 [To do]
-		- Software
-			 [To do]
-		- Integração
-			 [To do]
-
+Conclusão
+	- Geralzão de proposta de implementação para o TCC2
+	- Proposta de não linearidade do filtro visto que a atenuação de altas frequências é necessária que seja maior do que as menores
+	- Além disso, deve-se testar filtros e seus parâmetros para que se encontre um filtro ideal. 
 ------------------------------------------------------------------
-

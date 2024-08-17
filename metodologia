@@ -1,0 +1,32 @@
+Metodologia 
+
+- Proposta Geral
+	- Explicar o sistema que desejo e por que é assim
+	- Levantamento de Requisitos
+	- Diagrama de Subpartes
+		- Aqui, deve se constar blocos de funcionamento: aquisição de sinais, conversão AD, mixer setting, leitura de parâmetros, soma de sinais, conversão DA
+	- Fluxogramas de subblocos
+		- Explicar o funcionamento de cada bloco acima com leitura de sinais e tomada de decisão
+			- Bloco de Conversão AD
+			- Bloco de Leitura de HSlider e de escolha de f_c -> Bloco de Filtragem
+				- Ter leitura de Slider, controlar FC de HPF
+			- Bloco de Automação de FX
+				- Volume e comutação de FX
+			- Bloco de Delay - FX
+			- Bloco de Reverb - FX
+			- Bloco Mixer
+				- Apresentar a soma dos sinais de filtragem e de efeitos
+			- Bloco de Conversão DA
+
+- Prova de Conceito
+	- PureData
+	- Implementação de Filtragem
+	- Implementação de Efeitos
+
+- Proposta de Implementação
+	- Implementação em Hardware
+	- Implementação em Software
+	- Diagrama de Integração
+	- Protótipo de Interface de Usuário
+	- [Talvez] Documento de Especificação Técnica
+	- [Talvez] Documento de Plano de Teste

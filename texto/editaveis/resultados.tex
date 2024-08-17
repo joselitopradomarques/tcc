@@ -1,0 +1,68 @@
+\chapter[Resultados Preliminares]{Resultados Preliminares}
+\label{sec:Resultados}
+
+\section{Resultados de Filtragem}
+
+No Anexo \ref{anexos:filtragem}, há figuras correspondentes a ensaios realizados em um ambiente virtual \textit{PureData} simulando filtragem em diferentes frequências de corte.
+
+
+A partir de duas músicas: \cite{track01} e \cite{track02}, selecionou-se uma janela de duração de dois segundos. A escolha do intervalo dessas janelas levou em conta a presença de elementos de todas as bandas de frequência. Sobre essas janelas, utilizando um sistema de filtragem composto por filtros passa-altas. 
+
+As frequências de corte selecionadas foram de:
+
+\begin{itemize}
+    \item 0 Hz
+    \item 20 Hz
+    \item 300 Hz
+    \item 4 kHz
+    \item 24 kHz
+\end{itemize}
+
+Assim, para cada caso de frequência de corte, obteve-se o comportamento do sinal tanto no domínio do tempo quanto sua representação no domínio da frequência utilizando Transformada de Fourier de Curto Termo (STFT - \textit{Short Time Fourier Transform}). Assim, o par de representações em função da frequência de corte correspondentes a bandas de frequências, consolidadas na música, foi aplicado às duas músicas de referência. 
+
+Na Figura \ref{fig40}, há a janela do arquivo de áudio no domínio do tempo. Percebe-se a presença de \textit{kicks} e de elementos de maiores frequências. Na Figura \ref{fig41}, a STFT dessa janela aponta a maior presença de elementos em baixa frequência. Da mesma forma como visto na Figura \ref{fig40}, percebe-se a variação de elementos de agudos conforme varia o andamento da música. 
+
+As próximas figuras do Anexo \ref{anexos:filtragem} correspondem à aplicação de filtros passa altas.
+
+Posteriormente, um filtro passa-altas de 20 Hz foi aplicado ao sinal. Na Figura \ref{fig24}, pouco se percebe a alteração do sinal. O mesmo pode ser inferido ao se analisar a Figura \ref{fig25}, na qual não se percebe grandes alterações das componentes em frequência após a aplicação do filtro a uma frequência de corte de 20 Hz.
+
+Em \textit{mixers} convencionais, o botão correspondente às baixas frequências utiliza um controle de ganho na banda de 300 Hz. Dessa forma, deslocou-se o controle de frequência para que a frequência de corte se aproximasse de 300 Hz. O resultado dessa filtragem pode ser visto nas Figuras \ref{fig28} e \ref{fig29}. Ao analisar a primeira figura, percebe-se a atenuação significativa dos sinais ao visualizar os valores máximo alcançados pela amplitude. Além disso, percebe-se também a ausência de sinais de baixa frequência, presentes na forma de envelopes nos sinais anteriores. A atenuação dessa banda pode ser verificada na Figura \ref{fig29}, onde se percebe a atenuação dos sinais de baixa frequência de aproximadamente 30 dB.
+
+A próxima frequência de corte utilizada foi de 4 kHz, que conforme infere o capítulo \ref{cha:fundamentacao}, é onde se encontram os elementos médios. Inicialmente, na Figura \ref{fig26} já se percebe a ateunação dos sinais em relação às filtragens anteriores. Porém, na Figura \ref{fig27}, onde há a STFT, observa-se a atenuação das componentes referentes à presente banda de frequência. A queda foi bastante acentuada, encontrando-se componentes em 0 dB em determinados pontos.
+
+Para a música \cite{track01}, uma última análise foi realizada considerando que a filtragem foi realizada em toda banda. Dessa forma, utilizou-se uma frequência de corte de 24 kHz, de forma que os elementos restantes, tidos como agudos ou brilhos, fossem atenuados. Assim, verifica-se na Figura \ref{fig30} uma atenuação de amplitudes de sinais quando comparados com as filtragens anteriores. Além disso, na Figura \ref{fig31}, percebe uma atenuação da banda correspondente, contendo elementos de 10 dB a -40 dB. E ao comparado com a STFT da filtragem anterior, percebe-se uma atenuação generalizada do sinal. 
+
+A mesma análise realizada na Música \cite{track01} foi realizada a Música \cite{track02}, de forma que os resultados no domínio do tempo e da frequência utilizando a STFT foram obtidos. O comportamento obtido foi conforme o esperado.
+
+Deve-se atentar que conforme o botão avança na frequência de corte, a frequência de corte do filtro do canal 1 aumenta, de forma que as componentes são atenuadas começando pelas menores frequências e finalizando na maior frequência, enquanto para o canal 2, a frequência de corte começa sendo a máxima e termina sendo a mínima, de forma que as figuras mostrem as ampliações das componentes de frequência do sinal da Música \cite{track02}.
+
+Assim, nas Figuras \ref{fig32} e \ref{fig33}, encontram-se frequências atenuadas entre 20 e -20 dB. Percebe-se ainda a presença de elementos em torno de 300 e 800 Hz, além de agudos na faixa de kHz. Nas Figuras \ref{fig34} e \ref{fig35}, constata-se a amplificação de elementos na faixa de kHz. O que é verificado conforme se visualiza a Figura no domíno do tempo no qual se encontra uma ampliação dos sinais. Nas Figuras \ref{fig36} e \ref{fig37}, identificam-se ampliações dos sinais e uma ampliação da da banda a partir de 300 Hz, chegando a ter componentes por volta de 50 dB. Já nas Figuras \ref{fig38} e \ref{fig39}, observa-se na representação do sinal no domínio do tempo o envelope indicando sinais de baixa frequência no sinal ao se diminuir a frequência de corta a 20 Hz. Dessa forma, assim como aconteceu com a Música \cite{track02}, o comportamento do sinal, tanto no domínio do tempo quanto sua representação na frequência foi similar ao obtido quando a frequência de corte vai a zero Hz; fato que pode ser visualizado nas Figuras \ref{fig42} e \ref{fig43}.
+
+\section{Resultados de Efeitos}
+
+\subsection{Automação de Efeitos}
+
+
+1) Inserir gráficos de presença de efeitos conforme a fc do mixers
+
+2) O plot deve ser obtido variando a fc e obtendo o sinal isolado advindo dos efeitos.
+
+3) Escolher intervalos discretos para fc conforme a proposta [fc1, fc2, fc3, fc4]
+
+4) Comparar a presença dos efeitos em relação ao plot de presença
+
+\subsection{\textit{Reverb}}
+
+Aqui, escolher-se-á a maior fc para que se gere a maior presença de efeitos
+
+Selecionará um intervalo discreto de presença de efeitos que permita visualizar a mudança de efeitos.
+
+No caso de reverb, a quantidade de dB existente da música depois de 1 ms é utilizada, variando de 0 a 100 dB
+
+Escolher valores de parâmetro e obter o sinal de saída isolado do efeito
+
+\subsection{\textit{Delay}}
+
+No caso do delay, o mesmo conjunto de valores de parâmetros será utilizando
+
+No caso do delay, o parâmetro a ser modificado é o de tempo em ms cuja cópia do sinal estará existindo

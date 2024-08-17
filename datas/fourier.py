@@ -99,6 +99,6 @@ output_folder = './plots/'
 os.makedirs(output_folder, exist_ok=True)  # Criar a pasta se não existir
 
 # Caminho para os arquivos WAV específicos e execução do script
-for i in range(1, 9):
+for i in range(9, 11):
     file_path = f'/home/joselito/git/tcc/PureData/case{i}_cut.wav'
     plot_signal_and_fft(file_path, window_size=2048, noverlap=1024, plot_duration=2, output_folder=output_folder)

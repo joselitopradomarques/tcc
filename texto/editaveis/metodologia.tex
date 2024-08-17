@@ -1,0 +1,166 @@
+\chapter[Metodologia]{Metodologia}
+
+
+\section{Proposta Geral}
+Nessa seção, inserir a proposta geral em termos de funcionalidade e de requisitos preliminares de entrada e de saída. 
+
+\section{Prova de Conceito}
+
+\subsection{\textit{PureData}}
+
+\subsection{Implementação de Mixagem}
+
+\subsection{Implementação de Efeitos}
+
+\section{Proposta de Implementação}
+
+\subsection{Implementação em \textit{Hardware}}
+
+\subsection{Implementação em \textit{Software}}
+
+\subsection{Integração}
+
+\section{Proposta de Implementação - Old Section}
+Ao analisar a história de mixers e equipamentos e o mercado atual, chega-se a conclusão de que a evolução dos equipamentos foi e é realizada partindo de um modelo que se baseia na mixagem feita em vinil. Ao longo do tempo, acrescentou-se novas funcionalidades e formas de interações, porém, na maioria das vezes, mantendo o jogger para atraso e avanço da música, fadder para volume e knobs para frequências.
+\par
+Além disso, conforme a evolução da microeletrônica, equipamentos começaram a migrar aos poucos para a eletrônica digital, culminando na utilização de um DSP para o processamento do sinal de áudio para comportar formatos de música com baixa compressão como WAV. e FLAC. 
+\par
+Assim, o que se vê hoje são dois extremos: equipamentos extremamente caros mas que não necessitam da presença de um computador e equipamentos dependentes, que são mais baratos e acabam possuindo melhor qualidade nos processamentos, que dificultam a mobilidade.
+\par
+Dessa forma, o intuito é conceber um mixer dotado de uma interface inovadora, que se destaque em relação aos modelos tradicionais por sua intuitividade. Para tanto, opta-se pela utilização da Raspberry Pi, aproveitando sua capacidade de processamento de sinais e sua flexibilidade para criar uma interface personalizada. Tal abordagem se mostra vantajosa em comparação com os equipamentos convencionais, como as CDJs, não apenas devido à sua funcionalidade aprimorada, mas também por apresentar um custo mais acessível.
+
+\subsection{Documentação}
+Nas seções subjacentes, há uma série de documentações que visam a descrever e delinear o projeto a partir de diferentes óticas. Além disso, a informação contida de forma textual se encontrará melhor descrita graficamente através de diagrama, fluxogramas e outras ferramentas.
+
+\subsection{Levantamento de Requisitos}
+\textbf{Requisitos Funcionais:}
+\begin{enumerate}[label=\textbullet]
+\item O sistema deve permitir ao DJ ajustar o volume de cada canal de áudio individualmente.
+\item O sistema deve fornecer controles de equalização (graves, médios, agudos) para cada canal de áudio.
+\item O sistema deve permitir ao DJ utilizar tanto CDJs quanto toca-discos.
+\item O sistema deve permitir ao DJ escutar canais não ativados ao público (cue).
+
+\end{enumerate}
+
+\textbf{Requisitos Não Funcionais:}
+\begin{enumerate}[label=\textbullet]
+\item O sistema deve ser capaz de responder aos comandos do DJ com latência mínima, garantindo uma experiência de mixagem fluida.
+\item A interface do usuário do sistema deve ser intuitiva e fácil de usar, permitindo que o DJ faça ajustes rapidamente durante a performance.
+\item O sistema deve ser confiável e estável, capaz de lidar com longos períodos de uso contínuo sem falhas.
+\item O sistema deve oferecer uma qualidade de som de alta fidelidade, garantindo que o áudio reproduzido seja claro e sem distorções.
+\end{enumerate}
+
+\textbf{Requisitos de Interface do Usuário:}
+\begin{enumerate}[label=\textbullet]
+%\item A interface do mixer deve incluir botões físicos ou controles táteis para ajustar o volume, equalização e efeitos de áudio.
+\item A interface do mixer deve incluir indicadores visuais, como LEDs ou telas LCD, para mostrar o status dos diferentes canais e configurações.
+\item  A interface do mixer deve ser configurável para facilitar a forma de mixagem do DJ.
+%\item A interface do mixer deve ser organizada de forma lógica e intuitiva, com controles agrupados por função para facilitar a navegação.
+\end{enumerate}
+
+\textbf{Requisitos de Sistema:}
+\begin{enumerate}[label=\textbullet]
+\item O sistema deve ser compatível com uma variedade de dispositivos de áudio externos, como CDJs e toca-discos.
+\item O sistema deve ser alimentado por uma fonte de energia padrão, como uma tomada elétrica.
+\item O sistema deve incluir interfaces de entrada e saída de áudio padrão, como conectores RCA ou XLR, para facilitar a conexão com outros equipamentos de áudio.
+\end{enumerate}
+
+\textbf{Requisitos de Desempenho:}
+\begin{enumerate}[label=\textbullet]
+\item O sistema deve ser capaz de lidar com até dois canais de áudio simultaneamente, sem comprometer a qualidade do som ou a responsividade dos controles.
+\item O sistema deve suportar uma ampla gama de frequências de áudio, garantindo que os graves sejam reproduzidos com punch e os agudos sejam nítidos e claros.
+\end{enumerate}
+
+\textbf{Requisitos de Interface de Usuário:}
+\begin{enumerate}[label=\textbullet]
+%\item O sistema deve fornecer feedback visual claro para indicar quando um efeito está ativo ou desativado.
+\item O sistema deve permitir ao DJ personalizar a aparência e layout da interface do usuário para atender às suas preferências individuais.
+\item O sistema deve ser compatível com dispositivos de entrada externos, como controladores MIDI ou dispositivos de toque, para permitir diferentes estilos de interação do usuário.
+\end{enumerate}
+
+\textbf{Requisitos de Segurança:}
+\begin{enumerate}[label=\textbullet]
+\item O sistema deve ser projetado para minimizar o risco de danos aos equipamentos de áudio conectados, como proteção contra sobrecarga ou curto-circuito.
+\end{enumerate}
+
+\textbf{Requisitos de Manutenção:}
+\begin{enumerate}[label=\textbullet]
+\item O sistema deve ser projetado para facilitar a manutenção e reparo, com acesso fácil aos componentes internos e documentação clara sobre procedimentos de serviço.
+\end{enumerate}
+
+\textbf{Requisitos de Compatibilidade:}
+\begin{enumerate}[label=\textbullet]
+\item O sistema deve ser compatível com uma variedade de formatos de áudio comuns, como WAV, MP3 e FLAC.
+\end{enumerate}
+
+\subsection{Análise do Questionário}
+
+Um questionário foi aplicado pelo Digital DJ Tips; um portal de notícias e de cursos cuja abrangência possibilitou a coleta de mais de 1500 respostas ao redor do mundo, durante o dezembro de 2023 e janeiro de 2024. O questionário abrangeu informações divididas em seções como: informações demográficas, tipos e experiências, setup (hardware e software), estilos musicais e fontes musicais e, como último, social media. Através da análise do questionário, foi possível levantar algumas histórias de usuários. 
+
+\subsection{Informações Demográficas}
+Nesse quesito, obteve-se uma distribuição crescente conforme a idade dos DJs. 25 a 34 anos teve 18,86\%, 35 a 44 teve 28,45\% e 45 a 54 obteve 32,33\%. No questionário, não obteve-se respostas significativas de brasileiros. Dessa forma, esse perfil não corresponderia ao perfil do brasileiro.
+\par
+Quanto a renda anual em atividades gerais, em dólares, as maiores faixas foram 25k - 50k, 50k - 75k, seguidos por 0 - 15k. Além disso, quanto a renda advindo da atividade de DJ, 40,86\% não recebe pela atividade, já para 34,47\% dos entrevistados 10\% de sua renda advém de discotecagem.
+
+\subsection{Tipo de DJ e Experiência}
+A maioria, 53,92\%, havia começado a tocar há mais de 10 anos. Além disso, percebe-se há um aumento de DJs que permanecem na atividade até 3 anos, porém, depois começa a cair. Porém, percebe-se que a maior faixa é daqueles que permanecem há muito tempo na atividade, há mais de 10 anos.
+\par
+Outro ponto importante é o tipo de DJ que os entrevistadores são. A maioria, 27,49\% toca regularmente em público, já 25,66\% toca de vez em quando, logo em seguida estão: pessoas que tocam ocasionalmente para amigos e família.
+\par
+Outro dado importante é que a maioria dos entrevistados são hobbistas/bedroom ou DJs focados em eventos como casamentos, aniversário, corporativos. Em seguida, encontram-se os que chegam a tocar mas não levam a atividade como fonte de renda. Em seguida, encontram-se os que têm a discotecagem como profissão, como: residentes, djs e produtores. Portanto, a maioria são hobbistas e DJs focados em eventos, sem ser clubes.
+\par
+Porém, um dado interessante é que a maioria deseja se tornar um dj que vive em tour ou que possui residência em algum clube. Além disso, quanto a transmitir os sets, apenas 10\% disnponibiliza online os seus sets produzidos. Porém, quase 50\% almeja a transmissão de seus sets pela internet.
+\par
+Dessa forma, percebe-se todo tipo de estilo de DJ: aqueles que tocam em locais profissionais que provavelmente já contam com os equipamentos profissionais próprios e conforme cai a porcentagem dos resultados, percebe-se a diminuição da complexidade do equipamento devido ao sistema de som local.
+
+\subsection{Setup - Hardware e Software}
+Quanto ao equipamento utilizado, 56\% toca através de um notebook e de uma controladora. Em seguida, 15\% possui XDJ (All-in-one standalone). Além disso, 56\% utiliza Pioneer como marca principal em seus equipamentos, seguido pela Denon. 
+\par
+Quanto ao montante investido no setup, a maioria gastor entre USD 1500 a 3000, seguidos por USD 1000 a 1500 e USD 3000 a 5000.
+\par
+Outro dado importante, é que 63\% das pessoas visam realizar uma atualização do setup a cada ano. Dentre aqueles que não podem, metade desses não fazem devido aos custos relacionados. E mesmo entre esses, 53\% gostaria de adquirir Pioneer. 
+\par
+37\% dos entrevistados disse que, quando são contratados, devem levar o próprio equipamento.
+\par
+Quanto à inovação mais interessante, segundo os entrevistados, está a possibilidade, que tem sido vista em controladoras atuais, de separar uma música em elementos e ter a capacidade de tanto separar quanto de aplicar efeitos apenas nesse grupo de elementos em tempo real. Além disso, a possibilidade de utilizar uma biblioteca na nuvem e o desenvolvimento de softwares que mixam automaticamente também deixaram os entrevistadores animados. 
+\par
+Quanto às características mais importantes ao se adquirir novos equipamentos, a qualidade e durabilidade se encontraram em primeiro lugar, seguido de recursos, preços, marcas e integrações.
+\par
+O software utilizado pelo DJ precisa poder ser integrado ao sistema de mixagem. O software é como a biblioteca é organizada e como o pendrive é organizado. Dessa forma, ao escolher um software, a pessoa deve levar em consideração os equipamentos que ela pode utilizar. Assim, 2/3 dos entrevistados se dividiram entre Rekordbox e Serato DJ.
+
+\subsection{Estilos musicais e aquisição de músicas}
+
+56\% dos DJs mixa utilizando diversos tipos de gêneros. Em contrapartida, 1/4 dos DJs só mixa focado em um estilo. A diferença entre a mixagem entre um estilo e vários é a habilidade de elencar elementos semelhantes ou contrastantes para realizar uma mixagem.
+\par
+Dentre os gêneros mais tocados, encontram-se house, hip hop, pop, tech house, techno, bass, EDM, disco, deep house e outros. Para servir como base da mixagem, DJs utilizam outros gêneros para servir como construção e presença de elementos. Os gêneros mais utilizados para essa presença são house, disco, hiphop, tech house, deep house, funk e techno. Porém, a presença de gêneros é bem diversa.
+\subsection{Proposta de Implementação do Protótipo}
+
+Quais são as funcionalidades necessárias para um Protótipo:
+
+- Volume: o controle de volume exige dois knobs ou sliders: dois knobs ou sliders no total
+
+- Frequência: três knobs para cada canal: 6 no total
+
+- Trim: um knob para cada canal: 2 no total
+
+- Master: 1 knob no total
+
+- Headphone: 1 knob no total
+
+Ao todo, 10 potenciômetros/knobs ou 8 knobs + 2 sliders
+
+Quais botões são necessários?
+
+\begin{itemize}
+	\item On/off -> 1 no otal
+	\item Cue -> 2 no total
+	\item Master -> 2 no
+\end{itemize}
+
+\subsection{Diagramas de Subpartes}
+\subsection{Diagrama de Integração}
+\subsection{Diagrama de Comunicação}
+\subsection{Fluxograma}
+\subsection{Protótipo de Interface de Usuário}
+\subsection{Documento de Especificação Técnica}
+\subsection{Documento de Plano de Teste}
