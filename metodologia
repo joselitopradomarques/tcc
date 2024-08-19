@@ -1,32 +1,38 @@
 Metodologia 
 
 - Proposta Geral
-	- Explicar o sistema que desejo e por que é assim
-	- Levantamento de Requisitos
-	- Diagrama de Subpartes
-		- Aqui, deve se constar blocos de funcionamento: aquisição de sinais, conversão AD, mixer setting, leitura de parâmetros, soma de sinais, conversão DA
-	- Fluxogramas de subblocos
+	- Explicar o sistema que desejo e por que é assim [done]
+	- Levantamento de Requisitos [today]
+	- Diagrama de Subpartes [to do] [to write]
+		- Elementos do diagrama:
+			- Aqusição de sinais
+			- Conversão AD
+			- Mixer Setting
+			- Leitura de Parâmetros de Interface
+			- Mixer de sinais
+			- Conversão DA
+	- Fluxogramas de subblocos [to do] [to write]
 		- Explicar o funcionamento de cada bloco acima com leitura de sinais e tomada de decisão
-			- Bloco de Conversão AD
-			- Bloco de Leitura de HSlider e de escolha de f_c -> Bloco de Filtragem
+			- Bloco de Conversão AD [to do] [to write]
+			- Bloco de Leitura de HSlider e de escolha de f_c -> Bloco de Filtragem [to do] [to write]
 				- Ter leitura de Slider, controlar FC de HPF
-			- Bloco de Automação de FX
+			- Bloco de Automação de FX [to do] [to write]
 				- Volume e comutação de FX
-			- Bloco de Delay - FX
-			- Bloco de Reverb - FX
-			- Bloco Mixer
+			- Bloco de Delay - FX [to do] [to write]
+			- Bloco de Reverb - FX [to do] [to write]
+			- Bloco Mixer [to do] [to write]
 				- Apresentar a soma dos sinais de filtragem e de efeitos
-			- Bloco de Conversão DA
+			- Bloco de Conversão DA [to do] [to write]
 
 - Prova de Conceito
-	- PureData
-	- Implementação de Filtragem
-	- Implementação de Efeitos
+	- PureData  [to do] [to write] [today]
+	- Implementação de Filtragem [today]
+	- Implementação de Efeitos [to do] [to write]
 
 - Proposta de Implementação
-	- Implementação em Hardware
-	- Implementação em Software
-	- Diagrama de Integração
-	- Protótipo de Interface de Usuário
+	- Implementação em Hardware [to do] [to write]
+	- Implementação em Software [to do] [to write]
+	- Diagrama de Integração    [to do] [to write]
+	- Protótipo de Interface de Usuário [to do] [to write]
 	- [Talvez] Documento de Especificação Técnica
 	- [Talvez] Documento de Plano de Teste
