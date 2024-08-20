@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  19 AUG 2024 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  19 AUG 2024 22:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -471,4 +471,1003 @@ Package: babel 2022/01/26 3.70 The Babel package
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
 \bbl@dirlevel=\count323
- (/usr/share/texlive/texmf-dist/tex/generic/babel
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2021/07/20 v3.5m French support from the babel system
+Package babel Info: Hyphen rules for 'french' set to \l@nohyphenation
+(babel)             (\language2). Reported on input line 87.
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'French' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=nohyphenation instead on input line 87.
+
+Package babel Info: Hyphen rules for 'acadian' set to \l@nohyphenation
+(babel)             (\language2). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@nohyphenation
+(babel)             (\language2). Reported on input line 92.
+\FB@nonchar=\count324
+Package babel Info: Making : an active character on input line 430.
+Package babel Info: Making ; an active character on input line 431.
+Package babel Info: Making ! an active character on input line 432.
+Package babel Info: Making ? an active character on input line 433.
+\FBguill@level=\count325
+\FBold@everypar=\toks25
+\FB@Mht=\dimen188
+\mc@charclass=\count326
+\mc@charfam=\count327
+\mc@charslot=\count328
+\std@mcc=\count329
+\dec@mcc=\count330
+\listindentFB=\dimen189
+\descindentFB=\dimen190
+\labelindentFB=\dimen191
+\labelwidthFB=\dimen192
+\leftmarginFB=\dimen193
+\parindentFFN=\dimen194
+\FBfnindent=\dimen195
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Spanish' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=nohyphenation instead on input line 51.
+
+Package babel Info: Hyphen rules for 'spanish' set to \l@english
+(babel)             (\language0). Reported on input line 52.
+\es@quottoks=\toks26
+\es@quotdepth=\count331
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/brazil.ldf
+Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Portuguese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=nohyphenation instead on input line 53.
+
+Package babel Info: Hyphen rules for 'portuges' set to \l@english
+(babel)             (\language0). Reported on input line 54.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 111.
+)) (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip192
+\enit@outerparindent=\dimen196
+\enit@toks=\toks27
+\enit@inbox=\box55
+\enit@count@id=\count332
+\enitdp@description=\count333
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count334
+\calc@Bcount=\count335
+\calc@Adimen=\dimen197
+\calc@Bdimen=\dimen198
+\calc@Askip=\skip193
+\calc@Bskip=\skip194
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count336
+\calc@Cskip=\skip195
+)
+
+******************************************************
+Stock height and width: 845.04684pt by 597.50787pt
+Top and edge trims: 0pt and 0pt
+Page height and width: 845.04684pt by 597.50787pt
+Text height and width: 708pt by 455pt
+Spine and edge margins: 85.35826pt and 56.9055pt
+Upper and lower margins: 85.35826pt and 51.68858pt
+Headheight and headsep: 14.5pt and 19.8738pt
+Footskip: 30pt
+Columnsep and columnseprule: 10pt and 0pt
+Marginparsep and marginparwidth: 7pt and 42.9055pt
+Sidecapsep and sidecapwidth: 7pt and 92pt
+Sidebarhsep and sidebarwidth: 7pt and 92pt
+Sidebarvsep and sidebartopsep: 14.5pt and 0pt
+Sidebarheight: 590.14995pt
+Sidefoothsep and sidefootwidth: 7pt and 92pt
+Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
+******************************************************
+
+\c@abntex@bookmarkcounter=\count337
+
+LaTeX hooks Warning: Generic hook 'package/after/caption' is deprecated.
+(hooks)              Use hook 'package/caption/after' instead.
+
+\cftlastnumwidth=\skip196
+\chapternamenumlength=\skip197
+\ABNTEXcitacaorecuo=\skip198
+\c@alineasi=\count338
+\c@alineasii=\count339
+\enitdp@alineas=\count340
+\c@subalineasi=\count341
+\enitdp@subalineas=\count342
+\c@incisosi=\count343
+\enitdp@incisos=\count344
+\ABNTEXsignwidth=\skip199
+\ABNTEXsignthickness=\skip256
+\ABNTEXsignskip=\skip257
+) (/usr/share/texlive/texmf-dist/tex/latex/cmap/cmap.sty
+Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
+) (/usr/share/texmf/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)<<t1.cmap>>) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks28
+\inpenc@posthook=\toks29
+) (/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen199
+\Gin@req@width=\dimen256
+) (/usr/share/texlive/texmf-dist/tex/latex/units/units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+ (/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip258
+\L@UnitsRaiseTextstyle=\skip259
+\L@UnitsRaiseScriptstyle=\skip260
+)) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2021/02/04 v1.41 Bibliographical back referencing
+) (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2cite.sty
+Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
+ (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
+\minimumbiblabelwidth=\skip261
+\ABCIauxlen=\skip262
+\c@ABCIaux=\count345
+\c@ABCImax=\count346
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\biblabelsep=\skip263
+LaTeX Info: Redefining \newblock on input line 591.
+LaTeX Info: Redefining \cite on input line 618.
+\ABCItoken=\toks30
+) (/usr/share/texlive/texmf-dist/tex/latex/bold-extra/bold-extra.sty
+Package: bold-extra 2001/11/13 v0.1 Use fonts from cm/mf-extra/bold
+)) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen257
+\ESO@tempdimb=\dimen258
+) (./fixos/comandos.tex) (./fixos/customizacoes.sty) (./editaveis/informacoes.tex) (./fixos/informacoes.tex) (./fixos/setup.tex
+Package color Info: Redefining color blue on input line 1.
+Package hyperref Info: Option `colorlinks' set `true' on input line 16.
+)
+\tcc@idxfile=\write4
+\openout4 = `tcc.idx'.
+
+
+Writing index file tcc.idx 
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count347
+\l__pdf_internal_box=\box56
+) (./tcc.aux)
+\openout1 = `tcc.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+Package hyperref Info: Link coloring ON on input line 9.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count348
+)
+Redoing nameref's sectioning
+Redoing nameref's label
+LaTeX Info: Redefining \nameref on input line 9.
+LaTeX Info: Redefining \ref on input line 9.
+LaTeX Info: Redefining \pageref on input line 9.
+LaTeX Info: Redefining \nameref on input line 9.
+LaTeX Info: Redefining \degres on input line 9.
+LaTeX Info: Redefining \up on input line 9.
+\myptabbox=\box57
+\myptabboxwidth=\skip264
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 9.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count349
+\scratchdimen=\dimen259
+\scratchbox=\box58
+\nofMPsegments=\count350
+\nofMParguments=\count351
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen260
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
+\everyMPtoPDFconversion=\toks32
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 12.
+ (/usr/share/texmf/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Package epstopdf Info: Source file: <figuras/capa.eps>
+(epstopdf)                    date: 2024-04-12 13:20:54
+(epstopdf)                    size: 12409969 bytes
+(epstopdf)             Output file: <figuras/capa-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:37
+(epstopdf)                    size: 1515774 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/capa-eps-converted-to.pdf figuras/capa.eps>
+(epstopdf)             \includegraphics on input line 12.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/capa-eps-converted-to.pdf, id=5, 10037.5pt x 14194.02875pt>
+File: figuras/capa-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/capa-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/capa-eps-converted-to.pdf  used on input line 12.
+(pdftex.def)             Requested size: 597.47607pt x 844.89091pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figuras/capa-eps-converted-to.pdf>] [2
+
+]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 14.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)<<ot1.cmap>>
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 14.
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)<<oml.cmap>>
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 14.
+ (/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)<<oms.cmap>>
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 14.
+ (/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 14.
+<<omx.cmap>>
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 14.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 14.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 
+      [1
+
+
+] (./fixos/fichaCatalografica.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Overfull \hbox (16.44858pt too wide) in paragraph at lines 16--19
+[]  [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 30.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 30.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 30.
+) (./fixos/folhaDeAprovacao.texpdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 
+     [2] [3
+
+] [4
+
+]) (./editaveis/dedicatoria.tex [5] [6
+
+]) (./editaveis/agradecimentos.tex [7
+
+] [8
+
+]) (./editaveis/epigrafe.tex [9] [10
+
+]) (./editaveis/resumo.tex [11] [12
+
+]) (./editaveis/abstract.tex [13] [14
+
+]) (./fixos/listasAutomaticas.tex (./tcc.lof [15]) [16] (./tcc.lot) [17
+
+] [18
+
+]) (./editaveis/abreviaturas.tex [19
+
+] [20
+
+]) (./editaveis/simbolos.tex [21
+
+] [22
+
+]) (./fixos/indiceAutomatico.tex (./tcc.toc
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 31.
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+ [23]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 90.
+)
+Underfull \vbox (badness 2689) has occurred while \output is active []
+
+ [24] [25] [26
+
+]) (./editaveis/introducao.tex) (./editaveis/fundamentacao.tex [27
+
+] [28
+
+] [29]
+Overfull \hbox (5.8115pt too wide) in paragraph at lines 10--11
+ \T1/lmr/m/n/10 duzindo out-ros sinais ou al-gum com-por-ta-mento de-se-jado."([][]OPPENHEIM;
+ []
+
+Package epstopdf Info: Source file: <figuras/fig01.eps>
+(epstopdf)                    date: 2024-04-12 13:20:54
+(epstopdf)                    size: 274267 bytes
+(epstopdf)             Output file: <figuras/fig01-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:37
+(epstopdf)                    size: 11584 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig01-eps-converted-to.pdf figuras/fig01.eps>
+(epstopdf)             \includegraphics on input line 26.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig01-eps-converted-to.pdf, id=422, 568.1225pt x 234.8775pt>
+File: figuras/fig01-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig01-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig01-eps-converted-to.pdf  used on input line 26.
+(pdftex.def)             Requested size: 284.06055pt x 117.43846pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30]
+Package epstopdf Info: Source file: <figuras/fig02.eps>
+(epstopdf)                    date: 2024-04-12 13:20:54
+(epstopdf)                    size: 310305 bytes
+(epstopdf)             Output file: <figuras/fig02-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:38
+(epstopdf)                    size: 18574 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig02-eps-converted-to.pdf figuras/fig02.eps>
+(epstopdf)             \includegraphics on input line 40.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig02-eps-converted-to.pdf, id=433, 571.13374pt x 264.99pt>
+File: figuras/fig02-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig02-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig02-eps-converted-to.pdf  used on input line 40.
+(pdftex.def)             Requested size: 285.56618pt x 132.49467pt.
+ [31 <./figuras/fig01-eps-converted-to.pdf> <./figuras/fig02-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figuras/fig03.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 205302 bytes
+(epstopdf)             Output file: <figuras/fig03-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:38
+(epstopdf)                    size: 17340 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig03-eps-converted-to.pdf figuras/fig03.eps>
+(epstopdf)             \includegraphics on input line 66.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig03-eps-converted-to.pdf, id=447, 555.07375pt x 178.6675pt>
+File: figuras/fig03-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig03-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig03-eps-converted-to.pdf  used on input line 66.
+(pdftex.def)             Requested size: 277.53618pt x 89.33353pt.
+ [32 <./figuras/fig03-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figuras/fig04.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 683542 bytes
+(epstopdf)             Output file: <figuras/fig04-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:38
+(epstopdf)                    size: 21150 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig04-eps-converted-to.pdf figuras/fig04.eps>
+(epstopdf)             \includegraphics on input line 97.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig04-eps-converted-to.pdf, id=467, 760.8425pt x 442.65375pt>
+File: figuras/fig04-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig04-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig04-eps-converted-to.pdf  used on input line 97.
+(pdftex.def)             Requested size: 304.3316pt x 177.05835pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33]
+Package epstopdf Info: Source file: <figuras/fig05.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 148488 bytes
+(epstopdf)             Output file: <figuras/fig05-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:39
+(epstopdf)                    size: 10465 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig05-eps-converted-to.pdf figuras/fig05.eps>
+(epstopdf)             \includegraphics on input line 117.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig05-eps-converted-to.pdf, id=490, 433.62pt x 163.61125pt>
+File: figuras/fig05-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig05-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig05-eps-converted-to.pdf  used on input line 117.
+(pdftex.def)             Requested size: 173.44492pt x 65.44333pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[34 <./figuras/fig04-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figuras/fig06.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 166154 bytes
+(epstopdf)             Output file: <figuras/fig06-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:39
+(epstopdf)                    size: 11758 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig06-eps-converted-to.pdf figuras/fig06.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig06-eps-converted-to.pdf, id=502, 505.89pt x 157.58875pt>
+File: figuras/fig06-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig06-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig06-eps-converted-to.pdf  used on input line 126.
+(pdftex.def)             Requested size: 202.3524pt x 63.03436pt.
+Package epstopdf Info: Source file: <figuras/fig07.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 299450 bytes
+(epstopdf)             Output file: <figuras/fig07-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:39
+(epstopdf)                    size: 18561 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig07-eps-converted-to.pdf figuras/fig07.eps>
+(epstopdf)             \includegraphics on input line 140.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig07-eps-converted-to.pdf, id=506, 370.38374pt x 131.49126pt>
+File: figuras/fig07-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig07-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig07-eps-converted-to.pdf  used on input line 140.
+(pdftex.def)             Requested size: 259.26685pt x 92.04324pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35 <./figuras/fig05-eps-converted-to.pdf> <./figuras/fig06-eps-converted-to.pdf>] [36 <./figuras/fig07-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 158.
+ [37]
+Package epstopdf Info: Source file: <figuras/fig08.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 2193422 bytes
+(epstopdf)             Output file: <figuras/fig08-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:41
+(epstopdf)                    size: 104984 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig08-eps-converted-to.pdf figuras/fig08.eps>
+(epstopdf)             \includegraphics on input line 172.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig08-eps-converted-to.pdf, id=546, 602.25pt x 602.25pt>
+File: figuras/fig08-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig08-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig08-eps-converted-to.pdf  used on input line 172.
+(pdftex.def)             Requested size: 240.89572pt x 240.89572pt.
+ [38 <./figuras/fig08-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figuras/fig10.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 1273606 bytes
+(epstopdf)             Output file: <figuras/fig10-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:41
+(epstopdf)                    size: 67194 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig10-eps-converted-to.pdf figuras/fig10.eps>
+(epstopdf)             \includegraphics on input line 183.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig10-eps-converted-to.pdf, id=554, 642.4pt x 327.2225pt>
+File: figuras/fig10-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig10-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig10-eps-converted-to.pdf  used on input line 183.
+(pdftex.def)             Requested size: 385.44298pt x 196.335pt.
+Package epstopdf Info: Source file: <figuras/fig14.eps>
+(epstopdf)                    date: 2024-06-01 21:19:08
+(epstopdf)                    size: 5562441 bytes
+(epstopdf)             Output file: <figuras/fig14-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-01 21:20:50
+(epstopdf)                    size: 262531 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig14-eps-converted-to.pdf figuras/fig14.eps>
+(epstopdf)             \includegraphics on input line 192.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig14-eps-converted-to.pdf, id=556, 1204.5pt x 764.8575pt>
+File: figuras/fig14-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig14-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig14-eps-converted-to.pdf  used on input line 192.
+(pdftex.def)             Requested size: 301.12427pt x 191.2139pt.
+ [39 <./figuras/fig10-eps-converted-to.pdf> <./figuras/fig14-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figuras/fig15.eps>
+(epstopdf)                    date: 2024-06-01 21:19:08
+(epstopdf)                    size: 2242162 bytes
+(epstopdf)             Output file: <figuras/fig15-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-01 21:21:44
+(epstopdf)                    size: 114108 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig15-eps-converted-to.pdf figuras/fig15.eps>
+(epstopdf)             \includegraphics on input line 202.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig15-eps-converted-to.pdf, id=566, 1003.75pt x 369.38pt>
+File: figuras/fig15-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig15-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig15-eps-converted-to.pdf  used on input line 202.
+(pdftex.def)             Requested size: 301.12732pt x 110.81485pt.
+Package epstopdf Info: Source file: <figuras/fig13.eps>
+(epstopdf)                    date: 2024-06-01 21:02:34
+(epstopdf)                    size: 12484675 bytes
+(epstopdf)             Output file: <figuras/fig13-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-01 21:04:36
+(epstopdf)                    size: 374429 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig13-eps-converted-to.pdf figuras/fig13.eps>
+(epstopdf)             \includegraphics on input line 215.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig13-eps-converted-to.pdf, id=569, 1017.8025pt x 1115.16624pt>
+File: figuras/fig13-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig13-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig13-eps-converted-to.pdf  used on input line 215.
+(pdftex.def)             Requested size: 152.66379pt x 167.26772pt.
+ [40 <./figuras/fig15-eps-converted-to.pdf> <./figuras/fig13-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figuras/fig16.eps>
+(epstopdf)                    date: 2024-06-01 21:27:30
+(epstopdf)                    size: 2922621 bytes
+(epstopdf)             Output file: <figuras/fig16-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-06-01 21:28:29
+(epstopdf)                    size: 114283 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig16-eps-converted-to.pdf figuras/fig16.eps>
+(epstopdf)             \includegraphics on input line 225.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig16-eps-converted-to.pdf, id=579, 803.0pt x 602.25pt>
+File: figuras/fig16-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig16-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig16-eps-converted-to.pdf  used on input line 225.
+(pdftex.def)             Requested size: 240.90186pt x 180.67639pt.
+<figuras/fig17.png, id=581, 1204.5pt x 652.4375pt>
+File: figuras/fig17.png Graphic file (type png)
+<use figuras/fig17.png>
+Package pdftex.def Info: figuras/fig17.png  used on input line 234.
+(pdftex.def)             Requested size: 361.35278pt x 195.73276pt.
+<figuras/fig18.png, id=584, 1734.48pt x 1160.335pt>
+File: figuras/fig18.png Graphic file (type png)
+<use figuras/fig18.png>
+Package pdftex.def Info: figuras/fig18.png  used on input line 243.
+(pdftex.def)             Requested size: 346.88986pt x 232.06288pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[41 <./figuras/fig16-eps-converted-to.pdf> <./figuras/fig17.png>]
+Overfull \hbox (13.62878pt too wide) in paragraph at lines 253--254
+\T1/lmr/m/n/12 prop�si-tos como en-treten-i-mento, re-lax-am-ento, med-i-ta��o, cura, dan�a, apre-ci-a��o e pesquisa,
+ []
+
+[42 <./figuras/fig18.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 272.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [43]
+Package epstopdf Info: Source file: <figuras/fig09.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 3481702 bytes
+(epstopdf)             Output file: <figuras/fig09-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:43
+(epstopdf)                    size: 105933 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig09-eps-converted-to.pdf figuras/fig09.eps>
+(epstopdf)             \includegraphics on input line 286.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig09-eps-converted-to.pdf, id=612, 1104.125pt x 521.95pt>
+File: figuras/fig09-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig09-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig09-eps-converted-to.pdf  used on input line 286.
+(pdftex.def)             Requested size: 441.64218pt x 208.77629pt.
+ [44 <./figuras/fig09-eps-converted-to.pdf>]
+Overfull \hbox (4.96674pt too wide) in paragraph at lines 326--327
+[]\T1/lmr/m/n/12 O de-sen-volvi-mento da conex�o en-tre dis-pos-i-tivos de �u-dio, se-gundo Winer ([][]WINER[][],
+ []
+
+Package epstopdf Info: Source file: <figuras/fig11.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 658386 bytes
+(epstopdf)             Output file: <figuras/fig11-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:43
+(epstopdf)                    size: 21256 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig11-eps-converted-to.pdf figuras/fig11.eps>
+(epstopdf)             \includegraphics on input line 341.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig11-eps-converted-to.pdf, id=626, 602.25pt x 179.67125pt>
+File: figuras/fig11-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig11-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig11-eps-converted-to.pdf  used on input line 341.
+(pdftex.def)             Requested size: 240.89572pt x 71.86722pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[45]
+Package epstopdf Info: Source file: <figuras/fig12.eps>
+(epstopdf)                    date: 2024-04-12 13:20:56
+(epstopdf)                    size: 683900 bytes
+(epstopdf)             Output file: <figuras/fig12-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-04-12 14:37:44
+(epstopdf)                    size: 24777 bytes
+(epstopdf)             Command: <repstopdf --outfile=figuras/fig12-eps-converted-to.pdf figuras/fig12.eps>
+(epstopdf)             \includegraphics on input line 350.
+Package epstopdf Info: Output file is already uptodate.
+<figuras/fig12-eps-converted-to.pdf, id=636, 602.25pt x 186.6975pt>
+File: figuras/fig12-eps-converted-to.pdf Graphic file (type pdf)
+<use figuras/fig12-eps-converted-to.pdf>
+Package pdftex.def Info: figuras/fig12-eps-converted-to.pdf  used on input line 350.
+(pdftex.def)             Requested size: 240.89572pt x 74.67767pt.
+<figuras/fig19.png, id=640, 602.25pt x 437.635pt>
+File: figuras/fig19.png Graphic file (type png)
+<use figuras/fig19.png>
+Package pdftex.def Info: figuras/fig19.png  used on input line 363.
+(pdftex.def)             Requested size: 120.44786pt x 87.52544pt.
+ [46 <./figuras/fig11-eps-converted-to.pdf> <./figuras/fig12-eps-converted-to.pdf> <./figuras/fig19.png>]
+<figuras/fig20.png, id=651, 897.3525pt x 719.68875pt>
+File: figuras/fig20.png Graphic file (type png)
+<use figuras/fig20.png>
+Package pdftex.def Info: figuras/fig20.png  used on input line 372.
+(pdftex.def)             Requested size: 179.46732pt x 143.9352pt.
+<figuras/fig21.png, id=653, 803.0pt x 803.0pt>
+File: figuras/fig21.png Graphic file (type png)
+<use figuras/fig21.png>
+Package pdftex.def Info: figuras/fig21.png  used on input line 381.
+(pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
+<figuras/fig22.png, id=657, 1505.625pt x 1505.625pt>
+File: figuras/fig22.png Graphic file (type png)
+<use figuras/fig22.png>
+Package pdftex.def Info: figuras/fig22.png  used on input line 391.
+(pdftex.def)             Requested size: 150.57132pt x 150.57132pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[47 <./figuras/fig20.png> <./figuras/fig21.png>]
+<figuras/fig23.png, id=666, 702.625pt x 539.01375pt>
+File: figuras/fig23.png Graphic file (type png)
+<use figuras/fig23.png>
+Package pdftex.def Info: figuras/fig23.png  used on input line 401.
+(pdftex.def)             Requested size: 140.5225pt x 107.80083pt.
+ [48 <./figuras/fig22.png> <./figuras/fig23.png>]) (./editaveis/metodologia.tex [49] [50] [51
+
+]
+Overfull \hbox (1.00417pt too wide) in paragraph at lines 19--20
+[]\T1/lmr/m/n/12 Alguns equipa-men-tos at-u-ais con-tam com fer-ra-men-tas de uma mix-agem au-tom�tica,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52] [53]) (./editaveis/resultados.tex [54] [55] [56
+
+] [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]) (./editaveis/conclusao.tex [59] [60
+
+]) (./tcc.bbl (./tcc.brf)
+\tf@brf=\write5
+\openout5 = `tcc.brf'.
+
+ [61] [62
+
+]
+bibitemlist
+[63]) (./editaveis/anexos.tex [64]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 4.
+
+[65
+
+
+] [66]
+<figuras/fig40.png, id=840, 1011.78pt x 433.62pt>
+File: figuras/fig40.png Graphic file (type png)
+<use figuras/fig40.png>
+Package pdftex.def Info: figuras/fig40.png  used on input line 14.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+<figuras/fig41.png, id=841, 1011.78pt x 433.62pt>
+File: figuras/fig41.png Graphic file (type png)
+<use figuras/fig41.png>
+Package pdftex.def Info: figuras/fig41.png  used on input line 21.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+<figuras/fig24.png, id=842, 1011.78pt x 433.62pt>
+File: figuras/fig24.png Graphic file (type png)
+<use figuras/fig24.png>
+Package pdftex.def Info: figuras/fig24.png  used on input line 28.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig25.png, id=843, 1011.78pt x 433.62pt>
+File: figuras/fig25.png Graphic file (type png)
+<use figuras/fig25.png>
+Package pdftex.def Info: figuras/fig25.png  used on input line 35.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig28.png, id=844, 1011.78pt x 433.62pt>
+File: figuras/fig28.png Graphic file (type png)
+<use figuras/fig28.png>
+Package pdftex.def Info: figuras/fig28.png  used on input line 42.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig29.png, id=845, 1011.78pt x 433.62pt>
+File: figuras/fig29.png Graphic file (type png)
+<use figuras/fig29.png>
+Package pdftex.def Info: figuras/fig29.png  used on input line 49.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig26.png, id=846, 1011.78pt x 433.62pt>
+File: figuras/fig26.png Graphic file (type png)
+<use figuras/fig26.png>
+Package pdftex.def Info: figuras/fig26.png  used on input line 56.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig27.png, id=847, 1011.78pt x 433.62pt>
+File: figuras/fig27.png Graphic file (type png)
+<use figuras/fig27.png>
+Package pdftex.def Info: figuras/fig27.png  used on input line 63.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig30.png, id=848, 1011.78pt x 433.62pt>
+File: figuras/fig30.png Graphic file (type png)
+<use figuras/fig30.png>
+Package pdftex.def Info: figuras/fig30.png  used on input line 70.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig31.png, id=849, 1011.78pt x 433.62pt>
+File: figuras/fig31.png Graphic file (type png)
+<use figuras/fig31.png>
+Package pdftex.def Info: figuras/fig31.png  used on input line 77.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig32.png, id=850, 1011.78pt x 433.62pt>
+File: figuras/fig32.png Graphic file (type png)
+<use figuras/fig32.png>
+Package pdftex.def Info: figuras/fig32.png  used on input line 84.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig33.png, id=851, 1011.78pt x 433.62pt>
+File: figuras/fig33.png Graphic file (type png)
+<use figuras/fig33.png>
+Package pdftex.def Info: figuras/fig33.png  used on input line 91.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig34.png, id=852, 1011.78pt x 433.62pt>
+File: figuras/fig34.png Graphic file (type png)
+<use figuras/fig34.png>
+Package pdftex.def Info: figuras/fig34.png  used on input line 98.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig35.png, id=853, 1011.78pt x 433.62pt>
+File: figuras/fig35.png Graphic file (type png)
+<use figuras/fig35.png>
+Package pdftex.def Info: figuras/fig35.png  used on input line 105.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig36.png, id=854, 1011.78pt x 433.62pt>
+File: figuras/fig36.png Graphic file (type png)
+<use figuras/fig36.png>
+Package pdftex.def Info: figuras/fig36.png  used on input line 112.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig37.png, id=855, 1011.78pt x 433.62pt>
+File: figuras/fig37.png Graphic file (type png)
+<use figuras/fig37.png>
+Package pdftex.def Info: figuras/fig37.png  used on input line 119.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig38.png, id=856, 1011.78pt x 433.62pt>
+File: figuras/fig38.png Graphic file (type png)
+<use figuras/fig38.png>
+Package pdftex.def Info: figuras/fig38.png  used on input line 126.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig39.png, id=857, 1011.78pt x 433.62pt>
+File: figuras/fig39.png Graphic file (type png)
+<use figuras/fig39.png>
+Package pdftex.def Info: figuras/fig39.png  used on input line 133.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig42.png, id=858, 1011.78pt x 433.62pt>
+File: figuras/fig42.png Graphic file (type png)
+<use figuras/fig42.png>
+Package pdftex.def Info: figuras/fig42.png  used on input line 140.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig43.png, id=859, 1011.78pt x 433.62pt>
+File: figuras/fig43.png Graphic file (type png)
+<use figuras/fig43.png>
+Package pdftex.def Info: figuras/fig43.png  used on input line 147.
+(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./tcc.ind) 
+AED: lastpage setting LastPage
+[67
+
+ <./figuras/fig40.png> <./figuras/fig41.png>] [68 <./figuras/fig24.png> <./figuras/fig25.png> <./figuras/fig28.png>] [69 <./figuras/fig29.png> <./figuras/fig26.png> <./figuras/fig27.png>] [70 <./figuras/fig30.png> <./figuras/fig31.png> <./figuras/fig32.png>] [71 <./figuras/fig33.png> <./figuras/fig34.png> <./figuras/fig35.png>] [72 <./figuras/fig36.png> <./figuras/fig37.png> <./figuras/fig38.png>] [73 <./figuras/fig39.png> <./figuras/fig42.png> <./figuras/fig43.png>]
+\tf@lof=\write6
+\openout6 = `tcc.lof'.
+
+\tf@lot=\write7
+\openout7 = `tcc.lot'.
+
+\tf@toc=\write8
+\openout8 = `tcc.toc'.
+
+ (./tcc.aux)
+Package rerunfilecheck Info: File `tcc.brf' has not changed.
+(rerunfilecheck)             Checksum: C49D7DC9F3471CDC006F866108A2BBBF;2118.
+ ) 
+Here is how much of TeX's memory you used:
+ 17214 strings out of 480247
+ 274947 string characters out of 5896151
+ 602599 words of memory out of 5000000
+ 34505 multiletter control sequences out of 15000+600000
+ 549777 words of font info for 71 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 80i,13n,96p,1183b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on tcc.pdf (75 pages, 15405079 bytes).
+PDF statistics:
+ 1279 PDF objects out of 1440 (max. 8388607)
+ 1086 compressed objects within 11 object streams
+ 238 named destinations out of 1000 (max. 500000)
+ 913 words of extra memory for PDF output out of 10000 (max. 10000000)
+
