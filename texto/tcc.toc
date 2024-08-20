@@ -45,48 +45,50 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{51}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Proposta Geral}{51}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Prova de Conceito}{51}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}\textit {PureData}}{51}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Implementação de Mixagem}{51}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Implementação de Efeitos}{51}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Proposta de Implementação}{51}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Implementação em \textit {Hardware}}{51}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Implementação em \textit {Software}}{51}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Integração}{51}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Proposta de Implementação - Old Section}{51}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Documentação}{52}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Levantamento de Requisitos}{52}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Análise do Questionário}{54}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Informações Demográficas}{54}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Tipo de DJ e Experiência}{54}{subsection.3.4.5}%
-\contentsline {subsection}{\numberline {3.4.6}Setup - Hardware e Software}{55}{subsection.3.4.6}%
-\contentsline {subsection}{\numberline {3.4.7}Estilos musicais e aquisição de músicas}{56}{subsection.3.4.7}%
-\contentsline {subsection}{\numberline {3.4.8}Proposta de Implementação do Protótipo}{56}{subsection.3.4.8}%
-\contentsline {subsection}{\numberline {3.4.9}Diagramas de Subpartes}{57}{subsection.3.4.9}%
-\contentsline {subsection}{\numberline {3.4.10}Diagrama de Integração}{57}{subsection.3.4.10}%
-\contentsline {subsection}{\numberline {3.4.11}Diagrama de Comunicação}{57}{subsection.3.4.11}%
-\contentsline {subsection}{\numberline {3.4.12}Fluxograma}{57}{subsection.3.4.12}%
-\contentsline {subsection}{\numberline {3.4.13}Protótipo de Interface de Usuário}{57}{subsection.3.4.13}%
-\contentsline {subsection}{\numberline {3.4.14}Documento de Especificação Técnica}{57}{subsection.3.4.14}%
-\contentsline {subsection}{\numberline {3.4.15}Documento de Plano de Teste}{57}{subsection.3.4.15}%
+\contentsline {section}{\numberline {3.2}Levantamento de Requisitos}{53}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Requisitos Funcionais}{53}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Requisitos Não Funcionais}{53}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Requisitos de Interface do Usuário}{53}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Requisitos de Sistema}{54}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Requisitos de Desempenho}{54}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Requisitos de Segurança}{54}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Requisitos de Manutenção}{54}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Requisitos de Compatibilidade}{54}{subsection.3.2.8}%
+\contentsline {subsection}{\numberline {3.2.9}Diagrama de Subpartes}{55}{subsection.3.2.9}%
+\contentsline {subsection}{\numberline {3.2.10}Fluxograma de Sub-blocos}{55}{subsection.3.2.10}%
+\contentsline {section}{\numberline {3.3}Prova de Conceito}{55}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}\textit {PureData}}{55}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Implementação de Mixagem}{55}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Implementação de Efeitos}{55}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Proposta de Implementação}{55}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Implementação em \textit {Hardware}}{55}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Implementação em \textit {Software}}{55}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Integração}{55}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Diagramas de Subpartes}{55}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Diagrama de Integração}{55}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Diagrama de Comunicação}{55}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Fluxograma}{55}{subsection.3.4.7}%
+\contentsline {subsection}{\numberline {3.4.8}Protótipo de Interface de Usuário}{55}{subsection.3.4.8}%
+\contentsline {subsection}{\numberline {3.4.9}Documento de Especificação Técnica}{55}{subsection.3.4.9}%
+\contentsline {subsection}{\numberline {3.4.10}Documento de Plano de Teste}{55}{subsection.3.4.10}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{59}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Resultados de Filtragem}{59}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{61}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{61}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{61}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{61}{subsection.4.2.3}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{57}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resultados de Filtragem}{57}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{59}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{59}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{59}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{59}{subsection.4.2.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{63}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{61}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{65}{section*.18}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{63}{section*.18}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{67}{section*.19}%
+\contentsline {part}{\uppercase {Anexos}}{65}{section*.19}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{69}{appendix.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{67}{appendix.anexochapback.1}%

@@ -2,160 +2,111 @@
 
 
 \section{Proposta Geral}
-Nessa seção, inserir a proposta geral em termos de funcionalidade e de requisitos preliminares de entrada e de saída. 
-
-\section{Prova de Conceito}
-
-\subsection{\textit{PureData}}
-
-\subsection{Implementação de Mixagem}
-
-\subsection{Implementação de Efeitos}
-
-\section{Proposta de Implementação}
-
-\subsection{Implementação em \textit{Hardware}}
-
-\subsection{Implementação em \textit{Software}}
-
-\subsection{Integração}
-
-\section{Proposta de Implementação - Old Section}
-Ao analisar a história de mixers e equipamentos e o mercado atual, chega-se a conclusão de que a evolução dos equipamentos foi e é realizada partindo de um modelo que se baseia na mixagem feita em vinil. Ao longo do tempo, acrescentou-se novas funcionalidades e formas de interações, porém, na maioria das vezes, mantendo o jogger para atraso e avanço da música, fadder para volume e knobs para frequências.
+Ao analisar a história de mixers e equipamentos e o mercado atual, chega-se a conclusão de que a evolução dos equipamentos foi e é realizada partindo de um modelo que se baseia na mixagem feita em vinil. Ao longo do tempo, acrescentou-se novas funcionalidades e formas de interações, porém, na maioria das vezes, mantendo o jogger para atraso e avanço da música, \textit{fadder} para volume e knobs para frequências.
 \par
-Além disso, conforme a evolução da microeletrônica, equipamentos começaram a migrar aos poucos para a eletrônica digital, culminando na utilização de um DSP para o processamento do sinal de áudio para comportar formatos de música com baixa compressão como WAV. e FLAC. 
+Além disso, conforme a evolução da microeletrônica, equipamentos começaram a migrar aos poucos para a eletrônica digital, culminando na utilização de um DSP para o processamento do sinal de áudio para comportar formatos de música com baixa compressão como WAV e FLAC. 
 \par
 Assim, o que se vê hoje são dois extremos: equipamentos extremamente caros mas que não necessitam da presença de um computador e equipamentos dependentes, que são mais baratos e acabam possuindo melhor qualidade nos processamentos, que dificultam a mobilidade.
 \par
-Dessa forma, o intuito é conceber um mixer dotado de uma interface inovadora, que se destaque em relação aos modelos tradicionais por sua intuitividade. Para tanto, opta-se pela utilização da Raspberry Pi, aproveitando sua capacidade de processamento de sinais e sua flexibilidade para criar uma interface personalizada. Tal abordagem se mostra vantajosa em comparação com os equipamentos convencionais, como as CDJs, não apenas devido à sua funcionalidade aprimorada, mas também por apresentar um custo mais acessível.
-
-\subsection{Documentação}
-Nas seções subjacentes, há uma série de documentações que visam a descrever e delinear o projeto a partir de diferentes óticas. Além disso, a informação contida de forma textual se encontrará melhor descrita graficamente através de diagrama, fluxogramas e outras ferramentas.
-
-\subsection{Levantamento de Requisitos}
-\textbf{Requisitos Funcionais:}
-\begin{enumerate}[label=\textbullet]
-\item O sistema deve permitir ao DJ ajustar o volume de cada canal de áudio individualmente.
-\item O sistema deve fornecer controles de equalização (graves, médios, agudos) para cada canal de áudio.
-\item O sistema deve permitir ao DJ utilizar tanto CDJs quanto toca-discos.
-\item O sistema deve permitir ao DJ escutar canais não ativados ao público (cue).
-
-\end{enumerate}
-
-\textbf{Requisitos Não Funcionais:}
-\begin{enumerate}[label=\textbullet]
-\item O sistema deve ser capaz de responder aos comandos do DJ com latência mínima, garantindo uma experiência de mixagem fluida.
-\item A interface do usuário do sistema deve ser intuitiva e fácil de usar, permitindo que o DJ faça ajustes rapidamente durante a performance.
-\item O sistema deve ser confiável e estável, capaz de lidar com longos períodos de uso contínuo sem falhas.
-\item O sistema deve oferecer uma qualidade de som de alta fidelidade, garantindo que o áudio reproduzido seja claro e sem distorções.
-\end{enumerate}
-
-\textbf{Requisitos de Interface do Usuário:}
-\begin{enumerate}[label=\textbullet]
-%\item A interface do mixer deve incluir botões físicos ou controles táteis para ajustar o volume, equalização e efeitos de áudio.
-\item A interface do mixer deve incluir indicadores visuais, como LEDs ou telas LCD, para mostrar o status dos diferentes canais e configurações.
-\item  A interface do mixer deve ser configurável para facilitar a forma de mixagem do DJ.
-%\item A interface do mixer deve ser organizada de forma lógica e intuitiva, com controles agrupados por função para facilitar a navegação.
-\end{enumerate}
-
-\textbf{Requisitos de Sistema:}
-\begin{enumerate}[label=\textbullet]
-\item O sistema deve ser compatível com uma variedade de dispositivos de áudio externos, como CDJs e toca-discos.
-\item O sistema deve ser alimentado por uma fonte de energia padrão, como uma tomada elétrica.
-\item O sistema deve incluir interfaces de entrada e saída de áudio padrão, como conectores RCA ou XLR, para facilitar a conexão com outros equipamentos de áudio.
-\end{enumerate}
-
-\textbf{Requisitos de Desempenho:}
-\begin{enumerate}[label=\textbullet]
-\item O sistema deve ser capaz de lidar com até dois canais de áudio simultaneamente, sem comprometer a qualidade do som ou a responsividade dos controles.
-\item O sistema deve suportar uma ampla gama de frequências de áudio, garantindo que os graves sejam reproduzidos com punch e os agudos sejam nítidos e claros.
-\end{enumerate}
-
-\textbf{Requisitos de Interface de Usuário:}
-\begin{enumerate}[label=\textbullet]
-%\item O sistema deve fornecer feedback visual claro para indicar quando um efeito está ativo ou desativado.
-\item O sistema deve permitir ao DJ personalizar a aparência e layout da interface do usuário para atender às suas preferências individuais.
-\item O sistema deve ser compatível com dispositivos de entrada externos, como controladores MIDI ou dispositivos de toque, para permitir diferentes estilos de interação do usuário.
-\end{enumerate}
-
-\textbf{Requisitos de Segurança:}
-\begin{enumerate}[label=\textbullet]
-\item O sistema deve ser projetado para minimizar o risco de danos aos equipamentos de áudio conectados, como proteção contra sobrecarga ou curto-circuito.
-\end{enumerate}
-
-\textbf{Requisitos de Manutenção:}
-\begin{enumerate}[label=\textbullet]
-\item O sistema deve ser projetado para facilitar a manutenção e reparo, com acesso fácil aos componentes internos e documentação clara sobre procedimentos de serviço.
-\end{enumerate}
-
-\textbf{Requisitos de Compatibilidade:}
-\begin{enumerate}[label=\textbullet]
-\item O sistema deve ser compatível com uma variedade de formatos de áudio comuns, como WAV, MP3 e FLAC.
-\end{enumerate}
-
-\subsection{Análise do Questionário}
-
-Um questionário foi aplicado pelo Digital DJ Tips; um portal de notícias e de cursos cuja abrangência possibilitou a coleta de mais de 1500 respostas ao redor do mundo, durante o dezembro de 2023 e janeiro de 2024. O questionário abrangeu informações divididas em seções como: informações demográficas, tipos e experiências, setup (hardware e software), estilos musicais e fontes musicais e, como último, social media. Através da análise do questionário, foi possível levantar algumas histórias de usuários. 
-
-\subsection{Informações Demográficas}
-Nesse quesito, obteve-se uma distribuição crescente conforme a idade dos DJs. 25 a 34 anos teve 18,86\%, 35 a 44 teve 28,45\% e 45 a 54 obteve 32,33\%. No questionário, não obteve-se respostas significativas de brasileiros. Dessa forma, esse perfil não corresponderia ao perfil do brasileiro.
+Além disso, em experiência adquiridas com \textit{DJs}, observa-se que uma das maiores dificuldades que iniciantes possuem é realizar um ajuste fino entre as bandas de frequências quando lidam com \textit{mixers} clássicos de ajustes de três bandas. E é essa habilidade que permite o artista de destacar elementos de músicas e criar uma nova atmosfera. Apesar disso, quando o estilo de gênero de um \textit{DJ} está consolidad em uma área, a mixagem se torna mais mecânica, de forma que os elementos entre as música selecionadas se tornam semelhantes, o que permite maior flexibilidade na alteração de parâmetros de mixagem. Ou seja, há menos margem para que uma colagem sonora feita se torne desagradável aos ouvidos.
 \par
-Quanto a renda anual em atividades gerais, em dólares, as maiores faixas foram 25k - 50k, 50k - 75k, seguidos por 0 - 15k. Além disso, quanto a renda advindo da atividade de DJ, 40,86\% não recebe pela atividade, já para 34,47\% dos entrevistados 10\% de sua renda advém de discotecagem.
-
-\subsection{Tipo de DJ e Experiência}
-A maioria, 53,92\%, havia começado a tocar há mais de 10 anos. Além disso, percebe-se há um aumento de DJs que permanecem na atividade até 3 anos, porém, depois começa a cair. Porém, percebe-se que a maior faixa é daqueles que permanecem há muito tempo na atividade, há mais de 10 anos.
+Dessa forma, o intuito é conceber um \textit{mixer} que conte com um controle central, que visa controlar duas músicas, ou dois \textit{decks}. Em contrapartida à estrutura clássica de mixagem, que conta com controles de ganho de três bandas de frequência para cada canal, a proposta visa a utilização de um filtro passa-altas para cada canal. 
 \par
-Outro ponto importante é o tipo de DJ que os entrevistadores são. A maioria, 27,49\% toca regularmente em público, já 25,66\% toca de vez em quando, logo em seguida estão: pessoas que tocam ocasionalmente para amigos e família.
+O dispostivo conta com dois canais de entrada, ou seja, duas músicas de entrada. Conforme um filtro está passando toda a banda de um canal, o outro filtro automaticamente está rejeitando o outro canal. E conforme o controle central avança em direção ao canal dois, a frequência de corte do primeiro canal aumenta, diminuindo a presença da música um, enquanto a frequência de corte do canal dois diminui, aumentando a presença de elementos da música dois. 
 \par
-Outro dado importante é que a maioria dos entrevistados são hobbistas/bedroom ou DJs focados em eventos como casamentos, aniversário, corporativos. Em seguida, encontram-se os que chegam a tocar mas não levam a atividade como fonte de renda. Em seguida, encontram-se os que têm a discotecagem como profissão, como: residentes, djs e produtores. Portanto, a maioria são hobbistas e DJs focados em eventos, sem ser clubes.
+Assim, um controle central de frequência comanda ambas frequências de corte. Quando esse controle está em um extremo, apenas um canal é transmitido para a saída. Já no outro extremo, apenas o outro canal é transmitido. E conforme o controle avança de um extremo a outro, uma combinação entre as duas músicas é transmitida à saída.
 \par
-Porém, um dado interessante é que a maioria deseja se tornar um dj que vive em tour ou que possui residência em algum clube. Além disso, quanto a transmitir os sets, apenas 10\% disnponibiliza online os seus sets produzidos. Porém, quase 50\% almeja a transmissão de seus sets pela internet.
+Alguns equipamentos atuais contam com ferramentas de uma mixagem automática, na qual uma lista de músicas é selecionada. O próprio sistema realiza uma sincronia de tons e realiza a transição entre um canal e outro, através de um sistema de \textit{fader}, no qual o volume de um canal cai, enquanto do outro aumenta, até que a transição para a segunda música esteja finalizada.
 \par
-Dessa forma, percebe-se todo tipo de estilo de DJ: aqueles que tocam em locais profissionais que provavelmente já contam com os equipamentos profissionais próprios e conforme cai a porcentagem dos resultados, percebe-se a diminuição da complexidade do equipamento devido ao sistema de som local.
-
-\subsection{Setup - Hardware e Software}
-Quanto ao equipamento utilizado, 56\% toca através de um notebook e de uma controladora. Em seguida, 15\% possui XDJ (All-in-one standalone). Além disso, 56\% utiliza Pioneer como marca principal em seus equipamentos, seguido pela Denon. 
+Porém, esse tipo de sistema não leva em conta nuances da música ou qual seria o melhor momento para que a entrada da próxima música aconteça.
 \par
-Quanto ao montante investido no setup, a maioria gastor entre USD 1500 a 3000, seguidos por USD 1000 a 1500 e USD 3000 a 5000.
+Assim, o sistema proposto permite ao artista uma mixagem mais simples, sem grandes preocupações acerca do controle de bandas de frequência; modelo que pode facilitar mixagem para artistas que possuem uma biblioteca similar e consolidada ou jovens artistas que ainda não possuem total controle sobre as bandas de frequência mas que queiram experimentar.
 \par
-Outro dado importante, é que 63\% das pessoas visam realizar uma atualização do setup a cada ano. Dentre aqueles que não podem, metade desses não fazem devido aos custos relacionados. E mesmo entre esses, 53\% gostaria de adquirir Pioneer. 
+Para além de uma mixagem mais simples, o sistema propõe o uso de efeitos para que o artista tenha mais liberdade durante a criação de sua mixagem. Dessa forma, o sistema conta com a presença de dois efeitos: \textit{delay} e \textit{reverb}, que podem funcionar de forma automática; também controlada pelo botão central.
 \par
-37\% dos entrevistados disse que, quando são contratados, devem levar o próprio equipamento.
+A lógica de funcionamento do efeito leva em consideração a posição do botão central, já que quando o mesmo se encontra em uma posição na qual duas músicas estão sendo tocadas, entende-se que uma transição está acontecendo. Dessa forma, de forma automatizada, a presença do efeito parte do nulo até alcançar o seu máximo (na posição do meio do botão central) e conforme a posição do botão vai a uma extremidade, a presença do efeito diminui, pois se considera que a transição já foi realizada.
 \par
-Quanto à inovação mais interessante, segundo os entrevistados, está a possibilidade, que tem sido vista em controladoras atuais, de separar uma música em elementos e ter a capacidade de tanto separar quanto de aplicar efeitos apenas nesse grupo de elementos em tempo real. Além disso, a possibilidade de utilizar uma biblioteca na nuvem e o desenvolvimento de softwares que mixam automaticamente também deixaram os entrevistadores animados. 
+Portanto, a proposta deste projeto visa implementar um sistema que leia dois sinais analógicos, correspondentes a sinais músicais advindo de toca-discos, CDJs ou qualquer equipamento que transmita sinais de áudio analógicos. Esses sinais serão processados em tempo real a partir de filtros passa-altas que são controlados por um botão central. Além disso, o sistema deve permitir ao usuário a possibilidade de selecionar qual efeito ele deseja utilizar, de forma que se selecione a quantidade da presença do efeito, possibilitando ao usuário rejeitar a presença do efeito quando a presença for nula.
 \par
-Quanto às características mais importantes ao se adquirir novos equipamentos, a qualidade e durabilidade se encontraram em primeiro lugar, seguido de recursos, preços, marcas e integrações.
-\par
-O software utilizado pelo DJ precisa poder ser integrado ao sistema de mixagem. O software é como a biblioteca é organizada e como o pendrive é organizado. Dessa forma, ao escolher um software, a pessoa deve levar em consideração os equipamentos que ela pode utilizar. Assim, 2/3 dos entrevistados se dividiram entre Rekordbox e Serato DJ.
+A implementação visa utilizar botões \textit{sliders} para o controle central e presença de efeitos e um botão \textit{on}/\textit{off} para a seleção do efeito. 
 
-\subsection{Estilos musicais e aquisição de músicas}
+\section{Levantamento de Requisitos}
 
-56\% dos DJs mixa utilizando diversos tipos de gêneros. Em contrapartida, 1/4 dos DJs só mixa focado em um estilo. A diferença entre a mixagem entre um estilo e vários é a habilidade de elencar elementos semelhantes ou contrastantes para realizar uma mixagem.
-\par
-Dentre os gêneros mais tocados, encontram-se house, hip hop, pop, tech house, techno, bass, EDM, disco, deep house e outros. Para servir como base da mixagem, DJs utilizam outros gêneros para servir como construção e presença de elementos. Os gêneros mais utilizados para essa presença são house, disco, hiphop, tech house, deep house, funk e techno. Porém, a presença de gêneros é bem diversa.
-\subsection{Proposta de Implementação do Protótipo}
+O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer sistema, pois define as funcionalidades e características que ele deve possuir para atender às necessidades dos usuários finais. Nesta seção, são apresentados os requisitos funcionais e não funcionais, que especificam o comportamento esperado do sistema, assim como as restrições e qualidades que devem ser atendidas. Os requisitos foram organizados em categorias que abrangem desde aspectos de desempenho e interface do usuário até segurança e manutenção, assegurando uma visão completa e detalhada do que o sistema deve entrega
 
-Quais são as funcionalidades necessárias para um Protótipo:
-
-- Volume: o controle de volume exige dois knobs ou sliders: dois knobs ou sliders no total
-
-- Frequência: três knobs para cada canal: 6 no total
-
-- Trim: um knob para cada canal: 2 no total
-
-- Master: 1 knob no total
-
-- Headphone: 1 knob no total
-
-Ao todo, 10 potenciômetros/knobs ou 8 knobs + 2 sliders
-
-Quais botões são necessários?
-
+\subsection{Requisitos Funcionais}
 \begin{itemize}
-	\item On/off -> 1 no otal
-	\item Cue -> 2 no total
-	\item Master -> 2 no
+    \item O sistema deve permitir ao \textit{DJ} utilizar tanto CDJs quanto toca-discos.
+    \item O sistema deve permitir ao \textit{DJ} controlar a presença dos dois canais.
+    \item aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    \item bbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+    \item aaaaaaaaaaaaaaaaaaaaaa
+
 \end{itemize}
+
+\subsection{Requisitos Não Funcionais}
+\begin{itemize}
+    \item O sistema deve responder aos comandos do \textit{DJ} com latência mínima, garantindo uma experiência de mixagem fluida.
+    \item A interface do usuário deve ser intuitiva e fácil de usar, permitindo que o \textit{DJ} faça ajustes rapidamente durante a performance.
+    \item O sistema deve ser confiável e estável, capaz de lidar com longos períodos de uso contínuo sem falhas.
+    \item O sistema deve oferecer uma qualidade de som de alta fidelidade, garantindo que o áudio reproduzido seja claro e com mínimas distorções.
+\end{itemize}
+
+\subsection{Requisitos de Interface do Usuário}
+\begin{itemize}
+    \item A interface do mixer deve incluir botões físicos ou controles táteis para ajuste de frequência e efeitos de áudio.
+    \item A interface do mixer deve ser organizada de forma lógica e intuitiva, com controles agrupados por função para facilitar a navegação.
+    \item O sistema deve permitir ao \textit{DJ} personalizar a aparência e layout da interface de usuário conforme suas preferências.
+    \item O sistema deve ser compatível com dispositivos de entrada externos, como controladores MIDI ou dispositivos de toque, para suportar diferentes estilos de interação.
+\end{itemize}
+
+\subsection{Requisitos de Sistema}
+\begin{itemize}
+    \item O sistema deve ser compatível com uma variedade de dispositivos de áudio externos, como CDJs e toca-discos.
+    \item O sistema deve ser alimentado por uma fonte de energia padrão, como uma tomada elétrica.
+    \item O sistema deve incluir interfaces de entrada e saída de áudio padrão, como conectores RCA ou XLR, para facilitar a conexão com outros equipamentos de áudio.
+\end{itemize}
+
+\subsection{Requisitos de Desempenho}
+\begin{itemize}
+    \item O sistema deve ser capaz de lidar com até dois canais de áudio simultaneamente, sem comprometer a qualidade do som ou a responsividade dos controles.
+    \item O sistema deve suportar uma ampla gama de frequências de áudio, garantindo que os graves sejam reproduzidos com punch e os agudos sejam nítidos e claros.
+\end{itemize}
+
+\subsection{Requisitos de Segurança}
+\begin{itemize}
+    \item O sistema deve ser projetado para minimizar o risco de danos aos equipamentos de áudio conectados, oferecendo proteção contra sobrecarga ou curto-circuito.
+\end{itemize}
+
+\subsection{Requisitos de Manutenção}
+\begin{itemize}
+    \item O sistema deve ser projetado para facilitar a manutenção e reparo, com acesso fácil aos componentes internos e documentação clara sobre procedimentos de serviço.
+\end{itemize}
+
+\subsection{Requisitos de Compatibilidade}
+\begin{itemize}
+    \item O sistema deve ser compatível com uma variedade de formatos de áudio comuns, como WAV, MP3 e FLAC.
+\end{itemize}
+
+\subsection{Diagrama de Subpartes}
+
+\subsection{Fluxograma de Sub-blocos}
+
+\section{Prova de Conceito}
+
+	\subsection{\textit{PureData}}
+
+	\subsection{Implementação de Mixagem}
+
+	\subsection{Implementação de Efeitos}
+
+\section{Proposta de Implementação}
+
+	\subsection{Implementação em \textit{Hardware}}
+
+	\subsection{Implementação em \textit{Software}}
+
+	\subsection{Integração}
 
 \subsection{Diagramas de Subpartes}
 \subsection{Diagrama de Integração}
