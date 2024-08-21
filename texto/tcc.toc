@@ -57,7 +57,7 @@
 \contentsline {section}{\numberline {3.3}Diagrama do Sistema}{55}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Fluxogramas de Sub-blocos}{55}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Bloco de Conversão AD}{55}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Bloco de Leitura do Botão Central}{55}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}Bloco de Filtragem}{55}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Bloco de Automação de Efeitos}{55}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Bloco de Efeitos - Delay}{55}{subsection.3.4.4}%
 \contentsline {subsection}{\numberline {3.4.5}Bloco de Efeitos - Reverb}{55}{subsection.3.4.5}%
@@ -70,14 +70,10 @@
 \contentsline {section}{\numberline {3.6}Proposta de Implementação}{60}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Implementação em \textit {Hardware}}{60}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Implementação em \textit {Software}}{60}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Integração}{60}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Diagramas de Subpartes}{60}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Diagrama de Integração}{60}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}Diagrama de Comunicação}{60}{subsection.3.6.6}%
-\contentsline {subsection}{\numberline {3.6.7}Fluxograma}{60}{subsection.3.6.7}%
-\contentsline {subsection}{\numberline {3.6.8}Protótipo de Interface de Usuário}{60}{subsection.3.6.8}%
-\contentsline {subsection}{\numberline {3.6.9}Documento de Especificação Técnica}{60}{subsection.3.6.9}%
-\contentsline {subsection}{\numberline {3.6.10}Documento de Plano de Teste}{60}{subsection.3.6.10}%
+\contentsline {subsection}{\numberline {3.6.3}Diagrama de Integração}{60}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Protótipo de Interface de Usuário}{60}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Documento de Especificação Técnica}{60}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Documento de Plano de Teste}{60}{subsection.3.6.6}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{61}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Resultados de Filtragem}{61}{section.4.1}%
