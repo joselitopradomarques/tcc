@@ -2,7 +2,7 @@ Metodologia
 
 - Proposta Geral
 	- Explicar o sistema que desejo e por que é assim [done]
-	- Levantamento de Requisitos [today]
+	- Levantamento de Requisitos [done]
 	- Diagrama de Subpartes [to do] [to write]
 		- Elementos do diagrama:
 			- Aqusição de sinais
@@ -25,9 +25,9 @@ Metodologia
 			- Bloco de Conversão DA [to do] [to write]
 
 - Prova de Conceito
-	- PureData  [to do] [to write] [today]
-	- Implementação de Filtragem [today]
-	- Implementação de Efeitos [to do] [to write]
+	- PureData  [done]
+	- Implementação de Filtragem [done]
+	- Implementação de Efeitos [done]
 
 - Proposta de Implementação
 	- Implementação em Hardware [to do] [to write]

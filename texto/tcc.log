@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  19 AUG 2024 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  21 AUG 2024 15:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -916,13 +916,10 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 
 Underfull \vbox (badness 1325) has occurred while \output is active []
 
- [23]
+ [23] [24]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 90.
-)
-Underfull \vbox (badness 2689) has occurred while \output is active []
-
- [24] [25] [26
+(Font)              <14.4> on input line 97.
+) [25] [26
 
 ]) (./editaveis/introducao.tex) (./editaveis/fundamentacao.tex [27
 
@@ -942,7 +939,7 @@ Package epstopdf Info: Source file: <figuras/fig01.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig01-eps-converted-to.pdf figuras/fig01.eps>
 (epstopdf)             \includegraphics on input line 26.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig01-eps-converted-to.pdf, id=422, 568.1225pt x 234.8775pt>
+<figuras/fig01-eps-converted-to.pdf, id=453, 568.1225pt x 234.8775pt>
 File: figuras/fig01-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig01-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig01-eps-converted-to.pdf  used on input line 26.
@@ -960,7 +957,7 @@ Package epstopdf Info: Source file: <figuras/fig02.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig02-eps-converted-to.pdf figuras/fig02.eps>
 (epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig02-eps-converted-to.pdf, id=433, 571.13374pt x 264.99pt>
+<figuras/fig02-eps-converted-to.pdf, id=464, 571.13374pt x 264.99pt>
 File: figuras/fig02-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig02-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig02-eps-converted-to.pdf  used on input line 40.
@@ -975,7 +972,7 @@ Package epstopdf Info: Source file: <figuras/fig03.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig03-eps-converted-to.pdf figuras/fig03.eps>
 (epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig03-eps-converted-to.pdf, id=447, 555.07375pt x 178.6675pt>
+<figuras/fig03-eps-converted-to.pdf, id=478, 555.07375pt x 178.6675pt>
 File: figuras/fig03-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig03-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig03-eps-converted-to.pdf  used on input line 66.
@@ -990,7 +987,7 @@ Package epstopdf Info: Source file: <figuras/fig04.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig04-eps-converted-to.pdf figuras/fig04.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig04-eps-converted-to.pdf, id=467, 760.8425pt x 442.65375pt>
+<figuras/fig04-eps-converted-to.pdf, id=498, 760.8425pt x 442.65375pt>
 File: figuras/fig04-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig04-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig04-eps-converted-to.pdf  used on input line 97.
@@ -1009,7 +1006,7 @@ Package epstopdf Info: Source file: <figuras/fig05.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig05-eps-converted-to.pdf figuras/fig05.eps>
 (epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig05-eps-converted-to.pdf, id=490, 433.62pt x 163.61125pt>
+<figuras/fig05-eps-converted-to.pdf, id=520, 433.62pt x 163.61125pt>
 File: figuras/fig05-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig05-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig05-eps-converted-to.pdf  used on input line 117.
@@ -1028,7 +1025,7 @@ Package epstopdf Info: Source file: <figuras/fig06.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig06-eps-converted-to.pdf figuras/fig06.eps>
 (epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig06-eps-converted-to.pdf, id=502, 505.89pt x 157.58875pt>
+<figuras/fig06-eps-converted-to.pdf, id=532, 505.89pt x 157.58875pt>
 File: figuras/fig06-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig06-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig06-eps-converted-to.pdf  used on input line 126.
@@ -1042,7 +1039,7 @@ Package epstopdf Info: Source file: <figuras/fig07.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig07-eps-converted-to.pdf figuras/fig07.eps>
 (epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig07-eps-converted-to.pdf, id=506, 370.38374pt x 131.49126pt>
+<figuras/fig07-eps-converted-to.pdf, id=536, 370.38374pt x 131.49126pt>
 File: figuras/fig07-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig07-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig07-eps-converted-to.pdf  used on input line 140.
@@ -1064,7 +1061,7 @@ Package epstopdf Info: Source file: <figuras/fig08.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig08-eps-converted-to.pdf figuras/fig08.eps>
 (epstopdf)             \includegraphics on input line 172.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig08-eps-converted-to.pdf, id=546, 602.25pt x 602.25pt>
+<figuras/fig08-eps-converted-to.pdf, id=576, 602.25pt x 602.25pt>
 File: figuras/fig08-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig08-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig08-eps-converted-to.pdf  used on input line 172.
@@ -1079,7 +1076,7 @@ Package epstopdf Info: Source file: <figuras/fig10.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig10-eps-converted-to.pdf figuras/fig10.eps>
 (epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig10-eps-converted-to.pdf, id=554, 642.4pt x 327.2225pt>
+<figuras/fig10-eps-converted-to.pdf, id=584, 642.4pt x 327.2225pt>
 File: figuras/fig10-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig10-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig10-eps-converted-to.pdf  used on input line 183.
@@ -1093,7 +1090,7 @@ Package epstopdf Info: Source file: <figuras/fig14.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig14-eps-converted-to.pdf figuras/fig14.eps>
 (epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig14-eps-converted-to.pdf, id=556, 1204.5pt x 764.8575pt>
+<figuras/fig14-eps-converted-to.pdf, id=586, 1204.5pt x 764.8575pt>
 File: figuras/fig14-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig14-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig14-eps-converted-to.pdf  used on input line 192.
@@ -1108,7 +1105,7 @@ Package epstopdf Info: Source file: <figuras/fig15.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig15-eps-converted-to.pdf figuras/fig15.eps>
 (epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig15-eps-converted-to.pdf, id=566, 1003.75pt x 369.38pt>
+<figuras/fig15-eps-converted-to.pdf, id=596, 1003.75pt x 369.38pt>
 File: figuras/fig15-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig15-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig15-eps-converted-to.pdf  used on input line 202.
@@ -1122,7 +1119,7 @@ Package epstopdf Info: Source file: <figuras/fig13.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig13-eps-converted-to.pdf figuras/fig13.eps>
 (epstopdf)             \includegraphics on input line 215.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig13-eps-converted-to.pdf, id=569, 1017.8025pt x 1115.16624pt>
+<figuras/fig13-eps-converted-to.pdf, id=599, 1017.8025pt x 1115.16624pt>
 File: figuras/fig13-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig13-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig13-eps-converted-to.pdf  used on input line 215.
@@ -1137,17 +1134,17 @@ Package epstopdf Info: Source file: <figuras/fig16.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig16-eps-converted-to.pdf figuras/fig16.eps>
 (epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig16-eps-converted-to.pdf, id=579, 803.0pt x 602.25pt>
+<figuras/fig16-eps-converted-to.pdf, id=609, 803.0pt x 602.25pt>
 File: figuras/fig16-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig16-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig16-eps-converted-to.pdf  used on input line 225.
 (pdftex.def)             Requested size: 240.90186pt x 180.67639pt.
-<figuras/fig17.png, id=581, 1204.5pt x 652.4375pt>
+<figuras/fig17.png, id=611, 1204.5pt x 652.4375pt>
 File: figuras/fig17.png Graphic file (type png)
 <use figuras/fig17.png>
 Package pdftex.def Info: figuras/fig17.png  used on input line 234.
 (pdftex.def)             Requested size: 361.35278pt x 195.73276pt.
-<figuras/fig18.png, id=584, 1734.48pt x 1160.335pt>
+<figuras/fig18.png, id=614, 1734.48pt x 1160.335pt>
 File: figuras/fig18.png Graphic file (type png)
 <use figuras/fig18.png>
 Package pdftex.def Info: figuras/fig18.png  used on input line 243.
@@ -1158,7 +1155,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [41 <./figuras/fig16-eps-converted-to.pdf> <./figuras/fig17.png>]
 Overfull \hbox (13.62878pt too wide) in paragraph at lines 253--254
-\T1/lmr/m/n/12 propï¿½si-tos como en-treten-i-mento, re-lax-am-ento, med-i-taï¿½ï¿½o, cura, danï¿½a, apre-ci-aï¿½ï¿½o e pesquisa,
+\T1/lmr/m/n/12 propósi-tos como en-treten-i-mento, re-lax-am-ento, med-i-tação, cura, dança, apre-ci-ação e pesquisa,
  []
 
 [42 <./figuras/fig18.png>]
@@ -1175,14 +1172,14 @@ Package epstopdf Info: Source file: <figuras/fig09.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig09-eps-converted-to.pdf figuras/fig09.eps>
 (epstopdf)             \includegraphics on input line 286.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig09-eps-converted-to.pdf, id=612, 1104.125pt x 521.95pt>
+<figuras/fig09-eps-converted-to.pdf, id=642, 1104.125pt x 521.95pt>
 File: figuras/fig09-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig09-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig09-eps-converted-to.pdf  used on input line 286.
 (pdftex.def)             Requested size: 441.64218pt x 208.77629pt.
  [44 <./figuras/fig09-eps-converted-to.pdf>]
 Overfull \hbox (4.96674pt too wide) in paragraph at lines 326--327
-[]\T1/lmr/m/n/12 O de-sen-volvi-mento da conexï¿½o en-tre dis-pos-i-tivos de ï¿½u-dio, se-gundo Winer ([][]WINER[][],
+[]\T1/lmr/m/n/12 O de-sen-volvi-mento da conexão en-tre dis-pos-i-tivos de áu-dio, se-gundo Winer ([][]WINER[][],
  []
 
 Package epstopdf Info: Source file: <figuras/fig11.eps>
@@ -1194,7 +1191,7 @@ Package epstopdf Info: Source file: <figuras/fig11.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig11-eps-converted-to.pdf figuras/fig11.eps>
 (epstopdf)             \includegraphics on input line 341.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig11-eps-converted-to.pdf, id=626, 602.25pt x 179.67125pt>
+<figuras/fig11-eps-converted-to.pdf, id=656, 602.25pt x 179.67125pt>
 File: figuras/fig11-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig11-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig11-eps-converted-to.pdf  used on input line 341.
@@ -1212,28 +1209,28 @@ Package epstopdf Info: Source file: <figuras/fig12.eps>
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig12-eps-converted-to.pdf figuras/fig12.eps>
 (epstopdf)             \includegraphics on input line 350.
 Package epstopdf Info: Output file is already uptodate.
-<figuras/fig12-eps-converted-to.pdf, id=636, 602.25pt x 186.6975pt>
+<figuras/fig12-eps-converted-to.pdf, id=666, 602.25pt x 186.6975pt>
 File: figuras/fig12-eps-converted-to.pdf Graphic file (type pdf)
 <use figuras/fig12-eps-converted-to.pdf>
 Package pdftex.def Info: figuras/fig12-eps-converted-to.pdf  used on input line 350.
 (pdftex.def)             Requested size: 240.89572pt x 74.67767pt.
-<figuras/fig19.png, id=640, 602.25pt x 437.635pt>
+<figuras/fig19.png, id=670, 602.25pt x 437.635pt>
 File: figuras/fig19.png Graphic file (type png)
 <use figuras/fig19.png>
 Package pdftex.def Info: figuras/fig19.png  used on input line 363.
 (pdftex.def)             Requested size: 120.44786pt x 87.52544pt.
  [46 <./figuras/fig11-eps-converted-to.pdf> <./figuras/fig12-eps-converted-to.pdf> <./figuras/fig19.png>]
-<figuras/fig20.png, id=651, 897.3525pt x 719.68875pt>
+<figuras/fig20.png, id=681, 897.3525pt x 719.68875pt>
 File: figuras/fig20.png Graphic file (type png)
 <use figuras/fig20.png>
 Package pdftex.def Info: figuras/fig20.png  used on input line 372.
 (pdftex.def)             Requested size: 179.46732pt x 143.9352pt.
-<figuras/fig21.png, id=653, 803.0pt x 803.0pt>
+<figuras/fig21.png, id=683, 803.0pt x 803.0pt>
 File: figuras/fig21.png Graphic file (type png)
 <use figuras/fig21.png>
 Package pdftex.def Info: figuras/fig21.png  used on input line 381.
 (pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
-<figuras/fig22.png, id=657, 1505.625pt x 1505.625pt>
+<figuras/fig22.png, id=687, 1505.625pt x 1505.625pt>
 File: figuras/fig22.png Graphic file (type png)
 <use figuras/fig22.png>
 Package pdftex.def Info: figuras/fig22.png  used on input line 391.
@@ -1243,7 +1240,7 @@ Package pdftex.def Info: figuras/fig22.png  used on input line 391.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [47 <./figuras/fig20.png> <./figuras/fig21.png>]
-<figuras/fig23.png, id=666, 702.625pt x 539.01375pt>
+<figuras/fig23.png, id=696, 702.625pt x 539.01375pt>
 File: figuras/fig23.png Graphic file (type png)
 <use figuras/fig23.png>
 Package pdftex.def Info: figuras/fig23.png  used on input line 401.
@@ -1251,48 +1248,113 @@ Package pdftex.def Info: figuras/fig23.png  used on input line 401.
  [48 <./figuras/fig22.png> <./figuras/fig23.png>]) (./editaveis/metodologia.tex [49] [50] [51
 
 ]
-Overfull \hbox (1.00417pt too wide) in paragraph at lines 19--20
-[]\T1/lmr/m/n/12 Alguns equipa-men-tos at-u-ais con-tam com fer-ra-men-tas de uma mix-agem au-tomï¿½tica,
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52] [53]) (./editaveis/resultados.tex [54] [55] [56
+ [52] [53]
+Underfull \vbox (badness 5711) has occurred while \output is active []
 
-] [57]
+ [54]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 119.
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [55]
+<figuras/fig45.png, id=742, 578.16pt x 578.16pt>
+File: figuras/fig45.png Graphic file (type png)
+<use figuras/fig45.png>
+Package pdftex.def Info: figuras/fig45.png  used on input line 133.
+(pdftex.def)             Requested size: 318.49861pt x 318.49184pt.
+ [56 <./figuras/fig45.png>]
+<figuras/fig44.png, id=749, 826.08624pt x 429.605pt>
+File: figuras/fig44.png Graphic file (type png)
+<use figuras/fig44.png>
+Package pdftex.def Info: figuras/fig44.png  used on input line 143.
+(pdftex.def)             Requested size: 409.49722pt x 212.95995pt.
+<figuras/fig46.png, id=753, 225.84375pt x 74.2775pt>
+File: figuras/fig46.png Graphic file (type png)
+<use figuras/fig46.png>
+Package pdftex.def Info: figuras/fig46.png  used on input line 158.
+(pdftex.def)             Requested size: 136.50139pt x 44.89665pt.
+<figuras/fig47.png, id=755, 124.465pt x 91.34125pt>
+File: figuras/fig47.png Graphic file (type png)
+<use figuras/fig47.png>
+Package pdftex.def Info: figuras/fig47.png  used on input line 167.
+(pdftex.def)             Requested size: 90.99861pt x 66.78308pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[57 <./figuras/fig44.png> <./figuras/fig46.png>]
+<figuras/fig48.png, id=763, 214.8025pt x 232.87pt>
+File: figuras/fig48.png Graphic file (type png)
+<use figuras/fig48.png>
+Package pdftex.def Info: figuras/fig48.png  used on input line 178.
+(pdftex.def)             Requested size: 136.50139pt x 147.9845pt.
+<figuras/fig49.png, id=765, 722.7pt x 433.62pt>
+File: figuras/fig49.png Graphic file (type png)
+<use figuras/fig49.png>
+Package pdftex.def Info: figuras/fig49.png  used on input line 187.
+(pdftex.def)             Requested size: 409.49722pt x 245.6971pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig50.png, id=767, 443.6575pt x 186.6975pt>
+File: figuras/fig50.png Graphic file (type png)
+<use figuras/fig50.png>
+Package pdftex.def Info: figuras/fig50.png  used on input line 196.
+(pdftex.def)             Requested size: 273.00278pt x 114.88237pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/fig51.png, id=769, 280.04625pt x 172.645pt>
+File: figuras/fig51.png Graphic file (type png)
+<use figuras/fig51.png>
+Package pdftex.def Info: figuras/fig51.png  used on input line 205.
+(pdftex.def)             Requested size: 136.50139pt x 84.1542pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./editaveis/resultados.tex
+Underfull \vbox (badness 2582) has occurred while \output is active []
+
+ [58 <./figuras/fig47.png> <./figuras/fig48.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58]) (./editaveis/conclusao.tex [59] [60
+ [59 <./figuras/fig49.png> <./figuras/fig50.png> <./figuras/fig51.png>] [60] [61
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]) (./editaveis/conclusao.tex [63] [64
 
 ]) (./tcc.bbl (./tcc.brf)
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
- [61] [62
+ [65] [66
 
 ]
 bibitemlist
-[63]) (./editaveis/anexos.tex [64]
+[67]) (./editaveis/anexos.tex [68]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 4.
 
-[65
+[69
 
 
-] [66]
-<figuras/fig40.png, id=840, 1011.78pt x 433.62pt>
+] [70]
+<figuras/fig40.png, id=922, 1011.78pt x 433.62pt>
 File: figuras/fig40.png Graphic file (type png)
 <use figuras/fig40.png>
 Package pdftex.def Info: figuras/fig40.png  used on input line 14.
 (pdftex.def)             Requested size: 455.0pt x 195.00148pt.
-<figuras/fig41.png, id=841, 1011.78pt x 433.62pt>
+<figuras/fig41.png, id=923, 1011.78pt x 433.62pt>
 File: figuras/fig41.png Graphic file (type png)
 <use figuras/fig41.png>
 Package pdftex.def Info: figuras/fig41.png  used on input line 21.
 (pdftex.def)             Requested size: 455.0pt x 195.00148pt.
-<figuras/fig24.png, id=842, 1011.78pt x 433.62pt>
+<figuras/fig24.png, id=924, 1011.78pt x 433.62pt>
 File: figuras/fig24.png Graphic file (type png)
 <use figuras/fig24.png>
 Package pdftex.def Info: figuras/fig24.png  used on input line 28.
@@ -1301,7 +1363,7 @@ Package pdftex.def Info: figuras/fig24.png  used on input line 28.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig25.png, id=843, 1011.78pt x 433.62pt>
+<figuras/fig25.png, id=925, 1011.78pt x 433.62pt>
 File: figuras/fig25.png Graphic file (type png)
 <use figuras/fig25.png>
 Package pdftex.def Info: figuras/fig25.png  used on input line 35.
@@ -1309,7 +1371,7 @@ Package pdftex.def Info: figuras/fig25.png  used on input line 35.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig28.png, id=844, 1011.78pt x 433.62pt>
+<figuras/fig28.png, id=926, 1011.78pt x 433.62pt>
 File: figuras/fig28.png Graphic file (type png)
 <use figuras/fig28.png>
 Package pdftex.def Info: figuras/fig28.png  used on input line 42.
@@ -1317,7 +1379,7 @@ Package pdftex.def Info: figuras/fig28.png  used on input line 42.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig29.png, id=845, 1011.78pt x 433.62pt>
+<figuras/fig29.png, id=927, 1011.78pt x 433.62pt>
 File: figuras/fig29.png Graphic file (type png)
 <use figuras/fig29.png>
 Package pdftex.def Info: figuras/fig29.png  used on input line 49.
@@ -1325,7 +1387,7 @@ Package pdftex.def Info: figuras/fig29.png  used on input line 49.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig26.png, id=846, 1011.78pt x 433.62pt>
+<figuras/fig26.png, id=928, 1011.78pt x 433.62pt>
 File: figuras/fig26.png Graphic file (type png)
 <use figuras/fig26.png>
 Package pdftex.def Info: figuras/fig26.png  used on input line 56.
@@ -1333,7 +1395,7 @@ Package pdftex.def Info: figuras/fig26.png  used on input line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig27.png, id=847, 1011.78pt x 433.62pt>
+<figuras/fig27.png, id=929, 1011.78pt x 433.62pt>
 File: figuras/fig27.png Graphic file (type png)
 <use figuras/fig27.png>
 Package pdftex.def Info: figuras/fig27.png  used on input line 63.
@@ -1341,7 +1403,7 @@ Package pdftex.def Info: figuras/fig27.png  used on input line 63.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig30.png, id=848, 1011.78pt x 433.62pt>
+<figuras/fig30.png, id=930, 1011.78pt x 433.62pt>
 File: figuras/fig30.png Graphic file (type png)
 <use figuras/fig30.png>
 Package pdftex.def Info: figuras/fig30.png  used on input line 70.
@@ -1349,7 +1411,7 @@ Package pdftex.def Info: figuras/fig30.png  used on input line 70.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig31.png, id=849, 1011.78pt x 433.62pt>
+<figuras/fig31.png, id=931, 1011.78pt x 433.62pt>
 File: figuras/fig31.png Graphic file (type png)
 <use figuras/fig31.png>
 Package pdftex.def Info: figuras/fig31.png  used on input line 77.
@@ -1357,7 +1419,7 @@ Package pdftex.def Info: figuras/fig31.png  used on input line 77.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig32.png, id=850, 1011.78pt x 433.62pt>
+<figuras/fig32.png, id=932, 1011.78pt x 433.62pt>
 File: figuras/fig32.png Graphic file (type png)
 <use figuras/fig32.png>
 Package pdftex.def Info: figuras/fig32.png  used on input line 84.
@@ -1365,7 +1427,7 @@ Package pdftex.def Info: figuras/fig32.png  used on input line 84.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig33.png, id=851, 1011.78pt x 433.62pt>
+<figuras/fig33.png, id=933, 1011.78pt x 433.62pt>
 File: figuras/fig33.png Graphic file (type png)
 <use figuras/fig33.png>
 Package pdftex.def Info: figuras/fig33.png  used on input line 91.
@@ -1373,7 +1435,7 @@ Package pdftex.def Info: figuras/fig33.png  used on input line 91.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig34.png, id=852, 1011.78pt x 433.62pt>
+<figuras/fig34.png, id=934, 1011.78pt x 433.62pt>
 File: figuras/fig34.png Graphic file (type png)
 <use figuras/fig34.png>
 Package pdftex.def Info: figuras/fig34.png  used on input line 98.
@@ -1381,7 +1443,7 @@ Package pdftex.def Info: figuras/fig34.png  used on input line 98.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig35.png, id=853, 1011.78pt x 433.62pt>
+<figuras/fig35.png, id=935, 1011.78pt x 433.62pt>
 File: figuras/fig35.png Graphic file (type png)
 <use figuras/fig35.png>
 Package pdftex.def Info: figuras/fig35.png  used on input line 105.
@@ -1389,7 +1451,7 @@ Package pdftex.def Info: figuras/fig35.png  used on input line 105.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig36.png, id=854, 1011.78pt x 433.62pt>
+<figuras/fig36.png, id=936, 1011.78pt x 433.62pt>
 File: figuras/fig36.png Graphic file (type png)
 <use figuras/fig36.png>
 Package pdftex.def Info: figuras/fig36.png  used on input line 112.
@@ -1397,7 +1459,7 @@ Package pdftex.def Info: figuras/fig36.png  used on input line 112.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig37.png, id=855, 1011.78pt x 433.62pt>
+<figuras/fig37.png, id=937, 1011.78pt x 433.62pt>
 File: figuras/fig37.png Graphic file (type png)
 <use figuras/fig37.png>
 Package pdftex.def Info: figuras/fig37.png  used on input line 119.
@@ -1405,7 +1467,7 @@ Package pdftex.def Info: figuras/fig37.png  used on input line 119.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig38.png, id=856, 1011.78pt x 433.62pt>
+<figuras/fig38.png, id=938, 1011.78pt x 433.62pt>
 File: figuras/fig38.png Graphic file (type png)
 <use figuras/fig38.png>
 Package pdftex.def Info: figuras/fig38.png  used on input line 126.
@@ -1413,7 +1475,7 @@ Package pdftex.def Info: figuras/fig38.png  used on input line 126.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig39.png, id=857, 1011.78pt x 433.62pt>
+<figuras/fig39.png, id=939, 1011.78pt x 433.62pt>
 File: figuras/fig39.png Graphic file (type png)
 <use figuras/fig39.png>
 Package pdftex.def Info: figuras/fig39.png  used on input line 133.
@@ -1421,7 +1483,7 @@ Package pdftex.def Info: figuras/fig39.png  used on input line 133.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig42.png, id=858, 1011.78pt x 433.62pt>
+<figuras/fig42.png, id=940, 1011.78pt x 433.62pt>
 File: figuras/fig42.png Graphic file (type png)
 <use figuras/fig42.png>
 Package pdftex.def Info: figuras/fig42.png  used on input line 140.
@@ -1429,7 +1491,7 @@ Package pdftex.def Info: figuras/fig42.png  used on input line 140.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig43.png, id=859, 1011.78pt x 433.62pt>
+<figuras/fig43.png, id=941, 1011.78pt x 433.62pt>
 File: figuras/fig43.png Graphic file (type png)
 <use figuras/fig43.png>
 Package pdftex.def Info: figuras/fig43.png  used on input line 147.
@@ -1439,9 +1501,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./tcc.ind) 
 AED: lastpage setting LastPage
-[67
+[71
 
- <./figuras/fig40.png> <./figuras/fig41.png>] [68 <./figuras/fig24.png> <./figuras/fig25.png> <./figuras/fig28.png>] [69 <./figuras/fig29.png> <./figuras/fig26.png> <./figuras/fig27.png>] [70 <./figuras/fig30.png> <./figuras/fig31.png> <./figuras/fig32.png>] [71 <./figuras/fig33.png> <./figuras/fig34.png> <./figuras/fig35.png>] [72 <./figuras/fig36.png> <./figuras/fig37.png> <./figuras/fig38.png>] [73 <./figuras/fig39.png> <./figuras/fig42.png> <./figuras/fig43.png>]
+ <./figuras/fig40.png> <./figuras/fig41.png>] [72 <./figuras/fig24.png> <./figuras/fig25.png> <./figuras/fig28.png>] [73 <./figuras/fig29.png> <./figuras/fig26.png> <./figuras/fig27.png>] [74 <./figuras/fig30.png> <./figuras/fig31.png> <./figuras/fig32.png>] [75 <./figuras/fig33.png> <./figuras/fig34.png> <./figuras/fig35.png>] [76 <./figuras/fig36.png> <./figuras/fig37.png> <./figuras/fig38.png>] [77 <./figuras/fig39.png> <./figuras/fig42.png> <./figuras/fig43.png>]
 \tf@lof=\write6
 \openout6 = `tcc.lof'.
 
@@ -1453,21 +1515,21 @@ AED: lastpage setting LastPage
 
  (./tcc.aux)
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: C49D7DC9F3471CDC006F866108A2BBBF;2118.
+(rerunfilecheck)             Checksum: 9FDB253B707DFA3F3E6C145B2299D604;2170.
  ) 
 Here is how much of TeX's memory you used:
- 17214 strings out of 480247
- 274947 string characters out of 5896151
- 602599 words of memory out of 5000000
- 34505 multiletter control sequences out of 15000+600000
- 549777 words of font info for 71 fonts, out of 8000000 for 9000
+ 17364 strings out of 480247
+ 277272 string characters out of 5896151
+ 603513 words of memory out of 5000000
+ 34620 multiletter control sequences out of 15000+600000
+ 550095 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  80i,13n,96p,1183b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on tcc.pdf (75 pages, 15405079 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on tcc.pdf (79 pages, 15534175 bytes).
 PDF statistics:
- 1279 PDF objects out of 1440 (max. 8388607)
- 1086 compressed objects within 11 object streams
- 238 named destinations out of 1000 (max. 500000)
- 913 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1391 PDF objects out of 1440 (max. 8388607)
+ 1176 compressed objects within 12 object streams
+ 259 named destinations out of 1000 (max. 500000)
+ 1009 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -63,6 +63,12 @@ ISBN 9788521207481.}
   Pearson, 2010. 592p.~p.
 ISBN 857605504X.}
 
+\bibitem[Puckette 2002]{puredata}
+\abntrefinfo{Puckette}{PUCKETTE}{2002}
+{PUCKETTE, M. Using pd as a score language. In:  \emph{Proceedings of the
+  International Computer Music Conference (ICMC)}. [s.n.], 2002. p. 184--187.
+  Dispon{\'\i}vel em: \url{https://puredata.info/}.}
+
 \bibitem[Roads 1996]{roads1996computer}
 \abntrefinfo{Roads}{ROADS}{1996}
 {ROADS, C. \emph{The Computer Music Tutorial}. MIT Press, 1996.  (Mit Press).

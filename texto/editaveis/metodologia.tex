@@ -16,7 +16,7 @@ O dispostivo conta com dois canais de entrada, ou seja, duas músicas de entrada
 \par
 Assim, um controle central de frequência comanda ambas frequências de corte. Quando esse controle está em um extremo, apenas um canal é transmitido para a saída. Já no outro extremo, apenas o outro canal é transmitido. E conforme o controle avança de um extremo a outro, uma combinação entre as duas músicas é transmitida à saída.
 \par
-Alguns equipamentos atuais contam com ferramentas de uma mixagem automática, na qual uma lista de músicas é selecionada. O próprio sistema realiza uma sincronia de tons e realiza a transição entre um canal e outro, através de um sistema de \textit{fader}, no qual o volume de um canal cai, enquanto do outro aumenta, até que a transição para a segunda música esteja finalizada.
+Alguns equipamentos atuais contam com ferramentas de mixagem automática, na qualuma lista de músicas é selecionada. O próprio sistema realiza a sincronia de tons e a transição entre um canal e outro, através de um sistema de \textit{fader}, no qual o volume de um canal é atenuado, enquanto o do outro obtém um ganho, até que a transição seja finalizada.
 \par
 Porém, esse tipo de sistema não leva em conta nuances da música ou qual seria o melhor momento para que a entrada da próxima música aconteça.
 \par
@@ -38,10 +38,7 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
 \begin{itemize}
     \item O sistema deve permitir ao \textit{DJ} utilizar tanto CDJs quanto toca-discos.
     \item O sistema deve permitir ao \textit{DJ} controlar a presença dos dois canais.
-    \item aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    \item bbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-    \item aaaaaaaaaaaaaaaaaaaaaa
-
+    \item O sistema deve permitir ao \textit{DJ} controlar a presença dos efeitos.
 \end{itemize}
 
 \subsection{Requisitos Não Funcionais}
@@ -56,21 +53,20 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
 \begin{itemize}
     \item A interface do mixer deve incluir botões físicos ou controles táteis para ajuste de frequência e efeitos de áudio.
     \item A interface do mixer deve ser organizada de forma lógica e intuitiva, com controles agrupados por função para facilitar a navegação.
-    \item O sistema deve permitir ao \textit{DJ} personalizar a aparência e layout da interface de usuário conforme suas preferências.
-    \item O sistema deve ser compatível com dispositivos de entrada externos, como controladores MIDI ou dispositivos de toque, para suportar diferentes estilos de interação.
+    \item A interface deve possuir indicações das funções dos botões de interação com o usuário.
 \end{itemize}
 
 \subsection{Requisitos de Sistema}
 \begin{itemize}
     \item O sistema deve ser compatível com uma variedade de dispositivos de áudio externos, como CDJs e toca-discos.
     \item O sistema deve ser alimentado por uma fonte de energia padrão, como uma tomada elétrica.
-    \item O sistema deve incluir interfaces de entrada e saída de áudio padrão, como conectores RCA ou XLR, para facilitar a conexão com outros equipamentos de áudio.
+    \item O sistema deve incluir interfaces de entrada e saída de áudio padrão RCA.
 \end{itemize}
 
 \subsection{Requisitos de Desempenho}
 \begin{itemize}
     \item O sistema deve ser capaz de lidar com até dois canais de áudio simultaneamente, sem comprometer a qualidade do som ou a responsividade dos controles.
-    \item O sistema deve suportar uma ampla gama de frequências de áudio, garantindo que os graves sejam reproduzidos com punch e os agudos sejam nítidos e claros.
+    \item O sistema deve suportar uma ampla gama de frequências de áudio, garantindo que os graves sejam reproduzidos com graves e os agudos sejam nítidos e claros.
 \end{itemize}
 
 \subsection{Requisitos de Segurança}
@@ -85,20 +81,131 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
 
 \subsection{Requisitos de Compatibilidade}
 \begin{itemize}
-    \item O sistema deve ser compatível com uma variedade de formatos de áudio comuns, como WAV, MP3 e FLAC.
+    \item O sistema deve ser capaz de se comunicar perfeitamente com qualquer dispositivo de reprodução de música profissional como canal de entrada e qualquer sistema de som de sáida. 
 \end{itemize}
 
-\subsection{Diagrama de Subpartes}
+\section{Diagrama do Sistema}
 
-\subsection{Fluxograma de Sub-blocos}
+\section{Fluxogramas de Sub-blocos}
+
+\subsection{Bloco de Conversão AD}
+
+\subsection{Bloco de Leitura do Botão Central}
+
+\subsection{Bloco de Automação de Efeitos}
+
+\subsection{Bloco de Efeitos - Delay}
+
+\subsection{Bloco de Efeitos - Reverb}
+
+\subsection{Bloco Mixer}
+
+\subsection{Bloco de Conversão AD}
 
 \section{Prova de Conceito}
 
-	\subsection{\textit{PureData}}
+Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se pode simular a lógica de funcionamento do sistema.
 
-	\subsection{Implementação de Mixagem}
+	\subsection{\textit{PureData}}
+    O \textit{PureData} \cite{puredata} é um ambiente de música computacional programável para análise, síntese e processamento de áudio através de sinais digitais em tempo real. 
+    
+
+    Esse ambiente permite, através dos seus blocos, a criação de sistemas de processamento de áudio com inúmeras funções implementadas, tanto pelos seus criadores quanto pela sua extensa comundiade. Nele, foi possível a criação de uma prova de conceito que engloba a lógica do botão central com o comando das frequências de corte, bem como o funcionamento dos efeitos. Para simular os sinais de entrada, utilizou-se arquivos WAV locais.
+
+    Assim, a demonstração do sistema se divide em duas grandes funcionalidades: filtragem e efeitos.
+
+	\subsection{Implementação de Filtragem}
+
+    A filtragem lê dois arquivos de música no formato WAV, utilizando as funções \texttt{open}, \texttt{start} e \texttt{stop} para localização, execução e parada da reprodução, respectivamente. Em seguida, utilizou-se o comando \texttt{readsf\textasciitilde\ 2 1e+06} que configura a leitura dos sinais de forma estéreo e utilizando um milhão de amostras no seu \textit{buffer}. O mesmo processo é realizado para ambos arquivos. 
+
+    Em seguida, utilizou-se a função \texttt{hip\textasciitilde}, que corresponde a aplicação de um filtro passa-altas. Porém, neste caso, o argumento que a função utiliza difere entre o canal 1 e 2. Conforme a Figura \ref{fig24}, o canal 1 ("FC do HPF1") recebe diretamente o parâmetro \textit{fc}, advindo do \textit{slider} em azul.
+    
+    Porém, o filtro passa-altas do canal 2 ("FC do HPF2") recebe um valor ajustado por uma expressão anterior, representada pela Equação \ref{eq:05}. Esse ajuste permite com que uma pequena variação na \textit{fc$_{1}$} promova uma grande variação em \textit{fc$_{2}$} e vice-versa. Além disso, em frequências centrais, a variação entre eles se torna mais similar. Essa expressão coincide com a descrição de um círculo de raio sendo a frequência de amostragem, que é o intervalo do botão central, centralizado no ponto (22050, 22050).
+
+    \begin{equation}  \label{eq:05}
+        fc_2 = 22050 - \sqrt{22050^2 - (fc - 22050)^2}
+    \end{equation}
+
+    Esse ajuste presente na Equação \ref{eq:05} tem a função de ponderar mudanças nas frequências pois mudanças lineares não são eficientes nesse caso de um controle centralizado, conforme se encontram as frequências de ambos canais na Figura \ref{fig45}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.7\textwidth]{figuras/fig45.png}
+        \caption{expressão para a fc$_{2}$}
+        \label{fig45}
+    \end{figure}
+
+    \newpage
+    Mudanças na casa de centenas no canal 1 causariam pouco efeito no canal 2 pois as baixas frequências possuem maior ganho em relação às altas frequências. Além disso, a mesma lógica pode ser aplicada no outro extremo do controle de frequência. 
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figuras/fig44.png}
+        \caption{lógica de funcionamento do botão central no \textit{PureData}}
+        \label{fig44}
+    \end{figure}
+
+    Na Figura \ref{fig44}, a frequência obtida do botão central, indicada como \( f_c \), varia de 0.2 a 22050 Hz. A frequência de corte do canal 1, referida como FC do HPF1, é equivalente a \( f_c \) do botão central. A frequência de corte do canal 2, identificada como FC do HPF2, é obtida pela Equação \ref{eq:05}. O sinal resultante, \texttt{send\textasciitilde\ music}, é a soma dos sinais filtrados dos canais 1 e 2.
 
 	\subsection{Implementação de Efeitos}
+
+    O funcionamento do efeito utiliza três parâmetros. Um botão \texttt{toogle}, cuja função é alternar entre os efeitos \textit{delay} e \textit{reverb}; um \textit{slider} que varia parâmetros internos dos efeitos e a frequência de corte do botão central, que automatiza o volume do efeito.
+
+    O botão \texttt{toogle} visa alternar os efeitos. Possui duas posições, ou seja, sempre um efeito está ativo. Para alternar para o outro, basta alterar a posição. Figura \ref{fig46}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figuras/fig46.png}
+        \caption{botão de seleção de efeito no \textit{PureData}}
+        \label{fig46}
+    \end{figure}
+
+    O botão \textit{slider} visa alterar os parâmetros internos de cada efeito. Os valores variam de 0 a 1. O botão se encontra na Figura \ref{fig47}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figuras/fig47.png}
+        \caption{botão de quantidade de efeito no \textit{PureData}}
+        \label{fig47}
+    \end{figure}
+
+    Cada efeito utiliza o parâmetro \textit{fx} advindo do botão \textit{slider} e realiza uma adaptação para o seu parâmetro. No caso do \textit{reverb}, o valor de \textit{fx} é multiplicado por 100 e esse valro se torna a quantidade de dB que permanecerá na música após 1s. Para o \textit{delay}, esse valor é multiplicado por 1000 e se transforma no intervalo de tempo em ms da música que permanecerá no efeito.
+
+    A lógica que permeia a seleção do efeito, encontra-se na Figura \ref{fig48}. Os comandos \texttt{receive\textasciitilde\ fx} são responsáveis por inserirem os efeitos como entrada. Cada volume do efeito é multiplicado pelo valor do \texttt{toogle}; um deles é multiplicado pelo valor atual enquanto o outro é multiplicado pelo inverso, de forma que o botão \texttt{toogle} funciona como um alternador para selecionar os efeitos. 
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figuras/fig48.png}
+        \caption{botão de seleção de efeito no \textit{PureData}}
+        \label{fig48}
+    \end{figure}
+
+    Nesse sistema, o volume do efeito é regido de forma automática em função da posição do botão central, ou seja, pelas frequências de corte. Na Figura \ref{fig49} é possível ver a variação do volume do efeito em função da frequência central.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figuras/fig49.png}
+        \caption{variação do volume dos efeitos no \textit{PureData}}
+        \label{fig49}
+    \end{figure}
+
+    No \textit{PureData}, o bloco de automação de volume de efeitos é realizado utilizando as operações presentes na Figura \ref{fig50}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.6\textwidth]{figuras/fig50.png}
+        \caption{implementação da variação do volume dos efeitos no \textit{PureData}}
+        \label{fig50}
+    \end{figure}
+
+    Ao final, o sinal dos efeitos é multiplicado pelo volume dos efeitos, e, posteriormente, somado ao sinal das filtragens, dando origem ao sinal de saída. Esse sinal é processado por um bloco de conversão de sinal digital em analógico e enfim foi reproduzido. Esse bloco de soma de sinais está representado na Figura \ref{fig51}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figuras/fig51.png}
+        \caption{soma de sinais filtrado e de efeitos no \textit{PureData}}
+        \label{fig51}
+    \end{figure}
 
 \section{Proposta de Implementação}
 

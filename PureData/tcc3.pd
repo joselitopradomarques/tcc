@@ -1,4 +1,4 @@
-#N canvas 1366 0 1280 891 12;
+#N canvas -10 19 1366 672 12;
 #X msg 331 44 start;
 #X msg 382 45 stop;
 #X msg 424 44 print;
@@ -7,7 +7,7 @@
 #X msg 909 39 stop;
 #X msg 950 39 print;
 #X obj 871 76 readsf~ 2 1e+06;
-#X obj 565 243 hsl 170 20 0.2 24000 0 1 empty empty Fc\ do\ mixer -2 -10 0 12 #00faff #000000 #000000 13700 1;
+#X obj 565 243 hsl 170 20 0.2 22050 0 1 empty empty Fc\ do\ mixer -2 -10 0 12 #00faff #000000 #000000 14912 1;
 #X obj 321 385 hip~;
 #X obj 869 385 hip~;
 #X obj 244 614 dac~;
@@ -53,7 +53,7 @@
 #X text -169 31 Bloco de Reverb FX;
 #X text 17 30 Bloco de Delay FX;
 #X text 96 479 Bloco mixer de sinais;
-#X obj 903 319 receive fc;
+#X obj 645 280 receive fc;
 #X obj 350 351 receive fc;
 #X obj 658 144 tgl 20 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 560 183 send fx;
@@ -68,7 +68,7 @@
 #X msg 322 17 open /home/joselito/git/tcc/datas/audio01.wav;
 #X msg 790 13 open /home/joselito/git/tcc/datas/audio02.wav;
 #X msg 297 546 open case8.wav \, start;
-#X obj 879 345 expr (24000 - sqrt(24000*24000 - ($f1 - 24000)*($f1-24000)) );
+#X obj 645 312 expr (22050 - sqrt(22050*22050 - ($f1 - 22050)*($f1-22050)) );
 #X connect 0 0 3 0;
 #X connect 1 0 3 0;
 #X connect 2 0 3 0;
