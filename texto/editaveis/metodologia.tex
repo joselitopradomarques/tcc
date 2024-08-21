@@ -86,17 +86,82 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
 
 \section{Diagrama do Sistema}
 
-\section{Fluxogramas de Sub-blocos}
+O \textit{mixer} proposto possui sub-blocos de funcionamento e se interligam conforme se encontra na Figura \ref{fig52}.
+
+De forma geral, o sistema funciona em um laço contínuo de leitura de sinais, tanto das músicas quanto dos controles, e modificações de parâmetros para que os sinais sejam processados, e, enfim, reproduzidos. Assim, cada ciclo pode ser representado na Fig. \ref{fig52}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig52.png}
+    \caption{diagrama geral do sistema}
+    \label{fig52}
+\end{figure}
+
+Assim, a partir dos dispositivos de reprodução de música, os sinais adentrarão o sistema, de forma que serão convertidos para sinais digitas. Enquanto isso, é feita uma varredura dos valores correntes dos controles disponíveis na interface.
+
+Conforme se adquire valores para os parâmetros, tanto a filtragem de sinais quanto o processamento dos efeitos são realizados novamente a fim de ajustarem seu comportamento conforme os novos valores dos controles.
+
+
+Por fim, os sinais da filtragem e do efeito são somados e convertidos para analógico, de forma que possam ser reproduzidos ao final.
+
+\section{Fluxogramas de Blocos}
+
+Nesta seção, cada bloco presente no Diagrama Geral do Sistema, Fig. \ref{fig52}, será detalhado sobre o seu funcionamento conceitual proposto. 
 
 \subsection{Bloco de Conversão AD}
+Esse bloco é responsável pela aquisição e conversão do sinal obtido pelo reprodutor de música, seja uma CDJ, um toca-discos; e convertê-lo para um sinal digital, a fim de que possa ser processado. 
+
+As entradas desse bloco são os sinais analógicos e a saída são os sinais digitais. Dessa forma, os processos que devem ser realizados nesses sinais incluem amostragem, quantização e codificação, para que, enfim, o sinal possa ser lido pela unidade de processamento.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig53.png}
+    \caption{diagrama para conversão analógico digital}
+    \label{fig53}
+\end{figure}
 
 \subsection{Bloco de Filtragem}
 
-\subsection{Bloco de Automação de Efeitos}
+No bloco de filtragem, os sinais já estão no domínio digital. Assim, deve-se ler a posição do botão central. Esse sinal é adquirido através da conversão de um sinal analógico advindo de um potenciômetro e convertido, de um sinal elétrico para um digital. 
+
+Assim, pode-se obter a posição na qual o botão se encontra. Essa posição, que se encontrará em um intervalo de valores quantizados, será normalizado e convertido para um valor de frequência de corte, ou seja, estará entre 20 e 22050 Hz.
+
+Com esse valor de frequência de corte, o filtro passa-altas do canal 1 será atualizado; e seu sinal filtrado. 
+
+No canal 2, um novo valor para a frequênca de corte 2 será obtido através da expressão de Equação \ref{eq:05}. Assim, o filtro passa-altas deste canal será atualizado conforme a nova frequência de corte, como se encontra na Figura \ref{fig54}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig54.png}
+    \caption{processamento dos canais}
+    \label{fig54}
+\end{figure}
+
+No diagrama da Figura \ref{fig54}, \textit{fc} corresponde à frequência de corte central, ou seja, àquela lida e convertida do botão central; \textit{fc1} é a frequência de corte para o filtro passa-altas 1 (HPF1) e \textit{fc2} é a frequência de corte do canal 2 para o filtro passa-altas 2 (HPF2).
+
+Ao final, os dois canais são combinados e se tem o canal \textit{master}.
+
+\subsection{Bloco de Leitura de Controle de Efeitos}
+leitura de parâmetro fx -> atualização de paramnfx
+leitura de toogle de fx -> atualização de selfx
 
 \subsection{Bloco de Efeitos - Delay}
+conversão de paramnfx para ms -> delayms
+leitura de selfx -> 
+
+caso selfx seja delay -> delaysignal com delayms é criado
+caso selfx não seja delay -> fazer nada
+
 
 \subsection{Bloco de Efeitos - Reverb}
+conversão de paramnfx para db -> reverdb
+leitura de selfx -> 
+
+caso selfx seja reverb -> reverbsignal com reverbdb é criado
+caso selfx não seja reverb -> fazer nada
+
+\subsection{Bloco de Automação de Efeitos}
+
 
 \subsection{Bloco Mixer}
 

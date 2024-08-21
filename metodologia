@@ -3,19 +3,10 @@ Metodologia
 - Proposta Geral
 	- Explicar o sistema que desejo e por que é assim [done]
 	- Levantamento de Requisitos [done]
-	- Diagrama de Subpartes [doing]
-		- Elementos do diagrama:
-			- Aqusição de sinais
-			- Conversão AD
-			- Mixer Setting
-			- Leitura de Parâmetros de Interface
-			- Mixer de sinais
-			- Conversão DA
-	- Fluxogramas de subblocos [to do] [to write]
-		- Explicar o funcionamento de cada bloco acima com leitura de sinais e tomada de decisão
-			- Bloco de Conversão AD [to do] [to write]
-			- Bloco de Leitura de HSlider e de escolha de f_c -> Bloco de Filtragem [to do] [to write]
-				- Ter leitura de Slider, controlar FC de HPF
+	- Diagrama de Subpartes [done]
+	- Fluxogramas de subblocos [done]
+			- Bloco de Conversão AD [done]
+			- Bloco de Filtragem [done]s
 			- Bloco de Automação de FX [to do] [to write]
 				- Volume e comutação de FX
 			- Bloco de Delay - FX [to do] [to write]

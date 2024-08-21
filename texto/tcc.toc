@@ -54,44 +54,45 @@
 \contentsline {subsection}{\numberline {3.2.6}Requisitos de Segurança}{54}{subsection.3.2.6}%
 \contentsline {subsection}{\numberline {3.2.7}Requisitos de Manutenção}{54}{subsection.3.2.7}%
 \contentsline {subsection}{\numberline {3.2.8}Requisitos de Compatibilidade}{54}{subsection.3.2.8}%
-\contentsline {section}{\numberline {3.3}Diagrama do Sistema}{55}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Fluxogramas de Sub-blocos}{55}{section.3.4}%
+\contentsline {section}{\numberline {3.3}Diagrama do Sistema}{54}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Fluxogramas de Blocos}{55}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Bloco de Conversão AD}{55}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Bloco de Filtragem}{55}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Bloco de Automação de Efeitos}{55}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Bloco de Efeitos - Delay}{55}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Bloco de Efeitos - Reverb}{55}{subsection.3.4.5}%
-\contentsline {subsection}{\numberline {3.4.6}Bloco Mixer}{55}{subsection.3.4.6}%
-\contentsline {subsection}{\numberline {3.4.7}Bloco de Conversão AD}{55}{subsection.3.4.7}%
-\contentsline {section}{\numberline {3.5}Prova de Conceito}{55}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}\textit {PureData}}{55}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Implementação de Filtragem}{55}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Implementação de Efeitos}{57}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Proposta de Implementação}{60}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Implementação em \textit {Hardware}}{60}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Implementação em \textit {Software}}{60}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Diagrama de Integração}{60}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Protótipo de Interface de Usuário}{60}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Documento de Especificação Técnica}{60}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}Documento de Plano de Teste}{60}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.4.2}Bloco de Filtragem}{56}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Bloco de Leitura de Controle de Efeitos}{56}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Bloco de Efeitos - Delay}{56}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Bloco de Efeitos - Reverb}{56}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Bloco de Automação de Efeitos}{57}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Bloco Mixer}{57}{subsection.3.4.7}%
+\contentsline {subsection}{\numberline {3.4.8}Bloco de Conversão AD}{57}{subsection.3.4.8}%
+\contentsline {section}{\numberline {3.5}Prova de Conceito}{57}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}\textit {PureData}}{57}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Implementação de Filtragem}{57}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Implementação de Efeitos}{59}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Proposta de Implementação}{62}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Implementação em \textit {Hardware}}{62}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Implementação em \textit {Software}}{62}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Diagrama de Integração}{62}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Protótipo de Interface de Usuário}{62}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Documento de Especificação Técnica}{62}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Documento de Plano de Teste}{62}{subsection.3.6.6}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{61}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Resultados de Filtragem}{61}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{63}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{63}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{63}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{63}{subsection.4.2.3}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{63}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resultados de Filtragem}{63}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{65}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{65}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{65}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{65}{subsection.4.2.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{65}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{67}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{67}{section*.18}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{69}{section*.18}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{69}{section*.19}%
+\contentsline {part}{\uppercase {Anexos}}{71}{section*.19}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{71}{appendix.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{73}{appendix.anexochapback.1}%
