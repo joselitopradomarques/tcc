@@ -84,16 +84,17 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
     \item O sistema deve ser capaz de se comunicar perfeitamente com qualquer dispositivo de reprodução de música profissional como canal de entrada e qualquer sistema de som de sáida. 
 \end{itemize}
 
-\section{Diagrama do Sistema}
+\newpage
+\section{Fluxograma do Mixer}
 
-O \textit{mixer} proposto possui sub-blocos de funcionamento e se interligam conforme se encontra na Figura \ref{fig52}.
+O \textit{mixer} proposto possui subblocos de funcionamento e se interligam conforme se encontra na Figura \ref{fig52}.
 
 De forma geral, o sistema funciona em um laço contínuo de leitura de sinais, tanto das músicas quanto dos controles, e modificações de parâmetros para que os sinais sejam processados, e, enfim, reproduzidos. Assim, cada ciclo pode ser representado na Fig. \ref{fig52}.
 
-\begin{figure}[!h]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig52.png}
-    \caption{diagrama geral do sistema}
+    \caption{fluxograma geral do \textit{mixer}}
     \label{fig52}
 \end{figure}
 
@@ -102,23 +103,35 @@ Assim, a partir dos dispositivos de reprodução de música, os sinais adentrar�
 Conforme se adquire valores para os parâmetros, tanto a filtragem de sinais quanto o processamento dos efeitos são realizados novamente a fim de ajustarem seu comportamento conforme os novos valores dos controles.
 
 
-Por fim, os sinais da filtragem e do efeito são somados e convertidos para analógico, de forma que possam ser reproduzidos ao final.
+Por fim, os sinais da filtragem e do efeito são combinados e convertidos para analógico, de forma que possam ser reproduzidos ao final.
 
-\section{Fluxogramas de Blocos}
-
-Nesta seção, cada bloco presente no Diagrama Geral do Sistema, Fig. \ref{fig52}, será detalhado sobre o seu funcionamento conceitual proposto. 
+Nas subseções abaixo, cada bloco presente no Fluxograma Geral do Sistema, Fig. \ref{fig52}, será detalhado sobre o seu funcionamento conceitual proposto através de um subfluxograma, que detalha o processamento interno.
 
 \subsection{Bloco de Conversão AD}
-Esse bloco é responsável pela aquisição e conversão do sinal obtido pelo reprodutor de música, seja uma CDJ, um toca-discos; e convertê-lo para um sinal digital, a fim de que possa ser processado. 
-
-As entradas desse bloco são os sinais analógicos e a saída são os sinais digitais. Dessa forma, os processos que devem ser realizados nesses sinais incluem amostragem, quantização e codificação, para que, enfim, o sinal possa ser lido pela unidade de processamento.
+Esse bloco é responsável pela aquisição e conversão dos sinais analógicos em sinais codificados. Esses sinais são tanto obtidos pelo reprodutor de música, seja uma CDJ, um toca-discos, quanto pelos botões de controle, presentes na interface do usuário.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig53.png}
-    \caption{diagrama para conversão analógico digital}
+    \caption{bloco de conversão analógico digital}
     \label{fig53}
 \end{figure}
+
+As entradas desse bloco são os sinais analógicos e a saída são os sinais digitais. Dessa forma, os processos que devem ser realizados nesses sinais incluem amostragem, quantização e codificação, para que, enfim, o sinal possa ser lido pela unidade de processamento.
+
+\subsection{Bloco de Leitura de Sinais}
+
+Os sinais analógicos que são lidos incluem os sinais de música; e os sinais de controle que são advindos de dois potenciômetros e de um botão de duas posições, respectivamente para obtenção da frequência central, da quantidade de efeito desejado presente no processamento e o de escolha de qual efeito se deseja utilizar. 
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig54.png}
+    \caption{bloco de leitura de sinais analógicos}
+    \label{fig54}
+\end{figure}
+
+As operações realizadas nesses sinais são visualizados na Figura \ref{fig54}.
 
 \subsection{Bloco de Filtragem}
 
@@ -128,45 +141,76 @@ Assim, pode-se obter a posição na qual o botão se encontra. Essa posição, q
 
 Com esse valor de frequência de corte, o filtro passa-altas do canal 1 será atualizado; e seu sinal filtrado. 
 
-No canal 2, um novo valor para a frequênca de corte 2 será obtido através da expressão de Equação \ref{eq:05}. Assim, o filtro passa-altas deste canal será atualizado conforme a nova frequência de corte, como se encontra na Figura \ref{fig54}. 
+No canal 2, um novo valor para a frequênca de corte 2 será obtido através da expressão de Equação \ref{eq:05}. Assim, o filtro passa-altas deste canal será atualizado conforme a nova frequência de corte, como se encontra na Figura \ref{fig55}. 
+
+No bloco de filtragem, todos os sinais analógicos já estão codificados de forma que podem ser processados digitalmente. Assim, tem-se a \textit{fc} como o valor de frequência entre 20 a 22050 Hz. Dessa forma, valores são atribuídos aos parâmetros \textit{fc$_{1}$} e \textit{fc$_{2}$}.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figuras/fig54.png}
-    \caption{processamento dos canais}
-    \label{fig54}
+    \includegraphics[width=\textwidth]{figuras/fig55.png}
+    \caption{bloco de filtragem}
+    \label{fig55}
 \end{figure}
 
-No diagrama da Figura \ref{fig54}, \textit{fc} corresponde à frequência de corte central, ou seja, àquela lida e convertida do botão central; \textit{fc1} é a frequência de corte para o filtro passa-altas 1 (HPF1) e \textit{fc2} é a frequência de corte do canal 2 para o filtro passa-altas 2 (HPF2).
+No subfluxograma da Figura \ref{fig55}, \textit{fc} corresponde à frequência de corte central, ou seja, àquela lida e convertida do botão central; \textit{fc$_{1}$} é a frequência de corte para o filtro passa-altas 1 (HPF1) e \textit{fc$_{2}$} é a frequência de corte do canal 2 para o filtro passa-altas 2 (HPF2).
 
-Ao final, os dois canais são combinados e se tem o canal \textit{master}.
+Ao final, os dois canais são combinados e se tem o sinal \textit{signal\_master}, que é mandado tanto para o bloco de processamento de efeitos quanto o bloco final de combinação dos dois sinais: de efeito e de combinação dos canais 1 e 2.
 
-\subsection{Bloco de Leitura de Controle de Efeitos}
-leitura de parâmetro fx -> atualização de paramnfx
-leitura de toogle de fx -> atualização de selfx
+\subsection{Bloco de Efeitos}
 
-\subsection{Bloco de Efeitos - Delay}
-conversão de paramnfx para ms -> delayms
-leitura de selfx -> 
+Os efeitos do \textit{mixer} podem ter seus parâmetros de quantidade de reverberação após 1s e o intervalo de atraso (em milissegundos) de amostras configurados conforme o botão de quantidade de efeito. 
 
-caso selfx seja delay -> delaysignal com delayms é criado
-caso selfx não seja delay -> fazer nada
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig56.png}
+    \caption{bloco de efeitos}
+    \label{fig56}
+\end{figure}
 
-
-\subsection{Bloco de Efeitos - Reverb}
-conversão de paramnfx para db -> reverdb
-leitura de selfx -> 
-
-caso selfx seja reverb -> reverbsignal com reverbdb é criado
-caso selfx não seja reverb -> fazer nada
+Além disso, o usuário poderá escolher qual efeito deseja utilizar através de um botão de duas posições, conforme a Figura \ref{fig56}. Os dois parâmetros de seleção e quantidade de efeitos são obtidos do bloco de leitura de sinais. Ao fim desse bloco, tem-se o sinal isolado do efeito, ou seja, o sinal obtido ao final do bloco \textit{mixer} com o efeito aplicado, atribuído ao \textit{signal\_fx}. 
 
 \subsection{Bloco de Automação de Efeitos}
+
+Nesse \textit{mixer} proposto, o volume do efeito é ajustado automaticamente, conforme a frequência central presente na Figura \ref{fig57}. Assim, quando a \textit{fc} está nas extremidades, o volume do efeito é nulo. Porém, ele obtém um ganho conforme a \textit{fc} alcança a posição central da banda de frequênca.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figuras/fig57.png}
+    \caption{bloco de automação do volume de efeitos}
+    \label{fig57}
+\end{figure}
+
+Para a obtenção do ganho do efeito, uma expressão é utilizada para a conversão do valor da \textit{fc} em \textit{volume\_fx}, que é o ganho do \textit{signal\_fx}.
 
 
 \subsection{Bloco Mixer}
 
+A operação de somar dois sinais recebe o nome de \textit{mixing}. Dessa forma, entende-se que nesse processo há dois momentos em que os sinais são misturados. O primeiro é quando os sinais dos canais 1 e 2 são misturados. Outro momento acontece quando os sinais já misturados dos canais 1 e 2 são misturados com o sinal do efeito. Nesse caso, esse bloco se refere à mistura final, ou seja, do segundo caso.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig58.png}
+        \caption{bloco de mistura final de sinais}
+        \label{fig58}
+    \end{figure}
+
+No subfluxograma da Figura \ref{fig58}, o sinal do efeito é atenuado ou amplificado conforme o volume obtido pelo bloco de automação de volume de efeitos. Assim, esse sinal de efeito com volume ajustado é misturado com o sinal obtido do bloco de filtragem, de forma que o sinal de saída, \textit{signal\_output}, é obtido. Porém, esse sinal ainda se encontra no domínio digital.
+
+
 \subsection{Bloco de Conversão AD}
 
+O sinal de saída obtido pelo bloco \textit{mixer} precisa ser convertido para um sinal analógico para que possa ser reproduzido em um sistema de som.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig59.png}
+        \caption{bloco de conversão digital analógico}
+        \label{fig59}
+    \end{figure}
+
+Dessa forma, conforme a Figura \ref{fig59}, o sinal digital passará por processos de conversão digital analógico, filtragem e amplificação da sua potência para que enfim possa ser reproduzido por caixas de som.
+
+\newpage
 \section{Prova de Conceito}
 
 Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se pode simular a lógica de funcionamento do sistema.
@@ -272,16 +316,55 @@ Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se
         \label{fig51}
     \end{figure}
 
-\section{Proposta de Implementação}
+    \section{Proposta de Implementação}
 
-	\subsection{Implementação em \textit{Hardware}}
+    \subsection{Implementação em Hardware}
 
-	\subsection{Implementação em \textit{Software}}
+    Texto geral sobre a implementação em hardware percorrendo todos pontos abaixo
 
-	\subsection{Diagrama de Integração}
-
+    \paragraph{Conectores}
+    \paragraph{Botões}
+    \paragraph{Conversão AD}
+    \paragraph{Protocolos de Comunicação}
+    \paragraph{Unidades de Processamento}
+    \paragraph{Conversão DA}
+    
+    
+    \subsection{Implementação em Software}
+    
+    \begin{itemize}
+        \item \textbf{Linguagem e Estrutura}
+        \begin{itemize}
+            \item Descrição da linguagem de programação escolhida (e.g., Python, C++).
+            \item Estrutura do código e divisão em módulos/funções.
+            \item Abordagem de desenvolvimento (e.g., desenvolvimento ágil, incremental).
+        \end{itemize}
+    \end{itemize}
+    
+    \subsection{Integração entre Hardware e Software}
+    
+    \begin{itemize}
+        \item \textbf{Protocolo de Comunicação}
+        \begin{itemize}
+            \item Descrição dos protocolos de comunicação entre hardware e software (e.g., I2C, SPI, UART, Ethernet).
+            \item Mapeamento das funções de software para controlar e receber dados do hardware.
+            \item Sincronização e temporização entre o hardware e software.
+            \item Gerenciamento de erros e contingências na comunicação.
+        \end{itemize}
+    \end{itemize}
+    
     \subsection{Protótipo de Interface de Usuário}
-
-    \subsection{Documento de Especificação Técnica}
-
-    \subsection{Documento de Plano de Teste}
+    
+    \begin{itemize}
+        \item \textbf{Design da Interface}
+        \begin{itemize}
+            \item Especificação das telas e controles na interface de usuário.
+            \item Ferramentas e frameworks utilizados para o desenvolvimento da interface.
+        \end{itemize}
+        
+        \item \textbf{Interatividade}
+        \begin{itemize}
+            \item Como os usuários interagem com o sistema.
+            \item Feedback visual e sonoro para o usuário.
+        \end{itemize}
+    \end{itemize}

@@ -22,34 +22,39 @@
 \contentsline {figure}{\numberline {21}{\ignorespaces plug 2,5 mm}}{47}{figure.2.21}%
 \contentsline {figure}{\numberline {22}{\ignorespaces cabo RCA}}{48}{figure.2.22}%
 \contentsline {figure}{\numberline {23}{\ignorespaces cabo XLR}}{48}{figure.2.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces diagrama geral do sistema}}{55}{figure.3.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces diagrama para conversão analógico digital}}{55}{figure.3.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces processamento dos canais}}{56}{figure.3.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces expressão para a fc$_{2}$}}{58}{figure.3.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces lógica de funcionamento do botão central no \textit {PureData}}}{59}{figure.3.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces botão de seleção de efeito no \textit {PureData}}}{59}{figure.3.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces botão de quantidade de efeito no \textit {PureData}}}{60}{figure.3.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces botão de seleção de efeito no \textit {PureData}}}{60}{figure.3.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces variação do volume dos efeitos no \textit {PureData}}}{61}{figure.3.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces implementação da variação do volume dos efeitos no \textit {PureData}}}{61}{figure.3.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces soma de sinais filtrado e de efeitos no \textit {PureData}}}{61}{figure.3.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces música 1 no domínio do tempo sem filtragem}}{73}{figure.anexochapback.1.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces música 1 no domínio da frequência sem filtragem}}{73}{figure.anexochapback.1.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 20 Hz}}{74}{figure.anexochapback.1.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 20 Hz}}{74}{figure.anexochapback.1.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 300 Hz}}{74}{figure.anexochapback.1.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 300 Hz}}{75}{figure.anexochapback.1.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 4 kHz}}{75}{figure.anexochapback.1.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 4 kHz}}{75}{figure.anexochapback.1.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 24 kHz}}{76}{figure.anexochapback.1.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 24 kHz}}{76}{figure.anexochapback.1.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 24 kHz}}{76}{figure.anexochapback.1.45}%
-\contentsline {figure}{\numberline {46}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 24 kHz}}{77}{figure.anexochapback.1.46}%
-\contentsline {figure}{\numberline {47}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 4 kHz}}{77}{figure.anexochapback.1.47}%
-\contentsline {figure}{\numberline {48}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 4 kHz}}{77}{figure.anexochapback.1.48}%
-\contentsline {figure}{\numberline {49}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 300 Hz}}{78}{figure.anexochapback.1.49}%
-\contentsline {figure}{\numberline {50}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 300 Hz}}{78}{figure.anexochapback.1.50}%
-\contentsline {figure}{\numberline {51}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 20 Hz}}{78}{figure.anexochapback.1.51}%
-\contentsline {figure}{\numberline {52}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 20 Hz}}{79}{figure.anexochapback.1.52}%
-\contentsline {figure}{\numberline {53}{\ignorespaces música 2 no domínio do tempo sem filtragem}}{79}{figure.anexochapback.1.53}%
-\contentsline {figure}{\numberline {54}{\ignorespaces música 2 no domínio da frequência sem filtragem}}{79}{figure.anexochapback.1.54}%
+\contentsline {figure}{\numberline {24}{\ignorespaces fluxograma geral do \textit {mixer}}}{55}{figure.3.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces bloco de conversão analógico digital}}{56}{figure.3.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces bloco de leitura de sinais analógicos}}{56}{figure.3.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces bloco de filtragem}}{57}{figure.3.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces bloco de efeitos}}{58}{figure.3.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces bloco de automação do volume de efeitos}}{58}{figure.3.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces bloco de mistura final de sinais}}{59}{figure.3.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces bloco de conversão digital analógico}}{59}{figure.3.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces expressão para a fc$_{2}$}}{61}{figure.3.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces lógica de funcionamento do botão central no \textit {PureData}}}{62}{figure.3.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces botão de seleção de efeito no \textit {PureData}}}{62}{figure.3.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces botão de quantidade de efeito no \textit {PureData}}}{63}{figure.3.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces botão de seleção de efeito no \textit {PureData}}}{63}{figure.3.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces variação do volume dos efeitos no \textit {PureData}}}{64}{figure.3.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces implementação da variação do volume dos efeitos no \textit {PureData}}}{64}{figure.3.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces soma de sinais filtrado e de efeitos no \textit {PureData}}}{64}{figure.3.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces música 1 no domínio do tempo sem filtragem}}{77}{figure.anexochapback.1.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces música 1 no domínio da frequência sem filtragem}}{77}{figure.anexochapback.1.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 20 Hz}}{78}{figure.anexochapback.1.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 20 Hz}}{78}{figure.anexochapback.1.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 300 Hz}}{78}{figure.anexochapback.1.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 300 Hz}}{79}{figure.anexochapback.1.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 4 kHz}}{79}{figure.anexochapback.1.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 4 kHz}}{79}{figure.anexochapback.1.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 24 kHz}}{80}{figure.anexochapback.1.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 24 kHz}}{80}{figure.anexochapback.1.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 24 kHz}}{80}{figure.anexochapback.1.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 24 kHz}}{81}{figure.anexochapback.1.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 4 kHz}}{81}{figure.anexochapback.1.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 4 kHz}}{81}{figure.anexochapback.1.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 300 Hz}}{82}{figure.anexochapback.1.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 300 Hz}}{82}{figure.anexochapback.1.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces música 2 no domínio do tempo com uma $f_c$ de 20 Hz}}{82}{figure.anexochapback.1.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces música 2 no domínio da frequência com uma $f_c$ de 20 Hz}}{83}{figure.anexochapback.1.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces música 2 no domínio do tempo sem filtragem}}{83}{figure.anexochapback.1.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces música 2 no domínio da frequência sem filtragem}}{83}{figure.anexochapback.1.59}%

@@ -6,14 +6,11 @@ Metodologia
 	- Diagrama de Subpartes [done]
 	- Fluxogramas de subblocos [done]
 			- Bloco de Conversão AD [done]
-			- Bloco de Filtragem [done]s
-			- Bloco de Automação de FX [to do] [to write]
-				- Volume e comutação de FX
-			- Bloco de Delay - FX [to do] [to write]
-			- Bloco de Reverb - FX [to do] [to write]
-			- Bloco Mixer [to do] [to write]
-				- Apresentar a soma dos sinais de filtragem e de efeitos
-			- Bloco de Conversão DA [to do] [to write]
+			- Bloco de Filtragem [done]
+			- Bloco de Automação de FX [done]
+			- Bloco de Efeito [done]
+			- Bloco Mixer [done]
+			- Bloco de Conversão DA [done]
 
 - Prova de Conceito
 	- PureData  [done]
@@ -22,8 +19,16 @@ Metodologia
 
 - Proposta de Implementação
 	- Implementação em Hardware [to do] [to write]
+		- Alimentação
+		- Conectores
+		- Controles
+		- Conversão dos sinais analógicos em digitais
+		- Processamento do sinal
+		- Raspbr
+		- Conversão do sinal digital em analógico
 	- Implementação em Software [to do] [to write]
-	- Diagrama de Integração    [to do] [to write]
+		- Em qual linguagem e estrutura será implementado?
+	- Integração entre hardware e software
+		- Protocolo de Comunicação
 	- Protótipo de Interface de Usuário [to do] [to write]
-	- [Talvez] Documento de Especificação Técnica
-	- [Talvez] Documento de Plano de Teste
+		- 
