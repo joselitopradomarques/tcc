@@ -316,55 +316,156 @@ Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se
         \label{fig51}
     \end{figure}
 
+	\subsection{Implementação de Efeitos}
+
+    O funcionamento do efeito utiliza três parâmetros. Um botão \texttt{toogle}, cuja função é alternar entre os efeitos \textit{delay} e \textit{reverb}; um \textit{slider} que varia parâmetros internos dos efeitos e a frequência de corte do botão central, que automatiza o volume do efeito.
+
+    O botão \texttt{toogle} visa alternar os efeitos. Possui duas posições, ou seja, sempre um efeito está ativo. Para alternar para o outro, basta alterar a posição. Figura \ref{fig46}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figuras/fig46.png}
+        \caption{botão de seleção de efeito no \textit{PureData}}
+        \label{fig46}
+    \end{figure}
+
+    O botão \textit{slider} visa alterar os parâmetros internos de cada efeito. Os valores variam de 0 a 1. O botão se encontra na Figura \ref{fig47}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.2\textwidth]{figuras/fig47.png}
+        \caption{botão de quantidade de efeito no \textit{PureData}}
+        \label{fig47}
+    \end{figure}
+
+    Cada efeito utiliza o parâmetro \textit{fx} advindo do botão \textit{slider} e realiza uma adaptação para o seu parâmetro. No caso do \textit{reverb}, o valor de \textit{fx} é multiplicado por 100 e esse valro se torna a quantidade de dB que permanecerá na música após 1s. Para o \textit{delay}, esse valor é multiplicado por 1000 e se transforma no intervalo de tempo em ms da música que permanecerá no efeito.
+
+    A lógica que permeia a seleção do efeito, encontra-se na Figura \ref{fig48}. Os comandos \texttt{receive\textasciitilde\ fx} são responsáveis por inserirem os efeitos como entrada. Cada volume do efeito é multiplicado pelo valor do \texttt{toogle}; um deles é multiplicado pelo valor atual enquanto o outro é multiplicado pelo inverso, de forma que o botão \texttt{toogle} funciona como um alternador para selecionar os efeitos. 
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figuras/fig48.png}
+        \caption{botão de seleção de efeito no \textit{PureData}}
+        \label{fig48}
+    \end{figure}
+
+    Nesse sistema, o volume do efeito é regido de forma automática em função da posição do botão central, ou seja, pelas frequências de corte. Na Figura \ref{fig49} é possível ver a variação do volume do efeito em função da frequência central.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figuras/fig49.png}
+        \caption{variação do volume dos efeitos no \textit{PureData}}
+        \label{fig49}
+    \end{figure}
+
+    No \textit{PureData}, o bloco de automação de volume de efeitos é realizado utilizando as operações presentes na Figura \ref{fig50}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.6\textwidth]{figuras/fig50.png}
+        \caption{implementação da variação do volume dos efeitos no \textit{PureData}}
+        \label{fig50}
+    \end{figure}
+
+    Ao final, o sinal dos efeitos é multiplicado pelo volume dos efeitos, e, posteriormente, somado ao sinal das filtragens, dando origem ao sinal de saída. Esse sinal é processado por um bloco de conversão de sinal digital em analógico e enfim foi reproduzido. Esse bloco de soma de sinais está representado na Figura \ref{fig51}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figuras/fig51.png}
+        \caption{soma de sinais filtrado e de efeitos no \textit{PureData}}
+        \label{fig51}
+    \end{figure}
+
     \section{Proposta de Implementação}
+
 
     \subsection{Implementação em Hardware}
 
     Texto geral sobre a implementação em hardware percorrendo todos pontos abaixo
 
     \paragraph{Conectores}
+    Para a aquisição dos sinais de áudio, o \textit{mixer} contará com conectores RCA devido à padronização imposta pela indústria e pela facilidade de se ter cabos e entradas desse tipo, Figura \ref{fig22}.
+
+    Dessa forma, dois RCAs serão utilizados para cada canal, sendo assim: 4 RCAs para entrada e 2 RCAs para a saída, totalizando 6 RCAs.
+
     \paragraph{Botões}
+
+    A interação com o usuário é necessária para a obtenção de parâmetros como frequência de corte, quantidade de efeitos e a seleção do efeito desejado. Para isso, dois \textit{sliders} serão utilizados e uma chave de duas posições, respectivamente. 
+
+    Os \textit{sliders} em si possuem um potenciômetro. Dessa forma, são alimentados por uma tensão e sua posição é obtida através de uma tensão de saída, que é proporcional à tensão de entrada. A preferência por esse tipo de botão se dá à precisão alcançada utilizando dois dedos, o que confere à mudança de frequência precisão. Dessa forma, o botão da Figura \ref{fig61} é esperado para que o usuário interaja com o \textit{mixer}. 
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figuras/fig61.png}
+        \caption{botão \textit{slider} horizontal para frequência central}
+        \label{fig61}
+    \end{figure}
+
+    Em contrapartida, a chave de duas posições gera dois níveis possíveis de tensões, tensão nula ou de alimentação. Cada nível deve se relacionar a um efeito desejado. Dessa forma, um botão como o da Figura \ref{fig62} é esperado para a interface com o usuário.
+
+    Para a escolha de quantidade de efeitos desejado, um botão semelhante ao acima será escolhido para a interface do usuário.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figuras/fig62.png}
+        \caption{botão de duas posições para seleção do efeito}
+        \label{fig62}
+    \end{figure}
+
+
     \paragraph{Conversão AD}
+
+    A conversão analógica digital será utilizada em duas categorias de sinais: de áudio e de controle. Então, dois tipos de níveis de quantização são esperados: um alto para que as músicas convertidas tenham definição e outro baixo devido à precisão necessária para que se infira qual efeito é desejado (dois níveis) ou em qual frequência central se deseja estar.
+
+    Dessa forma, para a conversão dos sinais analógicos responsavéis pela aquisição de sinais de áudio, utilizar-se-á conversores de 16 \textit{bits}, semelhante ao da Figura \ref{fig63}.
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figuras/fig63.jpg}
+        \caption{botão de duas posições para seleção do efeito}
+        \label{fig63}
+    \end{figure}    
+    
+    
+    
+    Para a obtenção dos sinais de controle, utilizar-se-á a conversão analógico digital advinda de um Arduino Uno, que possui uma resolução de 10 \textit{bits}. O microcontrolador que seŕa utilizado se encontra na Figura \ref{fig64}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figuras/fig64.jpeg}
+        \caption{botão de duas posições para seleção do efeito}
+        \label{fig64}
+    \end{figure}    
+
     \paragraph{Protocolos de Comunicação}
+    Ao se utilizar adequados conversores analógico digitais, os sinais podem ser adquiridos e interpretados pela \textit{Raspberry Pi}. Porém, ainda há inúmeras formas de se adquirir esses sinais analógicos a apartir de um dispositivo. Uma forma eficiente é a utilização de protocolos de comunicação serial, que possitilitam a transmissão e/ou recepção de sinais através de um canal de comunicação.
+
+    Dessa forma, para essa aplicação, pode-se utilizar um canal de transmissão para a recepção de sinais de áudio e outro para os sinais de controle. Para isso, deve-se equiparar os protocolos para a transmissão e recepção.
+
+    Assim, para a recepção de sinais de áudio, o \textit{mixer} utilizará I2C pois os conversores levantados utilizam esse protocolo. Além disso, para a recepção dos sinais de controle, os protocolos disponíveis podem ser UART (\textit{Asynchronous Receiver/Transmitter}), I2C (\textit{Inter-Integrated Circuit}) ou SPI (\textit{Serial Peripheral Interface}).
+
+
     \paragraph{Unidades de Processamento}
+
+    A unidade de processamento é o local ou dispositivo no qual os processamentos de sinais serão realizados. Para isso, utilizar-se-á uma \textit{Raspberry Pi} devido ao seu poder de processamento e às suas variedades possibilidades de compilação quanto à linguagem de processamento. Esse dispositivo pode ser visualizado na Figura \ref{fig65}.
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figuras/fig65.jpg}
+        \caption{botão de duas posições para seleção do efeito}
+        \label{fig65}
+    \end{figure}    
+
+
     \paragraph{Conversão DA}
+
+    A conversão digital analógico é necessária para que o sinal final, após o processamento, possa ser reproduzido por sistemas de áudio que utilizam sinais analógicos. Porém, a \textit{Raspberry Pi} conta, nativamente, com uma saída/entrada de áudio com conector 3.5mm, conforme a Figura \ref{fig20}.
     
     
     \subsection{Implementação em Software}
-    
-    \begin{itemize}
-        \item \textbf{Linguagem e Estrutura}
-        \begin{itemize}
-            \item Descrição da linguagem de programação escolhida (e.g., Python, C++).
-            \item Estrutura do código e divisão em módulos/funções.
-            \item Abordagem de desenvolvimento (e.g., desenvolvimento ágil, incremental).
-        \end{itemize}
-    \end{itemize}
-    
-    \subsection{Integração entre Hardware e Software}
-    
-    \begin{itemize}
-        \item \textbf{Protocolo de Comunicação}
-        \begin{itemize}
-            \item Descrição dos protocolos de comunicação entre hardware e software (e.g., I2C, SPI, UART, Ethernet).
-            \item Mapeamento das funções de software para controlar e receber dados do hardware.
-            \item Sincronização e temporização entre o hardware e software.
-            \item Gerenciamento de erros e contingências na comunicação.
-        \end{itemize}
-    \end{itemize}
-    
-    \subsection{Protótipo de Interface de Usuário}
-    
-    \begin{itemize}
-        \item \textbf{Design da Interface}
-        \begin{itemize}
-            \item Especificação das telas e controles na interface de usuário.
-            \item Ferramentas e frameworks utilizados para o desenvolvimento da interface.
-        \end{itemize}
+
+    Na \textit{Raspberry Pi}, com os sinais convertidos e adquiridos, é necessário que haja o processamento para que, ao final, haja o sinal processado. Assim, devido à velocidade de processamento, a linguagem C será utilizada para a implementação do sistema. 
         
-        \item \textbf{Interatividade}
-        \begin{itemize}
-            \item Como os usuários interagem com o sistema.
-            \item Feedback visual e sonoro para o usuário.
-        \end{itemize}
-    \end{itemize}
+    \subsection{Protótipo de Interface de Usuário}
+
+        Assim, de forma similar a um \textit{mixer} atual, a interface do usuário seria implementada com dois botões \textit{sliders} horizontais com um botão de duas posições. Na parte traseira, haverá os conectores RCA e de alimentação.
