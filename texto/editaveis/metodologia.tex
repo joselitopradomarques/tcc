@@ -323,8 +323,27 @@ Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se
     Texto geral sobre a implementação em hardware percorrendo todos pontos abaixo
 
     \paragraph{Conectores}
+    Para a aquisição dos sinais de áudio, o \textit{mixer} contará com conectores RCA devido à padronização imposta pela indústria e pela facilidade de se ter cabos e entradas desse tipo, Figura \ref{fig22}.
+
+    Dessa forma, dois RCAs serão utilizados para cada canal, sendo assim: 4 RCAs para entrada e 2 RCAs para a saída, totalizando 6 RCAs.
+
     \paragraph{Botões}
+
+    A interação com o usuário é necessária para a obtenção de parâmetros como frequência de corte, quantidade de efeitos e a seleção do efeito desejado. Para isso, dois \textit{sliders} serão utilizados e uma chave de duas posições, respectivamente. 
+
+    Os \textit{sliders} em si possuem um potenciômetro. Dessa forma, são alimentados por uma tensão e sua posição é obtida através de uma tensão de saída, que é proporcional à tensão de entrada. 
+
+    [INSERIR FIGURA DE SLIDER]
+
+    Em contrapartida, a chave de duas posições gera dois níveis possíveis de tensões, tensão nula ou de alimentação. Cada nível deve se relacionar a um efeito desejado.
+
+    [INSERIR FIGURA DE CHAVE]
+
     \paragraph{Conversão AD}
+
+    A conversão analógica digital é essencial para que os parâmetros necessários para qu
+
+    
     \paragraph{Protocolos de Comunicação}
     \paragraph{Unidades de Processamento}
     \paragraph{Conversão DA}

@@ -75,8 +75,8 @@
 \contentsline {paragraph}{\numberline {3.5.1.0.5}Unidades de Processamento}{65}{paragraph.3.5.1.0.5}%
 \contentsline {paragraph}{\numberline {3.5.1.0.6}Conversão DA}{65}{paragraph.3.5.1.0.6}%
 \contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{65}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Integração entre Hardware e Software}{65}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Protótipo de Interface de Usuário}{65}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.3}Integração entre Hardware e Software}{66}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Protótipo de Interface de Usuário}{66}{subsection.3.5.4}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{67}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Resultados de Filtragem}{67}{section.4.1}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  22 AUG 2024 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  22 AUG 2024 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1374,9 +1374,9 @@ Underfull \vbox (badness 2582) has occurred while \output is active []
  [63 <./figuras/fig47.png> <./figuras/fig48.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64 <./figuras/fig49.png> <./figuras/fig50.png> <./figuras/fig51.png>]) (./editaveis/resultados.tex [65] [66
+ [64 <./figuras/fig49.png> <./figuras/fig50.png> <./figuras/fig51.png>] [65]) (./editaveis/resultados.tex [66] [67
 
-] [67]
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [68]) (./editaveis/conclusao.tex [69] [70
@@ -1398,17 +1398,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 ] [76]
-<figuras/fig40.png, id=988, 1011.78pt x 433.62pt>
+<figuras/fig40.png, id=989, 1011.78pt x 433.62pt>
 File: figuras/fig40.png Graphic file (type png)
 <use figuras/fig40.png>
 Package pdftex.def Info: figuras/fig40.png  used on input line 14.
 (pdftex.def)             Requested size: 455.0pt x 195.00148pt.
-<figuras/fig41.png, id=989, 1011.78pt x 433.62pt>
+<figuras/fig41.png, id=990, 1011.78pt x 433.62pt>
 File: figuras/fig41.png Graphic file (type png)
 <use figuras/fig41.png>
 Package pdftex.def Info: figuras/fig41.png  used on input line 21.
 (pdftex.def)             Requested size: 455.0pt x 195.00148pt.
-<figuras/fig24.png, id=990, 1011.78pt x 433.62pt>
+<figuras/fig24.png, id=991, 1011.78pt x 433.62pt>
 File: figuras/fig24.png Graphic file (type png)
 <use figuras/fig24.png>
 Package pdftex.def Info: figuras/fig24.png  used on input line 28.
@@ -1417,7 +1417,7 @@ Package pdftex.def Info: figuras/fig24.png  used on input line 28.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig25.png, id=991, 1011.78pt x 433.62pt>
+<figuras/fig25.png, id=992, 1011.78pt x 433.62pt>
 File: figuras/fig25.png Graphic file (type png)
 <use figuras/fig25.png>
 Package pdftex.def Info: figuras/fig25.png  used on input line 35.
@@ -1425,7 +1425,7 @@ Package pdftex.def Info: figuras/fig25.png  used on input line 35.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig28.png, id=992, 1011.78pt x 433.62pt>
+<figuras/fig28.png, id=993, 1011.78pt x 433.62pt>
 File: figuras/fig28.png Graphic file (type png)
 <use figuras/fig28.png>
 Package pdftex.def Info: figuras/fig28.png  used on input line 42.
@@ -1433,7 +1433,7 @@ Package pdftex.def Info: figuras/fig28.png  used on input line 42.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig29.png, id=993, 1011.78pt x 433.62pt>
+<figuras/fig29.png, id=994, 1011.78pt x 433.62pt>
 File: figuras/fig29.png Graphic file (type png)
 <use figuras/fig29.png>
 Package pdftex.def Info: figuras/fig29.png  used on input line 49.
@@ -1441,7 +1441,7 @@ Package pdftex.def Info: figuras/fig29.png  used on input line 49.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig26.png, id=994, 1011.78pt x 433.62pt>
+<figuras/fig26.png, id=995, 1011.78pt x 433.62pt>
 File: figuras/fig26.png Graphic file (type png)
 <use figuras/fig26.png>
 Package pdftex.def Info: figuras/fig26.png  used on input line 56.
@@ -1449,7 +1449,7 @@ Package pdftex.def Info: figuras/fig26.png  used on input line 56.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig27.png, id=995, 1011.78pt x 433.62pt>
+<figuras/fig27.png, id=996, 1011.78pt x 433.62pt>
 File: figuras/fig27.png Graphic file (type png)
 <use figuras/fig27.png>
 Package pdftex.def Info: figuras/fig27.png  used on input line 63.
@@ -1457,7 +1457,7 @@ Package pdftex.def Info: figuras/fig27.png  used on input line 63.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig30.png, id=996, 1011.78pt x 433.62pt>
+<figuras/fig30.png, id=997, 1011.78pt x 433.62pt>
 File: figuras/fig30.png Graphic file (type png)
 <use figuras/fig30.png>
 Package pdftex.def Info: figuras/fig30.png  used on input line 70.
@@ -1465,7 +1465,7 @@ Package pdftex.def Info: figuras/fig30.png  used on input line 70.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig31.png, id=997, 1011.78pt x 433.62pt>
+<figuras/fig31.png, id=998, 1011.78pt x 433.62pt>
 File: figuras/fig31.png Graphic file (type png)
 <use figuras/fig31.png>
 Package pdftex.def Info: figuras/fig31.png  used on input line 77.
@@ -1473,7 +1473,7 @@ Package pdftex.def Info: figuras/fig31.png  used on input line 77.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig32.png, id=998, 1011.78pt x 433.62pt>
+<figuras/fig32.png, id=999, 1011.78pt x 433.62pt>
 File: figuras/fig32.png Graphic file (type png)
 <use figuras/fig32.png>
 Package pdftex.def Info: figuras/fig32.png  used on input line 84.
@@ -1481,7 +1481,7 @@ Package pdftex.def Info: figuras/fig32.png  used on input line 84.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig33.png, id=999, 1011.78pt x 433.62pt>
+<figuras/fig33.png, id=1000, 1011.78pt x 433.62pt>
 File: figuras/fig33.png Graphic file (type png)
 <use figuras/fig33.png>
 Package pdftex.def Info: figuras/fig33.png  used on input line 91.
@@ -1489,7 +1489,7 @@ Package pdftex.def Info: figuras/fig33.png  used on input line 91.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig34.png, id=1000, 1011.78pt x 433.62pt>
+<figuras/fig34.png, id=1001, 1011.78pt x 433.62pt>
 File: figuras/fig34.png Graphic file (type png)
 <use figuras/fig34.png>
 Package pdftex.def Info: figuras/fig34.png  used on input line 98.
@@ -1497,7 +1497,7 @@ Package pdftex.def Info: figuras/fig34.png  used on input line 98.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig35.png, id=1001, 1011.78pt x 433.62pt>
+<figuras/fig35.png, id=1002, 1011.78pt x 433.62pt>
 File: figuras/fig35.png Graphic file (type png)
 <use figuras/fig35.png>
 Package pdftex.def Info: figuras/fig35.png  used on input line 105.
@@ -1505,7 +1505,7 @@ Package pdftex.def Info: figuras/fig35.png  used on input line 105.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig36.png, id=1002, 1011.78pt x 433.62pt>
+<figuras/fig36.png, id=1003, 1011.78pt x 433.62pt>
 File: figuras/fig36.png Graphic file (type png)
 <use figuras/fig36.png>
 Package pdftex.def Info: figuras/fig36.png  used on input line 112.
@@ -1513,7 +1513,7 @@ Package pdftex.def Info: figuras/fig36.png  used on input line 112.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig37.png, id=1003, 1011.78pt x 433.62pt>
+<figuras/fig37.png, id=1004, 1011.78pt x 433.62pt>
 File: figuras/fig37.png Graphic file (type png)
 <use figuras/fig37.png>
 Package pdftex.def Info: figuras/fig37.png  used on input line 119.
@@ -1521,7 +1521,7 @@ Package pdftex.def Info: figuras/fig37.png  used on input line 119.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig38.png, id=1004, 1011.78pt x 433.62pt>
+<figuras/fig38.png, id=1005, 1011.78pt x 433.62pt>
 File: figuras/fig38.png Graphic file (type png)
 <use figuras/fig38.png>
 Package pdftex.def Info: figuras/fig38.png  used on input line 126.
@@ -1529,7 +1529,7 @@ Package pdftex.def Info: figuras/fig38.png  used on input line 126.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig39.png, id=1005, 1011.78pt x 433.62pt>
+<figuras/fig39.png, id=1006, 1011.78pt x 433.62pt>
 File: figuras/fig39.png Graphic file (type png)
 <use figuras/fig39.png>
 Package pdftex.def Info: figuras/fig39.png  used on input line 133.
@@ -1537,53 +1537,4 @@ Package pdftex.def Info: figuras/fig39.png  used on input line 133.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig42.png, id=1006, 1011.78pt x 433.62pt>
-File: figuras/fig42.png Graphic file (type png)
-<use figuras/fig42.png>
-Package pdftex.def Info: figuras/fig42.png  used on input line 140.
-(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figuras/fig43.png, id=1007, 1011.78pt x 433.62pt>
-File: figuras/fig43.png Graphic file (type png)
-<use figuras/fig43.png>
-Package pdftex.def Info: figuras/fig43.png  used on input line 147.
-(pdftex.def)             Requested size: 455.0pt x 195.00148pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./tcc.ind) 
-AED: lastpage setting LastPage
-[77
-
- <./figuras/fig40.png> <./figuras/fig41.png>] [78 <./figuras/fig24.png> <./figuras/fig25.png> <./figuras/fig28.png>] [79 <./figuras/fig29.png> <./figuras/fig26.png> <./figuras/fig27.png>] [80 <./figuras/fig30.png> <./figuras/fig31.png> <./figuras/fig32.png>] [81 <./figuras/fig33.png> <./figuras/fig34.png> <./figuras/fig35.png>] [82 <./figuras/fig36.png> <./figuras/fig37.png> <./figuras/fig38.png>] [83 <./figuras/fig39.png> <./figuras/fig42.png> <./figuras/fig43.png>]
-\tf@lof=\write6
-\openout6 = `tcc.lof'.
-
-\tf@lot=\write7
-\openout7 = `tcc.lot'.
-
-\tf@toc=\write8
-\openout8 = `tcc.toc'.
-
- (./tcc.aux)
-Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: FC39CEE07258D9BEF09092734F842A0F;2170.
- ) 
-Here is how much of TeX's memory you used:
- 17443 strings out of 480247
- 278638 string characters out of 5896151
- 604733 words of memory out of 5000000
- 34677 multiletter control sequences out of 15000+600000
- 552865 words of font info for 73 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 80i,13n,96p,1183b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (85 pages, 15793545 bytes).
-PDF statistics:
- 1457 PDF objects out of 1728 (max. 8388607)
- 1219 compressed objects within 13 object streams
- 272 named destinations out of 1000 (max. 500000)
- 1041 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+<figuras/fig42.png, id=1007, 10
