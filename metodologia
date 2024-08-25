@@ -18,17 +18,14 @@ Metodologia
 	- Implementação de Efeitos [done]
 
 - Proposta de Implementação
-	- Implementação em Hardware [to do] [to write]
-		- Alimentação
-		- Conectores
-		- Controles
-		- Conversão dos sinais analógicos em digitais
-		- Processamento do sinal
-		- Raspbr
-		- Conversão do sinal digital em analógico
-	- Implementação em Software [to do] [to write]
-		- Em qual linguagem e estrutura será implementado?
-	- Integração entre hardware e software
-		- Protocolo de Comunicação
-	- Protótipo de Interface de Usuário [to do] [to write]
-		- 
+	- Implementação em Hardware [done]
+		- Conectores [done]
+		- Controles [done]
+		- Conversão dos sinais analógicos em digitais [done]
+		- Processamento do sinal [done]
+		- Raspbr [done]
+		- Conversão do sinal digital em analógico [done]
+		- Protocolo de Comunicação [done]
+	- Implementação em Software [done]
+	- Protótipo de Interface de Usuário [done]
+		- Criar um protótipo

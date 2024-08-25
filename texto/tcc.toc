@@ -66,35 +66,35 @@
 \contentsline {subsection}{\numberline {3.4.1}\textit {PureData}}{60}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Implementação de Filtragem}{60}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Implementação de Efeitos}{62}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Proposta de Implementação}{64}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Implementação em Hardware}{64}{subsection.3.5.1}%
-\contentsline {paragraph}{\numberline {3.5.1.0.1}Conectores}{65}{paragraph.3.5.1.0.1}%
-\contentsline {paragraph}{\numberline {3.5.1.0.2}Botões}{65}{paragraph.3.5.1.0.2}%
-\contentsline {paragraph}{\numberline {3.5.1.0.3}Conversão AD}{65}{paragraph.3.5.1.0.3}%
-\contentsline {paragraph}{\numberline {3.5.1.0.4}Protocolos de Comunicação}{65}{paragraph.3.5.1.0.4}%
-\contentsline {paragraph}{\numberline {3.5.1.0.5}Unidades de Processamento}{65}{paragraph.3.5.1.0.5}%
-\contentsline {paragraph}{\numberline {3.5.1.0.6}Conversão DA}{65}{paragraph.3.5.1.0.6}%
-\contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{65}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Integração entre Hardware e Software}{66}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Protótipo de Interface de Usuário}{66}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.4.4}Implementação de Efeitos}{64}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Proposta de Implementação}{67}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Implementação em Hardware}{67}{subsection.3.5.1}%
+\contentsline {paragraph}{\numberline {3.5.1.0.1}Conectores}{67}{paragraph.3.5.1.0.1}%
+\contentsline {paragraph}{\numberline {3.5.1.0.2}Botões}{67}{paragraph.3.5.1.0.2}%
+\contentsline {paragraph}{\numberline {3.5.1.0.3}Conversão AD}{68}{paragraph.3.5.1.0.3}%
+\contentsline {paragraph}{\numberline {3.5.1.0.4}Protocolos de Comunicação}{69}{paragraph.3.5.1.0.4}%
+\contentsline {paragraph}{\numberline {3.5.1.0.5}Unidades de Processamento}{69}{paragraph.3.5.1.0.5}%
+\contentsline {paragraph}{\numberline {3.5.1.0.6}Conversão DA}{70}{paragraph.3.5.1.0.6}%
+\contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{70}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Protótipo de Interface de Usuário}{70}{subsection.3.5.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{67}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Resultados de Filtragem}{67}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{69}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{69}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{69}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{69}{subsection.4.2.3}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{71}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Resultados de Filtragem}{71}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{73}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{73}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{73}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{73}{subsection.4.2.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{71}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{75}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{73}{section*.18}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{77}{section*.18}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{75}{section*.19}%
+\contentsline {part}{\uppercase {Anexos}}{79}{section*.19}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{77}{appendix.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Gráficos de Filtragem}}{81}{appendix.anexochapback.1}%
