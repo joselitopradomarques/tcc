@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1724611930 "/home/joselito/git/tcc/texto/fixos/pacotes.tex" "pacotes.pdf" "pacotes" 1724611930
+["pdflatex"] 1724691596 "/home/joselito/git/tcc/texto/fixos/pacotes.tex" "pacotes.pdf" "pacotes" 1724691596
   "/etc/texmf/web2c/texmf.cnf" 1712929699 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/joselito/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1712930075 1405654 07c26131251a961f34e5581db826d8da ""
-  "/home/joselito/git/tcc/texto/fixos/pacotes.tex" 1724108551 414 0b8c3b9b81f07ab1dc541ae93fa49788 ""
+  "/home/joselito/git/tcc/texto/fixos/pacotes.tex" 1724626549 414 0b8c3b9b81f07ab1dc541ae93fa49788 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
@@ -83,8 +83,8 @@
   "/usr/share/texmf/tex/latex/lm/lmodern.sty" 1256929440 1606 c17281c7cff2bbd7ff0173e1433487ec ""
   "/usr/share/texmf/tex/latex/lm/t1lmr.fd" 1256929440 1865 afbfccbe7fda9c2dc5078ad7c486bbed ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
-  "pacotes.aux" 0 -1 0 ""
-  "pacotes.tex" 1724108551 414 0b8c3b9b81f07ab1dc541ae93fa49788 ""
+  "pacotes.aux" 1724691596 32 3985256e7290058c681f74d7a3565a19 ""
+  "pacotes.tex" 1724626549 414 0b8c3b9b81f07ab1dc541ae93fa49788 ""
   (generated)
   "pacotes.log"
   "pacotes.pdf"
