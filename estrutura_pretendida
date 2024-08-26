@@ -1,9 +1,6 @@
 - Estruturação atual do trabalho
 
 Introdução
-	Proposta de Implementação
-		Toda documentação de projeto
-			[mover para CONCLUSÃO/IMPLEMENTAÇÃO FINAL]
 	Contextualização
 		[TO DO]
 	Definição do Problema e Proposta de Pesquisa
@@ -16,20 +13,21 @@ Introdução
 	Estrutura da Monografia
 			[TO DO]
 
-Fundamentação Teórica e Estado da Arte
-	 [Transferir para Revisão Bibliográfica]
-		Sinal Conceito
-		Sinal Contínuo
-		Som e Música
-		Mixer
+Fundamentação Teórica e Estado da Arte 	[Done]
+		Sinal Conceito 	[Done]
+		Sinal Contínuo	[Done]
+		Som e Música	[Done]
+		Mixer	[Done]
 
+Metodologia
+	
 Proposta de Implementação [done]
 
 Resultados Preliminares
-	- Mudar a posição das Figuras do teste de filtragem
-	- Obter os áudios dos testes de efeitos
-	- Escrever os testes de efeitos
+	- Mudar a posição das Figuras do teste de filtragem [to do] [to write]
+	- Obter os áudios dos testes de efeitos [to do] [to write]
+	- Escrever os testes de efeitos [to do] [to write]
 
 Anexos
-	[Done]
+	[Done]  [to do] [to write]
 ------------------------------------------------------------------
