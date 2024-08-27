@@ -71,7 +71,7 @@ def plot_fft_color(file_path, window_size=1024, window_type='hann', noverlap=512
     plt.show()
 
 # Caminho para o arquivo WAV
-file_path = '/home/joselito/git/tcc/datas/teste.wav'
+file_path = '/home/joselito/git/tcc/PureData/case12_cut.wav'
 
 # Exemplo de uso com diferentes tipos e tamanhos de janela
 plot_fft_color(file_path, window_size=1024, window_type='hann')

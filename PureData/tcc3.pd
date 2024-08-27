@@ -7,7 +7,7 @@
 #X msg 909 39 stop;
 #X msg 950 39 print;
 #X obj 871 76 readsf~ 2 1e+06;
-#X obj 565 243 hsl 170 20 0.2 22050 0 1 empty empty Fc\ do\ mixer -2 -10 0 12 #00faff #000000 #000000 14912 1;
+#X obj 565 243 hsl 170 20 0.2 22050 0 1 empty empty Fc\ do\ mixer -2 -10 0 12 #00faff #000000 #000000 8500 1;
 #X obj 321 385 hip~;
 #X obj 869 385 hip~;
 #X obj 244 614 dac~;
@@ -67,8 +67,8 @@
 #X msg 336 573 stop;
 #X msg 322 17 open /home/joselito/git/tcc/datas/audio01.wav;
 #X msg 790 13 open /home/joselito/git/tcc/datas/audio02.wav;
-#X msg 297 546 open case8.wav \, start;
-#X obj 645 312 expr (22050 - sqrt(22050*22050 - ($f1 - 22050)*($f1-22050)) );
+#X obj 646 312 expr (22050 - sqrt(22050*22050 - ($f1 - 22050)*($f1-22050)) );
+#X msg 297 546 open case11.wav \, start;
 #X connect 0 0 3 0;
 #X connect 1 0 3 0;
 #X connect 2 0 3 0;
@@ -95,6 +95,7 @@
 #X connect 33 0 32 0;
 #X connect 34 0 35 0;
 #X connect 35 0 11 0;
+#X connect 35 0 64 0;
 #X connect 36 0 57 0;
 #X connect 37 0 38 0;
 #X connect 38 0 39 0;
@@ -104,7 +105,7 @@
 #X connect 42 0 41 0;
 #X connect 45 0 63 0;
 #X connect 47 0 35 1;
-#X connect 54 0 69 0;
+#X connect 54 0 68 0;
 #X connect 55 0 9 1;
 #X connect 55 0 13 0;
 #X connect 56 0 58 0;
@@ -116,6 +117,6 @@
 #X connect 65 0 64 0;
 #X connect 66 0 3 0;
 #X connect 67 0 7 0;
-#X connect 68 0 64 0;
-#X connect 69 0 10 1;
-#X connect 69 0 12 0;
+#X connect 68 0 10 1;
+#X connect 68 0 12 0;
+#X connect 69 0 64 0;

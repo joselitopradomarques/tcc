@@ -316,66 +316,6 @@ Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se
         \label{fig51}
     \end{figure}
 
-	\subsection{Implementação de Efeitos}
-
-    O funcionamento do efeito utiliza três parâmetros. Um botão \texttt{toogle}, cuja função é alternar entre os efeitos \textit{delay} e \textit{reverb}; um \textit{slider} que varia parâmetros internos dos efeitos e a frequência de corte do botão central, que automatiza o volume do efeito.
-
-    O botão \texttt{toogle} visa alternar os efeitos. Possui duas posições, ou seja, sempre um efeito está ativo. Para alternar para o outro, basta alterar a posição. Figura \ref{fig46}.
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.3\textwidth]{figuras/fig46.png}
-        \caption{botão de seleção de efeito no \textit{PureData}}
-        \label{fig46}
-    \end{figure}
-
-    O botão \textit{slider} visa alterar os parâmetros internos de cada efeito. Os valores variam de 0 a 1. O botão se encontra na Figura \ref{fig47}.
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.2\textwidth]{figuras/fig47.png}
-        \caption{botão de quantidade de efeito no \textit{PureData}}
-        \label{fig47}
-    \end{figure}
-
-    Cada efeito utiliza o parâmetro \textit{fx} advindo do botão \textit{slider} e realiza uma adaptação para o seu parâmetro. No caso do \textit{reverb}, o valor de \textit{fx} é multiplicado por 100 e esse valro se torna a quantidade de dB que permanecerá na música após 1s. Para o \textit{delay}, esse valor é multiplicado por 1000 e se transforma no intervalo de tempo em ms da música que permanecerá no efeito.
-
-    A lógica que permeia a seleção do efeito, encontra-se na Figura \ref{fig48}. Os comandos \texttt{receive\textasciitilde\ fx} são responsáveis por inserirem os efeitos como entrada. Cada volume do efeito é multiplicado pelo valor do \texttt{toogle}; um deles é multiplicado pelo valor atual enquanto o outro é multiplicado pelo inverso, de forma que o botão \texttt{toogle} funciona como um alternador para selecionar os efeitos. 
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.3\textwidth]{figuras/fig48.png}
-        \caption{botão de seleção de efeito no \textit{PureData}}
-        \label{fig48}
-    \end{figure}
-
-    Nesse sistema, o volume do efeito é regido de forma automática em função da posição do botão central, ou seja, pelas frequências de corte. Na Figura \ref{fig49} é possível ver a variação do volume do efeito em função da frequência central.
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.9\textwidth]{figuras/fig49.png}
-        \caption{variação do volume dos efeitos no \textit{PureData}}
-        \label{fig49}
-    \end{figure}
-
-    No \textit{PureData}, o bloco de automação de volume de efeitos é realizado utilizando as operações presentes na Figura \ref{fig50}.
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.6\textwidth]{figuras/fig50.png}
-        \caption{implementação da variação do volume dos efeitos no \textit{PureData}}
-        \label{fig50}
-    \end{figure}
-
-    Ao final, o sinal dos efeitos é multiplicado pelo volume dos efeitos, e, posteriormente, somado ao sinal das filtragens, dando origem ao sinal de saída. Esse sinal é processado por um bloco de conversão de sinal digital em analógico e enfim foi reproduzido. Esse bloco de soma de sinais está representado na Figura \ref{fig51}.
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.3\textwidth]{figuras/fig51.png}
-        \caption{soma de sinais filtrado e de efeitos no \textit{PureData}}
-        \label{fig51}
-    \end{figure}
-
     \section{Proposta de Implementação}
 
 
@@ -422,7 +362,7 @@ Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{figuras/fig63.jpg}
-        \caption{botão de duas posições para seleção do efeito}
+        \caption{conversor analógico digital}
         \label{fig63}
     \end{figure}    
     
@@ -433,7 +373,7 @@ Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{figuras/fig64.jpeg}
-        \caption{botão de duas posições para seleção do efeito}
+        \caption{\textit[Arduino Uno] para conversão de sinais de controle}
         \label{fig64}
     \end{figure}    
 
@@ -452,7 +392,7 @@ Nessa seção, encontra-se uma implementação em um ambiente virtual no qual se
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\textwidth]{figuras/fig65.jpg}
-        \caption{botão de duas posições para seleção do efeito}
+        \caption{\textit{Raspberry Pi} para processamento dos sinais}
         \label{fig65}
     \end{figure}    
 
