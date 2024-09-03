@@ -10,7 +10,7 @@
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{25}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Justificativa}{25}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Objetivos}{25}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{25}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{26}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Objetivos Específicos}{26}{subsection.1.2.2}%
 \contentsline {section}{\numberline {1.3}Estrutura do Documento}{26}{section.1.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Sinal Discreto}{28}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Transformada de Fourier}{28}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Teorema da Amostragem}{29}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Aliasing}{30}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.4}\textit {Aliasing}}{30}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Teorema da Quantização}{30}{subsection.2.2.5}%
 \contentsline {section}{\numberline {2.3}Som e Música}{31}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Conceito físico}{31}{subsection.2.3.1}%

@@ -1096,6 +1096,7 @@ INPUT ./figuras/fig03.eps
 INPUT ./figuras/fig03-eps-converted-to.pdf
 INPUT ./figuras/fig03-eps-converted-to.pdf
 INPUT ./figuras/fig03-eps-converted-to.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmsso12.tfm
 INPUT ./figuras/fig04.eps
 INPUT ./figuras/fig04.eps
 INPUT figuras/fig04.eps
@@ -1118,7 +1119,6 @@ INPUT ./figuras/fig07.eps
 INPUT ./figuras/fig07-eps-converted-to.pdf
 INPUT ./figuras/fig07-eps-converted-to.pdf
 INPUT ./figuras/fig07-eps-converted-to.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmsso12.tfm
 INPUT ./figuras/fig08.eps
 INPUT ./figuras/fig08.eps
 INPUT figuras/fig08.eps
@@ -1504,9 +1504,9 @@ INPUT tcc.aux
 INPUT ./tcc.brf
 INPUT ./tcc.brf
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb

@@ -1,6 +1,4 @@
 \chapter[Metodologia]{Metodologia}
-
-
 \section{Proposta Geral}
 
 A evolução dos equipamentos de mixagem começou com a mixagem em vinil, e ao longo do tempo, novas funcionalidades foram adicionadas, como o \textit{jogger} para atraso e avanço da música, \textit{fader} para controle de volume e \textit{knobs} para ajuste de frequências. Com o avanço da microeletrônica, esses equipamentos evoluíram para a eletrônica digital, incorporando \textit{DSPs} para processar formatos de áudio de alta qualidade, como WAV e FLAC.
@@ -54,7 +52,7 @@ De forma geral, o sistema opera em um ciclo contínuo de leitura de sinais, tant
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig52.png}
-    \caption{Fluxograma geral do \textit{mixer}}
+    \caption{fluxograma geral do \textit{mixer}}
     \label{fig52}
 \end{figure}
 
@@ -73,7 +71,7 @@ Os sinais analógicos lidos incluem os sinais de música e os sinais de controle
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig54.png}
-    \caption{Bloco de leitura de sinais analógicos}
+    \caption{bloco de leitura de sinais analógicos}
     \label{fig54}
 \end{figure}
 
@@ -94,7 +92,7 @@ No bloco de filtragem, todos os sinais analógicos já estão codificados de for
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig55.png}
-    \caption{Bloco de filtragem}
+    \caption{bloco de filtragem}
     \label{fig55}
 \end{figure}
 
@@ -109,7 +107,7 @@ Os efeitos do \textit{mixer} podem ter seus parâmetros de reverberação e atra
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig56.png}
-    \caption{Bloco de efeitos}
+    \caption{bloco de efeitos}
     \label{fig56}
 \end{figure}
 
@@ -122,7 +120,7 @@ No \textit{mixer} proposto, o volume do efeito é ajustado automaticamente confo
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig57.png}
-    \caption{Bloco de automação do volume de efeitos}
+    \caption{bloco de automação do volume de efeitos}
     \label{fig57}
 \end{figure}
 
@@ -135,7 +133,7 @@ O processo de mistura de dois sinais é conhecido como \textit{mixing}. Neste \t
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig58.png}
-    \caption{Bloco de mistura final de sinais}
+    \caption{bloco de mistura final de sinais}
     \label{fig58}
 \end{figure}
 
@@ -148,7 +146,7 @@ O sinal de saída obtido pelo bloco \textit{mixer} precisa ser convertido de dig
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig59.png}
-    \caption{Bloco de conversão digital-analógico}
+    \caption{bloco de conversão digital-analógico}
     \label{fig59}
 \end{figure}
 
@@ -184,7 +182,7 @@ O ajuste na Equação \ref{eq:05} é projetado para ponderar mudanças nas frequ
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{figuras/fig45.png}
-    \caption{Expressão para a \textit{fc$_{2}$}}
+    \caption{expressão para a \textit{fc$_{2}$}}
     \label{fig45}
 \end{figure}
 
@@ -193,7 +191,7 @@ Mudanças na ordem de centenas no canal 1 têm pouco impacto no canal 2, uma vez
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{figuras/fig44.png}
-    \caption{Lógica de funcionamento do botão central no \textit{PureData}}
+    \caption{lógica de funcionamento do botão central no \textit{PureData}}
     \label{fig44}
 \end{figure}
 
@@ -208,7 +206,7 @@ O botão \texttt{toggle} é usado para alternar entre os efeitos. Com duas posi�
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{figuras/fig46.png}
-    \caption{Botão de seleção de efeito no \textit{PureData}}
+    \caption{botão de seleção de efeito no \textit{PureData}}
     \label{fig46}
 \end{figure}
 
@@ -217,7 +215,7 @@ O \textit{slider} é utilizado para ajustar os parâmetros internos de cada efei
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.2\textwidth]{figuras/fig47.png}
-    \caption{Botão de quantidade de efeito no \textit{PureData}}
+    \caption{botão de quantidade de efeito no \textit{PureData}}
     \label{fig47}
 \end{figure}
 
@@ -228,7 +226,7 @@ A lógica de seleção do efeito é apresentada na Figura \ref{fig48}. Os comand
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{figuras/fig48.png}
-    \caption{Lógica de seleção de efeito no \textit{PureData}}
+    \caption{lógica de seleção de efeito no \textit{PureData}}
     \label{fig48}
 \end{figure}
 
@@ -237,7 +235,7 @@ No sistema, o volume do efeito é ajustado automaticamente com base na posição
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{figuras/fig49.png}
-    \caption{Variação do volume dos efeitos no \textit{PureData}}
+    \caption{variação do volume dos efeitos no \textit{PureData}}
     \label{fig49}
 \end{figure}
 
@@ -246,7 +244,7 @@ No \textit{PureData}, o bloco de automação do volume dos efeitos é implementa
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{figuras/fig50.png}
-    \caption{Implementação da variação do volume dos efeitos no \textit{PureData}}
+    \caption{implementação da variação do volume dos efeitos no \textit{PureData}}
     \label{fig50}
 \end{figure}
 
@@ -255,7 +253,7 @@ Finalmente, o sinal dos efeitos é multiplicado pelo volume dos efeitos e, em se
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{figuras/fig51.png}
-    \caption{Soma dos sinais filtrados e dos efeitos no \textit{PureData}}
+    \caption{soma dos sinais filtrados e dos efeitos no \textit{PureData}}
     \label{fig51}
 \end{figure}
 
@@ -279,7 +277,7 @@ Os \textit{sliders} serão equipados com potenciômetros. Eles são alimentados 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{figuras/fig61.png}
-    \caption{Botão \textit{slider} horizontal para frequência central \cite{robocore}}
+    \caption{botão \textit{slider} horizontal para frequência central \cite{robocore}}
     \label{fig61}
 \end{figure}
 
@@ -290,7 +288,7 @@ Para ajustar a quantidade de efeitos desejada, será utilizado um botão semelha
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{figuras/fig62.png}
-    \caption{Botão de duas posições para seleção do efeito \cite{evea}}
+    \caption{botão de duas posições para seleção do efeito \cite{evea}}
     \label{fig62}
 \end{figure}
 
@@ -304,7 +302,7 @@ Para a conversão dos sinais analógicos de áudio, serão utilizados conversore
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{figuras/fig63.jpg}
-    \caption{Conversor analógico-digital \cite{walmartRobotHuman}}
+    \caption{conversor analógico-digital \cite{walmartRobotHuman}}
     \label{fig63}
 \end{figure}
 

@@ -1,14 +1,29 @@
 Revisão 02 - TCC01
 
-Título: Melhorar o título. Não precisa citar a RPi no título
+- Siglas em não itálico
+- Fazer varredura de siglas e citá-las em extenso antes de usar a sigla
+- Colocar Aliasing em itálico
+- Colocar Pioneer em itálico
+- Colocar Apple, Vision Pro
+- Colocar VR na lista de siglas
+- Colocar mix em itálico
+- Colocar CDJ em siglas
+- Colocar botebooks em itálico
+- WAV em siglas
+FLAC
+DSP
+
+
+Título: Melhorar o título. Não precisa citar a RPi no título [done]
 - Figuras que não são minhas: inserir referência [done]
 - Palavras em inglês: colocar em itálico [done]
 - Erros de ortografia [done]
-- Pente fino em palavras em inglês
-- Listar as siglas citadas
-- Listar os símbolos utilizados
-- Pente fino nas referências utilizadas
+- Pente fino em palavras em inglês [done]
+- Listar as siglas citadas [done]
+- Listar os símbolos utilizados [done]
+- Pente fino nas referências utilizadas [done]
 - Inserir refs de figuras que faltam [done]
+- Modificar nome de figuras para deixar a inicial minúscula [done]
 
 "Desenvolvimento de Sistema Automatizado de Mixagem Musical com Controle de Filtros e Efeitos"
 "Projeto e Implementação de Equipamento para Mixagem de Áudio com Filtros Dinâmicos e Efeitos"
@@ -22,9 +37,6 @@ Título: Melhorar o título. Não precisa citar a RPi no título
 "Análise e Desenvolvimento de Sistema para Mixagem de Áudio com Controle Dinâmico de Efeitos"
 
 
-prompt:
-corrija a ortografia desse texto e evidencie as mudanças utilizando [trecho anterior] seguido do texto corrigido. me mande o texto em latex
-
 ---------------------------------------------------------------
 
 Resumo
@@ -37,9 +49,9 @@ Palavras chaves - inserir processamento de sinal, áudio, e retirar RPi  [done]
 
 Key words - Traduzir as palavras chaves e inserir no abstract [done]
 
-Lista de abreviaturas e siglas: Varredura no texto e elencar aquelas que não estão presentes na lista
+Lista de abreviaturas e siglas: Varredura no texto e elencar aquelas que não estão presentes na lista [done]
 
-Lista de símbolos - Verificar quais são usadas no texto e modificar a lista de símbolos
+Lista de símbolos - Verificar quais são usadas no texto e modificar a lista de símbolos [done]
 
 Introdução: explique o que são mixers e depois insira os detalhes  [done]
 
