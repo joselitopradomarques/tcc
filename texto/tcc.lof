@@ -1,25 +1,25 @@
 \babel@toc {brazil}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces sinal de tempo contínuo \cite {oppenheim2010sinais}}}{28}{figure.2.1}%
 \contentsline {figure}{\numberline {2}{\ignorespaces sinal de tempo discreto \cite {oppenheim2010sinais}}}{28}{figure.2.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces espectro do sinal amostrado com Ws > 2Wm \cite {oppenheim2010sinais}}}{29}{figure.2.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces espectro do sinal amostrado com $W_s > 2W_m$ \cite {oppenheim2010sinais}}}{29}{figure.2.3}%
 \contentsline {figure}{\numberline {4}{\ignorespaces quantização de amplitudes em tempo discreto \cite {oppenheim2010sinais}}}{31}{figure.2.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces ciclo de propagação do som \cite {moyses}}}{32}{figure.2.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Rosnie - inventado por Alex Rosner \cite {stoneyroadsStoryBehind}}}{34}{figure.2.6}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Ciclo de propagação do som \cite {moyses}}}{32}{figure.2.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Rosnie - Inventado por Alex Rosner \cite {stoneyroadsStoryBehind}}}{34}{figure.2.6}%
 \contentsline {figure}{\numberline {7}{\ignorespaces CMA-10-2DL - Primeiro mixer estéreo comercial \cite {electronicaptBozak102}}}{35}{figure.2.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces toca-disco SL-1200 \cite {wikimediaFileTechnicsSL1200MK22jpg}}}{36}{figure.2.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces mixer criado pela Rane \cite {ranecommercialMixerEvolution}}}{36}{figure.2.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces CDJ-300 - primeira CDJ da Pioneer \cite {cdj300}}}{37}{figure.2.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces mixagem virtual com o Apple Vision Pro \cite {macmagazineDesenvolvedorFala}}}{37}{figure.2.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces configuração mais encontrada \cite {pioneerdjDJMA94channel}}}{38}{figure.2.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces \textit {rotary mixer} \cite {electroniquespectacleampAUDIO}}}{38}{figure.2.13}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Toca-disco SL-1200 \cite {wikimediaFileTechnicsSL1200MK22jpg}}}{35}{figure.2.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Mixer criado pela Rane \cite {ranecommercialMixerEvolution}}}{36}{figure.2.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces CDJ-300 - Primeira CDJ da Pioneer \cite {cdj300}}}{36}{figure.2.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Mixagem virtual com o Apple Vision Pro \cite {macmagazineDesenvolvedorFala}}}{37}{figure.2.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Configuração mais encontrada \cite {pioneerdjDJMA94channel}}}{37}{figure.2.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces \textit {Rotary mixer} \cite {electroniquespectacleampAUDIO}}}{38}{figure.2.13}%
 \contentsline {figure}{\numberline {14}{\ignorespaces espectro de áudio \cite {headphonestyAudioFrequency}}}{40}{figure.2.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces fio desbalanceado \cite {proaudiospQualDiferena}}}{42}{figure.2.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Fio Balanceado \cite {proaudiospQualDiferena}}}{42}{figure.2.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces plug 1/4$"$ \cite {mouser}}}{42}{figure.2.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces plug 1/8$"$ \cite {mouser}}}{43}{figure.2.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces plug 2,5 mm \cite {mouser}}}{43}{figure.2.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces cabo RCA \cite {rs}}}{44}{figure.2.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces cabo XLR \cite {hollylandWhatCable}}}{44}{figure.2.21}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Transmissão com fio desbalanceado \cite {proaudiospQualDiferena}}}{41}{figure.2.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Esquemático de fio balanceado \cite {proaudiospQualDiferena}}}{42}{figure.2.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Plug de 1/4" \cite {mouser}}}{42}{figure.2.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Plug de 1/8" \cite {mouser}}}{43}{figure.2.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Plug de 2,5 mm \cite {mouser}}}{43}{figure.2.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Cabo RCA \cite {rs}}}{43}{figure.2.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Conector XLR \cite {hollylandWhatCable}}}{44}{figure.2.21}%
 \contentsline {figure}{\numberline {22}{\ignorespaces fluxograma geral do \textit {mixer}}}{49}{figure.3.22}%
 \contentsline {figure}{\numberline {23}{\ignorespaces bloco de leitura de sinais analógicos}}{50}{figure.3.23}%
 \contentsline {figure}{\numberline {24}{\ignorespaces bloco de filtragem}}{51}{figure.3.24}%

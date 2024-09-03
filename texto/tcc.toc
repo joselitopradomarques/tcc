@@ -29,15 +29,15 @@
 \contentsline {subsection}{\numberline {2.3.4}Disc Jockeys \textit {DJs}}{33}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Parâmetros físicos}{39}{subsection.2.3.5}%
 \contentsline {subsubsection}{\numberline {2.3.5.1}Equipamentos}{40}{subsubsection.2.3.5.1}%
-\contentsline {section}{\numberline {2.4}Mixer}{41}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Mixer}{40}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Potência de Sinal de Áudio}{41}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Cabeamento}{41}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Conectores de 1/4”, 1/8” (3,5 mm) e 2,5 mm}{42}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}RCA}{43}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.3}Conectores de 1/4", 1/8" (3,5 mm) e 2,5 mm}{42}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}RCA}{42}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}XLR}{44}{subsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.4.6}Protocolos Digitais}{44}{subsection.2.4.6}%
 \contentsline {subsection}{\numberline {2.4.7}Amplificação de Potência}{44}{subsection.2.4.7}%
-\contentsline {subsection}{\numberline {2.4.8}Equalização}{45}{subsection.2.4.8}%
+\contentsline {subsection}{\numberline {2.4.8}Equalização}{44}{subsection.2.4.8}%
 \contentsline {subsection}{\numberline {2.4.9}\textit {Trim} e Volume}{45}{subsection.2.4.9}%
 \contentsline {subsection}{\numberline {2.4.10}Conversão AD/DA}{45}{subsection.2.4.10}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
