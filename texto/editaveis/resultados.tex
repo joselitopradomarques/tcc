@@ -1,15 +1,13 @@
 \chapter[Resultados Preliminares]{Resultados Preliminares}
 \label{sec:Resultados}
 
-Para que a validação do sistema proposto fosse obtida, utilizou-se do ambiente virtual \textit{PureData}, no qual testes acerca da filtragem controlada por um botão central foram realizados. Além disso, testes acerca do funcionamento do efeito como controle automático do volume e dos parâmetros de cada efeito foram realizados. 
+Para validar o sistema proposto, foram realizados testes no ambiente virtual \textit{PureData}, focando na filtragem controlada por um botão central e no funcionamento dos efeitos, incluindo o controle automático do volume e a configuração dos parâmetros de cada efeito.
 
 \section{Resultados de Filtragem}
 
-Nesta seção, há figuras correspondentes a ensaios realizados em um ambiente virtual \textit{PureData} simulando filtragem em diferentes frequências de corte.
+Nesta seção, são apresentados os resultados de ensaios realizados no ambiente virtual \textit{PureData}, simulando a filtragem em diferentes frequências de corte.
 
-A partir de duas músicas: \cite{track01} e \cite{track02}, selecionou-se uma janela de duração de dois segundos. A escolha do intervalo dessas janelas levou em conta a presença de elementos de todas as bandas de frequência. Sobre essas janelas, utilizando um sistema de filtragem composto por filtros passa-altas. 
-
-As frequências de corte selecionadas foram de:
+Utilizaram-se duas músicas: \cite{track01} e \cite{track02}, das quais foram selecionadas janelas de dois segundos. A escolha desse intervalo considerou a presença de elementos de todas as bandas de frequência. A filtragem foi realizada usando filtros passa-altas com as seguintes frequências de corte:
 
 \begin{itemize}
     \item 0 Hz
@@ -19,232 +17,229 @@ As frequências de corte selecionadas foram de:
     \item 22 kHz
 \end{itemize}
 
-Assim, para cada caso de frequência de corte, obteve-se o comportamento do sinal tanto no domínio do tempo quanto sua representação no domínio da frequência utilizando Transformada de Fourier de Curto Termo (STFT - \textit{Short Time Fourier Transform}). Assim, o par de representações em função da frequência de corte correspondentes a bandas de frequências, consolidadas na música, foi aplicado às duas músicas de referência. 
+Para cada frequência de corte, foram obtidas as representações do sinal tanto no domínio do tempo quanto no domínio da frequência, utilizando a Transformada de Fourier de Curto Prazo (STFT - \textit{Short Time Fourier Transform}). As figuras a seguir mostram as representações em função da frequência de corte para ambas as músicas de referência.
 
-Na Figura \ref{fig40}, há a janela do arquivo de áudio no domínio do tempo. Percebe-se a presença de \textit{kicks} e de elementos de maiores frequências.
+Na Figura \ref{fig40}, é mostrada a janela do arquivo de áudio no domínio do tempo, evidenciando a presença de \textit{kicks} e elementos de maiores frequências.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig40.png}
-	\caption{música 1 no domínio do tempo sem filtragem}
-	\label{fig40}
+    \caption{Música 1 no domínio do tempo sem filtragem}
+    \label{fig40}
 \end{figure}
 
-Na Figura \ref{fig41}, a STFT dessa janela aponta a maior presença de elementos em baixa frequência. Da mesma forma como visto na Figura \ref{fig40}, percebe-se a variação de elementos de agudos conforme varia o andamento da música. 
+Na Figura \ref{fig41}, a STFT da mesma janela revela uma maior presença de elementos em baixa frequência. Assim como na Figura \ref{fig40}, é possível observar a variação de elementos agudos ao longo da música.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig41.png}
-	\caption{música 1 no domínio da frequência sem filtragem}
-	\label{fig41}
+    \caption{Música 1 no domínio da frequência sem filtragem}
+    \label{fig41}
 \end{figure}
 
-Posteriormente, um filtro passa-altas de 20 Hz foi aplicado ao sinal. Na Figura \ref{fig24}, pouco se percebe a alteração do sinal.
+Após a aplicação de um filtro passa-altas com frequência de corte de 20 Hz, as alterações no sinal são sutis. A Figura \ref{fig24} mostra o sinal no domínio do tempo com a filtragem aplicada.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig24.png}
-	\caption{música 1 no domínio do tempo com uma $f_c$ de 20 Hz}
-	\label{fig24}
+    \caption{Música 1 no domínio do tempo com frequência de corte de 20 Hz}
+    \label{fig24}
 \end{figure}
 
-O mesmo pode ser inferido ao se analisar a Figura \ref{fig25}, na qual não se percebe grandes alterações das componentes em frequência após a aplicação do filtro a uma frequência de corte de 20 Hz.
+A análise da Figura \ref{fig25} confirma que as componentes em frequência não sofreram grandes alterações após a aplicação do filtro passa-altas com frequência de corte de 20 Hz.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig25.png}
-	\caption{música 1 no domínio da frequência com uma $f_c$ de 20 Hz}
-	\label{fig25}
+    \caption{Música 1 no domínio da frequência com frequência de corte de 20 Hz}
+    \label{fig25}
 \end{figure}
 
-Em \textit{mixers} convencionais, o botão correspondente às baixas frequências utiliza um controle de ganho na banda de 300 Hz. Dessa forma, deslocou-se o controle de frequência para que a frequência de corte se aproximasse de 300 Hz.
 
-O resultado dessa filtragem pode ser visto nas Figuras \ref{fig28} e \ref{fig29}. Ao analisar a primeira figura, percebe-se a atenuação significativa dos sinais ao visualizar os valores máximo alcançados pela amplitude.
+Em \textit{mixers} convencionais, o botão correspondente às baixas frequências geralmente controla a banda de 300 Hz. Portanto, no presente estudo, o controle de frequência foi ajustado para aproximar a frequência de corte de 300 Hz.
 
-Além disso, percebe-se também a ausência de sinais de baixa frequência, presentes na forma de envelopes nos sinais anteriores. 
+Os resultados dessa filtragem podem ser visualizados nas Figuras \ref{fig28} e \ref{fig29}. A Figura \ref{fig28} mostra que houve uma atenuação significativa dos sinais, evidenciada pelos valores máximos da amplitude. Observa-se também a ausência de sinais de baixa frequência, que estavam presentes como envelopes nos sinais não filtrados.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=\textwidth]{figuras/fig28.png}
-	\caption{música 1 no domínio do tempo com uma $f_c$ de 300 Hz}
-	\label{fig28}
+    \caption{Música 1 no domínio do tempo com uma frequência de corte de 300 Hz}
+    \label{fig28}
 \end{figure}
 
-A atenuação dessa banda pode ser verificada na Figura \ref{fig29}, onde se percebe a atenuação dos sinais de baixa frequência de aproximadamente 30 dB.
+A atenuação da banda de 300 Hz é confirmada na Figura \ref{fig29}, onde se observa uma redução de aproximadamente 30 dB nas componentes de baixa frequência.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig29.png}
-	\caption{música 1 no domínio da frequência com uma $f_c$ de 300 Hz}
-	\label{fig29}
+    \caption{Música 1 no domínio da frequência com uma frequência de corte de 300 Hz}
+    \label{fig29}
 \end{figure}
 
-A próxima frequência de corte utilizada foi de 4 kHz, que conforme infere o capítulo \ref{cha:fundamentacao}, é onde se encontram os elementos médios. Inicialmente, na Figura \ref{fig26} já se percebe a ateunação dos sinais em relação às filtragens anteriores.
+A próxima frequência de corte utilizada foi de 4 kHz, que, conforme descrito no Capítulo \ref{cha:fundamentacao}, é onde se encontram os elementos médios. A Figura \ref{fig26} mostra a atenuação dos sinais em comparação com as filtragens anteriores.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig26.png}
-	\caption{música 1 no domínio do tempo com uma $f_c$ de 4 kHz}
-	\label{fig26}
+    \caption{Música 1 no domínio do tempo com uma frequência de corte de 4 kHz}
+    \label{fig26}
 \end{figure}
 
-Porém, na Figura \ref{fig27}, onde há a STFT, observa-se a atenuação das componentes referentes à presente banda de frequência. A queda foi bastante acentuada, encontrando-se componentes em 0 dB em determinados pontos.
+Na Figura \ref{fig27}, que apresenta a STFT, observa-se uma atenuação significativa das componentes na banda de 4 kHz, com algumas componentes chegando a 0 dB em determinados pontos.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig27.png}
-	\caption{música 1 no domínio da frequência com uma $f_c$ de 4 kHz}
-	\label{fig27}
+    \caption{Música 1 no domínio da frequência com uma frequência de corte de 4 kHz}
+    \label{fig27}
 \end{figure}
 
-Para a música \cite{track01}, uma última análise foi realizada considerando que a filtragem foi realizada em toda banda. Dessa forma, utilizou-se uma frequência de corte de 24 kHz, de forma que os elementos restantes, tidos como agudos ou brilhos, fossem atenuados. Assim, verifica-se na Figura \ref{fig30} uma atenuação de amplitudes de sinais quando comparados com as filtragens anteriores.
+Para a música \cite{track01}, uma análise final foi realizada utilizando uma frequência de corte de 24 kHz. Este ajuste visou atenuar os elementos restantes, considerados agudos ou brilhantes. A Figura \ref{fig30} mostra a atenuação das amplitudes dos sinais em comparação com as filtragens anteriores.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig30.png}
-	\caption{música 1 no domínio do tempo com uma $f_c$ de 22 kHz}
-	\label{fig30}
+    \caption{Música 1 no domínio do tempo com uma frequência de corte de 22 kHz}
+    \label{fig30}
 \end{figure}
 
-Além disso, na Figura \ref{fig31}, percebe uma atenuação da banda correspondente, contendo elementos de 10 dB a -40 dB. E ao comparado com a STFT da filtragem anterior, percebe-se uma atenuação generalizada do sinal.
+Além disso, na Figura \ref{fig31}, observa-se a atenuação da banda correspondente, com elementos variando de 10 dB a -40 dB. Comparado com a STFT da filtragem anterior, nota-se uma atenuação generalizada do sinal.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig31.png}
-	\caption{música 1 no domínio da frequência com uma $f_c$ de 22 kHz}
-	\label{fig31}
+    \caption{Música 1 no domínio da frequência com uma frequência de corte de 22 kHz}
+    \label{fig31}
 \end{figure}
 
-A mesma análise realizada na Música \cite{track01} foi realizada a Música \cite{track02}, de forma que os resultados no domínio do tempo e da frequência, utilizando a STFT, foram obtidos. O comportamento obtido foi semelhante ao obtido na análise da música \cite{track01}.
+A análise realizada na música \cite{track01} foi também aplicada à música \cite{track02}. Os resultados obtidos no domínio do tempo e da frequência, utilizando a STFT, foram semelhantes aos observados para a música \cite{track01}.
 
-Deve-se atentar que conforme o botão avança na frequência de corte, a frequência de corte do filtro do canal 1 aumenta, de forma que as componentes são atenuadas começando pelas menores frequências e finalizando na maior frequência, enquanto para o canal 2, a frequência de corte começa sendo a máxima e termina sendo a mínima, de forma que as figuras mostrem as ampliações das componentes de frequência do sinal da Música \cite{track02}.
+É importante notar que, conforme o botão de frequência de corte avança, a frequência de corte do filtro do canal 1 aumenta, atenuando primeiro as menores frequências e, em seguida, as maiores frequências. Em contraste, para o canal 2, a frequência de corte começa alta e diminui, ampliando as componentes de frequência do sinal da música \cite{track02}.
 
 \section{Resultados de Efeitos}
 
-Os efeitos são operados de forma que a frequência central determina qual será o volume do efeito e um botão de duas posições seleciona qual efeito será utilizado. Assim, testes dessas operações foram realizados. 
+Os efeitos são controlados pela frequência central, que determina o volume do efeito, e um botão de duas posições, que seleciona o efeito a ser utilizado. Testes foram realizados para verificar essas operações.
 
-Primeiramente, simulou-se o volume do efeito em relação a posição do botão central. Posteriormente, simulações variando os parâmetros dos efeitos foram realizadas. 
+Primeiramente, simulou-se o volume do efeito em função da posição do botão central. Em seguida, foram realizadas simulações variando os parâmetros dos efeitos.
 
 \subsection{Automação de Efeitos}
 
-Para validar o controle automático do volume, isolou-se a saída dos efeitos e variações de frequências, que dão origens a diferentes volumes de efeitos, a fim de se obter sinais no domínio do tempo, conforme as figuras abaixo. 
+Para validar o controle automático do volume, isolou-se a saída dos efeitos e variaram-se as frequências, que geram diferentes volumes de efeitos. Os sinais no domínio do tempo foram analisados, conforme mostrado nas figuras abaixo.
 
-Na Figura \ref{fig66}, a frequência central utilizada foi a mínima. Dessa forma, conforme a função da Figura \ref{fig49}, o volume esperado seria nulo. Dessa forma, o sinal esperado também seria constante nulo, conforme o que foi obtido.
+Na Figura \ref{fig66}, a frequência central utilizada foi a mínima. De acordo com a função mostrada na Figura \ref{fig49}, o volume esperado seria nulo. Assim, o sinal obtido também foi constante e nulo, como esperado.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig66.png}
-	\caption{canal de efeito \textit{reverb} isolado com música 1 a um volume nulo}
-	\label{fig66}
+    \caption{Canal de efeito \textit{reverb} isolado com música 1 a um volume nulo}
+    \label{fig66}
 \end{figure}
 
-Posteriormente, variou-se a posição do botão central para que se alcancasse a frequência de 9454 Hz, que gera um volume de 0.3312. Assim, conforme a Figura \ref{fig67}, obteve-se um sinal similar à música \cite{track01} com determinada amplitude. 
- 
+Em seguida, variou-se a posição do botão central para atingir a frequência de 9454 Hz, resultando em um volume de 0.3312. A Figura \ref{fig67} mostra um sinal similar ao da música \cite{track01}, mas com uma amplitude específica.
+
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig67.png}
-	\caption{canal de efeito \textit{reverb} isolado com música 1 a um volume de 0.3312}
-	\label{fig67}
+    \caption{Canal de efeito \textit{reverb} isolado com música 1 a um volume de 0.3312}
+    \label{fig67}
 \end{figure}
 
-Variou-se a posição do botão central a fim de visualizar a variação do volume do efeito. Dessa forma, a próxima frequência utilizada foi de 9875 Hz. Obteve-se um volume maior, como se pode visualizar na Figura \ref{fig68}.
+A posição do botão central foi ajustada para observar a variação do volume do efeito. Na Figura \ref{fig68}, com a frequência de 9875 Hz, observou-se um volume maior.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig68.png}
-	\caption{canal de efeito \textit{reverb} isolado com música 1 a um volume de 0.6625}
-	\label{fig68}
+    \caption{Canal de efeito \textit{reverb} isolado com música 1 a um volume de 0.6625}
+    \label{fig68}
 \end{figure}
 
-Para validar completamente a automação do volume, posicionou-se o botão central na frequência de 11025 Hz, que gera o volume máximo unitário. Assim, pôde-se observar a ampliação do volume em função da variação da frequência de forma que se valide a automação do volume.
+Para validar completamente a automação do volume, o botão central foi posicionado na frequência de 11025 Hz, que gera o volume máximo (1.0). A Figura \ref{fig69} mostra a ampliação do volume em função da variação da frequência, confirmando a automação do volume.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig69.png}
-	\caption{canal de efeito \textit{reverb} isolado com música 1 a um volume igual a 1.0}
-	\label{fig69}
+    \caption{Canal de efeito \textit{reverb} isolado com música 1 a um volume de 1.0}
+    \label{fig69}
 \end{figure}
 
 \subsection{\textit{Reverb}}
 
-Para a validação do controle de presença de efeitos, o botão central foi posicionado de forma que a frequência selecionada conferisse o volume máximo para efeitos. Em seguida, alterou-se a posição do botão de presença de efeito a fim de visualizar a variação dos parâmetros de efeito. No caso de \textit{reverb}, ao se variar o parâmetro, a quantidade de dB presente após 1s é configurada conforme o botão de parâmetro. 
+Para validar o controle do efeito de \textit{reverb}, o botão central foi posicionado para garantir que a frequência selecionada resultasse no volume máximo do efeito. Em seguida, ajustou-se a posição do botão de presença do efeito para observar a variação dos parâmetros. No caso do \textit{reverb}, a quantidade de dB presente após 1 segundo é configurada conforme o botão de parâmetro.
 
-Nas figuras a seguir, pode-se observar Figuras que representam o sinal no domínio do tempo nos quais é possível observar a variação desse parâmetro. O intervalo de dB proposto nesse sistema varia de 0 a 1000 dB.
+Nas figuras a seguir, são apresentadas representações do sinal no domínio do tempo, ilustrando a variação desse parâmetro. O intervalo de dB proposto no sistema varia de 0 a 1000 dB.
 
-Na Figura \ref{fig70}, a posição do botão de quantidade de efeito foi a inicial, ou seja, a quantidade de dB presente após 1s é nula. Dessa forma, a forma de onda esperada seria também nula, conforme o que foi obtida.
-
+Na Figura \ref{fig70}, a posição inicial do botão de quantidade de efeito resulta em 0 dB após 1 segundo. Portanto, a forma de onda esperada também é nula, o que foi confirmado pelos resultados obtidos.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig70.png}
-	\caption{\textit{reverb} com 0 dB após 1s}
-	\label{fig70}
+    \caption{\textit{Reverb} com 0 dB após 1 segundo}
+    \label{fig70}
 \end{figure}
 
-Posteriormente, posicionou-se o botão de parâmetro de efeito de forma que 25 dB permanecesse após 1s da amostra atual da música. Assim, conforme a Figura \ref{fig71}, pôde-se observar a repetição de trechos da música. 
+Em seguida, o botão de parâmetro de efeito foi ajustado para que 25 dB permanecessem após 1 segundo da amostra atual da música. Na Figura \ref{fig71}, observa-se a repetição de trechos da música devido à aplicação do efeito.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig71.png}
-	\caption{\textit{reverb} com 25 dB após 1s}
-	\label{fig71}
+    \caption{\textit{Reverb} com 25 dB após 1 segundo}
+    \label{fig71}
 \end{figure}
 
-Porém, conforme o ganho da música é aumentado, mais se percebe o efeito de um \textit{reverb}. Na Figura \ref{fig72}, pôde-se observar maior presença desse efeito visto que o sinal obtido possuiu uma amplitude maior ao longo do tempo.
+Com o aumento do ganho, o efeito de \textit{reverb} torna-se mais perceptível. Na Figura \ref{fig72}, é possível observar uma maior presença do efeito, com um aumento na amplitude do sinal ao longo do tempo.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig72.png}
-	\caption{\textit{reverb} com 50 dB após 1s}
-	\label{fig72}
+    \caption{\textit{Reverb} com 50 dB após 1 segundo}
+    \label{fig72}
 \end{figure}
 
-O mesmo efeito pôde ser observado ao se configurar 100 dB de ganho após 1s na Figura \ref{fig73}, visto que essa imagem representa um som com pouca definição, o que infere que maior quantidade de som permaneceu de forma que a nitidez da música se perdeu.
+Finalmente, ao configurar 100 dB de ganho após 1 segundo, como mostrado na Figura \ref{fig73}, o efeito de \textit{reverb} é ainda mais pronunciado, resultando em um som com pouca definição. Isso indica que uma grande quantidade de som permaneceu, comprometendo a clareza da música.
 
 \begin{figure}[h]
-	\centering
+    \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig73.png}
-	\caption{\textit{reverb} com 100 dB após 1s}
-	\label{fig73}
+    \caption{\textit{Reverb} com 100 dB após 1 segundo}
+    \label{fig73}
 \end{figure}
 
 \subsection{\textit{Delay}}
 
-No caso do efeito de \textit{delay}, as amostras são repetidas a determinado tempo depois que os sinais são lidos. Assim, as figuras a seguir mostram a repetição desse sinal. Percebe-se que não há alteração do ganho do sinal nem do período em que o sinal permanece. Assim, os sinais simplesmente são repetidos.
+O efeito de \textit{delay} consiste em repetir o sinal após um determinado intervalo de tempo. As figuras a seguir ilustram o comportamento do efeito com diferentes configurações de atraso.
 
-Na Figura \ref{fig74}, um \textit{delay} de 0 ms foi configurado. Assim, uma cópia do sinal foi obtida porém concomitante conforme o sinal é lido. 
+Na Figura \ref{fig74}, foi configurado um \textit{delay} de 0 ms. Nesse caso, a cópia do sinal é obtida imediatamente, sem atraso.
 
 \begin{figure}[h]
 	\centering
-    \includegraphics[width=0.8\textwidth]{figuras/fig74.png}
-	\caption{\textit{delay} de 0 ms}
+    \includegraphics[width=0.7\textwidth]{figuras/fig74.png}
+	\caption{\textit{Delay} de 0 ms}
 	\label{fig74}
 \end{figure}
 
-
-Na Figura \ref{fig74}, um \textit{delay} de 250 ms foi configurado. Assim, uma cópia do sinal foi obtida e reproduzida conforme o tempo configurado.
+Na Figura \ref{fig75}, um \textit{delay} de 250 ms foi configurado. Aqui, a cópia do sinal é reproduzida com um atraso de 250 ms em relação ao sinal original.
 
 \begin{figure}[h]
 	\centering
-    \includegraphics[width=0.8\textwidth]{figuras/fig75.png}
-	\caption{\textit{delay} de 250 ms}
+    \includegraphics[width=0.7\textwidth]{figuras/fig75.png}
+	\caption{\textit{Delay} de 250 ms}
 	\label{fig75}
 \end{figure}
 
-Na Figura \ref{fig74}, um \textit{delay} de 500 ms foi configurado. Assim, uma cópia do sinal foi obtida e reproduzida conforme o tempo configurado.
+Na Figura \ref{fig76}, o \textit{delay} foi configurado para 500 ms. Neste caso, a cópia do sinal é reproduzida com um atraso de 500 ms em relação ao sinal original.
 
 \begin{figure}[h]
 	\centering
-    \includegraphics[width=0.8\textwidth]{figuras/fig76.png}
-	\caption{\textit{rdelay} de 500 ms}
+    \includegraphics[width=0.7\textwidth]{figuras/fig76.png}
+	\caption{\textit{Delay} de 500 ms}
 	\label{fig76}
 \end{figure}
 
-Na Figura \ref{fig74}, um \textit{delay} de 1000 ms foi configurado. Assim, uma cópia do sinal foi obtida e reproduzida conforme o tempo configurado.
+Na Figura \ref{fig77}, foi configurado um \textit{delay} de 1000 ms. A cópia do sinal é reproduzida com um atraso de 1000 ms em relação ao sinal original.
 
 \begin{figure}[h]
 	\centering
-    \includegraphics[width=0.8\textwidth]{figuras/fig77.png}
-	\caption{\textit{delay} de 1000 ms}
+    \includegraphics[width=0.7\textwidth]{figuras/fig77.png}
+	\caption{\textit{Delay} de 1000 ms}
 	\label{fig77}
 \end{figure}

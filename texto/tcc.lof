@@ -20,45 +20,45 @@
 \contentsline {figure}{\numberline {19}{\ignorespaces Plug de 2,5 mm \cite {mouser}}}{43}{figure.2.19}%
 \contentsline {figure}{\numberline {20}{\ignorespaces Cabo RCA \cite {rs}}}{43}{figure.2.20}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Conector XLR \cite {hollylandWhatCable}}}{44}{figure.2.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces fluxograma geral do \textit {mixer}}}{49}{figure.3.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces bloco de leitura de sinais analógicos}}{50}{figure.3.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces bloco de filtragem}}{51}{figure.3.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces bloco de efeitos}}{52}{figure.3.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces bloco de automação do volume de efeitos}}{52}{figure.3.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces bloco de mistura final de sinais}}{53}{figure.3.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces bloco de conversão digital analógico}}{53}{figure.3.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces expressão para a \textit {fc$_{2}$}}}{55}{figure.3.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces lógica de funcionamento do botão central no \textit {PureData}}}{56}{figure.3.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces botão de seleção de efeito no \textit {PureData}}}{56}{figure.3.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces botão de quantidade de efeito no \textit {PureData}}}{56}{figure.3.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces botão de seleção de efeito no \textit {PureData}}}{57}{figure.3.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces variação do volume dos efeitos no \textit {PureData}}}{57}{figure.3.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces implementação da variação do volume dos efeitos no \textit {PureData}}}{58}{figure.3.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces soma de sinais filtrado e de efeitos no \textit {PureData}}}{58}{figure.3.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces botão \textit {slider} horizontal para frequência central \cite {robocore}}}{59}{figure.3.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces botão de duas posições para seleção do efeito \cite {evea}}}{59}{figure.3.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces conversor analógico digital \cite {walmartRobotHuman}}}{60}{figure.3.39}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Fluxograma geral do \textit {mixer}}}{49}{figure.3.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Bloco de leitura de sinais analógicos}}{50}{figure.3.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Bloco de filtragem}}{51}{figure.3.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Bloco de efeitos}}{52}{figure.3.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Bloco de automação do volume de efeitos}}{52}{figure.3.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Bloco de mistura final de sinais}}{53}{figure.3.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Bloco de conversão digital-analógico}}{53}{figure.3.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Expressão para a \textit {fc$_{2}$}}}{55}{figure.3.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Lógica de funcionamento do botão central no \textit {PureData}}}{56}{figure.3.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Botão de seleção de efeito no \textit {PureData}}}{56}{figure.3.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Botão de quantidade de efeito no \textit {PureData}}}{56}{figure.3.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Lógica de seleção de efeito no \textit {PureData}}}{57}{figure.3.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Variação do volume dos efeitos no \textit {PureData}}}{57}{figure.3.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Implementação da variação do volume dos efeitos no \textit {PureData}}}{58}{figure.3.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Soma dos sinais filtrados e dos efeitos no \textit {PureData}}}{58}{figure.3.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Botão \textit {slider} horizontal para frequência central \cite {robocore}}}{59}{figure.3.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Botão de duas posições para seleção do efeito \cite {evea}}}{59}{figure.3.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Conversor analógico-digital \cite {walmartRobotHuman}}}{60}{figure.3.39}%
 \contentsline {figure}{\numberline {40}{\ignorespaces \textit {Arduino Uno} para conversão de sinais de controle \cite {vidadesilicioPlacaCabo}}}{60}{figure.3.40}%
 \contentsline {figure}{\numberline {41}{\ignorespaces \textit {Raspberry Pi} para processamento dos sinais \cite {adrenalineDisplaysLanar}}}{61}{figure.3.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces música 1 no domínio do tempo sem filtragem}}{64}{figure.4.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces música 1 no domínio da frequência sem filtragem}}{64}{figure.4.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 20 Hz}}{64}{figure.4.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 20 Hz}}{65}{figure.4.45}%
-\contentsline {figure}{\numberline {46}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 300 Hz}}{65}{figure.4.46}%
-\contentsline {figure}{\numberline {47}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 300 Hz}}{66}{figure.4.47}%
-\contentsline {figure}{\numberline {48}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 4 kHz}}{66}{figure.4.48}%
-\contentsline {figure}{\numberline {49}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 4 kHz}}{66}{figure.4.49}%
-\contentsline {figure}{\numberline {50}{\ignorespaces música 1 no domínio do tempo com uma $f_c$ de 22 kHz}}{67}{figure.4.50}%
-\contentsline {figure}{\numberline {51}{\ignorespaces música 1 no domínio da frequência com uma $f_c$ de 22 kHz}}{67}{figure.4.51}%
-\contentsline {figure}{\numberline {52}{\ignorespaces canal de efeito \textit {reverb} isolado com música 1 a um volume nulo}}{68}{figure.4.52}%
-\contentsline {figure}{\numberline {53}{\ignorespaces canal de efeito \textit {reverb} isolado com música 1 a um volume de 0.3312}}{69}{figure.4.53}%
-\contentsline {figure}{\numberline {54}{\ignorespaces canal de efeito \textit {reverb} isolado com música 1 a um volume de 0.6625}}{69}{figure.4.54}%
-\contentsline {figure}{\numberline {55}{\ignorespaces canal de efeito \textit {reverb} isolado com música 1 a um volume igual a 1.0}}{69}{figure.4.55}%
-\contentsline {figure}{\numberline {56}{\ignorespaces \textit {reverb} com 0 dB após 1s}}{70}{figure.4.56}%
-\contentsline {figure}{\numberline {57}{\ignorespaces \textit {reverb} com 25 dB após 1s}}{70}{figure.4.57}%
-\contentsline {figure}{\numberline {58}{\ignorespaces \textit {reverb} com 50 dB após 1s}}{71}{figure.4.58}%
-\contentsline {figure}{\numberline {59}{\ignorespaces \textit {reverb} com 100 dB após 1s}}{71}{figure.4.59}%
-\contentsline {figure}{\numberline {60}{\ignorespaces \textit {delay} de 0 ms}}{72}{figure.4.60}%
-\contentsline {figure}{\numberline {61}{\ignorespaces \textit {delay} de 250 ms}}{72}{figure.4.61}%
-\contentsline {figure}{\numberline {62}{\ignorespaces \textit {rdelay} de 500 ms}}{72}{figure.4.62}%
-\contentsline {figure}{\numberline {63}{\ignorespaces \textit {delay} de 1000 ms}}{73}{figure.4.63}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Música 1 no domínio do tempo sem filtragem}}{64}{figure.4.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Música 1 no domínio da frequência sem filtragem}}{64}{figure.4.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Música 1 no domínio do tempo com frequência de corte de 20 Hz}}{64}{figure.4.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Música 1 no domínio da frequência com frequência de corte de 20 Hz}}{65}{figure.4.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Música 1 no domínio do tempo com uma frequência de corte de 300 Hz}}{65}{figure.4.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Música 1 no domínio da frequência com uma frequência de corte de 300 Hz}}{66}{figure.4.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Música 1 no domínio do tempo com uma frequência de corte de 4 kHz}}{66}{figure.4.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Música 1 no domínio da frequência com uma frequência de corte de 4 kHz}}{66}{figure.4.49}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Música 1 no domínio do tempo com uma frequência de corte de 22 kHz}}{67}{figure.4.50}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Música 1 no domínio da frequência com uma frequência de corte de 22 kHz}}{67}{figure.4.51}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a um volume nulo}}{68}{figure.4.52}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a um volume de 0.3312}}{68}{figure.4.53}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a um volume de 0.6625}}{69}{figure.4.54}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a um volume de 1.0}}{69}{figure.4.55}%
+\contentsline {figure}{\numberline {56}{\ignorespaces \textit {Reverb} com 0 dB após 1 segundo}}{70}{figure.4.56}%
+\contentsline {figure}{\numberline {57}{\ignorespaces \textit {Reverb} com 25 dB após 1 segundo}}{70}{figure.4.57}%
+\contentsline {figure}{\numberline {58}{\ignorespaces \textit {Reverb} com 50 dB após 1 segundo}}{71}{figure.4.58}%
+\contentsline {figure}{\numberline {59}{\ignorespaces \textit {Reverb} com 100 dB após 1 segundo}}{71}{figure.4.59}%
+\contentsline {figure}{\numberline {60}{\ignorespaces \textit {Delay} de 0 ms}}{71}{figure.4.60}%
+\contentsline {figure}{\numberline {61}{\ignorespaces \textit {Delay} de 250 ms}}{72}{figure.4.61}%
+\contentsline {figure}{\numberline {62}{\ignorespaces \textit {Delay} de 500 ms}}{72}{figure.4.62}%
+\contentsline {figure}{\numberline {63}{\ignorespaces \textit {Delay} de 1000 ms}}{72}{figure.4.63}%

@@ -52,7 +52,7 @@
 \contentsline {subsection}{\numberline {3.3.3}Bloco de Efeitos}{51}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Bloco de Automação de Efeitos}{52}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Bloco Mixer}{52}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Bloco de Conversão AD}{53}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.6}Bloco de Conversão DA}{53}{subsection.3.3.6}%
 \contentsline {section}{\numberline {3.4}Prova de Conceito}{54}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}\textit {PureData}}{54}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Implementação de Filtragem}{54}{subsection.3.4.2}%
@@ -61,21 +61,21 @@
 \contentsline {subsection}{\numberline {3.5.1}Implementação em Hardware}{58}{subsection.3.5.1}%
 \contentsline {paragraph}{\numberline {3.5.1.0.1}Conectores}{58}{paragraph.3.5.1.0.1}%
 \contentsline {paragraph}{\numberline {3.5.1.0.2}Botões}{58}{paragraph.3.5.1.0.2}%
-\contentsline {paragraph}{\numberline {3.5.1.0.3}Conversão AD}{60}{paragraph.3.5.1.0.3}%
-\contentsline {paragraph}{\numberline {3.5.1.0.4}Protocolos de Comunicação}{61}{paragraph.3.5.1.0.4}%
+\contentsline {paragraph}{\numberline {3.5.1.0.3}Conversão AD}{59}{paragraph.3.5.1.0.3}%
+\contentsline {paragraph}{\numberline {3.5.1.0.4}Protocolos de Comunicação}{60}{paragraph.3.5.1.0.4}%
 \contentsline {paragraph}{\numberline {3.5.1.0.5}Unidades de Processamento}{61}{paragraph.3.5.1.0.5}%
 \contentsline {paragraph}{\numberline {3.5.1.0.6}Conversão DA}{61}{paragraph.3.5.1.0.6}%
-\contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{62}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{61}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Protótipo de Interface de Usuário}{62}{subsection.3.5.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{63}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Resultados de Filtragem}{63}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{68}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Resultados de Efeitos}{67}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Automação de Efeitos}{68}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{69}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{71}{subsection.4.2.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{75}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{73}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{77}{section*.18}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{75}{section*.18}%

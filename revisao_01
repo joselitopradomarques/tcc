@@ -3,9 +3,27 @@ Revisão 02 - TCC01
 Título: Melhorar o título. Não precisa citar a RPi no título
 - Figuras que não são minhas: inserir referência [done]
 - Palavras em inglês: colocar em itálico [done]
-- Erros de ortografia
+- Erros de ortografia [done]
+- Pente fino em palavras em inglês
+- Listar as siglas citadas
+- Listar os símbolos utilizados
+- Pente fino nas referências utilizadas
 - Inserir refs de figuras que faltam [done]
 
+"Desenvolvimento de Sistema Automatizado de Mixagem Musical com Controle de Filtros e Efeitos"
+"Projeto e Implementação de Equipamento para Mixagem de Áudio com Filtros Dinâmicos e Efeitos"
+"Sistema de Controle Dinâmico para Mixagem de Áudio com Integração de Efeitos de Reverb e Delay"
+"Automação de Processos de Mixagem de Áudio com Filtros Passa-Alta e Efeitos Configuráveis"
+"Tecnologia de Mixagem de Música com Filtros e Efeitos: Desenvolvimento e Avaliação de Sistema"
+"Implementação de Equipamento de Mixagem para DJs com Controle Automatizado de Filtros e Efeitos"
+"Sistema Integrado de Efeitos e Filtros para Mixagem Musical: Desenvolvimento e Testes"
+"Desenvolvimento de Equipamento de Mixagem Musical com Controle de Frequência e Parâmetros de Efeito"
+"Sistema Automatizado de Mixagem Musical com Filtros Passa-Alta e Efeitos de Áudio"
+"Análise e Desenvolvimento de Sistema para Mixagem de Áudio com Controle Dinâmico de Efeitos"
+
+
+prompt:
+corrija a ortografia desse texto e evidencie as mudanças utilizando [trecho anterior] seguido do texto corrigido. me mande o texto em latex
 
 ---------------------------------------------------------------
 
@@ -44,8 +62,8 @@ Fluxograma Geral do Mixer
 
 - Implementação de Efeitos - Consertar a palavra toggle [done]
 
-- Figuras que não são minhas: inserir referência
-- Palavras em inglês: colocar em itálico
-- Erros de ortografia
+- Figuras que não são minhas: inserir referência  [done]
+- Palavras em inglês: colocar em itálico [done]
+- Erros de ortografia [done]
 
 
