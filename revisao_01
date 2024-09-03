@@ -1,0 +1,51 @@
+Revisão 02 - TCC01
+
+Título: Melhorar o título. Não precisa citar a RPi no título
+- Figuras que não são minhas: inserir referência [done]
+- Palavras em inglês: colocar em itálico [done]
+- Erros de ortografia
+- Inserir refs de figuras que faltam [done]
+
+
+---------------------------------------------------------------
+
+Resumo
+	1 - Explicar o que são mixers antes da história [done]
+	2 - Revisar e utilizar termos mais simples [done]
+	
+Abstract - Retraduzir [done]
+
+Palavras chaves - inserir processamento de sinal, áudio, e retirar RPi  [done]
+
+Key words - Traduzir as palavras chaves e inserir no abstract [done]
+
+Lista de abreviaturas e siglas: Varredura no texto e elencar aquelas que não estão presentes na lista
+
+Lista de símbolos - Verificar quais são usadas no texto e modificar a lista de símbolos
+
+Introdução: explique o que são mixers e depois insira os detalhes  [done]
+
+Objetivo Geral: refazer retirando a Raspberry Pi pois RPi não é objetivo e sim ferramenta [done]
+
+2 - Fundamentação Teórica
+
+Apagar o \newpage do início dos capítulos [done]
+
+3 - Proposta Geral
+Reduzir essa seção [done]
+
+Requisitos: apagar o título dos requisitos e apenas fazer uma lista corrida dos pontos [done]
+
+Fluxograma Geral do Mixer
+- Inserir os dois sinais estéreos. [done]
+- Colocar Filtragem e Efeitos em série e não em paralelo [done]
+
+- Bloco de Conversão AD - Retirar subseção [done]
+
+- Implementação de Efeitos - Consertar a palavra toggle [done]
+
+- Figuras que não são minhas: inserir referência
+- Palavras em inglês: colocar em itálico
+- Erros de ortografia
+
+

@@ -3,7 +3,6 @@
 Nessa seção, serão abordados conceitos básicos para a compreensão da monografia (teoria, problema e proposta); a começar pela definição de um sinal segundo a literatura,representado por um sinal elétrico, tanto analógico quanto digital; conceituar música e a importância da mixagem realizada por \textit{DJs}, culminando no equipamento utilizado, dando enfoque ao \textit{mixer}, seja na sua história, evolução e no seu estado da arte.
 
 
-\newpage
 \section{Sinal: Conceito}
 
 \begin{citacao}
@@ -13,37 +12,31 @@ Nessa seção, serão abordados conceitos básicos para a compreensão da monogr
 Como exemplifica \cite{oppenheim2010sinais}, tensões e correntes ao longo do tempo são funções, ou seja, sinais, enquanto o circuito em si pode ser compreendido como um sistema que reage à entrada aplicada, ao produzir sinais de saída.
 
 Sensores são dispositivos capazes de mensurar grandezas físicas através da captação de sinais elétricos. Dessa forma, a criação desse instrumento permitiu a compreensão de fenômenos físicos. Assim, o monitoramento de grandezas permite que se atue em sistemas físicos a fim de se obter um resultado desejado.
-\newline
-[O intuito do parágrafo acima é simplesmente realizar uma ponte entre sinais elétricos e quais compreensões um sensor permite que sejam realizadas. De forma que a atuação em um sistema seja realizada a fim de se chegar a um resultado esperado.]
 
 Com o desenvolvimento de sensores na história da instrumentação, foi possível a obtenção da quantização de parâmetros físicos através de sinais elétricos. E dessa forma, a compreensão de fenômenos físicos e, consonante a isso, a construção de sistemas que podem alterar os sinais conforme a resposta desejada. 
 
 \section{Sinal Contínuo}
 Dentro das possibilidades do que um sinal pode ser, pode-se classificá-lo como contínuo caso a sua variável independente seja contínua, ou seja, que tenha um valor para cada instante de tempo (variável independente). Por exemplo, entre o intervalo de \textit{t} a \textit{t+1}, há infinitos valores tanto de tempo quanto para o parâmetro em função do tempo, \cite{oppenheim2010sinais}. Um exemplo pode ser o valor de corrente em um resistor alimentado por uma tensão ou um som que gera uma pressão acústica no ar captados pelo sistema auditivo. A Figura \ref{fig01} é um exemplo de um gráfico para um sinal contínuo no tempo. 
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{figuras/fig01.eps}
-	\caption{sinal de tempo contínuo}
+	\caption{sinal de tempo contínuo \cite{oppenheim2010sinais}}
 	\label{fig01}
 \end{figure}
 \newpage
 
 \subsection{Sinal Discreto}
-Em contrapartida a um sinal contínuo em relação a sua variável independente, há outra classificação de sinal denominado de discreto. A sua variável independente é o tempo discreto, que pode ser definido por um conjunto de números inteiros. Caso a variável independente não seja inteira, ou seja, \textit{n} não seja inteiro, não há  valor definido. Dessa forma, entre \textit{n} e \textit{n+1}, não há infinitos valores como há no tempo contínuo. Um exemplo dessa classificação de sinal pode ser . \cite{oppenheim2010sinais}. A Figura \ref{fig02} é um exemplo de um gráfico para um sinal no tempo discreto. 
-\newline
-[Quando o senhor diz que ao invés de ser um sinal discreto, é um discretizado, o senhor se refere ao exemplo da variação semanal da bolsa de valores. Ou ao conceito explicado na seção?]
-
+Em contrapartida a um sinal contínuo em relação a sua variável independente, há outra classificação de sinal denominado de discreto. A sua variável independente é o tempo discreto, que pode ser definido por um conjunto de números inteiros. Caso a variável independente não seja inteira, ou seja, \textit{n} não seja inteiro, não há  valor definido. Dessa forma, entre \textit{n} e \textit{n+1}, não há infinitos valores como há no tempo contínuo. Um exemplo dessa classificação de sinal pode ser \cite{oppenheim2010sinais}. A Figura \ref{fig02} é um exemplo de um gráfico para um sinal no tempo discreto.
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.5]{figuras/fig02.eps}
-	\caption{sinal de tempo discreto}
+	\caption{sinal de tempo discreto \cite{oppenheim2010sinais}}
 	\label{fig02}
 \end{figure}
 
 \subsection{Transformada de Fourier}
-Uma ferramenta matemática crucial para a análise de sinais na frequência é a transformada de Fourier, que realiza uma modificação do termo independente, saindo do tempo ou espaço e indo para frequências, também denominada de equação de análise, que pode ser visualizada na equação \ref{eq:03}. \par De forma análoga, transformada inversa, ou a também chamada de equação de síntese, realiza o processo inverso, modificando o sinal representado no domínio da frequência para o seu domínio original, segundo \cite{oppenheim2010sinais}, seja tempo ou espaço. A equação da transformada inversa pode ser visualizada na equação \ref{eq:04}
+Uma ferramenta matemática crucial para a análise de sinais na frequência é a transformada de Fourier, que realiza uma modificação do termo independente, saindo do tempo ou espaço e indo para frequências, também denominada de equação de análise, que pode ser visualizada na equação \ref{eq:03}. \par De forma análoga, a transformada inversa, ou a também chamada de equação de síntese, realiza o processo inverso, modificando o sinal representado no domínio da frequência para o seu domínio original, segundo \cite{oppenheim2010sinais}, seja tempo ou espaço. A equação da transformada inversa pode ser visualizada na equação \ref{eq:04}
 
 \begin{equation}  \label{eq:03}
 X(e^{j\omega})= \sum_{n=-\infty}^{+\infty} x[n]e^{-j\omega n}
@@ -58,13 +51,12 @@ Devido ao desenvolvimento da computação nas últimas décadas e pela conseguin
 
 O processo de obter um sinal discreto a partir de um sinal contínuo é denominado de amostragem, e para que, a partir do sinal amostrado, reconstrua-se o sinal contínuo original, o sinal e o processo de amostragem devem preencher alguns requisitos.
 
-Para que um sinal seja amostrado, é necessário que o intervalo de amostragem, ou seja, o espaçamento entre duas amostras seja regular. A cada período $T$, uma amostra é adquirida, resultando em uma frequência de amostragem $f = 1/T$.
-Ao passar essa função do domínio do tempo para o domínio da frequência, obter-se-á uma banda de frequências que compõe o sinal no domínio do tempo.
+Para que um sinal seja amostrado, é necessário que o intervalo de amostragem, ou seja, o espaçamento entre duas amostras seja regular. A cada período $T$, uma amostra é adquirida, resultando em uma frequência de amostragem $f = 1/T$. Ao passar essa função do domínio do tempo para o domínio da frequência, obter-se-á uma banda de frequências que compõe o sinal no domínio do tempo.
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.5]{figuras/fig03.eps}
-	\caption{espectro do sinal amostrado com Ws > 2Wm}
+	\caption{espectro do sinal amostrado com Ws > 2Wm \cite{oppenheim2010sinais}}
 	\label{fig03}
 \end{figure}
 
@@ -81,52 +73,29 @@ em que
 \omega_s=\frac{2\pi}{T}
 \end{equation}
 
-O parâmetro $\omega_M$, que deve ser menor que metade da frequência de amostragem  $\omega_s$, recebe o nome de frequência de Nyquist \cite{oppenheim2010sinais}.
+O parâmetro $\omega_M$, que deve ser menor que metade da frequência de amostragem $\omega_s$, recebe o nome de frequência de Nyquist \cite{oppenheim2010sinais}.
 \par
-Esse teorema foi explicitado na literatura por Shannon \cite{Shannon} mas foi apontado anteriormente por Nyquist \cite{nyquist} [EXPLICAR DIREITO O QUE A FRASE A SEGUIR SIGNIFICA]. A partir dela, compreende-se a suficiência da representação de um sinal pela série de Fourier por 2TW amostras, no qual T é a duração de uma função e W é a frequência mais alta que compõe o sinal.
+Esse teorema foi explicitado na literatura por Shannon \cite{Shannon} mas foi apontado anteriormente por Nyquist \cite{nyquist}. A partir dela, compreende-se a suficiência da representação de um sinal pela série de Fourier por 2TW amostras, no qual T é a duração de uma função e W é a frequência mais alta que compõe o sinal.
 
 \subsection{Aliasing}
-Quando a frequência de amostragem não está de acordo com o critério de Nyquist, ou seja, menor que o dobro da frequência mais alta, não se tem a reconstrução do sinal, já que, ao realizar a filtragem passa-baixa, na banda $/omega_M$ haverá componentes da banda adjacente.
+Quando a frequência de amostragem não está de acordo com o critério de Nyquist, ou seja, menor que o dobro da frequência mais alta, não se tem a reconstrução do sinal, já que, ao realizar a filtragem passa-baixa, na banda $\omega_M$ haverá componentes da banda adjacente.
 
 \subsection{Teorema da Quantização}
 
-Após a amostragem de sinais, obtém-se um conjunto de sinais. Para que esses sinais, pertencentes ao domínio contínuo, possam ser processados, é necessário que se faça a quantização digitalmente. A quantização é um processo no qual se determina intervalos de valores, atribuindo cada valor amostrado a um valor quantizado em função do intervalo no qual o valor se insere. Para cada sinal amostrado, é atribuido um valor quantizado.
+Após a amostragem de sinais, obtém-se um conjunto de sinais. Para que esses sinais, pertencentes ao domínio contínuo, possam ser processados, é necessário que se faça a quantização digitalmente. A quantização é um processo no qual se determina intervalos de valores, atribuindo cada valor amostrado a um valor quantizado em função do intervalo no qual o valor se insere. Para cada sinal amostrado, é atribuído um valor quantizado.
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.4]{figuras/fig04.eps}
-	\caption{quantização de amplitudes em tempo discreto}
+	\caption{quantização de amplitudes em tempo discreto \cite{oppenheim2010sinais}}
 	\label{fig04}
 \end{figure}
 
-Para que determine com precisão os valores dos intervalos da quantização, o maior e o menor valor obtido pós amostragem são os limites dos valores de amplitudes discretos. Na Figura \ref{fig04}, observa-se o processo a partir do qual, para cada valor obtido na amostragem, há um intervalo correspondente que passará a representar esse sinal. \par O intervalo de amplitude discreta da Figura \ref{fig04} varia de -32768 a +32767, totalizando 65536 possíveis amplitudes discretas, ou seja, $2^{16}$ possíveis amplitudes. Dessa forma, cada amplitude pode ser representada por uma palavra binária de 16 bits. A quantidade de bits a ser utilizada determinará a quantidade de intervalos possíveis, o que, por conseguinte, determinará a precisão da quantização, devido a um erro gerado.\par Cada processo de quantização deve levar em conta a precisão necessária e os limites do intervalo de valores possíveis. Ao final, o procedimento de quantização é essencial para as conversões AD (analógico para digital).
+Para que determine com precisão os valores dos intervalos da quantização, o maior e o menor valor obtido pós amostragem são os limites dos valores de amplitudes discretos. Na Figura \ref{fig04}, observa-se o processo a partir do qual, para cada valor obtido na amostragem, há um intervalo correspondente que passará a representar esse sinal.
+\par O intervalo de amplitude discreta da Figura \ref{fig04} varia de -32768 a +32767, totalizando 65536 possíveis amplitudes discretas, ou seja, $2^{16}$ possíveis amplitudes. Dessa forma, cada amplitude pode ser representada por uma palavra binária de 16 bits. A quantidade de bits a ser utilizada determinará a quantidade de intervalos possíveis, o que, por conseguinte, determinará a precisão da quantização, devido a um erro gerado
+\par Cada processo de quantização deve levar em conta a precisão necessária e os limites do intervalo de valores possíveis. Ao final, o procedimento de quantização é essencial para as conversões AD (analógico para digital).
 
 A quantização, o processo de digitalizar a amplitude, é descrita pelo Teorema de Quantização de Widrow \cite{widrow}, segundo  Zölzer \cite{zolzer2008digital}.
-
-\subsection{Reconstrução do Sinal}
-A transformação do sinal do tempo discreto para o tempo contínuo, em diversas aplicações, é necessário após algum processamento de sinal realizado segundo Oppenheim e Willsky \cite{oppenheim2010sinais}.
-\par
-Para que essa reconstrução aconteça, é necessário que o sinal tenha a banda limitada e que se tenha sido utilizada a frequência de amostragem adequada. Uma forma mais simples de implementar a interpolação, segundo Oppenheim e Willsky \cite{oppenheim2010sinais}, é o retentor de ordem zero, que mantém o sinal no mesmo nível até que chegue a próxima amostra, a partir da qual, o nível se alterará para a amplitude desta nova amostra.
-\par
-Há ordens maiores para os retentores, e, segundo Oppenheim e Willsky \cite{oppenheim2010sinais}, a própria interpolação linear, às vezes, é denominada de retentor de primeira ordem. Um fato a que se deve se atentar é que a reconstrução garante a igualdade entre os valores do sinal inicial e do reconstruído para aqueles instantes em que ocorreram as amostragem.  Conforme a necessidade, pode-se aumentar a ordem do retentor.
-\par
-Na Figura \ref{fig05}, há o retentor de ordem zero, que mantém o nível da última amostra por um período T. Método que pode ser utilizado na reconstrução de um sinal.
-
-\begin{figure}[h]
-	\centering
-    \includegraphics[scale=0.4]{figuras/fig05.eps}
-	\caption{retentor de ordem zero como amostragem ou reconstrução de um sinal}
-	\label{fig05}
-\end{figure}
-
-Já na Figura \ref{fig06}, há a interpolação linear para a reconstrução de um sinal. A linha pontilhada é o sinal original e a linha contínua é o sinal reconstruído. 
-
-\begin{figure}[h]
-	\centering
-    \includegraphics[scale=0.4]{figuras/fig06.eps}
-	\caption{interpolação linear entre amostras}
-	\label{fig06}
-\end{figure}
 
 
 \section{Som e Música}
@@ -138,7 +107,7 @@ Segundo Moyses \cite{moyses}: "... corpos em vibração produzem sons ...". Dess
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.7]{figuras/fig07.eps}
-	\caption{ciclo de propagação do som}
+	\caption{ciclo de propagação do som \cite{moyses}}
 	\label{fig07}
 \end{figure}
 
@@ -170,18 +139,18 @@ Já em 1971, Alex Rosner criou o primeiro \textit{mixer} estéreo para \textit{D
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.4]{figuras/fig08.eps}
-	\caption{Rosnie - inventado por Alex Rosner}
+	\caption{Rosnie - inventado por Alex Rosner \cite{stoneyroadsStoryBehind}}
 	\label{fig08}
 \end{figure}
 \par
 O Rosnie foi o primeiro \textit{mixer}, para aplicações fora de estúdios, capaz de controlar o ganho de bandas de frequências. Diferente das soluções anteriores que apenas conseguiam controlar o volume dos canais, esse equipamento possibilitou, que de forma natural, mixassem com dois discos simultaneamente, de forma que as transições realizadas fossem extremamente suaves, muitas vezes não compreendendo quando acabava uma música e começava outra. Porém, esse equipamento não foi criado com o intuito comercial.
 \par
-Louis Bozak, auxiliado por Alex Rosner, criou o CMA-10-2DL em 1971, visto na Figura \ref{fig10}, primeiro mixer estéreo comercializado que instantaneamente se tornou padrão nos clubes da época.
+Louis Bozak, auxiliado por Alex Rosner, criou o CMA-10-2DL em 1971, visto na Figura \ref{fig10}, primeiro \textit{mixer} estéreo comercializado que instantaneamente se tornou padrão nos clubes da época.
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.6]{figuras/fig10.eps}
-	\caption{CMA-10-2DL - Primeiro mixer estéreo comercial}
+	\caption{CMA-10-2DL - Primeiro mixer estéreo comercial \cite{electronicaptBozak102}}
 	\label{fig10}
 \end{figure}
 \par
@@ -189,18 +158,18 @@ Em 1972, a Technics criou o toca-disco SL-1200, Figura \ref{fig14}, que se torno
 
 \begin{figure}[h]
 	\centering
-    \includegraphics[scale=0.25]{figuras/fig14.eps}
-	\caption{toca-disco SL-1200}
+    \includegraphics[scale=0.25]{figuras/fig14.png}
+	\caption{toca-disco SL-1200 \cite{wikimediaFileTechnicsSL1200MK22jpg}}
 	\label{fig14}
 \end{figure}
 
-A partir de uma colaboração entre duas gigantes da indústria da música, Sony e Phillips criaram o CD em 1979, uma nova mídia capaz de armazenar e reproduzir músicas de forma extremamente compacta, leve e mais barata do que o vinil. No ano seguinte, a mesma colaboração desenvolveu o Red Book Audio, o formato de arquivo que viria a ser utilizado no CD, que utiliza PCM (\textit{Pulse Code Modulation}) na sua codificação. Esses desenvolvimentos culminaram em 1982 no início do consumo de CDs, que popularizou ainda mais o consumo de música ao redor do mundo.
+A partir de uma colaboração entre duas gigantes da indústria da música, Sony e Phillips criaram o CD em 1979, uma nova mídia capaz de armazenar e reproduzir músicas de forma extremamente compacta, leve e mais barata do que o vinil. No ano seguinte, a mesma colaboração desenvolveu o \textit{Red Book Audio}, o formato de arquivo que viria a ser utilizado no CD, que utiliza PCM (\textit{Pulse Code Modulation}) na sua codificação. Esses desenvolvimentos culminaram em 1982 no início do consumo de CDs, que popularizou ainda mais o consumo de música ao redor do mundo.
 
 Em 1986, a empresa Rane criou um mixer, Figura \ref{fig15}, focado para \textit{DJs} cuja qualidade aproximava-se bastante àquelas praticadas em estúdios de música, MP 24 DJ Club Mixer, o que possibilitou um aumento na qualidade do som reproduzido em clubes.
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.3]{figuras/fig15.eps}
-	\caption{mixer criado pela Rane}
+	\caption{mixer criado pela Rane \cite{ranecommercialMixerEvolution}}
 	\label{fig15}
 \end{figure}
 
@@ -213,7 +182,7 @@ Nos anos 90, uma empresa que viria a ser a gigante dos equipamentos focados em \
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.15]{figuras/fig13.eps}
-	\caption{CDJ-300 - primeira CDJ da Pioneer}
+	\caption{CDJ-300 - primeira CDJ da Pioneer \cite{cdj300}}
 	\label{fig13}
 \end{figure}
 
@@ -223,7 +192,7 @@ Na década de 2010, grandes empresas possibilitaram o \textit{DJ} de tocar músi
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.3]{figuras/fig16.eps}
-	\caption{mixagem virtual com o Apple Vision Pro}
+	\caption{mixagem virtual com o Apple Vision Pro \cite{macmagazineDesenvolvedorFala}}
 	\label{fig16}
 \end{figure}
 
@@ -232,7 +201,7 @@ Ainda que haja muitas soluções inovadoras a respeito de formas de mixagem, a c
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.3]{figuras/fig17.png}
-	\caption{configuração mais encontrada}
+	\caption{configuração mais encontrada \cite{pioneerdjDJMA94channel}}
 	\label{fig17}
 \end{figure}
 
@@ -241,7 +210,7 @@ Porém, há ainda configurações que evocam a qualidade sonora como aspecto pri
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.2]{figuras/fig18.png}
-	\caption{\textit{rotary mixer}}
+	\caption{\textit{rotary mixer} \cite{electroniquespectacleampAUDIO}}
 	\label{fig18}
 \end{figure}
 
@@ -254,7 +223,6 @@ Uma mix possui estrutura e enredo, com início, meio e fim. Também diversos pro
 \par
 Além disso, a adição de performances ao vivo, com a utilização de sintetizadores e qualquer dispositivo capaz de gerar som, amplia ainda mais as possibilidades criativas. Desde o uso de sinais elétricos provenientes de eletrodos até a integração de elementos inusitados, como performances ao vivo, as opções são verdadeiramente infinitas, limitadas apenas pela imaginação do criador.
 
-\newpage
 \subsection{Parâmetros físicos}
 Quando um \textit{DJ} mixa músicas, alguns parâmetros devem ser considerados durante uma música ou no momento da transição entre duas, tais como batidas por minuto (BPM), tom, volume, ganho e presença de componentes em bandas de frequência como graves, médios e agudos.
 \par
@@ -284,41 +252,15 @@ A essa escolha de bandas reduzidas se deve a necessidade de simplicidade e rapid
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.4]{figuras/fig09.eps}
-	\caption{espectro de áudio}
+	\caption{espectro de áudio \cite{headphonestyAudioFrequency}}
 	\label{fig09}
 \end{figure}
 
 
 \subsubsection{Equipamentos}
 Os equipamentos utilizados por \textit{DJs} ao longo do tempo evoluíram. Partiram de equipamentos improvisados utilizados para outra finalidade até que foram inventados dispositivos para a finalidade específica foram criados.
-Há inúmeras configurações possíveis para se realizar uma mixagem. Primeiramente, deve-se saber qual a fonte de música é utilizada. Caso sejam vinis, deve-se utilizar toca-discos. Caso a fonte seja um dispotivo de memória digital como pendrive ou cartão de memória, no qual há uma série de músicas organizadas por um software de gerenciamento de música, deve-se utilizar uma CDJ. Caso o \textit{DJ} queira fazer performances live na qual ele produz músicas ao vivo, pode-se utilizar notebooks, sintetizadores, samplers ou sequenciadores e inúmeros outros 
-
-
-%https://daily.redbullmusicacademy.com/2019/06/evolution-of-dj-mixers
-%https://www.rane.com/history
-%https://medium.com/@soarkxbeta/dj-mixers-series-technology-adapted-to-the-artists-perspective-part-one-90cd4b1f4b27
-%https://medium.com/@soarkxbeta/dj-mixers-series-a-technological-invention-turned-to-the-artistic-perspective-part-two-ce6bbbdfb2d4]
-% Segundo Laurin Schaffhausen, os mixers clássicos coloriam os sinais, o que não é algo significamente ruim. -> Colocar um parâmetro de distorção do sinal para verificar esse efeito. Coloração pode dar mais vivacidade devido a um ganho em determinada banda. Talvez emular esses brilhos. 
-% [Dúvida: qual a diferença entre um vinil analógico e um vinil digital(final dos anos 90)]
-% Rotary mixers hoje são produzidos pelas empresas Vestax e Rane
-% E&S foi uma empresa criada em colaboração entre um dj Deep e um engenheiro eletrônico. Produzem duas unidades por semana em Paris. 
-% Outras empresas no mesmo estilo, pequenas, foram criadas pós E&S, como a Can Electric e Condensa, para ficcionados por Rotary Mixers, principalmente focados em djs que utilizam vinil. 
-% Giles Smith produziu o seu próprio mixer - TPI Sound
-% Alguns dizem que os Rotary soam melhor do que os com faders mas isso só pode ser dito devido aos componentes eletrônicos serem projetados com a ênfase na qualidade sonora. Tendem a ser estritamente analógicos. 
-% O que se sabe é que um controle rotativo acaba sendo mais preciso do que um fader.
-% Outra empresa de mixer é a Mastersounds -> Exclusão do EQ de 3 bandas. 
-% Os parâmetros para classificar um mixer como bom são muito subjetivos. Pode ser o design, qualidade do áudio, limpeza do som, movimento suave e limpo nos botões, portabilidade, preço, recursos como efeitos. São inúmeros. Além disso, cada pessoa tem seu gosto pessoal. 
-
-% Mixers rotativos têm sido mantidos em um padrão elevado de qualidade de produção. Seus usuários estão amplamente conectados a uma variedade mais caracterizada de mixagem com som orgânico, como disco, música house, Balearic e estilos semelhantes.
-%------------------------------------------
-%Equipamentos de reprodução -> Revisar a parte de cima e reduzir conforme esses links
-
-% https://medium.com/@soarkxbeta/the-evolution-of-record-players-from-early-beginnings-to-modern-times-part-one-f5f40b39b6e3
-% https://medium.com/@soarkxbeta/the-evolution-of-record-players-from-early-beginnings-to-modern-times-part-two-635b8cb8f84d
-% https://medium.com/@soarkxbeta/the-evolution-of-record-players-from-early-beginnings-to-modern-times-part-three-77bd2a9c811c
-\newpage
+Há inúmeras configurações possíveis para se realizar uma mixagem. Primeiramente, deve-se saber qual a fonte de música é utilizada. Caso sejam vinis, deve-se utilizar toca-discos. Caso a fonte seja um dispotivo de memória digital como pendrive ou cartão de memória, no qual há uma série de músicas organizadas por um \textit{software} de gerenciamento de música, deve-se utilizar uma CDJ. Caso o \textit{DJ} queira fazer performances live na qual ele produz músicas ao vivo, pode-se utilizar \textit{notebooks}, sintetizadores, \textit{samplers} ou sequenciadores e inúmeros outros 
 \section{Mixer}
-% https://medium.com/@soarkxbeta/dj-mixers-series-a-technological-invention-turned-to-the-artistic-perspective-part-two-ce6bbbdfb2d4
 Um dispositivo que está sempre em qualquer \textit{layout} montado é o \textit{mixer}, cuja função é a de misturar e controlar canais de entrada de áudio. Quanto ao controle, inúmeras são as possibilidades, mas a mais usual é a de fornecer controle de bandas de frequência para canais de entrada de áudio. Cada dispositivo que reproduz música é lido como um canal de entrada. E esse equipamento é tanto capaz de controlar as bandas de frequência, quanto somar os sinais de áudio, gerando um sinal de saída, que é ligada a alto-falantes. 
 \par
 Os parâmetros para classificar um \textit{mixer} como bom são muito subjetivos. Podem ser o design do equipamento, qualidade do áudio, distorção do som, manipulação precisa dos botões, ergonomia, portabilidade, preço, recursos como efeitos, referências históricas, integrações com \textit{software} ou outros equipamentos. Além disso, cada pessoa tem seu gosto pessoal e o seu jeito de mixar prezando determinados aspectos.
@@ -330,7 +272,6 @@ O desenvolvimento da conexão entre dispositivos de áudio, segundo Winer \cite{
 Comumente, encontra-se uma entrada \textit{phono} em \textit{mixers}, correspondente aos dispositivos como toca-discos ou qualquer outro que emita sinais na ordem de miliVolts. Esses sinais necessitam de uma amplificação realizada posteriormente por um amplificador de potência para serem processados pelo sistema do \textit{mixer}. Alguns dispositivos possuem a tensão de saída tão baixa que necessitam de um pré-amplificador para que o sinal possa estar na faixa ideal para que sua potência seja amplificada, para que esteja em um nível de linha.
 \par
 Outra entrada comumente encontrada é a \textit{line}, que são sinais que já estão em nível de linha. Conforme Winer \cite{winer}, esses sinais possuem dois níveis padrões que são -10 dBV, em equipamentos não balanceados, e +4 dBu, para equipamentos balanceados. Equipamentos de linha profissional costumam a ser balanceados, ou seja, tensões RMS em torno de 1,23 V. Enquanto equipamentos não balanceados são de consumo, por exemplo, aparelhos de som, reprodutores de música e TVs, tensões em torno de 0,316 V.
-% [INSERIR TABELA DE CONVERSÃO DE NÍVEIS DE SINAIS EM V, dBV e dBu]
 
 \subsection{Cabeamento}
 
@@ -339,7 +280,7 @@ Condutores desbalanceados apresentam um fio para transmitir o sinal e possuem um
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.4]{figuras/fig11.eps}
-	\caption{fio desbalanceado}
+	\caption{fio desbalanceado \cite{proaudiospQualDiferena}}
 	\label{fig12}
 \end{figure}
 
@@ -348,29 +289,29 @@ Já condutores balanceados são cabos que utilizam dois condutores para transmi
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.4]{figuras/fig12.eps}
-	\caption{Fio Balanceado}
+	\caption{Fio Balanceado \cite{proaudiospQualDiferena}}
 	\label{fig11}
 \end{figure}
 
-\subsection{Conectores de 1/4”, 1/8” (3,5 mm) e 2,5 mm}
+\subsection{Conectores de 1/4”, 1/8” (3,5 mm) e 2,5 mm}
 
 Para realizar a comunicação entre dispositivos, é necessário que haja tanto a transmissão de sinais elétricos quanto conectores. Cada tipo de conector possui vantagens relacionadas à transmissão de sinais, seja por: quantidade de canais, distância, potência, blindagem e interferência.
 
-Um dos conectores mais conhecidos é o $1/4"$ , Figura \ref{fig19}, principalmente utilizado em instrumentos como guitarras, violões, teclados e outros, podem ser encontrados em amplificadores e mixers, ou seja, em geral para o transporte de níveis baixos de potência. Devido à sua construção física que conta com dois condutores de sinais e um terra, esse tipo de conector pode ser aplicado em sinais estéreos não balanceados ou sinais mono balanceados \cite{bartlett}.
+Um dos conectores mais conhecidos é o \textit{1/4"} , Figura \ref{fig19}, principalmente utilizado em instrumentos como guitarras, violões, teclados e outros, podem ser encontrados em amplificadores e \textit{mixers}, ou seja, em geral para o transporte de níveis baixos de potência. Devido à sua construção física que conta com dois condutores de sinais e um terra, esse tipo de conector pode ser aplicado em sinais estéreos não balanceados ou sinais mono balanceados \cite{bartlett}.
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.2]{figuras/fig19.png}
-	\caption{plug 1/4$"$}
+	\caption{plug 1/4$"$ \cite{mouser}}
 	\label{fig19}
 \end{figure}
 
-Existe uma versão menor da versão 1/4", sendo o 1/8", Figura \ref{fig20}, ou mais conhecido como 3.5 mm. Esse tipo de conector é muito encontrado em celulares, dispositivos de reprodução de música e alto-falantes. Internamente, ele possui a mesma construção do 1/4" e também consegue transmitir os mesmos tipos de sinais.
+Existe uma versão menor da versão 1/4", sendo o \textit{1/8"} , Figura \ref{fig20}, ou mais conhecido como 3.5 mm. Esse tipo de conector é muito encontrado em celulares, dispositivos de reprodução de música e alto-falantes. Internamente, ele possui a mesma construção do 1/4" e também consegue transmitir os mesmos tipos de sinais.
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.2]{figuras/fig20.png}
-	\caption{plug 1/8$"$}
+	\caption{plug 1/8$"$ \cite{mouser}}
 	\label{fig20}
 \end{figure}
 
@@ -379,7 +320,7 @@ Outra versão existente é o conector de 2.5 mm, que muitas vezes, ao invés de 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.2]{figuras/fig21.png}
-	\caption{plug 2,5 mm}
+	\caption{plug 2,5 mm \cite{mouser}}
 	\label{fig21}
 \end{figure}
 
@@ -389,7 +330,7 @@ Outra versão existente é o conector de 2.5 mm, que muitas vezes, ao invés de 
  \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.1]{figuras/fig22.png}
-	\caption{cabo RCA}
+	\caption{cabo RCA \cite{rs}}
 	\label{fig22}
 \end{figure}
 
@@ -399,13 +340,13 @@ Outra versão existente é o conector de 2.5 mm, que muitas vezes, ao invés de 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.2]{figuras/fig23.png}
-	\caption{cabo XLR}
+	\caption{cabo XLR \cite{hollylandWhatCable}}
 	\label{fig23}
 \end{figure}
 
 \subsection{Protocolos Digitais}
 
-Conectores para transmissão de dados digitais também são utilizados em \textit{mixers} e inúmeros outros equipamentos relacionados a áudio. Conectores como \textit{Ethernet} e \textit{Switch}, USB, \textit{bluetooth} e MIDI também são utilizados para diversas configurações de equipamentos.
+Conectores para transmissão de dados digitais também são utilizados em \textit{mixers} e inúmeros outros equipamentos relacionados a áudio. Conectores como \textit{Ethernet} e \textit{Switch}, USB, \textit{Bluetooth} e MIDI também são utilizados para diversas configurações de equipamentos.
   
 \subsection{Amplificação de Potência}
 
@@ -427,20 +368,9 @@ Quanto à amplitude do sinal de áudio, há dois controles que frequentemente es
 Já o volume é geralmente visto em um controle de \textit{fader}. Esse botão serve para controlar a amplitude do sinal enquanto o sinal é equalizado, ou seja, posteriormente à amplificação do sinal.
 
 \subsection{Conversão AD/DA}
-Quanto ao processamento dos sinais de áudio, pode-se dividir o tipo de processamento em dois grandes bloco: analógicos e digitais. Analógicos são feitos por circuitos analógicos e digitais são por computadores, DSPs e outros dispositivos. Porém, a diferença primordial é o estado no qual o sinal, enquanto processado, se encontra. Caso o sinal, enquanto esteja sendo processado, for analógico, o mixer é analógico, e vice-versa.
+Quanto ao processamento dos sinais de áudio, pode-se dividir o tipo de processamento em dois grandes bloco: analógicos e digitais. Analógicos são feitos por circuitos analógicos e digitais são por computadores, DSPs e outros dispositivos. Porém, a diferença primordial é o estado no qual o sinal, enquanto processado, se encontra. Caso o sinal, enquanto esteja sendo processado, for analógico, o \textit{mixer} é analógico, e vice-versa.
 \par
 Dispositivos que reproduzem música como CDJs e toca-discos podem emitir sinais analógicos ou digitais, dependendo do equipamento e da saída utilizada. 
 Dessa forma, caso o \textit{mixer} necessite de sinais digitais e a saída do reprodutor de música for analógico, deve-se realizar a conversão analógico digital e vice-versa.
 \par
 De forma parecida, o sinal de saída do \textit{mixer} deve ser analógica pois passará por um amplificador de potência para que, posteriormente, vá para alto-falantes. Ou seja, caso o processamento seja realizado de forma digital, o sinal deve passar por uma conversão digital analógica.
-
-
-
-
-%\subsection{PureData}
-%Dentro dos sinais digitais, há inúmeras formas de se processar sinais. Pode-se usar diversas linguagens de programação como PureData, MAX, SuperCollider, CSound, Faust e Chuck que são dedicadas a processamento de áudio. Já há outras linguagens de finalidades diversas como JavaScript, C, C++, Rust e outros que também contam com aplicações a áudio.
-%\par
-%Cada linguagem possui sua especificidade, vantagens, desvantagens, aplicações e suportes. Por isso, a escolha da linguagem deve levar em conta as especificações dos requisitos que o projeto demanda.
-%\par
-
-
