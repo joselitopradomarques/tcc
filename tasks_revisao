@@ -1,10 +1,10 @@
 # Revisão do TCC - Organização por Similaridade e Dificuldade
 
 ## 1. Tarefas Rápidas e de Execução Simples (Fáceis)
-- Limpar partes do template: Dedicatória, Epígrafe. [Deixar pro final]
+- [FAÇO NO FINAL] Limpar partes do template: Dedicatória, Epígrafe.
 - [DONE] Inserir o nome dos professores da banca.
-- Figura 5 está incorreta: Localizar outra. [Terça-feira]
-- Objetivos: Inserir uma lista numérica e citar os objetivos conforme a numeração. [Terça-feira]
+- [DONE] Figura 5 está incorreta: Localizar outra.
+- [DONE] Objetivos: Inserir uma lista numérica e citar os objetivos conforme a numeração.
 - Inserir uma imagem do meu futuro produto. [Isso eu vou pensar em como fazer]
 
 ## 2. Tarefas de Melhoria da Qualidade do Texto e Estruturação (Média dificuldade, mas demoradas)
@@ -23,10 +23,40 @@
 - **Figuras 42, 44 e 46:** Inserir unidade de medidas no gráfico.
 
 ## 4. Conformidade com ABNT e Documentação Técnica (Alta dificuldade por ser detalhado e trabalhoso)
-- **ABNT:** Nunca começar ou finalizar um tópico com figura ou lista de itens. Demandará ajustes em diversos capítulos e seções.
-- Verificar como o documento está cortando as palavras: Revisar e ajustar a formatação do texto.
-- **Diagramas de engenharia, Conexões, Esqueleto de Software, Envólucro:** Revisão ou inclusão da documentação técnica em detalhes. Esse processo pode ser demorado e exigirá precisão técnica.
+- **ABNT:**: Nunca começar ou finalizar um tópico com figura ou lista de itens. Demandará ajustes em diversos capítulos e seções.
+- **Corte de Palavras**: Verificar como o documento está cortando as palavras: Revisar e ajustar a formatação do texto.
+- **Diagramas de engenharia, Conexões, Esqueleto de Software, Envólucro:**: Revisão ou inclusão da documentação técnica em detalhes. Esse processo pode ser demorado e exigirá precisão técnica.
+
+---- Erros em relação a ABNT
+1) Verificar o nome do título das figuras. Deve ser tudo minúsculo mesmo?
+2) Lista de requisitos -> Verificar a regra se tem que ser enumerado ou se não
+
+## Seções que começam ou finalizam com imagens:
 
 
-- Dúvida:
-1) O ano que consta no arquivo deve ser o ano em que eu apresentarei o TCC? Dessa forma, devo alterar para 2025?
+- **Sinal Contínuo**
+- **Sinal Discreto**
+- **Parâmetros Físicos**
+- **Cabeamento**
+- **RCA**
+- **XLR**
+- **Bloco de Leitura de Sinais**
+- **Implementação de Efeitos**
+- **Bloco de Conversão DA**
+- **Unidade de Processamento**
+- **Resultados de Filtragem**
+- **Resultados de Efeitos**
+- **Automação de Efeitos**
+- **Reverb**
+- **Delay**
+
+
+## Seções que começam ou finalizam com listas:
+
+- **Requisitos Funcionais** 
+- **Requisitos Não Funcionais**: tirar o hífen do título
+
+ ## Seções que estou em dúvida
+
+ - **Sinal: Conceito**: pode começar com uma citação direta?
+ - **Transformada de Fourier**: finaliza com duas equações.
