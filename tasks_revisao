@@ -1,0 +1,32 @@
+# Revisão do TCC - Organização por Similaridade e Dificuldade
+
+## 1. Tarefas Rápidas e de Execução Simples (Fáceis)
+- Limpar partes do template: Dedicatória, Epígrafe. [Deixar pro final]
+- [DONE] Inserir o nome dos professores da banca.
+- Figura 5 está incorreta: Localizar outra. [Terça-feira]
+- Objetivos: Inserir uma lista numérica e citar os objetivos conforme a numeração. [Terça-feira]
+- Inserir uma imagem do meu futuro produto. [Isso eu vou pensar em como fazer]
+
+## 2. Tarefas de Melhoria da Qualidade do Texto e Estruturação (Média dificuldade, mas demoradas)
+- **Evitar frases curtas no texto:** Demandará uma revisão extensa para identificar e reescrever frases curtas.
+- Melhorar a construção de frases e discurso.
+- **Resumo:** Melhorar contando a história do trabalho com começo, meio e fim. Reescrever o resumo para torná-lo mais claro e conciso.
+- **Português não está elaborado:** Revisão geral de coesão e coerência.
+- **Introdução:** Contextualizar melhor, inserir dados, relatos, imagens. Revisão e adição de material demandam tempo.
+- **Desenvolvimento:** Explicar mais sobre circuitos, decisões de design (uso de processamento digital versus analógico), e apresentar o produto final.
+- **PureData:** Explicar melhor o software com exemplos e sua conexão com o produto final.
+
+## 3. Tarefas de Revisão Técnica e Correções Específicas (Relativamente fáceis e pontuais)
+- **Arduino:** Retirar referências ao Arduino no texto final. [Terça-feira]
+- **Filtros:** Explicar a modelagem de filtros e efeitos. Incluir mais detalhes técnicos.
+- **Resultados:** Detalhar como os resultados foram obtidos e como as figuras foram geradas.
+- **Figuras 42, 44 e 46:** Inserir unidade de medidas no gráfico.
+
+## 4. Conformidade com ABNT e Documentação Técnica (Alta dificuldade por ser detalhado e trabalhoso)
+- **ABNT:** Nunca começar ou finalizar um tópico com figura ou lista de itens. Demandará ajustes em diversos capítulos e seções.
+- Verificar como o documento está cortando as palavras: Revisar e ajustar a formatação do texto.
+- **Diagramas de engenharia, Conexões, Esqueleto de Software, Envólucro:** Revisão ou inclusão da documentação técnica em detalhes. Esse processo pode ser demorado e exigirá precisão técnica.
+
+
+- Dúvida:
+1) O ano que consta no arquivo deve ser o ano em que eu apresentarei o TCC? Dessa forma, devo alterar para 2025?
