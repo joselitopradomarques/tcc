@@ -33,7 +33,7 @@
 \contentsline {subsection}{\numberline {2.4.1}Potência de Sinal de Áudio}{41}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Cabeamento}{41}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Conectores de 1/4", 1/8" (3,5 mm) e 2,5 mm}{42}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}RCA}{42}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.4}RCA}{43}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}XLR}{44}{subsection.2.4.5}%
 \contentsline {subsection}{\numberline {2.4.6}Protocolos Digitais}{44}{subsection.2.4.6}%
 \contentsline {subsection}{\numberline {2.4.7}Amplificação de Potência}{44}{subsection.2.4.7}%
@@ -45,7 +45,7 @@
 \contentsline {section}{\numberline {3.1}Proposta Geral}{47}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Levantamento de Requisitos}{47}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Requisitos Funcionais}{48}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Requisitos Não-Funcionais}{48}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.2}Requisitos Não Funcionais}{48}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Fluxograma do Mixer}{49}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Bloco de Leitura de Sinais}{50}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Bloco de Filtragem}{50}{subsection.3.3.2}%
@@ -56,16 +56,16 @@
 \contentsline {section}{\numberline {3.4}Prova de Conceito}{54}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}\textit {PureData}}{54}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Implementação de Filtragem}{54}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Implementação de Efeitos}{55}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}Implementação de Efeitos}{56}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Proposta de Implementação}{58}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Implementação em Hardware}{58}{subsection.3.5.1}%
 \contentsline {paragraph}{\numberline {3.5.1.0.1}Conectores}{58}{paragraph.3.5.1.0.1}%
-\contentsline {paragraph}{\numberline {3.5.1.0.2}Botões}{58}{paragraph.3.5.1.0.2}%
+\contentsline {paragraph}{\numberline {3.5.1.0.2}Botões}{59}{paragraph.3.5.1.0.2}%
 \contentsline {paragraph}{\numberline {3.5.1.0.3}Conversão AD}{59}{paragraph.3.5.1.0.3}%
 \contentsline {paragraph}{\numberline {3.5.1.0.4}Protocolos de Comunicação}{60}{paragraph.3.5.1.0.4}%
 \contentsline {paragraph}{\numberline {3.5.1.0.5}Unidades de Processamento}{61}{paragraph.3.5.1.0.5}%
 \contentsline {paragraph}{\numberline {3.5.1.0.6}Conversão DA}{61}{paragraph.3.5.1.0.6}%
-\contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{61}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{62}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Protótipo de Interface de Usuário}{62}{subsection.3.5.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados Preliminares}}{63}{chapter.4}%
@@ -75,7 +75,7 @@
 \contentsline {subsection}{\numberline {4.2.2}\textit {Reverb}}{69}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}\textit {Delay}}{71}{subsection.4.2.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{73}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusão}}{75}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{75}{section*.18}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{77}{section*.18}%

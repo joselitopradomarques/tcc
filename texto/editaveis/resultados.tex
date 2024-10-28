@@ -126,8 +126,6 @@ Primeiramente, simulou-se o volume do efeito em função da posição do botão 
 
 Para validar o controle automático do volume, isolou-se a saída dos efeitos e variaram-se as frequências, que geram diferentes volumes de efeitos. Os sinais no domínio do tempo foram analisados, conforme mostrado nas figuras abaixo.
 
-Na Figura \ref{fig66}, a frequência central utilizada foi a mínima. De acordo com a função mostrada na Figura \ref{fig49}, o volume esperado seria nulo. Assim, o sinal obtido também foi constante e nulo, como esperado.
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig66.png}
@@ -135,7 +133,7 @@ Na Figura \ref{fig66}, a frequência central utilizada foi a mínima. De acordo 
     \label{fig66}
 \end{figure}
 
-Em seguida, variou-se a posição do botão central para atingir a frequência de 9454 Hz, resultando em um volume de 0.3312. A Figura \ref{fig67} mostra um sinal similar ao da música \cite{track01}, mas com uma amplitude específica.
+Na Figura \ref{fig66}, a frequência central utilizada foi a mínima. De acordo com a função mostrada na Figura \ref{fig49}, o volume esperado seria nulo. Assim, o sinal obtido também foi constante e nulo, como esperado.
 
 \begin{figure}[h]
     \centering
@@ -144,7 +142,9 @@ Em seguida, variou-se a posição do botão central para atingir a frequência d
     \label{fig67}
 \end{figure}
 
-A posição do botão central foi ajustada para observar a variação do volume do efeito. Na Figura \ref{fig68}, com a frequência de 9875 Hz, observou-se um volume maior.
+Em seguida, variou-se a posição do botão central para atingir a frequência de 9454 Hz, resultando em um volume de 0.3312. A Figura \ref{fig67} mostra um sinal similar ao da música \cite{track01}, mas com uma amplitude específica.
+
+\newpage
 
 \begin{figure}[h]
     \centering
@@ -153,7 +153,7 @@ A posição do botão central foi ajustada para observar a variação do volume 
     \label{fig68}
 \end{figure}
 
-Para validar completamente a automação do volume, o botão central foi posicionado na frequência de 11025 Hz, que gera o volume máximo (1.0). A Figura \ref{fig69} mostra a ampliação do volume em função da variação da frequência, confirmando a automação do volume.
+A posição do botão central foi ajustada para observar a variação do volume do efeito. Na Figura \ref{fig68}, com a frequência de 9875 Hz, observou-se um volume maior.
 
 \begin{figure}[h]
     \centering
@@ -161,6 +161,7 @@ Para validar completamente a automação do volume, o botão central foi posicio
     \caption{canal de efeito \textit{reverb} isolado com música 1 a um volume de 1.0}
     \label{fig69}
 \end{figure}
+Para validar completamente a automação do volume, o botão central foi posicionado na frequência de 11025 Hz, que gera o volume máximo (1.0). A Figura \ref{fig69} mostra a ampliação do volume em função da variação da frequência, confirmando a automação do volume.
 
 \subsection{\textit{Reverb}}
 
@@ -168,7 +169,6 @@ Para validar o controle do efeito de \textit{reverb}, o botão central foi posic
 
 Nas figuras a seguir, são apresentadas representações do sinal no domínio do tempo, ilustrando a variação desse parâmetro. O intervalo de dB proposto no sistema varia de 0 a 1000 dB.
 
-Na Figura \ref{fig70}, a posição inicial do botão de quantidade de efeito resulta em 0 dB após 1 segundo. Portanto, a forma de onda esperada também é nula, o que foi confirmado pelos resultados obtidos.
 
 \begin{figure}[h]
     \centering
@@ -177,7 +177,7 @@ Na Figura \ref{fig70}, a posição inicial do botão de quantidade de efeito res
     \label{fig70}
 \end{figure}
 
-Em seguida, o botão de parâmetro de efeito foi ajustado para que 25 dB permanecessem após 1 segundo da amostra atual da música. Na Figura \ref{fig71}, observa-se a repetição de trechos da música devido à aplicação do efeito.
+Na Figura \ref{fig70}, a posição inicial do botão de quantidade de efeito resulta em 0 dB após 1 segundo. Portanto, a forma de onda esperada também é nula, o que foi confirmado pelos resultados obtidos.
 
 \begin{figure}[h]
     \centering
@@ -186,8 +186,10 @@ Em seguida, o botão de parâmetro de efeito foi ajustado para que 25 dB permane
     \label{fig71}
 \end{figure}
 
-Com o aumento do ganho, o efeito de \textit{reverb} torna-se mais perceptível. Na Figura \ref{fig72}, é possível observar uma maior presença do efeito, com um aumento na amplitude do sinal ao longo do tempo.
+Em seguida, o botão de parâmetro de efeito foi ajustado para que 25 dB permanecessem após 1 segundo da amostra atual da música. Na Figura \ref{fig71}, observa-se a repetição de trechos da música devido à aplicação do efeito.
 
+
+\newpage
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figuras/fig72.png}
@@ -195,7 +197,7 @@ Com o aumento do ganho, o efeito de \textit{reverb} torna-se mais perceptível. 
     \label{fig72}
 \end{figure}
 
-Finalmente, ao configurar 100 dB de ganho após 1 segundo, como mostrado na Figura \ref{fig73}, o efeito de \textit{reverb} é ainda mais pronunciado, resultando em um som com pouca definição. Isso indica que uma grande quantidade de som permaneceu, comprometendo a clareza da música.
+Com o aumento do ganho, o efeito de \textit{reverb} torna-se mais perceptível. Na Figura \ref{fig72}, é possível observar uma maior presença do efeito, com um aumento na amplitude do sinal ao longo do tempo.
 
 \begin{figure}[h]
     \centering
@@ -204,12 +206,13 @@ Finalmente, ao configurar 100 dB de ganho após 1 segundo, como mostrado na Figu
     \label{fig73}
 \end{figure}
 
+Finalmente, ao configurar 100 dB de ganho após 1 segundo, como mostrado na Figura \ref{fig73}, o efeito de \textit{reverb} é ainda mais pronunciado, resultando em um som com pouca definição. Isso indica que uma grande quantidade de som permaneceu, comprometendo a clareza da música.
+
 \subsection{\textit{Delay}}
 
 O efeito de \textit{delay} consiste em repetir o sinal após um determinado intervalo de tempo. As figuras a seguir ilustram o comportamento do efeito com diferentes configurações de atraso.
 
-Na Figura \ref{fig74}, foi configurado um \textit{delay} de 0 ms. Nesse caso, a cópia do sinal é obtida imediatamente, sem atraso.
-
+\newpage
 \begin{figure}[h]
 	\centering
     \includegraphics[width=0.7\textwidth]{figuras/fig74.png}
@@ -217,7 +220,7 @@ Na Figura \ref{fig74}, foi configurado um \textit{delay} de 0 ms. Nesse caso, a 
 	\label{fig74}
 \end{figure}
 
-Na Figura \ref{fig75}, um \textit{delay} de 250 ms foi configurado. Aqui, a cópia do sinal é reproduzida com um atraso de 250 ms em relação ao sinal original.
+Na Figura \ref{fig74}, foi configurado um \textit{delay} de 0 ms. Nesse caso, a cópia do sinal é obtida imediatamente, sem atraso.
 
 \begin{figure}[h]
 	\centering
@@ -226,7 +229,7 @@ Na Figura \ref{fig75}, um \textit{delay} de 250 ms foi configurado. Aqui, a cóp
 	\label{fig75}
 \end{figure}
 
-Na Figura \ref{fig76}, o \textit{delay} foi configurado para 500 ms. Neste caso, a cópia do sinal é reproduzida com um atraso de 500 ms em relação ao sinal original.
+Na Figura \ref{fig75}, um \textit{delay} de 250 ms foi configurado. Aqui, a cópia do sinal é reproduzida com um atraso de 250 ms em relação ao sinal original.
 
 \begin{figure}[h]
 	\centering
@@ -235,11 +238,14 @@ Na Figura \ref{fig76}, o \textit{delay} foi configurado para 500 ms. Neste caso,
 	\label{fig76}
 \end{figure}
 
-Na Figura \ref{fig77}, foi configurado um \textit{delay} de 1000 ms. A cópia do sinal é reproduzida com um atraso de 1000 ms em relação ao sinal original.
+Na Figura \ref{fig76}, o \textit{delay} foi configurado para 500 ms. Neste caso, a cópia do sinal é reproduzida com um atraso de 500 ms em relação ao sinal original.
 
+\newpage
 \begin{figure}[h]
 	\centering
     \includegraphics[width=0.7\textwidth]{figuras/fig77.png}
 	\caption{\textit{delay} de 1000 ms}
 	\label{fig77}
 \end{figure}
+
+Na Figura \ref{fig77}, foi configurado um \textit{delay} de 1000 ms. A cópia do sinal é reproduzida com um atraso de 1000 ms em relação ao sinal original.

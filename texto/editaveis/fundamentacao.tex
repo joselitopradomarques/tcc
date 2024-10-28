@@ -15,7 +15,7 @@ Sensores são dispositivos capazes de mensurar grandezas físicas através da ca
 Com o desenvolvimento de sensores na história da instrumentação, foi possível a obtenção da quantização de parâmetros físicos através de sinais elétricos. Dessa forma, a compreensão de fenômenos físicos e, consequentemente, a construção de sistemas que podem alterar os sinais conforme a resposta desejada.
 
 \section{Sinal Contínuo}
-Dentro das possibilidades do que um sinal pode ser, pode-se classificá-lo como contínuo caso a sua variável independente seja contínua, ou seja, que tenha um valor para cada instante de tempo (variável independente). Por exemplo, entre o intervalo de \textit{t} a \textit{t+1}, há infinitos valores tanto de tempo quanto para o parâmetro em função do tempo \cite{oppenheim2010sinais}. Um exemplo pode ser o valor de corrente em um resistor alimentado por uma tensão ou um som que gera uma pressão acústica no ar captada pelo sistema auditivo. A Figura \ref{fig01} é um exemplo de um gráfico para um sinal contínuo no tempo. 
+Um sinal pode ser classificado como contínuo caso sua variável independente seja contínua, ou seja, se houver um valor para cada instante de tempo (variável independente).
 
 \begin{figure}[h]
 	\centering
@@ -23,10 +23,12 @@ Dentro das possibilidades do que um sinal pode ser, pode-se classificá-lo como 
 	\caption{sinal de tempo contínuo \cite{oppenheim2010sinais}}
 	\label{fig01}
 \end{figure}
-\newpage
+
+Por exemplo, na Figura \ref{fig01}, entre o intervalo de 0 a \textit{t}, há infinitos valores tanto de tempo quanto para o parâmetro em função do tempo \cite{oppenheim2010sinais}. Um exemplo pode ser o valor de corrente em um resistor alimentado por uma tensão ou um som que gera uma pressão acústica no ar captada pelo sistema auditivo. A Figura \ref{fig01} é um exemplo de um gráfico para um sinal contínuo no tempo. 
+
 
 \subsection{Sinal Discreto}
-Em contrapartida a um sinal contínuo em relação à sua variável independente, há outra classificação de sinal denominado discreto. A sua variável independente é o tempo discreto, que pode ser definido por um conjunto de números inteiros. Caso a variável independente não seja inteira, ou seja, \textit{n} não seja inteiro, não há valor definido. Dessa forma, entre \textit{n} e \textit{n+1}, não há infinitos valores como há no tempo contínuo. Um exemplo dessa classificação de sinal pode ser \cite{oppenheim2010sinais}. A Figura \ref{fig02} é um exemplo de um gráfico para um sinal no tempo discreto.
+No caso de um sinal discreto, a sua variável independente é o tempo discreto, que pode ser definido por um conjunto de números inteiros, de forma que caso \textit{n} não seja inteiro, não há valor definido. 
 
 \begin{figure}[h]
 	\centering
@@ -35,8 +37,10 @@ Em contrapartida a um sinal contínuo em relação à sua variável independente
 	\label{fig02}
 \end{figure}
 
+Dessa forma, entre as amostras consecutivas da Figura \ref{fig02}, não há infinitos valores como há no tempo contínuo.
+
 \subsection{Transformada de Fourier}
-Uma ferramenta matemática crucial para a análise de sinais na frequência é a transformada de Fourier, que realiza uma modificação do termo independente, saindo do tempo ou espaço e indo para frequências, também denominada de equação de análise, que pode ser visualizada na equação \ref{eq:03}. \par De forma análoga, a transformada inversa, ou a também chamada de equação de síntese, realiza o processo inverso, modificando o sinal representado no domínio da frequência para o seu domínio original, segundo \cite{oppenheim2010sinais}, seja tempo ou espaço. A equação da transformada inversa pode ser visualizada na equação \ref{eq:04}
+Uma ferramenta matemática crucial para a análise de sinais na frequência é a transformada de Fourier, que realiza uma modificação do termo independente, saindo do tempo ou espaço e indo para frequências, também denominada de equação de análise, que pode ser visualizada na equação \ref{eq:03}.
 
 \begin{equation}  \label{eq:03}
 X(e^{j\omega})= \sum_{n=-\infty}^{+\infty} x[n]e^{-j\omega n}
@@ -45,6 +49,8 @@ X(e^{j\omega})= \sum_{n=-\infty}^{+\infty} x[n]e^{-j\omega n}
 \begin{equation}  \label{eq:04}
 x[n]=\frac{1}{2\pi} \int_{2\pi}^{} X(e^{j\omega})e^{j\omega n} \,d\omega
 \end{equation}
+
+De forma análoga, a transformada inversa, ou a também chamada de equação de síntese, realiza o processo inverso, modificando o sinal representado no domínio da frequência para o seu domínio original, segundo \cite{oppenheim2010sinais}, seja tempo ou espaço. A equação da transformada inversa pode ser visualizada na equação \ref{eq:04}
 
 \subsection{Teorema da Amostragem}
 Devido ao desenvolvimento da computação nas últimas décadas e pela consequente diminuição de custos de produção e de aquisição de dispositivos capazes de realizar o processamento digital de sinais, tornou-se muito vantajoso a utilização de sinais no tempo discreto, para que possam ser trabalhados digitalmente e, posteriormente, ou não, serem convertidos novamente para o tempo contínuo, sem a perda da informação inicial. 
@@ -92,7 +98,7 @@ Após a amostragem de sinais, obtém-se um conjunto de sinais. Para que esses si
 \end{figure}
 
 Para determinar com precisão os valores dos intervalos da quantização, o maior e o menor valor obtido pós-amostragem são os limites dos valores de amplitudes discretos. Na Figura \ref{fig04}, observa-se o processo a partir do qual, para cada valor obtido na amostragem, há um intervalo correspondente que passará a representar esse sinal.
-\par O intervalo de amplitude discreta da Figura \ref{fig04} varia de -32768 a +32767, totalizando 65536 possíveis amplitudes discretas, ou seja, $2^{16}$ possíveis amplitudes. Dessa forma, cada amplitude pode ser representada por uma palavra binária de 16 bits. A quantidade de bits a ser utilizada determinará a quantidade de intervalos possíveis, o que, por conseguinte, determinará a precisão da quantização, devido a um erro gerado.
+\par O intervalo de amplitude discreta da Figura \ref{fig04} varia de -32768 a +32767, totalizando 65536 possíveis amplitudes discretas, ou seja, $2^{16}$ possíveis amplitudes. Dessa forma, cada amplitude pode ser representada por uma palavra binária de 16 \textit{bits}. A quantidade de \textit{bits} a ser utilizada determinará a quantidade de intervalos possíveis, o que, por conseguinte, determinará a precisão da quantização, devido a um erro gerado.
 \par Cada processo de quantização deve levar em conta a precisão necessária e os limites do intervalo de valores possíveis. Ao final, o procedimento de quantização é essencial para as conversões AD (analógico para digital).
 
 A quantização, o processo de digitalizar a amplitude, é descrita pelo Teorema de Quantização de Widrow \cite{widrow}, segundo Zölzer \cite{zolzer2008digital}.
@@ -222,11 +228,18 @@ Além disso, a adição de performances ao vivo, com a utilização de sintetiza
 
 Quando um \textit{DJ} mixa músicas, diversos parâmetros devem ser considerados durante a execução de uma música ou no momento da transição entre duas, como batidas por minuto (BPM), tom, volume, ganho e a presença de componentes em bandas de frequência, como graves, médios e agudos.
 
-A evolução dos equipamentos para \textit{DJs} pode ser descrita pelo aprimoramento do controle de cada um desses parâmetros, visando um design que permita decisões rápidas com a menor latência possível na saída de áudio e, ao mesmo tempo, melhore o processamento do áudio para obter a melhor qualidade possível.
+A evolução dos equipamentos para \textit{DJs} pode ser descrita pelo aprimoramento do controle de cada um desses parâmetros, visando um design que permita decisões  rápidas com a menor latência possível na saída de áudio e, ao mesmo tempo, melhore o processamento do áudio para obter a melhor qualidade possível.
 
 Para criar uma atmosfera musical ideal, o controle das bandas de frequência é crucial. Ele permite a adição e a subtração de elementos de uma música para criar uma nova versão, que pode ser usada durante a transição entre músicas ou para dar uma nova roupagem a uma música existente. Por exemplo, pode-se adicionar batidas a uma música que não as possui ou adicionar vocal a uma música que é somente instrumental.
 
-O equalizador foi criado, segundo Izhaki \cite{mixing}, pelos \textit{Bell Labs} com o objetivo de ajustar o que era transmitido ao ouvido devido à atenuação de altas frequências durante a transmissão do sinal pelos fios. No entanto, para a produção musical, o equalizador é utilizado para manipular o conteúdo das bandas de frequências dos diversos elementos musicais. 
+O equalizador foi criado, segundo Izhaki \cite{mixing}, pelos \textit{Bell Labs} com o objetivo de ajustar o que era transmitido ao ouvido devido à atenuação de altas frequências durante a transmissão do sinal pelos fios. No entanto, para a produção musical, o equalizador é utilizado para manipular o conteúdo das bandas de frequências dos diversos elementos musicais. A Figura \ref{fig09} ilustra os dois tipos de divisões de bandas apresentados.
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[scale=0.4]{figuras/fig09.eps}
+	\caption{Espectro de áudio \cite{headphonestyAudioFrequency}}
+	\label{fig09}
+\end{figure}
 
 Para a produção musical, considera-se a equalização em sete bandas:
 
@@ -241,14 +254,8 @@ Para a produção musical, considera-se a equalização em sete bandas:
 
 A quantidade de bandas e a definição dos intervalos podem variar entre teóricos e equipamentos, portanto, esses intervalos não são uma regra fixa. No entanto, para \textit{DJs}, a maioria dos equipamentos divide o espectro de áudio em três bandas: graves (de 20 a 250 Hz), médios (de 250 Hz a 4 kHz) e agudos (de 4 kHz a 20 kHz).
 
-Essa escolha de bandas reduzidas deve-se à necessidade de simplicidade e rapidez no uso, além de que, em cada uma dessas três bandas, há elementos semelhantes bem definidos, que auxiliam na construção de uma boa mixagem. A Figura \ref{fig09} ilustra os dois tipos de divisões de bandas apresentados acima.
+Essa escolha de bandas reduzidas deve-se à necessidade de simplicidade e rapidez no uso, além de que, em cada uma dessas três bandas, há elementos semelhantes bem definidos, que auxiliam na construção de uma boa mixagem.
 
-\begin{figure}[h]
-	\centering
-    \includegraphics[scale=0.4]{figuras/fig09.eps}
-	\caption{espectro de áudio \cite{headphonestyAudioFrequency}}
-	\label{fig09}
-\end{figure}
 
 
 \subsubsection{Equipamentos}
@@ -282,7 +289,7 @@ Condutores desbalanceados possuem um fio para transmitir o sinal e um terra comu
 	\label{fig12}
 \end{figure}
 
-Por outro lado, condutores balanceados utilizam dois condutores para transmitir o sinal, cobrindo-os com uma blindagem. Ao final da transmissão, um diferenciador é usado para reduzir o ruído adquirido durante a transmissão \cite{bartlett}. A Figura \ref{fig11} mostra um esquemático de fios balanceados.
+Por outro lado, condutores balanceados utilizam dois condutores para transmitir o sinal, cobrindo-os com uma blindagem. Ao final da transmissão, um diferenciador é usado para reduzir o ruído adquirido durante a transmissão \cite{bartlett}.
 
 \begin{figure}[h]
 	\centering
@@ -291,11 +298,11 @@ Por outro lado, condutores balanceados utilizam dois condutores para transmitir 
 	\label{fig11}
 \end{figure}
 
+A Figura \ref{fig11} mostra um esquemático de fios balanceados no qual há a presença de um condutor adicional, diferente do desbalanceado. 
+
 \subsection{Conectores de 1/4", 1/8" (3,5 mm) e 2,5 mm}
 
 Para conectar dispositivos, é necessário considerar tanto a transmissão de sinais elétricos quanto os conectores. Cada tipo de conector tem suas vantagens relacionadas a aspectos como quantidade de canais, distância, potência, blindagem e interferência.
-
-Um dos conectores mais conhecidos é o \textit{1/4"} (Figura \ref{fig19}), amplamente utilizado em instrumentos como guitarras, violões e teclados, além de amplificadores e \textit{mixers}. Este conector pode ser usado para sinais estéreos não balanceados ou sinais mono balanceados \cite{bartlett}.
 
 \begin{figure}[h]
 	\centering
@@ -304,7 +311,7 @@ Um dos conectores mais conhecidos é o \textit{1/4"} (Figura \ref{fig19}), ampla
 	\label{fig19}
 \end{figure}
 
-O conector \textit{1/8"} (Figura \ref{fig20}), também conhecido como 3,5 mm, é muito encontrado em celulares, dispositivos de reprodução de música e alto-falantes. Internamente, ele possui a mesma construção do conector de 1/4" e pode transmitir os mesmos tipos de sinais.
+Um dos conectores mais conhecidos é o \textit{1/4"} (Figura \ref{fig19}), amplamente utilizado em instrumentos como guitarras, violões e teclados, além de amplificadores e \textit{mixers}. Este conector pode ser usado para sinais estéreos não balanceados ou sinais mono balanceados \cite{bartlett}.
 
 \begin{figure}[h]
 	\centering
@@ -313,7 +320,7 @@ O conector \textit{1/8"} (Figura \ref{fig20}), também conhecido como 3,5 mm, é
 	\label{fig20}
 \end{figure}
 
-O conector de 2,5 mm, frequentemente utilizado em \textit{headsets} para adicionar um microfone, possui três fios em vez de dois. A Figura \ref{fig21} ilustra esse tipo de conector.
+O conector \textit{1/8"} (Figura \ref{fig20}), também conhecido como 3,5 mm, é muito encontrado em celulares, dispositivos de reprodução de música e alto-falantes. Internamente, ele possui a mesma construção do conector de 1/4" e pode transmitir os mesmos tipos de sinais.
 
 \begin{figure}[h]
 	\centering
@@ -322,9 +329,11 @@ O conector de 2,5 mm, frequentemente utilizado em \textit{headsets} para adicion
 	\label{fig21}
 \end{figure}
 
+O conector de 2,5 mm, frequentemente utilizado em \textit{headsets} para adicionar um microfone, possui três fios em vez de dois. A Figura \ref{fig21} ilustra esse tipo de conector.
+
 \subsection{RCA}
 
-O cabo RCA (Figura \ref{fig22}), amplamente utilizado nos primórdios dos sistemas de telefonia e também conhecido como \textit{phono} devido ao seu uso em toca-discos, pode transmitir sinais de áudio mono de forma não balanceada. Para transmitir um sinal estéreo, são usados dois cabos RCA. Caso um cabo mono seja conectado, ele pode ser automaticamente duplicado para os dois canais, permitindo que o sinal mono seja transmitido por ambos os canais de áudio \cite{bartlett}.
+O cabo RCA (Figura \ref{fig22}), amplamente utilizado nos primórdios dos sistemas de telefonia e também conhecido como \textit{phono} devido ao seu uso em toca-discos, pode transmitir sinais de áudio mono de forma não balanceada. Para transmitir um sinal estéreo, são usados dois cabos RCA.
 
 \begin{figure}[h]
 	\centering
@@ -333,16 +342,20 @@ O cabo RCA (Figura \ref{fig22}), amplamente utilizado nos primórdios dos sistem
 	\label{fig22}
 \end{figure}
 
+Caso um cabo RCA (Figura \ref{fig22}) mono seja conectado, ele pode ser automaticamente duplicado para os dois canais, permitindo que o sinal mono seja transmitido por ambos os canais de áudio \cite{bartlett}.
+
 \subsection{XLR}
 
-O conector XLR, inicialmente chamado de Cannon, foi desenvolvido pela empresa Cannon para a transmissão de sinais balanceados em aplicações profissionais, oferecendo boa rejeição a ruídos e mantendo a integridade do sinal \cite{bartlett}. A Figura \ref{fig23} mostra esse conector.
+O conector XLR, inicialmente chamado de Cannon, foi desenvolvido pela empresa Cannon para a transmissão de sinais balanceados em aplicações profissionais, oferecendo boa rejeição a ruídos e mantendo a integridade do sinal.
 
 \begin{figure}[h]
 	\centering
     \includegraphics[scale=0.2]{figuras/fig23.png}
-	\caption{conector XLR \cite{hollylandWhatCable}}
+	\caption{Conector XLR}
 	\label{fig23}
 \end{figure}
+
+A Figura \ref{fig23} mostra esse conector, que é amplamente utilizado em áudio profissional, especialmente em microfones, mesas de som e outros equipamentos que exigem alta qualidade de sinal.
 
 \subsection{Protocolos Digitais}
 

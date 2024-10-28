@@ -22,7 +22,7 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
     \item O sistema deve permitir ao \textit{DJ} controlar a presença dos efeitos.
 \end{itemize}
 
-\subsection{Requisitos Não-Funcionais}
+\subsection{Requisitos Não Funcionais}
 \begin{itemize}
     \item O sistema deve responder aos comandos do \textit{DJ} com latência mínima, garantindo uma experiência de mixagem fluida.
     \item A interface do usuário deve ser intuitiva e fácil de usar, permitindo que o \textit{DJ} faça ajustes rapidamente durante a performance.
@@ -75,7 +75,7 @@ Os sinais analógicos lidos incluem os sinais de música e os sinais de controle
     \label{fig54}
 \end{figure}
 
-As operações realizadas nesses sinais são ilustradas na Figura \ref{fig54}.
+Assim, conforme a Figura \ref{fig54}, todos os sinais analógicos passarão por uma conversão analógico-digital, para que, em seguida, algumas variáveis tenham seus valores atualizados.
 
 \subsection{Bloco de Filtragem}
 
@@ -197,11 +197,10 @@ Mudanças na ordem de centenas no canal 1 têm pouco impacto no canal 2, uma vez
 
 Na Figura \ref{fig44}, a frequência obtida do botão central, denotada como \( f_c \), varia de 0.2 a 22050 Hz. A frequência de corte do canal 1, referida como FC do HPF1, é equivalente a \( f_c \). A frequência de corte do canal 2, identificada como FC do HPF2, é calculada pela Equação \ref{eq:05}. O sinal resultante, \texttt{send\textasciitilde\ music}, é a soma dos sinais filtrados dos canais 1 e 2.
 
+\newpage
 \subsection{Implementação de Efeitos}
 
 A implementação dos efeitos utiliza três parâmetros principais: um botão \texttt{toggle} para alternar entre os efeitos \textit{delay} e \textit{reverb}; um \textit{slider} para ajustar parâmetros internos dos efeitos; e a frequência de corte do botão central, que automatiza o volume do efeito.
-
-O botão \texttt{toggle} é usado para alternar entre os efeitos. Com duas posições disponíveis, sempre um efeito está ativo. Para mudar o efeito, basta alterar a posição do botão, conforme mostrado na Figura \ref{fig46}.
 
 \begin{figure}[h]
     \centering
@@ -210,7 +209,7 @@ O botão \texttt{toggle} é usado para alternar entre os efeitos. Com duas posi�
     \label{fig46}
 \end{figure}
 
-O \textit{slider} é utilizado para ajustar os parâmetros internos de cada efeito. Seus valores variam de 0 a 1, e o botão está ilustrado na Figura \ref{fig47}.
+O botão \texttt{toggle} é usado para alternar entre os efeitos. Com duas posições disponíveis, sempre um efeito está ativo. Para mudar o efeito, basta alterar a posição do botão, conforme mostrado na Figura \ref{fig46}.
 
 \begin{figure}[h]
     \centering
@@ -219,9 +218,9 @@ O \textit{slider} é utilizado para ajustar os parâmetros internos de cada efei
     \label{fig47}
 \end{figure}
 
-Cada efeito utiliza o parâmetro \textit{fx} do \textit{slider} e o ajusta conforme necessário. No caso do \textit{reverb}, o valor de \textit{fx} é multiplicado por 100 para determinar a quantidade de \textit{dB} que permanece na música após 1s. Para o \textit{delay}, o valor é multiplicado por 1000, transformando-se no intervalo de tempo em \textit{ms} que o efeito permanecerá na música.
+O \textit{slider} é utilizado para ajustar os parâmetros internos de cada efeito. Seus valores variam de 0 a 1, e o botão está ilustrado na Figura \ref{fig47}.
 
-A lógica de seleção do efeito é apresentada na Figura \ref{fig48}. Os comandos \texttt{receive\textasciitilde\ fx} inserem os efeitos como entrada. Cada volume do efeito é multiplicado pelo valor do \texttt{toggle}; um deles é multiplicado pelo valor atual enquanto o outro é multiplicado pelo inverso, permitindo que o botão \texttt{toggle} funcione como um alternador entre os efeitos.
+Cada efeito utiliza o parâmetro \textit{fx} do \textit{slider} e o ajusta conforme necessário. No caso do \textit{reverb}, o valor de \textit{fx} é multiplicado por 100 para determinar a quantidade de \textit{dB} que permanece na música após 1s. Para o \textit{delay}, o valor é multiplicado por 1000, transformando-se no intervalo de tempo em \textit{ms} que o efeito permanecerá na música.
 
 \begin{figure}[h]
     \centering
@@ -230,7 +229,8 @@ A lógica de seleção do efeito é apresentada na Figura \ref{fig48}. Os comand
     \label{fig48}
 \end{figure}
 
-No sistema, o volume do efeito é ajustado automaticamente com base na posição do botão central, ou seja, nas frequências de corte. A Figura \ref{fig49} ilustra a variação do volume dos efeitos em função da frequência central.
+A lógica de seleção do efeito é apresentada na Figura \ref{fig48}. Os comandos \texttt{receive\textasciitilde\ fx} inserem os efeitos como entrada. Cada volume do efeito é multiplicado pelo valor do \texttt{toggle}; um deles é multiplicado pelo valor atual enquanto o outro é multiplicado pelo inverso, permitindo que o botão \texttt{toggle} funcione como um alternador entre os efeitos.
+
 
 \begin{figure}[h]
     \centering
@@ -239,7 +239,7 @@ No sistema, o volume do efeito é ajustado automaticamente com base na posição
     \label{fig49}
 \end{figure}
 
-No \textit{PureData}, o bloco de automação do volume dos efeitos é implementado usando as operações mostradas na Figura \ref{fig50}.
+No sistema, o volume do efeito é ajustado automaticamente com base na posição do botão central, ou seja, nas frequências de corte. A Figura \ref{fig49} ilustra a variação do volume dos efeitos em função da frequência central.
 
 \begin{figure}[h]
     \centering
@@ -248,7 +248,8 @@ No \textit{PureData}, o bloco de automação do volume dos efeitos é implementa
     \label{fig50}
 \end{figure}
 
-Finalmente, o sinal dos efeitos é multiplicado pelo volume dos efeitos e, em seguida, somado ao sinal filtrado, resultando no sinal de saída. Esse sinal é processado por um bloco de conversão digital-analógico e, por fim, é reproduzido. O bloco que realiza a soma dos sinais está representado na Figura \ref{fig51}.
+\newpage
+No \textit{PureData}, o bloco de automação do volume dos efeitos é implementado usando as operações mostradas na Figura \ref{fig50}.
 
 \begin{figure}[h]
     \centering
@@ -257,6 +258,7 @@ Finalmente, o sinal dos efeitos é multiplicado pelo volume dos efeitos e, em se
     \label{fig51}
 \end{figure}
 
+Finalmente, o sinal dos efeitos é multiplicado pelo volume dos efeitos e, em seguida, somado ao sinal filtrado, resultando no sinal de saída. Esse sinal é processado por um bloco de conversão digital-analógico e, por fim, é reproduzido. O bloco que realiza a soma dos sinais está representado na Figura \ref{fig51}.
 
 \section{Proposta de Implementação}
 
@@ -324,7 +326,7 @@ Para a recepção de sinais de áudio, o \textit{mixer} utilizará o protocolo I
 
 \paragraph{Unidades de Processamento}
 
-A unidade de processamento é o dispositivo responsável pela realização do processamento dos sinais. Para essa tarefa, será utilizada uma \textit{Raspberry Pi}, que oferece um bom poder de processamento e flexibilidade em termos de linguagens de programação suportadas. A \textit{Raspberry Pi} é mostrada na Figura \ref{fig65}.
+A unidade de processamento é o dispositivo responsável pela realização do processamento dos sinais. 
 
 \begin{figure}[h]
     \centering
@@ -332,6 +334,8 @@ A unidade de processamento é o dispositivo responsável pela realização do pr
     \caption{\textit{Raspberry Pi} para processamento dos sinais \cite{adrenalineDisplaysLanar}}
     \label{fig65}
 \end{figure}
+
+Para essa tarefa, será utilizada uma \textit{Raspberry Pi}, que oferece um bom poder de processamento e flexibilidade em termos de linguagens de programação suportadas. A \textit{Raspberry Pi} é mostrada na Figura \ref{fig65}.
 
 \paragraph{Conversão DA}
 

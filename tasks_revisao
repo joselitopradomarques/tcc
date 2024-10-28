@@ -14,49 +14,44 @@
 - **Português não está elaborado:** Revisão geral de coesão e coerência.
 - **Introdução:** Contextualizar melhor, inserir dados, relatos, imagens. Revisão e adição de material demandam tempo.
 - **Desenvolvimento:** Explicar mais sobre circuitos, decisões de design (uso de processamento digital versus analógico), e apresentar o produto final.
-- **PureData:** Explicar melhor o software com exemplos e sua conexão com o produto final.
+- [Terça-feira] **PureData:** Explicar melhor o software com exemplos e sua conexão com o produto final.
 
 ## 3. Tarefas de Revisão Técnica e Correções Específicas (Relativamente fáceis e pontuais)
-- **Arduino:** Retirar referências ao Arduino no texto final. [Terça-feira]
-- **Filtros:** Explicar a modelagem de filtros e efeitos. Incluir mais detalhes técnicos.
-- **Resultados:** Detalhar como os resultados foram obtidos e como as figuras foram geradas.
-- **Figuras 42, 44 e 46:** Inserir unidade de medidas no gráfico.
+- [Terça-feira] **Arduino:** Retirar referências ao Arduino no texto final.
+- [Terça-feira] **Filtros:** Explicar a modelagem de filtros e efeitos. Incluir mais detalhes técnicos.
+- [Terça-feira] **Resultados:** Detalhar como os resultados foram obtidos e como as figuras foram geradas.
+- [Terça-feira]**Figuras 42, 44, 46, 48, 50, ...:** Inserir unidade de medidas no gráfico.
 
 ## 4. Conformidade com ABNT e Documentação Técnica (Alta dificuldade por ser detalhado e trabalhoso)
-- **ABNT:**: Nunca começar ou finalizar um tópico com figura ou lista de itens. Demandará ajustes em diversos capítulos e seções.
-- **Corte de Palavras**: Verificar como o documento está cortando as palavras: Revisar e ajustar a formatação do texto.
+- [DONE] **ABNT:**: Nunca começar ou finalizar um tópico com figura ou lista de itens. Demandará ajustes em diversos capítulos e seções.
+- [DONE] **Corte de Palavras**: Verificar como o documento está cortando as palavras: Revisar e ajustar a formatação do texto.
 - **Diagramas de engenharia, Conexões, Esqueleto de Software, Envólucro:**: Revisão ou inclusão da documentação técnica em detalhes. Esse processo pode ser demorado e exigirá precisão técnica.
 
----- Erros em relação a ABNT
+---- Dúvidas em relação a ABNT:
+
 1) Verificar o nome do título das figuras. Deve ser tudo minúsculo mesmo?
 2) Lista de requisitos -> Verificar a regra se tem que ser enumerado ou se não
 
 ## Seções que começam ou finalizam com imagens:
 
 
-- **Sinal Contínuo**
-- **Sinal Discreto**
-- **Parâmetros Físicos**
-- **Cabeamento**
-- **RCA**
-- **XLR**
-- **Bloco de Leitura de Sinais**
-- **Implementação de Efeitos**
-- **Bloco de Conversão DA**
-- **Unidade de Processamento**
-- **Resultados de Filtragem**
-- **Resultados de Efeitos**
-- **Automação de Efeitos**
-- **Reverb**
-- **Delay**
+- **Sinal Contínuo** [DONE]
+- **Sinal Discreto** [DONE]
+- **Parâmetros Físicos** [DONE]
+- **Cabeamento** [DONE]
+- **RCA** [DONE]
+- **XLR** [DONE]
+- **Bloco de Leitura de Sinais** [DONE]
+- **Implementação de Efeitos** [DONE]
+- **Unidade de Processamento** [DONE]
+- **Automação de Efeitos** [DONE]
+- **Reverb** [DONE]
+- **Delay** [DONE]
 
 
-## Seções que começam ou finalizam com listas:
+## Tarefas a serem realizadas após a revisão final de conteúdo:
 
-- **Requisitos Funcionais** 
-- **Requisitos Não Funcionais**: tirar o hífen do título
-
- ## Seções que estou em dúvida
-
- - **Sinal: Conceito**: pode começar com uma citação direta?
- - **Transformada de Fourier**: finaliza com duas equações.
+- **Checagem de hifenização**
+- **Checagem de posição de figuras**
+- **Checagem de erros de português**
+- **Checagem de unidades nos gráficos**
