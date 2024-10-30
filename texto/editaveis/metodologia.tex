@@ -1,4 +1,9 @@
 \chapter[Metodologia]{Metodologia}
+
+Nesta seção serão abordados a delineação da proposta geral, os requisitos funcionais e não funcionais do sistema. Em seguida, um fluxograma geral pretende dividir o funcionamento final em subblocos, cada qual com um fluxograma detalhado com as operações que os sinais sofrerão.
+Para a validação do fluxo de dados almejado, utilizou-se um software de síntese musical, no qual foi possível a implementação e testes dos subblocos. 
+Com a prova de conceito realizada, em seguida há uma subseção denominada de Proposta de Implementação, na qual detalhes tanto acerca da implementação em hardware quanto em software, bem como a interface do usuário, são elucidados.
+
 \section{Proposta Geral}
 
 A evolução dos equipamentos de mixagem começou com a mixagem em vinil, e ao longo do tempo, novas funcionalidades foram adicionadas, como o \textit{jogger} para atraso e avanço da música, \textit{fader} para controle de volume e \textit{knobs} para ajuste de frequências. Com o avanço da microeletrônica, esses equipamentos evoluíram para a eletrônica digital, incorporando \textit{DSPs} para processar formatos de áudio de alta qualidade, como WAV e FLAC.
@@ -16,6 +21,8 @@ Em resumo, o sistema processará sinais de áudio analógicos em tempo real, uti
 O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer sistema, pois define as funcionalidades e características necessárias para atender às necessidades dos usuários finais. Nesta seção, são apresentados os requisitos funcionais e não funcionais, que especificam o comportamento esperado do sistema, assim como as restrições e qualidades que devem ser atendidas. Os requisitos foram organizados em categorias que abrangem desde aspectos de desempenho e interface do usuário até segurança e manutenção, assegurando uma visão completa e detalhada do que o sistema deve entregar.
 
 \subsection{Requisitos Funcionais}
+
+Assim, nessa subseção são levantados os requisitos que descrevem o que o sistema deve realizar, bem como funcionalidades e comportamentos.
 \begin{itemize}
     \item O sistema deve permitir ao \textit{DJ} utilizar tanto \textit{CDJs} quanto toca-discos.
     \item O sistema deve permitir ao \textit{DJ} controlar a presença dos dois \textit{canais}.
@@ -23,6 +30,7 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
 \end{itemize}
 
 \subsection{Requisitos Não Funcionais}
+Já nesta subseção, há a descrição de como o sistema deve se comportar em relação ao desempenho, segurança, usabilidade e outros atributos qualitativos.  
 \begin{itemize}
     \item O sistema deve responder aos comandos do \textit{DJ} com latência mínima, garantindo uma experiência de mixagem fluida.
     \item A interface do usuário deve ser intuitiva e fácil de usar, permitindo que o \textit{DJ} faça ajustes rapidamente durante a performance.
@@ -161,7 +169,20 @@ Nesta seção, é apresentada uma implementação em um ambiente virtual que sim
 
 O \textit{PureData} \cite{puredata} é um ambiente de música computacional programável, projetado para análise, síntese e processamento de áudio em tempo real através de sinais digitais.
 
-Esse ambiente permite a criação de sistemas de processamento de áudio utilizando blocos programáveis, com funções implementadas tanto pelos seus criadores quanto pela extensa comunidade de usuários. No \textit{PureData}, foi possível desenvolver uma prova de conceito que abrange a lógica do botão central para controle das frequências de corte, bem como o funcionamento dos efeitos. Para simular os sinais de entrada, foram utilizados arquivos WAV locais.
+Esse ambiente permite a criação de sistemas de processamento de áudio utilizando blocos programáveis, com funções implementadas tanto pelos seus criadores quanto pela extensa comunidade de usuários.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figuras/fig78.png}
+    \caption{funcionalidades do \textit{PureData}}
+    \label{fig78}
+\end{figure}
+
+Como ilustrado na Figura \ref{fig78}, algumas funcionalidades do PureData envolvem a síntese de som, utilizando ondas fundamentais como senoidais, quadradas, dente de serra ou ruídos. Além disso, é possível criar máquinas de ritmos com percussões, sequenciadores e efeitos de áudio.
+
+Outras aplicações incluem gravação, processamento e edição de áudio, samplers e instalações de arte interativas que podem integrar sensores ou sistemas de áudio multicanal, além de projetos de projeção mapeada e muitos outros.
+
+No \textit{PureData}, foi possível desenvolver uma prova de conceito que abrange a lógica do botão central para controle das frequências de corte, bem como o funcionamento dos efeitos. Para simular os sinais de entrada, foram utilizados arquivos WAV locais.
 
 A demonstração do sistema se divide em duas principais funcionalidades: filtragem e efeitos.
 
@@ -274,7 +295,6 @@ Serão utilizados dois conectores \textit{RCA} para cada canal, totalizando 4 co
 \paragraph{Botões}
 A interação do usuário é crucial para ajustar parâmetros como frequência de corte, quantidade de efeitos e seleção do efeito desejado. Para isso, serão utilizados dois \textit{sliders} e uma chave de duas posições.
 
-Os \textit{sliders} serão equipados com potenciômetros. Eles são alimentados por uma tensão, e sua posição é medida por uma tensão de saída proporcional à tensão de entrada. Essa configuração é preferida devido à precisão oferecida pelo ajuste com dois dedos, que proporciona uma mudança de frequência precisa. A Figura \ref{fig61} mostra um exemplo esperado de um \textit{slider} horizontal para ajustar a frequência central.
 
 \begin{figure}[h]
     \centering
@@ -283,9 +303,7 @@ Os \textit{sliders} serão equipados com potenciômetros. Eles são alimentados 
     \label{fig61}
 \end{figure}
 
-A chave de duas posições será utilizada para selecionar entre dois efeitos distintos, gerando dois níveis de tensão: um nulo e outro de alimentação. Cada nível corresponderá a um efeito diferente. Um exemplo de botão para essa finalidade é mostrado na Figura \ref{fig62}.
-
-Para ajustar a quantidade de efeitos desejada, será utilizado um botão semelhante ao \textit{slider}, com a mesma abordagem de controle e ajuste.
+Os \textit{sliders} serão equipados com potenciômetros. Eles são alimentados por uma tensão, e sua posição é medida por uma tensão de saída proporcional à tensão de entrada. Essa configuração é preferida devido à precisão oferecida pelo ajuste com dois dedos, que proporciona uma mudança de frequência precisa. A Figura \ref{fig61} mostra um exemplo esperado de um \textit{slider} horizontal para ajustar a frequência central.
 
 \begin{figure}[h]
     \centering
@@ -294,28 +312,30 @@ Para ajustar a quantidade de efeitos desejada, será utilizado um botão semelha
     \label{fig62}
 \end{figure}
 
+A chave de duas posições será utilizada para selecionar entre dois efeitos distintos, gerando dois níveis de tensão: um nulo e outro de alimentação. Cada nível corresponderá a um efeito diferente. Um exemplo de botão para essa finalidade é mostrado na Figura \ref{fig62}.
+
+Para ajustar a quantidade de efeitos desejada, será utilizado um botão semelhante ao \textit{slider}, com a mesma abordagem de controle e ajuste.
 
 \paragraph{Conversão AD}
-
 A conversão analógica-digital será empregada em duas categorias de sinais: áudio e controle. Para cada categoria, diferentes níveis de quantização serão utilizados: um alto para garantir a definição das músicas convertidas e outro baixo para permitir a precisão necessária na identificação do efeito desejado (com dois níveis) ou da frequência central.
-
-Para a conversão dos sinais analógicos de áudio, serão utilizados conversores de 16 \textit{bits}, como o mostrado na Figura \ref{fig63}.
-
+ 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{figuras/fig63.jpg}
-    \caption{conversor analógico-digital \cite{walmartRobotHuman}}
+    \caption{conversor analógico-digital de 16 \textit{bits} \cite{walmartRobotHuman}}
     \label{fig63}
 \end{figure}
 
-Para os sinais de controle, a conversão será realizada por um \textit{Arduino Uno}, que possui uma resolução de 10 \textit{bits}. O microcontrolador utilizado está representado na Figura \ref{fig64}.
+Para a conversão dos sinais analógicos de áudio, serão utilizados conversores de 16 \textit{bits}, como o mostrado na Figura \ref{fig63}. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figuras/fig64.jpeg}
-    \caption{\textit{Arduino Uno} para conversão de sinais de controle \cite{vidadesilicioPlacaCabo}}
+    \includegraphics[width=0.5\textwidth]{figuras/fig64.jpg}
+    \caption{conversor analógico-digital de 16 \textit{bits} \cite{eletroniklvEletronikComponentes}}
     \label{fig64}
 \end{figure}
+
+Para os sinais de controle, a conversão será realizada por um conversor analógico digital, também de 16 \textit{bits}, porém, com uma taxa de amostragem por segundo menor. Para que esses sinais de controle sejam lidos, basta que a porta digital da \textit{Raspberry Pi} esteja habilitada para leitura. Figura \ref{fig64}.
 
 \paragraph{Protocolos de Comunicação}
 Com conversores analógico-digital adequados, os sinais podem ser adquiridos e interpretados pela \textit{Raspberry Pi}. Existem várias maneiras de adquirir esses sinais analógicos a partir de um dispositivo, sendo uma das mais eficientes o uso de protocolos de comunicação serial, que permitem a transmissão e/ou recepção de sinais através de um canal de comunicação.

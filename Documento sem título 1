@@ -1,0 +1,24 @@
+Terça-feira
+
+- PureData - Explicar melhor o software com exemplos e sua conexão com o produto final
+- Arduino - Retirar referências ao Arduino no texto final
+	  - Inserir um Conversor AD mais básico no lugar
+- Filtros - Explicar a modelagem de filtros e efeitos. Incluir mais detalhes técnicos
+- Resultados - Acrescentar como os resultados foram obtidos e como as imagens foram geradas
+- Inserir unidades do eixo Y das figuras 42, 44, 46, ...
+
+
+- Começar por:
+1) PureData -> 30 min -> 15 minutos
+2) Arduino -> 20 min -> Durou 50 minutos
+3) Resultados -> 45 min -> 15 minutos
+4) Filtros -> 3h -> 15 minutos
+5) Unidade nos gráficos -> 2h
+6) Verificar o nome do arquivo que ficou no ciclo de propagação do som
+
+
+Quarta-feira
+
+1) Unidade nos gráficos -> 2h
+	-> Qual é a forma padrão de visualizar arquivos WAV no domínio do tempo?
+2) Verificar o nome do arquivo que ficou no ciclo de propagação do som

@@ -8,19 +8,19 @@
 - Inserir uma imagem do meu futuro produto. [Isso eu vou pensar em como fazer]
 
 ## 2. Tarefas de Melhoria da Qualidade do Texto e Estruturação (Média dificuldade, mas demoradas)
-- **Evitar frases curtas no texto:** Demandará uma revisão extensa para identificar e reescrever frases curtas.
-- Melhorar a construção de frases e discurso.
-- **Resumo:** Melhorar contando a história do trabalho com começo, meio e fim. Reescrever o resumo para torná-lo mais claro e conciso.
-- **Português não está elaborado:** Revisão geral de coesão e coerência.
-- **Introdução:** Contextualizar melhor, inserir dados, relatos, imagens. Revisão e adição de material demandam tempo.
-- **Desenvolvimento:** Explicar mais sobre circuitos, decisões de design (uso de processamento digital versus analógico), e apresentar o produto final.
-- [Terça-feira] **PureData:** Explicar melhor o software com exemplos e sua conexão com o produto final.
+- [LTTD] **Evitar frases curtas no texto:** Demandará uma revisão extensa para identificar e reescrever frases curtas.
+- [LTTD]Melhorar a construção de frases e discurso.
+- [LTTD] **Resumo:** Melhorar contando a história do trabalho com começo, meio e fim. Reescrever o resumo para torná-lo mais claro e conciso.
+- [LTTD] **Português não está elaborado:** Revisão geral de coesão e coerência.
+- [LTTD] **Introdução:** Contextualizar melhor, inserir dados, relatos, imagens. Revisão e adição de material demandam tempo.
+-**Desenvolvimento:** Explicar mais sobre circuitos, decisões de design (uso de processamento digital versus analógico), e apresentar o produto final.
+- [DONE] **PureData:** Explicar melhor o software com exemplos e sua conexão com o produto final.
 
 ## 3. Tarefas de Revisão Técnica e Correções Específicas (Relativamente fáceis e pontuais)
-- [Terça-feira] **Arduino:** Retirar referências ao Arduino no texto final.
-- [Terça-feira] **Filtros:** Explicar a modelagem de filtros e efeitos. Incluir mais detalhes técnicos.
-- [Terça-feira] **Resultados:** Detalhar como os resultados foram obtidos e como as figuras foram geradas.
-- [Terça-feira]**Figuras 42, 44, 46, 48, 50, ...:** Inserir unidade de medidas no gráfico.
+- [DONE] **Arduino:** Retirar referências ao Arduino no texto final.
+- [DONE] **Filtros:** Explicar a modelagem de filtros e efeitos. Incluir mais detalhes técnicos.
+- [DONE] **Resultados:** Detalhar como os resultados foram obtidos e como as figuras foram geradas.
+- [QUESTION]**Figuras 42, 44, 46, 48, 50, ...:** Inserir unidade de medidas no gráfico.
 
 ## 4. Conformidade com ABNT e Documentação Técnica (Alta dificuldade por ser detalhado e trabalhoso)
 - [DONE] **ABNT:**: Nunca começar ou finalizar um tópico com figura ou lista de itens. Demandará ajustes em diversos capítulos e seções.
@@ -33,7 +33,6 @@
 2) Lista de requisitos -> Verificar a regra se tem que ser enumerado ou se não
 
 ## Seções que começam ou finalizam com imagens:
-
 
 - **Sinal Contínuo** [DONE]
 - **Sinal Discreto** [DONE]
@@ -48,6 +47,21 @@
 - **Reverb** [DONE]
 - **Delay** [DONE]
 
+## Seções que começam ou finalizam com listas:
+- [DONE]**Objetivos Específicos**
+- [DONE]**Requisitos Funcionais**
+- [DONE]**Requisitos Não Funcionais**
+
+## Seções ou sub que começam vazias:
+- [DONE]**Metodologia**
+
+## Seções a serem realizadas ao final: 
+- **Dedicatória**
+- **Epígrafe**
+- **Agradecimentos**
+- **Resumo**
+- **Abstract**
+- **Introdução**
 
 ## Tarefas a serem realizadas após a revisão final de conteúdo:
 
@@ -55,3 +69,8 @@
 - **Checagem de posição de figuras**
 - **Checagem de erros de português**
 - **Checagem de unidades nos gráficos**
+
+## Dúvidas
+- **O que fazer com a ficha catalográfica?**
+- **Os nomes das Figuras realmente são minúsculas?**
+- **Como deixar as unidades de medidas dos sinais no domínio do tempo e da frequência?**

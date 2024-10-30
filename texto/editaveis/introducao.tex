@@ -23,13 +23,26 @@ Nessa seção, o objetivo geral e os objetivos específicos almejados por esse p
 Esse projeto visa a criação de um \textit{mixer} implementado em um sistema embarcado que facilite a mixagem de \textit{DJ}s tendo em vista os equipamentos disponíveis hoje no mercado.
 
 \subsection{Objetivos Específicos}
+
+Quanto aos objetivos específicos, elencou-se pontos ao longo do desenvolvimento desse sistemas que servirão como pontos de referência para garantir que o funcionamento do todo. 
+
 \begin{enumerate}
-    \item Obter leituras de sinais analógicos de equipamentos como \textit{CDJs}
-    \item Realizar de forma automatizada o deslocamento de frequências de corte dos filtros passa-altas
-    \item Implementar dois tipos de efeitos
-    \item Converter o sinal obtido após o processamento para analógico a fim de ser reproduzido por um sistema de som
-    \item Desenvolvimento de um sistema com uma interface amigável para um \textit{DJ}
+    \item \label{item:leitura} Obter leituras de sinais analógicos de equipamentos como \textit{CDJs}
+    \item \label{item:deslocamento} Realizar de forma automatizada o deslocamento de frequências de corte dos filtros passa-altas
+    \item \label{item:efeitos} Implementar dois tipos de efeitos
+    \item \label{item:conversao} Converter o sinal obtido após o processamento para analógico a fim de ser reproduzido por um sistema de som
+    \item \label{item:interface} Desenvolvimento de um sistema com uma interface amigável para um \textit{DJ}
 \end{enumerate}
+
+O Objetivo Específico \ref{item:leitura} visa garantir a obtenção dos sinais analógicos de equipamentos externos de forma que o sistema deve estar de acordo com as normas. 
+
+O Objetivo Específico \ref{item:deslocamento} envolve a obtenção dos sinais de controle, conversões de analógico para digitais, a atuação correta nos filtros passa-altas de ambos canais.
+
+Em relação aos efeitos, o Objetivo Específico \ref{item:efeitos} visa embarcar desde a concepção matemática, obtenção dos dados da frequência central e a conseguinte intensidade do efeito. 
+
+Uma vez que a conclusão dos Objetivos acima garante um sinal processado no domínio digital, é necessário garantir que o sinal seja adequadamente convertido para analógico, a fim de ser reproduzido em equipamentos externos. Portanto, o Objetivo Específico \ref{item:conversao} agrega a conversão do sinal de saída para que o sistema de som conectado ao sistema consiga reproduzir com potência adequada. 
+
+Por fim, para que o usuário consiga utilizar o equipamento e suas funcionalidades de forma plena, é necessário que a interface do usuário possibilite o usuário utilizar todas as funções disponíveis; requisitos englobados no Objetivo \ref{item:interface}.
 
 \section{Estrutura do Documento}
 
