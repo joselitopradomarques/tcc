@@ -1,6 +1,0 @@
-#N canvas 39 115 621 469 12;
-#X floatatom 80 97 5 0 0 0 - - - 0;
-#X obj 78 18 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X msg 78 59 56;
-#X connect 1 0 2 0;
-#X connect 2 0 0 0;

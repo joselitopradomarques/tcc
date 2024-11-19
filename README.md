@@ -1,149 +1,51 @@
-Cronograma do Desenvolvimento do TCC1
+Cronograma do Desenvolvimento do TCC2
 
+## Semana 1: Semana Universitária (04/11/24 - 10/11/24)
+- **Sem atividades alocadas para o TCC**.
 
-Link do texto provisório:  https://drive.google.com/file/d/1cWWhGClszC63rGshOex7TL-GsQI92gkh/view?usp=sharing
+## Semana 2: Desenvolvimento de Hardware (Parte 1) (11/11/24 - 17/11/24)
+- Instalar e configurar a Raspberry Pi.
+- Configurar conectores e botões para leitura de sinais analógicos.
 
-Link do Notion: https://www.notion.so/TCC-c1813a43dadb409da10014e7b1622d90?pvs=4
+## Semana 3: Desenvolvimento de Hardware (Parte 2) (18/11/24 - 24/11/24)
+- Configurar conversores AD/DA.
+- Garantir a funcionalidade básica de leitura e escrita de sinais.
 
-### Entrega 0 (18/03/24 - 07/04/24):
-- **Pesquisas acerca da história e de conceitos de um mixer:**  
-  - Contexto histórico da criação de um mixer
-  - Conceituação de sinais e sistemas
-  - Conceituação de música
-  - Levantamento de equipamentos criados e utilizados em mixagens
-  - Definição de subsistemas existentes em um mixer
+## Semana 4: Desenvolvimento de Hardware (Parte 3) (25/11/24 - 01/12/24)
+- Integrar os botões e controles físicos com a Raspberry Pi.
+- Preparar o sistema para o processamento de sinais.
 
+## Semana 5: Desenvolvimento de Software (Parte 1) (02/12/24 - 08/12/24)
+- Implementar a lógica de controle dos filtros passa-altas.
+- Ajustar as frequências de corte conforme o controle central.
 
-### Entrega 1 (08/04/24 - 14/04/24):
+## Semana 6: Desenvolvimento de Software (Parte 2) (09/12/24 - 15/12/24)
+- Programar os efeitos de reverb e delay.
+- Controlar os efeitos via botões.
 
-- **Configuração Inicial do Ambiente de Desenvolvimento:**
-  - [DONE] Instalação e configuração do PureData na Raspberry Pi
-  - Estabelecimento do acesso remoto à Raspberry Pi para desenvolvimento do software
+## Semana 7: Desenvolvimento de Software (Parte 3) (16/12/24 - 22/12/24)
+- Otimizar o código para garantir baixa latência.
+- Garantir desempenho eficiente no processamento dos sinais.
 
-- **Pesquisa sobre Leitura de Sinais de Áudio:**
-  - Pesquisa sobre leitura de entrada de sinais de áudio
-  - Exploração de métodos para interface com CDJs e sinais de áudio
-  - Documentação do projeto:
-    - Levantamento de Requisitos
-    - Diagrama de Subpartes
-    - Diagrama de Integração
-    - Diagrama de Comunicação
-    - Fluxogramas
-    - Diagrama de Casos de Uso
-    - Protótipos de Interface de Usuário
-    - Matriz de Rastreabiidade de Requisitos
-    - Planos de Teste
-    - Diagrama de Grant
+## Semana 8: Recesso (Parte 1) (23/12/24 - 29/12/24)
+- **Sem atividades alocadas para o TCC**.
 
-- **Revisão do texto produzido:**
-  - Análise e revisão do documento produzido até então
+## Semana 9: Recesso (Parte 2) (30/12/24 - 04/01/25)
+- **Sem atividades alocadas para o TCC**.
 
-### Entrega 2 (15/04/24 - 21/04/24):
+## Semana 10: Integração de Hardware e Software (06/01/25 - 12/01/25)
+- Integrar o hardware com o software.
+- Testar a comunicação entre as partes e validar a leitura dos sinais.
 
-- **Desenvolvimento de Protótipos de Leitura de CDJs:**
-  - Implementação de protótipos iniciais para leitura de saída de CDJs
-  - Teste dos protótipos de leitura de saída de CDJs em ambiente real
-  - Ajustes nos protótipos conforme necessário
+## Semana 11: Testes do Sistema (13/01/25 - 19/01/25)
+- Testar o sistema com sinais reais, como CDJs.
+- Validar o funcionamento dos filtros e efeitos.
+- Ajustar a latência para otimizar o desempenho.
 
-- **Desenvolvimento do Software de Controle do Mixer:**
-  - Início do desenvolvimento do software para leitura de sinais de CDJs
-  - Implementação inicial de algoritmos de processamento de áudio
+## Semana 12: Desenvolvimento da Interface de Usuário (20/01/25 - 26/01/25)
+- Criar uma interface de usuário intuitiva.
+- Testar a interface para controle dos efeitos e filtros pelos DJs.
 
-### Entrega 3 (22/04/24 - 28/04/24):
-
-- **Pesquisa sobre Subpartes da Solução:**
-  - Conclusão da pesquisa sobre leitura de saída de CDJs
-  - Documentação dos resultados e progressos obtidos
-
-- **Estudos sobre Interface com Usuário:**
-  - Estudos sobre possíveis interfaces
-  - Aquisição de dispositivo de interface
-  - Documentação dos estudos realizados
-
-### Entrega 4 (29/04/24 - 05/05/24):
-- **Desenvolvimento de Interface:**
-
-  - Desenvolvimento de protótipos de GUI
-  - Testes de integração com a Rasp
-
-- **Desenvolvimento do Software de Controle do Mixer:**
-  - Refinamento dos algoritmos de processamento de áudio
-
-### Entrega 5 (06/05/24 - 12/05/24):
-
-- **Desenvolvimento de Interface:**
-  - Continuação do desenvolvimento da GUI
-  - Testes de controles com a GUI
-
-- **Desenvolvimento do Software de Controle do Mixer:**
-  - Integração dos protótipos de leitura de CDJs ao software de controle
-
-### Entrega 6 (13/05/24 - 19/05/24):
-
-- **Desenvolvimento de Protótipos de Saída de Áudio:**
-  - Implementação de protótipos iniciais para saída de áudio
-  - Teste dos protótipos de saída de áudio em ambiente real
-  - Ajustes nos protótipos conforme necessário
-
-- **Desenvolvimento do Software de Controle do Mixer:**
-  - Continuação do desenvolvimento e refinamento do software de controle
-
-### Entrega 7 (20/05/24 - 26/05/24):
-
-- **Desenvolvimento do Software de Controle do Mixer:**
-  - Implementação de funcionalidades adicionais no software de controle do som
-  - Testes preliminares de integração entre o software e os protótipos de hardware
-
-- **Desenvolvimento de Protótipos de Saída de Áudio:**
-  - Continuação do desenvolvimento dos protótipos de saída de áudio
-  - Teste dos protótipos de saída de áudio em ambiente real
-  - Ajustes nos protótipos conforme necessário
-
-### Entrega 8 (27/05/24 - 02/06/24):
-
-- **Desenvolvimento do Software de Controle do Mixer:**
-  - Continuação do desenvolvimento e refinamento do software de controle
-  - Implementação de funcionalidades adicionais com base em feedbacks preliminares
-
-- **Análise de Resultados Preliminares:**
-  - Testes finais do sistema integrado (software e hardware)
-  - Coleta de dados para análise de desempenho e funcionalidades
-  - Identificação de possíveis melhorias e ajustes necessários
-
-### Entrega 9 (03/06/24 - 09/06/24):
-
-- **Análise de Resultados Preliminares:**
-  - Continuação da análise dos resultados obtidos
-  - Identificação de melhorias e ajustes no sistema integrado
-
-- **Desenvolvimento do Software de Controle do Mixer:**
-  - Implementação das melhorias identificadas na análise dos resultados preliminares
-
-### Entrega 10 (10/06/24 - 16/06/24):
-
-- **Análise de Resultados Preliminares:**
-  - Conclusão da análise dos resultados obtidos
-  - Documentação detalhada dos resultados e conclusões preliminares
-
-- **Escrita do Relatório do TCC1:**
-  - Redação do relatório do TCC1, incluindo introdução, resultados preliminares e desenvolvimento para o TCC2
-
-- **Ajustes no equipamento:**
-  - Ajustes necessários para boa integração de partes
-
-### Entrega 11 (17/06/24 - 23/06/24):
-
-- **Escrita do Relatório do TCC1:**
-  - Continuação da redação do relatório, incluindo metodologia e discussão preliminar
-
-- **Ajustes no equipamento:**
-  - Ajustes necessários para boa integração de partes
-
-### Entrega 12 (24/06/24 - 30/06/24):
-
-- **Escrita do Relatório do TCC1:**
-  - Conclusão da redação do relatório
-  - Revisão final e preparação para a entrega do TCC1
-  
-- **Ajustes no equipamento:**
-  - Ajustes necessários para boa integração de partes
+## Semana 13: Documentação e Ajustes Finais (27/01/25 - 02/02/25)
+- Documentar todo o projeto, desde a implementação até os testes.
+- Realizar ajustes finais com base nos testes e feedback dos usuários.

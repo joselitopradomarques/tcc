@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  30 OCT 2024 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  4 NOV 2024 10:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1326,13 +1326,13 @@ Package pdftex.def Info: figuras/fig51.png  used on input line 277.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4660) has occurred while \output is active []
 
  [60 <./figuras/fig48.png> <./figuras/fig49.png>]
 <figuras/fig61.png, id=957, 602.25pt x 602.25pt>
 File: figuras/fig61.png Graphic file (type png)
 <use figuras/fig61.png>
-Package pdftex.def Info: figuras/fig61.png  used on input line 301.
+Package pdftex.def Info: figuras/fig61.png  used on input line 305.
 (pdftex.def)             Requested size: 227.5pt x 227.49731pt.
 
 
@@ -1341,24 +1341,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figuras/fig62.png, id=963, 1003.75pt x 1003.75pt>
 File: figuras/fig62.png Graphic file (type png)
 <use figuras/fig62.png>
-Package pdftex.def Info: figuras/fig62.png  used on input line 310.
+Package pdftex.def Info: figuras/fig62.png  used on input line 314.
 (pdftex.def)             Requested size: 136.50139pt x 136.49594pt.
-[61 <./figuras/fig50.png> <./figuras/fig51.png>] [62 <./figuras/fig61.png> <./figuras/fig62.png>]
-<figuras/fig63.jpg, id=981, 1447.4075pt x 686.565pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[61 <./figuras/fig50.png> <./figuras/fig51.png>]
+<figuras/fig63.jpg, id=975, 1447.4075pt x 686.565pt>
 File: figuras/fig63.jpg Graphic file (type jpg)
 <use figuras/fig63.jpg>
-Package pdftex.def Info: figuras/fig63.jpg  used on input line 324.
+Package pdftex.def Info: figuras/fig63.jpg  used on input line 328.
 (pdftex.def)             Requested size: 227.5pt x 107.90408pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[62 <./figuras/fig61.png> <./figuras/fig62.png>]
 <figuras/fig64.jpg, id=987, 240.9pt x 240.9pt>
 File: figuras/fig64.jpg Graphic file (type jpg)
 <use figuras/fig64.jpg>
-Package pdftex.def Info: figuras/fig64.jpg  used on input line 333.
+Package pdftex.def Info: figuras/fig64.jpg  used on input line 337.
 (pdftex.def)             Requested size: 227.5pt x 227.50465pt.
  [63 <./figuras/fig63.jpg> <./figuras/fig64.jpg>]
 <figuras/fig65.jpg, id=997, 1003.75pt x 565.11125pt>
 File: figuras/fig65.jpg Graphic file (type jpg)
 <use figuras/fig65.jpg>
-Package pdftex.def Info: figuras/fig65.jpg  used on input line 353.
+Package pdftex.def Info: figuras/fig65.jpg  used on input line 357.
 (pdftex.def)             Requested size: 227.5pt x 128.0758pt.
 ) (./editaveis/resultados.tex [64 <./figuras/fig65.jpg>] [65] [66
 
@@ -1565,7 +1573,7 @@ Here is how much of TeX's memory you used:
  26 hyphenation exceptions out of 8191
  80i,13n,96p,1831b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (85 pages, 14729091 bytes).
+Output written on tcc.pdf (85 pages, 14729478 bytes).
 PDF statistics:
  1664 PDF objects out of 1728 (max. 8388607)
  1370 compressed objects within 14 object streams

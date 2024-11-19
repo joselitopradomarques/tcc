@@ -57,13 +57,13 @@
 \contentsline {subsection}{\numberline {3.4.1}\textit {PureData}}{56}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Implementação de Filtragem}{57}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Implementação de Efeitos}{58}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Proposta de Implementação}{61}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Proposta de Implementação}{60}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Implementação em Hardware}{61}{subsection.3.5.1}%
 \contentsline {paragraph}{\numberline {3.5.1.0.1}Conectores}{61}{paragraph.3.5.1.0.1}%
 \contentsline {paragraph}{\numberline {3.5.1.0.2}Botões}{61}{paragraph.3.5.1.0.2}%
 \contentsline {paragraph}{\numberline {3.5.1.0.3}Conversão AD}{62}{paragraph.3.5.1.0.3}%
 \contentsline {paragraph}{\numberline {3.5.1.0.4}Protocolos de Comunicação}{63}{paragraph.3.5.1.0.4}%
-\contentsline {paragraph}{\numberline {3.5.1.0.5}Unidades de Processamento}{64}{paragraph.3.5.1.0.5}%
+\contentsline {paragraph}{\numberline {3.5.1.0.5}Raspberry Pi}{64}{paragraph.3.5.1.0.5}%
 \contentsline {paragraph}{\numberline {3.5.1.0.6}Conversão DA}{64}{paragraph.3.5.1.0.6}%
 \contentsline {subsection}{\numberline {3.5.2}Implementação em Software}{64}{subsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.5.3}Protótipo de Interface de Usuário}{65}{subsection.3.5.3}%
