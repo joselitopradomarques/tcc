@@ -109,3 +109,18 @@
 ## Objetivo Geral
 
 - **Resultado Final**: Ao fim das 2 semanas, espera-se que a seção de "Filtros" esteja completamente desenvolvida, com a fundamentação teórica sólida e os testes práticos aplicados de forma eficaz.
+
+
+Digital Signal Processing: Principles, Algorithms, and Applications" - John G. Proakis e Dimitris G. Manolakis
+
+    Um dos livros mais completos e amplamente usados na área de processamento digital de sinais. Ele abrange conceitos fundamentais de filtros digitais, FFT, design de filtros FIR e IIR, além de aplicações práticas.
+
+"Discrete-Time Signal Processing" - Alan V. Oppenheim, Ronald W. Schafer e John R. Buck
+
+    Este livro é outro clássico no campo de DSP. Ele explora filtros digitais e suas implementações, com ênfase na teoria de sinais em tempo discreto. É excelente para entender o design e a análise de filtros FIR e IIR.
+
+"Understanding Digital Signal Processing" - Richard G. Lyons
+
+    Este livro é mais acessível e fornece uma introdução prática ao processamento de sinais digitais. Ele também aborda filtros de maneira clara e prática, sendo ótimo para quem deseja uma abordagem menos teórica e mais aplicada.
+
+"Theory and Application of Digital Signal Processing" - Lawrence R. Rabiner e Bernard Gold

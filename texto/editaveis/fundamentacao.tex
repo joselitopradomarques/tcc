@@ -103,6 +103,33 @@ Para determinar com precisão os valores dos intervalos da quantização, o maio
 
 A quantização, o processo de digitalizar a amplitude, é descrita pelo Teorema de Quantização de Widrow \cite{widrow}, segundo Zölzer \cite{zolzer2008digital}.
 
+\section{Filtros}
+
+
+Os filtros são sistemas essenciais que desempenham um papel de modificação seletiva de componentes durante um processamento de sinais \cite{oppenheim2013processamento}, conectivo sinônimo a de forma que, um filtro ideal deixaria que certas frequências passassem sem modificações (banda de passagem), enquanto bloquearia complemente outras (banda de rejeição). Porém, em um filtro real, o comportamento na região da modificação entre as bandas de passagem e rejeição, denominada de banda de transição, não funciona idealmente, havendo na verdade atenuações e amplificações em diferentes graus ao longo desse intervalo de frequência.
+
+A implementação de filtros pode se dar de duas formas: através de circuitos analógicos ou digitais, sendo este utilizado no processamento de sinais digitais, de maneira que a sua lógica de circuitaria digital pode ser transformada em uma lógica de programação. Circuitos digitais oferecem algumas vantagens em relação aos analógicos, como: a flexibilidade de serem reprogramados de forma simples conforme novas haja novas necessidades; reprodutibilidade, de maneira que filtros digitais podem ser reproduzidos garantindo alta precisão para que os seus resultados sejam consistentes; imunidade a ruídos devido aos componentes utilizados em um circuito digital em relação ao analógico; e possibilidade de implementar funções extremamente complexas cujo comportamento analógico pode ser extremamente difícil de ser alcançado.
+
+Dentro da categoria de filtros digitais, há inúmeras formas de classificar os tipos existentes. Primeiramente, classifica-se em função da resposta no domínio da frequência observando onde há um comportamento de banda passante e banda de rejeição. Além disso, baixas, altas e banda são termos que se referem a uma determinada banda sendo, respectivamente, um intervalo entre zero e determinada frequência, uma determinada banda entre duas frequências e, ao final, a banda entre uma frequência até o final da banda existente. A combinação das duas classificações gera os inúmeros filtros como: passa-faixa, \textit{low pass filter (LPF)}; passa-altas, \textit{high pass filter (HPF)}; passa-banda, \textit{band pass filter - (BPF)}; rejeita-faixa, \textit{band-reject filter (BRF)} e outros. 
+
+Há outra classificação extremamente importante
+, tendo seus conceitos e comportamentos influenciados por conceitos-chaves como frequência, fase, polos e zero
+
+
+
+e, sendo divididos em duas grandes categorias, em relação à resposta do filtro quando excitado por um pulso, a partir do qual, a resposta do filtro pode ser finita, denominada Resposta Infinita ao Impulso, \textit{Infinite Impulse Response} (IIR), ou infinita, sendo a Resposta Finita ao Impulso, \textit{Finite Response Impulse} (FIR).
+
+
+
+\subsection{Conceito}
+
+\subsection{Classificações}
+
+\subsection{Variáveis}
+
+\subsection{Ferramentas para Análise de Desempenho}
+
+
 \section{Som e Música}
 Nesta seção, será apresentada uma abordagem histórica, conceitual e técnica sobre a natureza do som e a mixagem realizada por um \textit{DJ}. A partir do som, a música será definida e grandezas físicas serão abordadas. Posteriormente, serão discutidos cenários históricos e técnicos sobre o início das gravações musicais e da discotecagem. Em seguida, com um enfoque mais atual, será apresentado um contexto contemporâneo acerca da mixagem realizada por um \textit{DJ}, que realiza uma seleção musical com base nas características de cada música e faz transições para criar uma experiência musical única.
 
