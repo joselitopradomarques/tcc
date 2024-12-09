@@ -199,8 +199,11 @@ int main() {
     const char* inputFilePath = "/home/joselito/git/tcc/scripts/audio02.wav";
     const char* outputFilePath = "/home/joselito/git/tcc/scripts/reverb_output_stereo.wav";
 
+    // Define o efeito de reverb com o valor entre 0.0 e 1.0, onde 1.0 corresponde ao feedback máximo (100 dB)
+    float effectAmount = 0.5f;  // Ajuste para variar entre 0.0 (sem efeito) e 1.0 (feedback máximo)
+
     // Chama a função de aplicação do efeito com o parâmetro effectAmount
-    applyReverbEffect(inputFilePath, outputFilePath, 0.5f);  // Exemplo de efeito com feedback 50%
+    applyReverbEffect(inputFilePath, outputFilePath, effectAmount);
 
     return 0;
 }

@@ -88,18 +88,15 @@ void apply_delay_to_audio(const char *input_filename, const char *output_filenam
     free(db_right.buffer);
 }
 
-// Função principal que recebe apenas o tempo de delay como entrada
+// Função principal que recebe apenas a quantidade de efeito como entrada
 int main() {
-    // Definindo o tempo de delay desejado (em ms)
-    int delay_time = 500;  // Aqui você pode ajustar a quantidade de delay
+    // Definindo a quantidade de efeito (0.0 a 1.0)
+    float effect_amount = 0.1f;  // Aqui você pode ajustar a quantidade de efeito (0.0 = sem delay, 1.0 = delay máximo)
 
-    // Certifique-se de que o delay não ultrapasse o valor máximo
-    if (delay_time > MAX_DELAY_TIME) {
-        printf("O valor do delay foi ajustado para o máximo permitido de %d ms.\n", MAX_DELAY_TIME);
-        delay_time = MAX_DELAY_TIME;
-    }
+    // Mapeando a quantidade de efeito para o tempo de delay (0 a MAX_DELAY_TIME)
+    int delay_time = (int)(effect_amount * MAX_DELAY_TIME);
 
-    // Chamando a função para processar o áudio com o delay especificado
+    // Chamando a função para processar o áudio com o delay calculado
     apply_delay_to_audio("/home/joselito/git/tcc/datas/audio02.wav", "/home/joselito/git/tcc/datas/saida_filtrada_delay.wav", delay_time);
 
     printf("Processamento concluído. Arquivo de saída gerado.\n");

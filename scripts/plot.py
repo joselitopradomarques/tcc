@@ -1,40 +1,49 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from scipy.io import wavfile
+from scipy.io.wavfile import read
 
-# Função para carregar o arquivo wav e plotar 5 segundos
-def plot_audio_file(wav_filename, duration=5):
-    # Carregar o arquivo WAV
-    sample_rate, data = wavfile.read(wav_filename)
+# Função para carregar o arquivo WAV
+def load_wav(file_path):
+    sample_rate, data = read(file_path)
+    return sample_rate, data
+
+# Função para plotar os sinais
+def plot_signals(signal1, signal2, sample_rate, label1, label2):
+    # Definir o tempo para os gráficos
+    time = [i / sample_rate for i in range(len(signal1))]
+
+    # Criar o gráfico
+    plt.figure(figsize=(10, 6))
     
-    # Calcular o número de amostras a serem exibidas (5 segundos)
-    num_samples = duration * sample_rate
-    
-    # Certifique-se de não ultrapassar o número total de amostras no arquivo
-    if num_samples > len(data):
-        num_samples = len(data)
-    
-    # Criar o eixo do tempo
-    time = np.linspace(0, num_samples / sample_rate, num_samples, endpoint=False)
-    
-    # Se o áudio for estéreo (2 canais), pegamos apenas o primeiro canal
-    if len(data.shape) > 1:
-        data = data[:, 0]
-    
-    # Selecionar os dados dos primeiros 5 segundos
-    data_to_plot = data[:num_samples]
-    
-    # Plotar os dados
-    plt.figure(figsize=(10, 4))
-    plt.plot(time, data_to_plot, label="Áudio (Canal 1)")
-    plt.title("Áudio WAV - 5 segundos")
+    # Plotando o primeiro sinal
+    plt.subplot(2, 1, 1)
+    plt.plot(time, signal1, label=label1)
+    plt.title(f"{label1} - Sinal no Domínio do Tempo")
     plt.xlabel("Tempo [s]")
     plt.ylabel("Amplitude")
-    plt.grid(True)
     plt.legend()
+
+    # Plotando o segundo sinal
+    plt.subplot(2, 1, 2)
+    plt.plot(time, signal2, label=label2, color='r')
+    plt.title(f"{label2} - Sinal no Domínio do Tempo")
+    plt.xlabel("Tempo [s]")
+    plt.ylabel("Amplitude")
+    plt.legend()
+
     plt.tight_layout()
     plt.show()
 
-# Chamar a função com o nome do arquivo WAV
-wav_filename = 'filtered_audio_highpass.wav'  # Substitua pelo nome do seu arquivo
-plot_audio_file(wav_filename)
+# Caminho para os arquivos WAV
+file_delay = '/home/joselito/git/tcc/scripts/effect_output_delay.wav'
+file_reverb = '/home/joselito/git/tcc/scripts/effect_output_reverb.wav'
+
+# Carregar os arquivos WAV
+sample_rate_delay, signal_delay = load_wav(file_delay)
+sample_rate_reverb, signal_reverb = load_wav(file_reverb)
+
+# Certificar-se de que ambos os sinais têm o mesmo número de amostras
+if len(signal_delay) != len(signal_reverb):
+    print("Aviso: os sinais têm tamanhos diferentes!")
+
+# Plotar os sinais no domínio do tempo
+plot_signals(signal_delay, signal_reverb, sample_rate_delay, 'Delay', 'Reverb')
