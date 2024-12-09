@@ -1,0 +1,5 @@
+[console_scripts]
+pyfdax = pyfda.pyfdax:main
+
+[gui_scripts]
+pyfdax_no_term = pyfda.pyfdax:main

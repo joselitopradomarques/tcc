@@ -1,0 +1,69 @@
+<!DOCTYPE RCC><RCC version="1.0">
+
+<qresource>
+    <file alias="action-redo.svg">images/icons/dark/action-redo.svg</file>
+    <file alias="action-undo.svg">images/icons/dark/action-undo.svg</file>
+    <file alias="brush.svg">images/icons/dark/brush.svg</file>
+    <file alias="check.svg">images/icons/dark/check.svg</file>
+    <file alias="circle-check.svg">images/icons/dark/circle-check.svg</file>
+    <file alias="circle-x.svg">images/icons/dark/circle-x.svg</file>    
+    <file alias="clipboard.svg">images/icons/dark/clipboard.svg</file>
+    <file alias="csv_options.svg">images/icons/dark/csv_options.svg</file>    
+    <file alias="ellipses_h.svg">images/icons/dark/ellipses_h.svg</file>
+    <file alias="ellipses_v.svg">images/icons/dark/ellipses_v.svg</file>
+    <file alias="file.svg">images/icons/dark/file.svg</file>
+    <file alias="fft.svg">images/icons/fft.svg</file>
+    <file alias="fullscreen-enter.svg">images/icons/dark/fullscreen-enter.svg</file>
+    <file alias="graph_90.svg">images/icons/dark/graph_90.svg</file>
+    <file alias="grid_none.svg">images/icons/dark/grid_none.svg</file>
+    <file alias="grid_fine.svg">images/icons/dark/grid_fine.svg</file>
+    <file alias="grid_coarse.svg">images/icons/dark/grid_coarse.svg</file>
+     <!--  <file alias="hearing.svg">images/icons/dark/ic_hearing_48px.svg</file>  -->
+    <file alias="help.svg">images/icons/dark/ic_help_24px.svg</file>
+    <file alias="home.svg">images/icons/dark/home.svg</file>
+    <file alias="lock-locked.svg">images/icons/dark/lock-locked.svg</file>
+    <file alias="lock-unlocked.svg">images/icons/dark/lock-unlocked.svg</file>    
+    <file alias="magnifying-glass.svg">images/icons/dark/magnifying-glass.svg</file>
+    <file alias="move.svg">images/icons/dark/move.svg</file>
+    <file alias="map-marker.svg">images/icons/dark/map-marker.svg</file>
+    <file alias="play.svg">images/icons/dark/ic_play_arrow_48px.svg</file>  
+    <file alias="quantize.svg">images/icons/dark/quantize.svg</file>
+    <file alias="row_delete.svg">images/icons/dark/appbar.list.delete.svg</file>
+    <file alias="row_insert_above.svg">images/icons/dark/appbar.list.add.above.svg</file>
+    <file alias="save.svg">images/icons/dark/appbar.disk.svg</file>
+    <file alias="settings.svg">images/icons/dark/cog.svg</file>
+    <file alias="sort-ascending.svg">images/icons/dark/sort-ascending.svg</file>
+    <!-- <file alias="stop.svg">images/icons/dark/ic_stop_48px.svg</file> -->
+    <file alias="star.svg">images/icons/dark/stars_black_24dp.svg</file>
+    <file alias="stop.svg">images/icons/dark/ic_play_arrow_48px.svg</file>
+    <file alias="to_clipboard.svg">images/icons/dark/appbar.to_clipboard.svg</file>
+    <file alias="table_export.svg">images/icons/dark/table_export.svg</file>
+    <file alias="table_import.svg">images/icons/dark/table_import.svg</file>
+    <file alias="trash.svg">images/icons/dark/trash.svg</file>
+    <file alias="ui_level_min.svg">images/icons/dark/density_large.svg</file>
+    <file alias="ui_level_mid.svg">images/icons/dark/density_medium.svg</file>
+    <file alias="ui_level_max.svg">images/icons/dark/density_small.svg</file>
+
+    <!-- <file alias="pause_w.svg">images/icons/light/ic_pause_48px_white.svg</file> -->
+    <!-- <file alias="play_w.svg">images/icons/light/ic_play_arrow_48px_white.svg</file> -->
+
+    <file alias="plot_style-none">images/icons/plot_style-none.png</file>
+    <file alias="plot_style-mkr">images/icons/plot_style-mkr.png</file>
+    <file alias="plot_style-line">images/icons/plot_style-line.png</file>
+    <file alias="plot_style-line-mkr">images/icons/plot_style-line-mkr.png</file>
+    <file alias="plot_style-stem">images/icons/plot_style-stem.png</file>
+    <file alias="plot_style-stem-mkr">images/icons/plot_style-stem-mkr.png</file>
+    <file alias="plot_style-steps">images/icons/plot_style-steps.png</file>
+    <file alias="plot_style-steps-mkr">images/icons/plot_style-steps-mkr.png</file>
+
+    <file alias="pyfda_icon.svg">images/icons/pyfda_icon.svg</file>
+</qresource>
+
+
+</RCC>
+
+
+<!-- 
+     QtPy5: pyrcc5 pyfda.qrc -o qrc_resources.py
+-->
+

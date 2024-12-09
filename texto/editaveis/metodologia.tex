@@ -372,3 +372,22 @@ Na \textit{Raspberry Pi}, após a conversão e aquisição dos sinais, é necess
 \subsection{Protótipo de Interface de Usuário}
 
 A interface do usuário será projetada de forma semelhante a um \textit{mixer} atual, com dois botões \textit{sliders} horizontais e um botão de duas posições. Na parte traseira do dispositivo, estarão localizados os conectores \textit{RCA} e a entrada de alimentação.
+
+
+\section{Implementação em \textit{Software}}
+
+A aplicação estará embarcada em uma \textit{Raspberry Pi} através da linguagem C++, com a implementação de inúmeras classes e métodos dedicadas a cada funcionalidade necessária. Nas seções abaixo, uma explanação de cada classe ou método utilizada para determinada funcionalidade.
+
+\subsection{Filtragem}
+
+Um filtro passa-altas deverá ser projetado para a aplicaçaõ sobre os sinais de áudio. Porém, diante de inúmeras opções, deve-se estabelecer um método que chegue ao filtro adequado em função de inúmeros fatores como demanda computacional, latência, fatores como ganho e atenuação em bandas. Dessa forma, uma metodologia de análise de desempenho foi estabelecida para elencar o filtro adequado para essa aplicação em específico. Esse método visa elencar qual classificação, tipo, $f_c$, banda de transição, ordem e outros parâmetros para otimizar o funcionamento em tempo real do filtro.
+1) Determinação de Classificação de Filtro
+2) Tipo de Filtro
+3) Especificações de filtros
+
+4) Filtro determinado
+
+
+\subsection{Efeitos - \textit{Delay}}
+\subsection{Efeitos - \textit{Reverb}}
+

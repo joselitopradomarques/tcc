@@ -1,0 +1,83 @@
+1. Especificação das Propriedades do Filtro:
+●
+Definir as características: O primeiro passo é crucial e idêntico para ambos os tipos de filtro.  Envolve a especificação detalhada das características desejadas para o filtro FIR.
+ Isso inclui:
+○
+Tipo: Define a função básica do filtro, como passa-baixa, passa-alta, passa-faixa, ou rejeita-faixa.
+○
+Frequências de Corte: Delimitam as fronteiras entre as bandas de passagem e rejeição, determinando quais frequências serão atenuadas e quais serão passadas pelo filtro.
+○
+Ganho na Faixa de Passagem: Determina o ganho desejado para os sinais que se encontram dentro da faixa de passagem do filtro.
+○
+Atenuação na Faixa de Rejeição: Especifica a atenuação mínima desejada para os sinais presentes na faixa de rejeição do filtro.
+○
+Tolerâncias: Levam em consideração as variações aceitáveis em relação aos ganhos ideais nas faixas de passagem e de rejeição, definindo os limites de erro permitidos para o projeto do filtro.
+○
+Considerações sobre Fase: Em projetos de filtros FIR, a fase linear é frequentemente um requisito importante, pois evita distorções de fase no sinal filtrado.
+2. "Transformação" das Especificações para o Domínio de Tempo Discreto:
+●
+Adaptação Conceitual:  Nessa etapa, em vez de uma transformação literal como nos filtros IIR, realizamos uma interpretação das especificações no contexto do domínio de tempo discreto.
+ Esse processo envolve:
+○
+Conversão de Frequência: As frequências de corte e as tolerâncias de frequência, originalmente especificadas em Hz, são convertidas para frequências digitais normalizadas (ω), geralmente expressas em radianos por amostra.
+○
+Resposta em Frequência Desejada: A partir das especificações, define-se a resposta em frequência ideal (Hd(ejω)) que o filtro FIR deve aproximar.
+ Essa resposta em frequência ideal serve como alvo para o projeto.
+3. Escolha do Método de Projeto do Filtro FIR:
+●
+Método do Janelamento:
+○
+Ponto de Partida: A resposta ao impulso ideal (hd[n]) de um filtro não causal que corresponde à resposta em frequência desejada é obtida. Essa resposta ao impulso ideal geralmente possui extensão infinita.
+○
+Truncamento:  A resposta ao impulso ideal é truncada, limitando sua duração a um número finito de amostras (M), para obter uma resposta ao impulso causal e de comprimento finito (h[n]).
+○
+Aplicação de Janela: Uma função de janela é aplicada à resposta ao impulso truncada para suavizar as transições abruptas introduzidas pelo truncamento e minimizar o ripple na resposta em frequência do filtro resultante.
+○
+Tipos de Janela: Diversas funções de janela podem ser utilizadas nesse processo, cada uma com suas próprias características e impacto na resposta do filtro. As janelas mais comuns incluem:
+■
+Retangular
+■
+Bartlett
+■
+Hamming
+■
+Hanning
+■
+Blackman
+■
+Kaiser
+○
+Janela de Kaiser:  Destaca-se por sua versatilidade, permitindo o controle do compromisso entre a largura da faixa de transição e a ondulação na faixa de rejeição, por meio do ajuste de um parâmetro (β).
+●
+Algoritmo de Parks-McClellan:
+○
+Otimização Minimax: Este método iterativo busca encontrar a melhor aproximação da resposta em frequência desejada, minimizando o erro máximo de aproximação entre a resposta ideal e a resposta do filtro projetado.
+○
+Flexibilidade: Permite a especificação de diferentes tolerâncias para as faixas de passagem e rejeição, adaptando-se às necessidades específicas do projeto.
+○
+Eficiência: Em geral, resulta em filtros de ordem mais baixa em comparação ao método do janelamento para as mesmas especificações, o que significa menor complexidade computacional para a implementação.
+4. "Transformação" do Filtro para Implementação:
+●
+Cálculo dos Coeficientes: Independente do método escolhido, o resultado do projeto é um conjunto de coeficientes que definem a resposta ao impulso do filtro FIR.
+ Esses coeficientes são os parâmetros utilizados na implementação.
+●
+Escolha da Estrutura: A estrutura de implementação determina como os coeficientes do filtro serão utilizados para calcular a saída do filtro a partir do sinal de entrada.
+●
+Opções de Estrutura: As estruturas mais comuns para filtros FIR incluem:
+○
+Forma Direta: Implementa a equação de convolução diretamente, multiplicando cada amostra de entrada pelos coeficientes do filtro e somando os resultados.
+○
+Forma em Cascata: Decompõe o filtro em uma série de seções de segunda ordem, reduzindo a complexidade computacional em alguns casos.
+○
+Forma Polifásica: Divide o filtro em múltiplos subfiltros que operam em paralelo, proporcionando eficiência em aplicações multitaxa, como dizimação e interpolação.
+○
+Forma em Treliça: Uma estrutura eficiente para a implementação de filtros com fase linear, como os filtros FIR projetados pelo algoritmo de Parks-McClellan.
+●
+Fatores de Escolha: A escolha da estrutura depende de fatores como a complexidade computacional, a velocidade de processamento, o consumo de energia, e a sensibilidade a erros numéricos inerentes à implementação.
+Considerações Finais:
+●
+Efeitos da Digitalização: A digitalização dos coeficientes do filtro, imposta pela representação numérica finita em sistemas digitais, pode introduzir erros que impactam o desempenho do filtro.
+ Essas imprecisões devem ser consideradas durante o projeto e a implementação.
+●
+Compromissos: O projeto de filtros FIR, assim como o de qualquer outro tipo de filtro, envolve uma série de compromissos.
+ As decisões tomadas durante o processo de projeto impactam diretamente as características do filtro, como a ordem do filtro (número de coeficientes), a ondulação na banda de passagem, a atenuação na banda de rejeição, a largura da banda de transição, e a complexidade da implementação. A escolha do método de projeto e da estrutura de implementação dependerá dos requisitos específicos da aplicação e das prioridades do projetista.

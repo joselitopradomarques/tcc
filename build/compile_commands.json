@@ -1,0 +1,962 @@
+[
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_arithmetic.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_arithmetic.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_arithmetic.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_array.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_array.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_array.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_ctl.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_ctl.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_ctl.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_dac.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_dac.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_dac.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_delay.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_delay.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_delay.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_fft.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_fft.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_fft.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_fft_fftsg.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_fft_fftsg.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_fft_fftsg.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_filter.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_filter.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_filter.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_global.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_global.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_global.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_math.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_math.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_math.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_misc.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_misc.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_misc.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_osc.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_osc.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_osc.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_resample.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_resample.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_resample.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_soundfile.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_soundfile_aiff.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_aiff.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_aiff.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_soundfile_caf.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_caf.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_caf.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_soundfile_next.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_next.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_next.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_soundfile_wave.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_wave.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_wave.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/d_ugen.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_ugen.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_ugen.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_all_guis.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_all_guis.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_all_guis.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_array.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_array.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_array.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_bang.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_bang.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_bang.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_canvas.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_canvas.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_canvas.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_clone.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_clone.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_clone.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_editor.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_editor.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_editor.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_editor_extras.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_editor_extras.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_editor_extras.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_graph.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_graph.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_graph.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_guiconnect.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_guiconnect.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_guiconnect.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_io.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_io.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_io.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_mycanvas.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_mycanvas.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_mycanvas.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_numbox.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_numbox.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_numbox.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_radio.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_radio.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_radio.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_readwrite.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_readwrite.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_readwrite.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_rtext.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_rtext.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_rtext.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_scalar.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_scalar.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_scalar.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_slider.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_slider.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_slider.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_template.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_template.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_template.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_text.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_text.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_text.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_toggle.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_toggle.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_toggle.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_traversal.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_traversal.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_traversal.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_undo.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_undo.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_undo.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/g_vumeter.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_vumeter.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_vumeter.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_atom.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_atom.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_atom.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_binbuf.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_binbuf.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_binbuf.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_class.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_class.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_class.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_conf.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_conf.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_conf.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_glob.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_glob.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_glob.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_memory.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_memory.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_memory.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_obj.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_obj.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_obj.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_pd.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_pd.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_pd.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/m_sched.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_sched.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_sched.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_audio.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_audio.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_audio.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_audio_dummy.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_audio_dummy.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_audio_dummy.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_inter.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_inter.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_inter.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_inter_gui.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_inter_gui.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_inter_gui.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_loader.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_loader.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_loader.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_main.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_main.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_main.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_net.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_net.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_net.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_path.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_path.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_path.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_print.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_print.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_print.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/s_utf8.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_utf8.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_utf8.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_acoustics.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_acoustics.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_acoustics.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_arithmetic.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_arithmetic.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_arithmetic.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_array.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_array.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_array.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_connective.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_connective.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_connective.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_file.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_file.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_file.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_gui.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_gui.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_gui.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_interface.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_interface.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_interface.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_list.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_list.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_list.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_midi.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_midi.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_midi.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_misc.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_misc.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_misc.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_net.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_net.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_net.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_scalar.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_scalar.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_scalar.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_text.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_text.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_text.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_time.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_time.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_time.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_vexp.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_vexp.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_vexp.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_vexp_fun.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_vexp_fun.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_vexp_fun.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/src/x_vexp_if.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_vexp_if.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_vexp_if.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/libpd_wrapper/s_libpdmidi.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/s_libpdmidi.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/s_libpdmidi.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/libpd_wrapper/x_libpdreceive.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/x_libpdreceive.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/x_libpdreceive.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/libpd_wrapper/z_hooks.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/z_hooks.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/z_hooks.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/libpd_wrapper/z_libpd.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/z_libpd.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/z_libpd.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/libpd_wrapper/util/z_ringbuffer.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/util/z_ringbuffer.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/util/z_ringbuffer.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/libpd_wrapper/util/z_print_util.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/util/z_print_util.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/util/z_print_util.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/libpd_wrapper/util/z_queued.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/util/z_queued.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/util/z_queued.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/bob~/bob~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/bob~/bob~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/bob~/bob~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/bonk~/bonk~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/bonk~/bonk~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/bonk~/bonk~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/extra/choice/choice.c.o -c /home/joselito/git/tcc/libpd/pure-data/extra/choice/choice.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/choice/choice.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/fiddle~/fiddle~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/fiddle~/fiddle~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/fiddle~/fiddle~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/loop~/loop~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/loop~/loop~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/loop~/loop~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/lrshift~/lrshift~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/lrshift~/lrshift~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/lrshift~/lrshift~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/pd~/pdsched.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pdsched.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pdsched.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/pd~/pd~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pd~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pd~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/extra/pique/pique.c.o -c /home/joselito/git/tcc/libpd/pure-data/extra/pique/pique.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/pique/pique.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd_static.dir/pure-data/extra/sigmund~/sigmund~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/sigmund~/sigmund~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/sigmund~/sigmund~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd_static.dir/pure-data/extra/stdout/stdout.c.o -c /home/joselito/git/tcc/libpd/pure-data/extra/stdout/stdout.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/stdout/stdout.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_arithmetic.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_arithmetic.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_arithmetic.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_array.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_array.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_array.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_ctl.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_ctl.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_ctl.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_dac.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_dac.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_dac.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_delay.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_delay.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_delay.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_fft.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_fft.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_fft.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_fft_fftsg.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_fft_fftsg.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_fft_fftsg.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_filter.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_filter.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_filter.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_global.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_global.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_global.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_math.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_math.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_math.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_misc.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_misc.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_misc.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_osc.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_osc.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_osc.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_resample.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_resample.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_resample.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_soundfile.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_soundfile_aiff.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_aiff.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_aiff.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_soundfile_caf.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_caf.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_caf.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_soundfile_next.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_next.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_next.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_soundfile_wave.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_wave.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_soundfile_wave.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/d_ugen.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/d_ugen.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/d_ugen.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_all_guis.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_all_guis.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_all_guis.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_array.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_array.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_array.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_bang.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_bang.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_bang.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_canvas.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_canvas.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_canvas.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_clone.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_clone.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_clone.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_editor.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_editor.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_editor.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_editor_extras.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_editor_extras.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_editor_extras.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_graph.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_graph.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_graph.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_guiconnect.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_guiconnect.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_guiconnect.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_io.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_io.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_io.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_mycanvas.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_mycanvas.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_mycanvas.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_numbox.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_numbox.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_numbox.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_radio.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_radio.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_radio.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_readwrite.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_readwrite.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_readwrite.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_rtext.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_rtext.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_rtext.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_scalar.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_scalar.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_scalar.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_slider.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_slider.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_slider.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_template.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_template.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_template.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_text.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_text.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_text.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_toggle.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_toggle.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_toggle.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_traversal.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_traversal.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_traversal.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_undo.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_undo.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_undo.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/g_vumeter.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/g_vumeter.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/g_vumeter.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_atom.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_atom.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_atom.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_binbuf.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_binbuf.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_binbuf.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_class.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_class.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_class.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_conf.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_conf.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_conf.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_glob.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_glob.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_glob.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_memory.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_memory.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_memory.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_obj.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_obj.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_obj.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_pd.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_pd.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_pd.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/m_sched.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/m_sched.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/m_sched.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_audio.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_audio.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_audio.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_audio_dummy.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_audio_dummy.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_audio_dummy.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_inter.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_inter.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_inter.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_inter_gui.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_inter_gui.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_inter_gui.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_loader.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_loader.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_loader.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_main.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_main.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_main.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_net.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_net.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_net.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_path.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_path.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_path.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_print.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_print.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_print.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/s_utf8.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/s_utf8.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/s_utf8.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_acoustics.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_acoustics.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_acoustics.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_arithmetic.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_arithmetic.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_arithmetic.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_array.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_array.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_array.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_connective.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_connective.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_connective.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_file.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_file.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_file.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_gui.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_gui.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_gui.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_interface.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_interface.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_interface.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_list.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_list.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_list.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_midi.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_midi.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_midi.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_misc.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_misc.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_misc.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_net.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_net.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_net.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_scalar.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_scalar.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_scalar.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_text.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_text.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_text.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_time.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_time.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_time.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_vexp.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_vexp.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_vexp.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_vexp_fun.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_vexp_fun.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_vexp_fun.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/src/x_vexp_if.c.o -c /home/joselito/git/tcc/libpd/pure-data/src/x_vexp_if.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/src/x_vexp_if.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/libpd_wrapper/s_libpdmidi.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/s_libpdmidi.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/s_libpdmidi.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/libpd_wrapper/x_libpdreceive.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/x_libpdreceive.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/x_libpdreceive.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/libpd_wrapper/z_hooks.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/z_hooks.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/z_hooks.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/libpd_wrapper/z_libpd.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/z_libpd.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/z_libpd.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/libpd_wrapper/util/z_ringbuffer.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/util/z_ringbuffer.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/util/z_ringbuffer.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/libpd_wrapper/util/z_print_util.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/util/z_print_util.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/util/z_print_util.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/libpd_wrapper/util/z_queued.c.o -c /home/joselito/git/tcc/libpd/libpd_wrapper/util/z_queued.c",
+  "file": "/home/joselito/git/tcc/libpd/libpd_wrapper/util/z_queued.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/bob~/bob~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/bob~/bob~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/bob~/bob~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/bonk~/bonk~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/bonk~/bonk~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/bonk~/bonk~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/extra/choice/choice.c.o -c /home/joselito/git/tcc/libpd/pure-data/extra/choice/choice.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/choice/choice.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/fiddle~/fiddle~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/fiddle~/fiddle~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/fiddle~/fiddle~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/loop~/loop~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/loop~/loop~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/loop~/loop~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/lrshift~/lrshift~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/lrshift~/lrshift~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/lrshift~/lrshift~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/pd~/pdsched.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pdsched.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pdsched.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/pd~/pd~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pd~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/pd~/pd~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/extra/pique/pique.c.o -c /home/joselito/git/tcc/libpd/pure-data/extra/pique/pique.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/pique/pique.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o \"CMakeFiles/libpd.dir/pure-data/extra/sigmund~/sigmund~.c.o\" -c \"/home/joselito/git/tcc/libpd/pure-data/extra/sigmund~/sigmund~.c\"",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/sigmund~/sigmund~.c"
+},
+{
+  "directory": "/home/joselito/git/tcc/build",
+  "command": "/usr/bin/cc -DHAVE_LIBDL -DHAVE_UNISTD_H=1 -DLIBPD_EXTRA=1 -DPD=1 -DPD_INTERNAL -DUSEAPI_DUMMY=1 -Dlibpd_EXPORTS -I/home/joselito/git/tcc/libpd/libpd_wrapper -I/home/joselito/git/tcc/libpd/pure-data/src  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast  -Wno-int-to-pointer-cast -Wno-pointer-to-int-cast -g -O0 -fPIC -o CMakeFiles/libpd.dir/pure-data/extra/stdout/stdout.c.o -c /home/joselito/git/tcc/libpd/pure-data/extra/stdout/stdout.c",
+  "file": "/home/joselito/git/tcc/libpd/pure-data/extra/stdout/stdout.c"
+}
+]
