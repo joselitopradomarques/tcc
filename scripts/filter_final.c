@@ -129,3 +129,21 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
     fclose(file);
     return 0;
 }
+
+float calcular_nova_frequencia_corte(float frequencia_corte_atual) {
+    // Definindo os valores mínimos e máximos para as frequências
+    float fc1_min = 20.0;
+    float fc1_max = 22050.0;
+    
+    // Aplicando a transformação logarítmica inversa
+    float fc2_log = log10(fc1_max) - (log10(frequencia_corte_atual) - log10(fc1_min));
+    
+    // Voltando para a escala linear após a transformação log
+    float fc2 = pow(10.0, fc2_log);
+    
+    // Exibindo o resultado
+    printf("Para fc1 = %.2f Hz, fc2 = %.2f Hz\n", frequencia_corte_atual, fc2);
+    
+    // Retornando o valor de fc2
+    return fc2;
+}

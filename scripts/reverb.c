@@ -2,85 +2,17 @@
 #include <stdlib.h>
 #include <sndfile.h>
 #include <math.h>
-
-// Definição de Reverb com o campo 'feedback' e 'delay'
-typedef struct {
-    float decay;
-    int delay;  // Atraso em amostras
-    float feedback;
-} Reverb;
+#include "reverb.h" // Inclui o cabeçalho das funções
+#include "filter_final.h"
 
 #define BUFFER_SIZE 44100  // Defina o tamanho do buffer (exemplo: 1 segundo de áudio a 44.1kHz)
+#define SAMPLE_RATE 44100
+
 
 float delayBufferLeft[BUFFER_SIZE];
 float delayBufferRight[BUFFER_SIZE];
 int delayIndexLeft = 0;
 int delayIndexRight = 0;
-
-// Funções auxiliares para leitura e gravação de arquivos WAV
-void readWAV(const char* filePath, float** leftChannel, float** rightChannel, int* numSamples) {
-    SF_INFO sfInfo;
-    SNDFILE* file = sf_open(filePath, SFM_READ, &sfInfo);
-    
-    if (!file) {
-        printf("Erro ao abrir o arquivo WAV para leitura.\n");
-        exit(1);
-    }
-
-    *numSamples = sfInfo.frames;
-    int numChannels = sfInfo.channels;
-
-    *leftChannel = (float*)malloc(*numSamples * sizeof(float));
-    *rightChannel = (float*)malloc(*numSamples * sizeof(float));
-
-    if (*leftChannel == NULL || *rightChannel == NULL) {
-        printf("Erro ao alocar memória para os canais.\n");
-        exit(1);
-    }
-
-    float* buffer = (float*)malloc(*numSamples * numChannels * sizeof(float));
-
-    // Lê o conteúdo do arquivo WAV para o buffer
-    sf_readf_float(file, buffer, *numSamples);
-
-    // Divide os canais
-    for (int i = 0; i < *numSamples; i++) {
-        (*leftChannel)[i] = buffer[i * numChannels];
-        if (numChannels > 1) {
-            (*rightChannel)[i] = buffer[i * numChannels + 1];
-        } else {
-            (*rightChannel)[i] = 0.0f;
-        }
-    }
-
-    free(buffer);
-    sf_close(file);
-}
-
-void writeWAV(const char* filePath, float* leftChannel, float* rightChannel, int numSamples) {
-    SF_INFO sfInfo;
-    sfInfo.frames = numSamples;
-    sfInfo.channels = 2;  // Para um arquivo estéreo
-    sfInfo.samplerate = 44100;
-    sfInfo.format = SF_FORMAT_WAV | SF_FORMAT_FLOAT;
-
-    SNDFILE* file = sf_open(filePath, SFM_WRITE, &sfInfo);
-    if (!file) {
-        printf("Erro ao abrir o arquivo WAV para gravação.\n");
-        exit(1);
-    }
-
-    float* buffer = (float*)malloc(numSamples * 2 * sizeof(float));
-
-    for (int i = 0; i < numSamples; i++) {
-        buffer[i * 2] = leftChannel[i];  // Canal esquerdo
-        buffer[i * 2 + 1] = rightChannel[i];  // Canal direito
-    }
-
-    sf_writef_float(file, buffer, numSamples);
-    free(buffer);
-    sf_close(file);
-}
 
 void initReverb(Reverb* reverb, float decayDB, float delayTimeInSeconds, int sampleRate, float feedback) {
     reverb->decay = decayDB;
@@ -89,12 +21,16 @@ void initReverb(Reverb* reverb, float decayDB, float delayTimeInSeconds, int sam
     reverb->delay = (int)(delayTimeInSeconds * sampleRate);  // Atraso em amostras
 }
 
-// Processamento do reverb com o atraso aplicado
 float processReverb(Reverb* reverb, float inputSample, float* delayBuffer, int delayBufferSize, int* delayIndex, int sampleIndex) {
+    // Se o feedback for 0 (efetivamente quando effectAmount é 0), o reverb é desativado
+    if (reverb->feedback == 0.0f) {
+        return inputSample;  // Retorna o sinal original sem modificar
+    }
+
     // Se o índice atual for menor que o atraso, não aplica o efeito
     if (sampleIndex < reverb->delay) {
         delayBuffer[*delayIndex] = 0.0f;  // Não aplica o efeito antes do tempo de atraso
-        return 0.0f;  // Retorna 0 antes do início do efeito
+        return inputSample;  // Retorna a amostra original, sem efeito
     }
     
     // Quando o atraso for superado, começa a aplicar o reverb
@@ -106,7 +42,7 @@ float processReverb(Reverb* reverb, float inputSample, float* delayBuffer, int d
     // Incrementa o índice do delay e faz o wraparound para simular um buffer circular
     *delayIndex = (*delayIndex + 1) % delayBufferSize;
 
-    return outputSample;  // Retorna apenas o efeito de reverb
+    return outputSample;  // Retorna o efeito de reverb
 }
 
 void applyGain(float* leftChannel, float* rightChannel, int numSamples, float gain) {
@@ -141,22 +77,22 @@ void normalize(float* leftChannel, float* rightChannel, int numSamples) {
     }
 }
 
-void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, float effectAmount) {
+void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, float effectSend) {
     int sampleRate = 44100;
     float decayDB = 40.0f;    // Ajuste do decaimento
-    float delayTime = 1.0f;   // Atraso de 4 segundos
-    float feedbackAmount = effectAmount;  // Ajuste de feedback controlado pelo parâmetro
+    float delayTime = 1.0f;   // Atraso de 1 segundo
+    float feedbackAmount = effectSend;  // Ajuste de feedback controlado pelo parâmetro effectSend
     float gain = 0.5f;        // Redução de ganho para evitar estouro
     int numSamples;
 
     // Lê o arquivo WAV estéreo de entrada
-    float *leftChannel, *rightChannel;
-    readWAV(inputFilePath, &leftChannel, &rightChannel, &numSamples);
-    if (leftChannel == NULL || rightChannel == NULL) {
+    short *sinal;
+    ler_wav_estereo(inputFilePath, &sinal, &numSamples);
+    if (sinal == NULL) {
         exit(1);
     }
 
-    // Inicializa o reverb com o valor de feedback controlado pelo parâmetro effectAmount
+    // Inicializa o reverb com o valor de feedback controlado pelo parâmetro effectSend
     Reverb reverbLeft, reverbRight;
     initReverb(&reverbLeft, decayDB, delayTime, sampleRate, feedbackAmount);
     initReverb(&reverbRight, decayDB, delayTime, sampleRate, feedbackAmount);
@@ -170,40 +106,43 @@ void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, fl
         exit(1);
     }
 
-    // Aplica o reverb em ambos os canais com delay
-    for (int i = 0; i < numSamples; i++) {
-        outputLeftChannel[i] = processReverb(&reverbLeft, leftChannel[i], delayBufferLeft, BUFFER_SIZE, &delayIndexLeft, i);
-        outputRightChannel[i] = processReverb(&reverbRight, rightChannel[i], delayBufferRight, BUFFER_SIZE, &delayIndexRight, i);
+    // Ajusta o efeito usando uma curva exponencial para suavizar o controle
+    float smoothEffectSend = pow(effectSend, 2);  // Aplica uma curva quadrática (pode ajustar o expoente conforme necessário)
+
+    // Se o efeito for 0, não aplica nenhum reverb
+    if (smoothEffectSend == 0.0f) {
+        for (int i = 0; i < numSamples; i++) {
+            outputLeftChannel[i] = 0.0f;  // Silêncio total
+            outputRightChannel[i] = 0.0f;
+        }
+    } else {
+        // Aplica o reverb gradual nos dois canais
+        for (int i = 0; i < numSamples; i++) {
+            // Aplica o reverb de acordo com a intensidade do smoothEffectSend
+            outputLeftChannel[i] = processReverb(&reverbLeft, sinal[i*2], delayBufferLeft, BUFFER_SIZE, &delayIndexLeft, i) * smoothEffectSend;
+            outputRightChannel[i] = processReverb(&reverbRight, sinal[i*2 + 1], delayBufferRight, BUFFER_SIZE, &delayIndexRight, i) * smoothEffectSend;
+        }
     }
 
-    // Aplica o ganho ao sinal processado
+    // Aplica o ganho ao sinal processado, antes de aplicar os efeitos
     applyGain(outputLeftChannel, outputRightChannel, numSamples, gain);
 
-    // Normaliza o sinal para evitar clipping
+    // Normaliza o sinal para evitar clipping (agora após aplicar o ganho e o reverb)
     normalize(outputLeftChannel, outputRightChannel, numSamples);
 
-    // Escreve o arquivo WAV estéreo de saída
-    writeWAV(outputFilePath, outputLeftChannel, outputRightChannel, numSamples);
+    // Converte os valores de volta para short e escreve o arquivo WAV estéreo de saída
+    short* outputSignal = (short*)malloc(numSamples * 2 * sizeof(short));
+    for (int i = 0; i < numSamples; i++) {
+        outputSignal[i*2] = (short)(outputLeftChannel[i] * 32767);   // Conversão de volta para valores de 16-bit
+        outputSignal[i*2 + 1] = (short)(outputRightChannel[i] * 32767);
+    }
+    escrever_wav_estereo(outputFilePath, outputSignal, numSamples);
 
     // Libera a memória
     free(outputLeftChannel);
     free(outputRightChannel);
-    free(leftChannel);
-    free(rightChannel);
+    free(sinal);
+    free(outputSignal);
 
     printf("Arquivo %s criado com sucesso!\n", outputFilePath);
-}
-
-int main() {
-    // Caminho do arquivo de entrada e saída
-    const char* inputFilePath = "/home/joselito/git/tcc/scripts/audio02.wav";
-    const char* outputFilePath = "/home/joselito/git/tcc/scripts/reverb_output_stereo.wav";
-
-    // Define o efeito de reverb com o valor entre 0.0 e 1.0, onde 1.0 corresponde ao feedback máximo (100 dB)
-    float effectAmount = 0.5f;  // Ajuste para variar entre 0.0 (sem efeito) e 1.0 (feedback máximo)
-
-    // Chama a função de aplicação do efeito com o parâmetro effectAmount
-    applyReverbEffect(inputFilePath, outputFilePath, effectAmount);
-
-    return 0;
 }

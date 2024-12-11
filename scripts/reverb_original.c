@@ -2,109 +2,71 @@
 #include <stdlib.h>
 #include <sndfile.h>
 #include <math.h>
-#include "reverb.h"
-#include "delay.h"
+#include "reverb.h" // Inclui o cabeçalho das funções
 
-#define BUFFER_SIZE 44100  // Tamanho do buffer (1 segundo de áudio a 44.1kHz)
+#define BUFFER_SIZE 44100  // Defina o tamanho do buffer (exemplo: 1 segundo de áudio a 44.1kHz)
 #define SAMPLE_RATE 44100
+
 
 float delayBufferLeft[BUFFER_SIZE];
 float delayBufferRight[BUFFER_SIZE];
 int delayIndexLeft = 0;
 int delayIndexRight = 0;
 
-
-// Inicializa o buffer de delay
-void init_delay_buffer(DelayBuffer *db, int delay_ms) {
-    db->buffer_size = (SAMPLE_RATE * delay_ms) / 1000;
-    db->buffer = (float *)calloc(db->buffer_size, sizeof(float));
-    if (db->buffer == NULL) {
-        fprintf(stderr, "Erro ao alocar memória para o buffer de delay.\n");
-        exit(1);
-    }
-    db->write_index = 0;
-}
-
-// Função para aplicar o delay
-float process_delay(DelayBuffer *db, float input, int delay_ms) {
-    int delay_samples = (SAMPLE_RATE * delay_ms) / 1000;
-    int read_index = (db->write_index - delay_samples + db->buffer_size) % db->buffer_size;
-    float delayed_sample = db->buffer[read_index];
-
-    // Escreve a nova amostra no buffer
-    db->buffer[db->write_index] = input;
-    db->write_index = (db->write_index + 1) % db->buffer_size;
-
-    return delayed_sample;
-}
-
-// Função para aplicar o delay ao áudio
-void apply_delay_to_audio(float* leftChannel, float* rightChannel, int numSamples, int delayTime) {
-    DelayBuffer dbLeft, dbRight;
-    init_delay_buffer(&dbLeft, delayTime);
-    init_delay_buffer(&dbRight, delayTime);
-
-    for (int i = 0; i < numSamples; i++) {
-        // Aplica o delay ao canal esquerdo e direito
-        leftChannel[i] += process_delay(&dbLeft, leftChannel[i]);
-        rightChannel[i] += process_delay(&dbRight, rightChannel[i]);
-    }
-}
-
-// Função fictícia para aplicar o efeito de delay
-void apply_delay_to_audio(float* leftChannel, float* rightChannel, int numSamples, int delayMs) {
-    int delaySamples = (delayMs / 1000.0) * 44100;  // Assume uma taxa de amostragem de 44.1 kHz
-    for (int i = delaySamples; i < numSamples; i++) {
-        leftChannel[i] += leftChannel[i - delaySamples];  // Aplica o delay no canal esquerdo
-        rightChannel[i] += rightChannel[i - delaySamples];  // Aplica o delay no canal direito
-    }
-}
-
 // Função para ler o arquivo WAV estéreo
-void ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
+int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
     FILE *file = fopen(filename, "rb");
     if (!file) {
         printf("Erro ao abrir o arquivo WAV: %s\n", filename);
-        return;
+        return -1;  // Apenas retorna sem fazer mais nada
     }
 
-    fseek(file, 22, SEEK_SET);
+    // Ler cabeçalho WAV (34 primeiros bytes de interesse)
+    fseek(file, 22, SEEK_SET);  // Pular até o número de canais
     short num_channels;
     fread(&num_channels, sizeof(short), 1, file);
 
-    fseek(file, 24, SEEK_SET);
+    fseek(file, 24, SEEK_SET);  // Pular até a taxa de amostragem
     int sample_rate;
     fread(&sample_rate, sizeof(int), 1, file);
 
-    fseek(file, 34, SEEK_SET);
+    fseek(file, 34, SEEK_SET);  // Pular até os bits por amostra
     short bits_per_sample;
     fread(&bits_per_sample, sizeof(short), 1, file);
 
     if (num_channels != 2 || bits_per_sample != 16) {
         printf("Erro: o arquivo WAV não é estéreo ou não possui 16 bits por amostra.\n");
         fclose(file);
-        return;
+        return -1;  // Apenas retorna sem fazer mais nada
     }
 
+    // Saltar para a parte de dados do arquivo WAV (pular o cabeçalho até a posição 44)
     fseek(file, 44, SEEK_SET);
 
+    // Descobrir o tamanho do arquivo
     fseek(file, 0, SEEK_END);
     int file_size = ftell(file);
-    fseek(file, 44, SEEK_SET);
+    fseek(file, 44, SEEK_SET);  // Volta para a posição onde os dados de áudio começam
 
-    int num_samples = (file_size - 44) / (sizeof(short) * num_channels);
+    // Calcular o número de amostras considerando que é estéreo (2 canais)
+    int num_samples = (file_size - 44) / (sizeof(short) * num_channels);  // 2 canais
     *tamanho = num_samples;
 
-    *sinal = (short *)malloc(num_samples * num_channels * sizeof(short));
+    // Alocar memória para o sinal estéreo (2 canais)
+    *sinal = (short *)malloc(num_samples * num_channels * sizeof(short));  
     if (!*sinal) {
         printf("Erro ao alocar memória para o sinal estéreo\n");
         fclose(file);
-        return;
+        return -1;  // Apenas retorna sem fazer mais nada
     }
 
+    // Ler os dados do sinal estéreo (2 canais)
     fread(*sinal, sizeof(short), num_samples * num_channels, file);
     fclose(file);
+
+     return 0;
 }
+
 
 // Função para salvar o arquivo WAV com o sinal filtrado em estéreo
 int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
@@ -114,18 +76,21 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
         return -1;
     }
 
-    unsigned int chunk_size = 36 + tamanho * 2 * sizeof(short);
-    unsigned short audio_format = 1;
-    unsigned short num_channels = 2;
+    // Escrever cabeçalho WAV simples (44 bytes)
+    unsigned int chunk_size = 36 + tamanho * 2 * sizeof(short);  // 2 canais
+    unsigned short audio_format = 1; // PCM
+    unsigned short num_channels = 2; // Estéreo
     unsigned int sample_rate = SAMPLE_RATE;
-    unsigned int byte_rate = SAMPLE_RATE * 2 * sizeof(short);
-    unsigned short block_align = 2 * sizeof(short);
+    unsigned int byte_rate = SAMPLE_RATE * 2 * sizeof(short);  // 2 canais
+    unsigned short block_align = 2 * sizeof(short);  // 2 canais
     unsigned short bits_per_sample = 16;
 
+    // Cabeçalho RIFF
     fwrite("RIFF", sizeof(char), 4, file);
     fwrite(&chunk_size, sizeof(unsigned int), 1, file);
     fwrite("WAVE", sizeof(char), 4, file);
 
+    // Sub-chunk 1 "fmt "
     fwrite("fmt ", sizeof(char), 4, file);
     unsigned int sub_chunk1_size = 16;
     fwrite(&sub_chunk1_size, sizeof(unsigned int), 1, file);
@@ -136,9 +101,11 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
     fwrite(&block_align, sizeof(unsigned short), 1, file);
     fwrite(&bits_per_sample, sizeof(unsigned short), 1, file);
 
-    unsigned int sub_chunk2_size = tamanho * 2 * sizeof(short);
+    // Sub-chunk 2 "data"
+    unsigned int sub_chunk2_size = tamanho * 2 * sizeof(short);  // 2 canais
     fwrite("data", sizeof(char), 4, file);
     fwrite(&sub_chunk2_size, sizeof(unsigned int), 1, file);
+    // Escrever o sinal filtrado em estéreo
     fwrite(sinal, sizeof(short), tamanho * 2, file);
 
     fclose(file);
@@ -262,54 +229,16 @@ void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, fl
     printf("Arquivo %s criado com sucesso!\n", outputFilePath);
 }
 
-// Função principal
 int main() {
+    // Caminho do arquivo de entrada e saída
     const char* inputFilePath = "/home/joselito/git/tcc/scripts/audio02.wav";
-    const char* outputFilePath = "/home/joselito/git/tcc/scripts/fx_output_stereo.wav";
+    const char* outputFilePath = "/home/joselito/git/tcc/scripts/reverb_output_stereo.wav";
 
-    int numSamples;
-    short *sinal;
-    ler_wav_estereo(inputFilePath, &sinal, &numSamples);
-    if (sinal == NULL) {
-        exit(1);
-    }
+    // Define o efeito de reverb com o valor entre 0.0 e 1.0, onde 1.0 corresponde ao feedback máximo (100 dB)
+    float effectAmount = 0.3f;  // Ajuste para variar entre 0.0 (sem efeito) e 1.0 (feedback máximo)
 
-    float* outputLeftChannel = (float*)malloc(numSamples * sizeof(float));
-    float* outputRightChannel = (float*)malloc(numSamples * sizeof(float));
-
-    if (outputLeftChannel == NULL || outputRightChannel == NULL) {
-        printf("Erro ao alocar memória para os canais de saída.\n");
-        exit(1);
-    }
-
-    for (int i = 0; i < numSamples; i++) {
-        outputLeftChannel[i] = (float)sinal[i * 2];
-        outputRightChannel[i] = (float)sinal[i * 2 + 1];
-    }
-
-    // Aplica o efeito de delay aos canais
-    apply_delay_to_audio(outputLeftChannel, outputRightChannel, numSamples, 500);
-
-    // Normaliza os sinais
-    for (int i = 0; i < numSamples; i++) {
-        outputLeftChannel[i] = fmin(fmax(outputLeftChannel[i], -1.0f), 1.0f);
-        outputRightChannel[i] = fmin(fmax(outputRightChannel[i], -1.0f), 1.0f);
-    }
-
-    short* outputSignal = (short*)malloc(numSamples * 2 * sizeof(short));
-    for (int i = 0; i < numSamples; i++) {
-        outputSignal[i * 2] = (short)(outputLeftChannel[i] * 32767);
-        outputSignal[i * 2 + 1] = (short)(outputRightChannel[i] * 32767);
-    }
-
-    escrever_wav_estereo(outputFilePath, outputSignal, numSamples);
-
-    free(outputLeftChannel);
-    free(outputRightChannel);
-    free(sinal);
-    free(outputSignal);
-
-    printf("Arquivo %s criado com sucesso!\n", outputFilePath);
+    // Chama a função de aplicação do efeito com o parâmetro effectAmount
+    applyReverbEffect(inputFilePath, outputFilePath, effectAmount);
 
     return 0;
 }

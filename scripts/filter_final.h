@@ -22,4 +22,7 @@ int ler_wav_estereo(const char *filename, short **sinal, int *tamanho);
 // Função para salvar o arquivo WAV com o sinal filtrado em estéreo
 int escrever_wav_estereo(const char *filename, short *sinal, int tamanho);
 
+// Função para calcular a frequencia de corte fc2 para o segundo canal
+float calcular_nova_frequencia_corte(float frequencia_corte_atual);
+
 #endif
