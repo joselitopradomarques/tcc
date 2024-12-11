@@ -8,7 +8,6 @@
 #define BUFFER_SIZE 44100  // Defina o tamanho do buffer (exemplo: 1 segundo de áudio a 44.1kHz)
 #define SAMPLE_RATE 44100
 
-
 float delayBufferLeft[BUFFER_SIZE];
 float delayBufferRight[BUFFER_SIZE];
 int delayIndexLeft = 0;
@@ -32,17 +31,22 @@ float processReverb(Reverb* reverb, float inputSample, float* delayBuffer, int d
         delayBuffer[*delayIndex] = 0.0f;  // Não aplica o efeito antes do tempo de atraso
         return inputSample;  // Retorna a amostra original, sem efeito
     }
-    
-    // Quando o atraso for superado, começa a aplicar o reverb
-    float outputSample = delayBuffer[*delayIndex];  // Somente o valor do buffer de delay
 
-    // Atualiza o buffer de delay com a amostra atual + feedback ajustado pelo decaimento
+    // Processa o reverb normalmente, sem decaimento no feedback
+    float outputSample = delayBuffer[*delayIndex];
+
+    // Atualiza o buffer de delay com a amostra atual + feedback (sem decaimento)
     delayBuffer[*delayIndex] = inputSample + reverb->feedback * delayBuffer[*delayIndex];
 
     // Incrementa o índice do delay e faz o wraparound para simular um buffer circular
     *delayIndex = (*delayIndex + 1) % delayBufferSize;
 
     return outputSample;  // Retorna o efeito de reverb
+}
+
+float applySigmoidGain(float wetness, float k) {
+    // Calcula o feedbackAmount usando uma função sigmoide
+    return 1.0f / (1.0f + expf(-k * (wetness - 0.5f)));
 }
 
 void applyGain(float* leftChannel, float* rightChannel, int numSamples, float gain) {
@@ -77,12 +81,13 @@ void normalize(float* leftChannel, float* rightChannel, int numSamples) {
     }
 }
 
-void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, float effectSend) {
+void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, float wetness) {
     int sampleRate = 44100;
-    float decayDB = 40.0f;    // Ajuste do decaimento
-    float delayTime = 1.0f;   // Atraso de 1 segundo
-    float feedbackAmount = effectSend;  // Ajuste de feedback controlado pelo parâmetro effectSend
-    float gain = 0.5f;        // Redução de ganho para evitar estouro
+    float decayDB = 1.5f;    // Ajuste do decaimento
+    float delayTime = 0.4f;   // Atraso de 1 segundo
+    float k = 50.0f;  // Parâmetro que controla a taxa de crescimento (ajuste se necessário)
+    float feedbackAmount = applySigmoidGain(wetness, k);  // Aplica a função sigmoide ao wetness
+    float gain = 0.9f;        // Redução de ganho para evitar estouro
     int numSamples;
 
     // Lê o arquivo WAV estéreo de entrada
@@ -92,7 +97,7 @@ void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, fl
         exit(1);
     }
 
-    // Inicializa o reverb com o valor de feedback controlado pelo parâmetro effectSend
+    // Inicializa o reverb com o valor de feedback controlado pelo parâmetro wetness
     Reverb reverbLeft, reverbRight;
     initReverb(&reverbLeft, decayDB, delayTime, sampleRate, feedbackAmount);
     initReverb(&reverbRight, decayDB, delayTime, sampleRate, feedbackAmount);
@@ -106,22 +111,18 @@ void applyReverbEffect(const char* inputFilePath, const char* outputFilePath, fl
         exit(1);
     }
 
-    // Ajusta o efeito usando uma curva exponencial para suavizar o controle
-    float smoothEffectSend = pow(effectSend, 2);  // Aplica uma curva quadrática (pode ajustar o expoente conforme necessário)
+    // Aplica uma curva de suavização exponencial ao controle de wetness
+    float smoothWetness = pow(wetness, 2);  // Aplica uma curva quadrática para suavização
 
-    // Se o efeito for 0, não aplica nenhum reverb
-    if (smoothEffectSend == 0.0f) {
-        for (int i = 0; i < numSamples; i++) {
-            outputLeftChannel[i] = 0.0f;  // Silêncio total
-            outputRightChannel[i] = 0.0f;
-        }
-    } else {
-        // Aplica o reverb gradual nos dois canais
-        for (int i = 0; i < numSamples; i++) {
-            // Aplica o reverb de acordo com a intensidade do smoothEffectSend
-            outputLeftChannel[i] = processReverb(&reverbLeft, sinal[i*2], delayBufferLeft, BUFFER_SIZE, &delayIndexLeft, i) * smoothEffectSend;
-            outputRightChannel[i] = processReverb(&reverbRight, sinal[i*2 + 1], delayBufferRight, BUFFER_SIZE, &delayIndexRight, i) * smoothEffectSend;
-        }
+    // Aplica o reverb e mistura com o som original
+    for (int i = 0; i < numSamples; i++) {
+        // Processa o reverb nos dois canais
+        float wetLeft = processReverb(&reverbLeft, sinal[i*2], delayBufferLeft, BUFFER_SIZE, &delayIndexLeft, i);
+        float wetRight = processReverb(&reverbRight, sinal[i*2 + 1], delayBufferRight, BUFFER_SIZE, &delayIndexRight, i);
+
+        // Mistura o som seco (original) com o molhado (com reverb)
+        outputLeftChannel[i] = sinal[i*2] * (1.0f - smoothWetness) + wetLeft * smoothWetness;
+        outputRightChannel[i] = sinal[i*2 + 1] * (1.0f - smoothWetness) + wetRight * smoothWetness;
     }
 
     // Aplica o ganho ao sinal processado, antes de aplicar os efeitos

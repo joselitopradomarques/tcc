@@ -108,7 +108,7 @@ int main() {
     apply_delay_to_audio(input_files[0], output_files_with_delay[0], delay_time);
 
     // Define o efeito de reverb com o valor entre 0.0 e 1.0, onde 1.0 corresponde ao feedback máximo (100 dB)
-    float effectAmount = 0.1f;  // Ajuste para variar entre 0.0 (sem efeito) e 1.0 (feedback máximo)
+    float effectAmount = 0.5f;  // Ajuste para variar entre 0.0 (sem efeito) e 1.0 (feedback máximo)
 
     // Chama a função de aplicação do efeito com o parâmetro effectAmount
     applyReverbEffect(input_files[0], output_files_with_reverb[0], effectAmount);
