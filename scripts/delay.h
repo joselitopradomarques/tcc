@@ -15,10 +15,13 @@ typedef struct {
 // Função para inicializar o buffer de delay
 void init_delay_buffer(DelayBuffer *db, int delay_ms);
 
-// Função para processar o delay
-float process_delay(DelayBuffer *db, float input, int delay_ms);
+// Função para prevenir clipping
+float prevent_clipping(float sample);
+
+// Função para processar o delay com atenuação fixa
+float process_delay(DelayBuffer *db, float input, int delay_ms, float attenuation);
 
 // Função para aplicar delay ao áudio
-void apply_delay_to_audio(const char *input_filename, const char *output_filename, int delay_time);
+void apply_delay_to_audio(const char *input_filename, const char *output_filename, float delay_time);
 
 #endif // DELAY_H
