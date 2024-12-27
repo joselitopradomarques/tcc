@@ -1,3 +1,5 @@
+// processamento_sinais.h
+
 #ifndef PROCESSAMENTO_SINAIS_H
 #define PROCESSAMENTO_SINAIS_H
 
@@ -11,6 +13,8 @@ void somar_sinais(short *sinal1, short *sinal2, short *resultado, int tamanho);
 // Função para aplicar os efeitos (delay ou reverb)
 void apply_effect_to_audio(int effect_choice, float effect_amount);
 
+// Função para execução final
+void aplicar_filtragem_e_efeito(float frequencia_corte, int fx_select, float effectAmount);
 
 // Função para executar a filtragem dos dois sinais e somá-los
 void executar_filtragem_e_soma(float frequencia_corte);

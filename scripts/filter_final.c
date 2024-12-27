@@ -144,7 +144,11 @@ float calcular_nova_frequencia_corte(float frequencia_corte_atual) {
     float fc2 = pow(10.0, fc2_log);
     
     // Exibindo o resultado
-    printf("Para fc1 = %.2f Hz, fc2 = %.2f Hz\n", frequencia_corte_atual, fc2);
+    printf("\n---- Seção de filtragem:\n"); 
+    printf("fc = %.2f Hz\n", frequencia_corte_atual);
+    printf("HPF aplicado ao canal 1 com frequência de corte igual a %.2f Hz\n", frequencia_corte_atual);
+    printf("HPF aplicado ao canal 2 com frequência de corte igual a %.2f Hz\n\n", fc2);
+
     
     // Retornando o valor de fc2
     return fc2;
