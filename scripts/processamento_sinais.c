@@ -64,58 +64,33 @@ void apply_effect_to_audio(int effect_choice, float effect_amount) {
 
 
 
-// Função para executar a filtragem dos dois sinais e somá-los
-void executar_filtragem_e_soma(float frequencia_corte) {
-    const char *input_files[] = {
-        "/home/joselito/git/tcc/datas/audio01.wav",
-        "/home/joselito/git/tcc/datas/audio02.wav"
-    };
-    const char *output_files[] = {
-        "/home/joselito/git/tcc/scripts/saida_filtrada_1.wav",
-        "/home/joselito/git/tcc/scripts/saida_filtrada_2.wav",
-        "/home/joselito/git/tcc/scripts/saida_filtrada_soma.wav"
-    };
+void processar_audio(char* buffer, int size, float frequencia_corte_i) {
+    // Função onde o processamento de áudio será feito
+    printf("Processando áudio...\n");
 
-    short *sinal_estereo[2] = {NULL, NULL};
-    short *sinal_filtrado[2] = {NULL, NULL};
-    short *sinal_soma = NULL;
-    int tamanho[2] = {0, 0};
+    // Definir os coeficientes do filtro FIR
+    float coeficientes[ORDEM];
 
-    // Filtragem para o primeiro arquivo com a frequência de corte recebida como argumento
-    for (int i = 0; i < 2; i++) {
-        if (ler_wav_estereo(input_files[i], &sinal_estereo[i], &tamanho[i]) != 0) {
-            for (int j = 0; j < i; j++) {
-                free(sinal_estereo[j]);
-                free(sinal_filtrado[j]);
-            }
-            return;
-        }
-
-        sinal_filtrado[i] = (short *)malloc(tamanho[i] * 2 * sizeof(short));  // 2 canais (estéreo)
-        if (!sinal_filtrado[i]) {
-            printf("Erro ao alocar memória para o sinal filtrado %d\n", i + 1);
-            for (int j = 0; j <= i; j++) {
-                free(sinal_estereo[j]);
-                free(sinal_filtrado[j]);
-            }
-            return;
-        }
-
-        // Definindo a frequência de corte para o segundo arquivo
-        float frequencia_corte_i = (i == 0) ? frequencia_corte : calcular_nova_frequencia_corte(frequencia_corte);
-
-        float coeficientes[ORDEM];
-        gerar_filtro_FIR(coeficientes, ORDEM, frequencia_corte_i, SAMPLE_RATE);
-        aplicar_filtro_FIR(sinal_estereo[i], sinal_filtrado[i], tamanho[i] * 2, coeficientes, ORDEM);
-
-        if (escrever_wav_estereo(output_files[i], sinal_filtrado[i], tamanho[i]) != 0) {
-            for (int j = 0; j <= i; j++) {
-                free(sinal_estereo[j]);
-                free(sinal_filtrado[j]);
-            }
-            return;
-        }
+    // Gerar o filtro FIR com os coeficientes baseados na frequência de corte
+    gerar_filtro_FIR(coeficientes, ORDEM, frequencia_corte_i, SAMPLE_RATE);
+    
+    // O buffer de áudio precisa ser tratado de acordo com o tipo de dado (por exemplo, short ou float)
+    // Aqui assumimos que o buffer é um array de shorts (16 bits)
+    short* sinal_filtrado = (short*)malloc(size * sizeof(short));
+    if (!sinal_filtrado) {
+        printf("Erro ao alocar memória para o sinal filtrado\n");
+        return;
     }
+
+    // Aplicar o filtro FIR no buffer de áudio
+    aplicar_filtro_FIR((short*)buffer, sinal_filtrado, size, coeficientes, ORDEM);
+
+    // Aqui você pode adicionar outras operações no sinal filtrado, como delay, reverb, etc.
+
+    // Liberar memória
+    free(sinal_filtrado);
+}
+
 
     sinal_soma = (short *)malloc(tamanho[0] * 2 * sizeof(short));  // 2 canais (estéreo)
     if (!sinal_soma) {

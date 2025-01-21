@@ -1,0 +1,20 @@
+- Fluxograma da main
+
+1) Definição de variáveis
+	a) float Fx_Amount
+	b) int fx_select
+	c) float frequencia_corte
+
+2) aplicar_filtragem_e_efeito(frequencia_corte, fx_select, fx_Amount);
+
+    a) executar_filtragem_e_soma(frequencia_corte);
+        2.a.a)
+            - Definição dos arquivos de entrada e de saída
+            - Loop que percorre cada canal da track
+                - ler_wav_estereo(input_files[i], &sinal_estereo[i], &tamanho[i]) != 0);
+
+
+    b) apply_effect_to_audio(fx_select, effectAmount);
+    c) executar_arquivo_wav("/home/joselito/git/tcc/scripts/saida_filtrada_soma.wav");
+        Essa função só serve para a reprodução.
+        Ela deve se associar à função de finalização do callback

@@ -1,6 +1,7 @@
 {
     "git.ignoreLimitWarning": true,
     "files.associations": {
-        "processamento_sinais.h": "c"
+        "processamento_sinais.h": "c",
+        "filter_final.h": "c"
     }
 }
