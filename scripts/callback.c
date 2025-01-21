@@ -3,19 +3,50 @@
 #include <alsa/asoundlib.h>
 #include "filter_final.h"
 #include <time.h>  // Para medir o tempo
+#include <unistd.h>
+#include <fcntl.h>
+#include <linux/i2c-dev.h>
 
-#define PCM_DEVICE_1 "hw:1,0"  // Dispositivo 1 de captura
-#define PCM_DEVICE_2 "hw:2,0"  // Dispositivo 2 de captura (ajuste conforme necessário)
+#define PCM_DEVICE_1 "hw:3,0"  // Dispositivo 1 de captura
+#define PCM_DEVICE_2 "hw:4,0"  // Dispositivo 2 de captura (ajuste conforme necessário)
 #define BUFFER_SIZE 1024  // Ajuste conforme necessário
 #define SAMPLE_RATE 44100  // Taxa de amostragem
-#define N_BUFFERS_PARA_ATUALIZAR 10  // Número de buffers após os quais a frequência de corte será atualizada
+#define I2C_DEVICE "/dev/i2c-1"  // Caminho do dispositivo I2C (ajuste conforme necessário)
+#define PCF8591_ADDR 0x48  // Endereço do dispositivo I2C (ajuste conforme necessário)
+#define N_BUFFERS_UPDATE 10  // Atualizar as frequências de corte a cada N buffers
+
+int abrir_i2c() {
+    int file = open(I2C_DEVICE, O_RDWR);
+    if (file < 0) {
+        perror("Erro ao abrir o barramento I2C");
+        exit(1);
+    }
+    return file;
+}
+
+int ler_valor_i2c(int file) {
+    unsigned char buffer[2];
+    // Envia o comando para ler o valor da entrada analógica
+    buffer[0] = 0x01;  // Comando de leitura (ajuste conforme necessário)
+    if (write(file, buffer, 1) != 1) {
+        perror("Erro ao escrever no barramento I2C");
+        exit(1);
+    }
+
+    // Lê o valor
+    if (read(file, buffer, 2) != 2) {
+        perror("Erro ao ler do barramento I2C");
+        exit(1);
+    }
+    // Retorna o valor lido (ajuste conforme necessário)
+    return (int)buffer[1];
+}
 
 void processar_audio(char* buffer, int size, float* coeficientes_filtro) {
     // Função onde o processamento de áudio será feito
     printf("Processando áudio...\n");
 
     // O buffer de áudio precisa ser tratado de acordo com o tipo de dado (por exemplo, short ou float)
-    // Aqui assumimos que o buffer é um array de shorts (16 bits)
     short* sinal_filtrado = (short*)malloc(size * sizeof(short));
     if (!sinal_filtrado) {
         printf("Erro ao alocar memória para o sinal filtrado\n");
@@ -34,10 +65,30 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
     char buffer1[BUFFER_SIZE];
     char buffer2[BUFFER_SIZE];
     int rc;
-    int contador_buffers = 0;  // Inicializa o contador de buffers
+
+    // Abrir o dispositivo I2C
+    int file = abrir_i2c();
+
+    // Contador de buffers processados
+    int contador_buffers = 0;
 
     while (1) {
         clock_t start_time = clock();  // Captura o tempo antes do processamento
+
+        // A cada N buffers, atualiza as frequências de corte
+        if (contador_buffers % N_BUFFERS_UPDATE == 0) {
+            // Lê os valores das frequências de corte do dispositivo I2C
+            int frequencia_corte1_valor = ler_valor_i2c(file);
+            int frequencia_corte2_valor = ler_valor_i2c(file);
+
+            // Converte os valores lidos para frequências de corte (ajuste conforme necessário)
+            float frequencia_corte1 = frequencia_corte1_valor * 1000.0f / 255.0f;  // Exemplo de conversão
+            float frequencia_corte2 = frequencia_corte2_valor * 1000.0f / 255.0f;  // Exemplo de conversão
+
+            // Atualiza os coeficientes dos filtros com as novas frequências de corte
+            gerar_filtro_FIR(coeficientes_filtro1, ORDEM, frequencia_corte1, SAMPLE_RATE);
+            gerar_filtro_FIR(coeficientes_filtro2, ORDEM, frequencia_corte2, SAMPLE_RATE);
+        }
 
         // Captura o áudio do primeiro dispositivo de entrada
         rc = snd_pcm_readi(pcm_handle_capture1, buffer1, BUFFER_SIZE);
@@ -55,23 +106,6 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
             snd_pcm_prepare(pcm_handle_capture2);
         } else if (rc < 0) {
             fprintf(stderr, "Erro ao capturar áudio do dispositivo 2: %s\n", snd_strerror(rc));
-        }
-
-        // Atualiza a frequência de corte a cada N buffers
-        if (contador_buffers >= N_BUFFERS_PARA_ATUALIZAR) {
-            // Atualiza as frequências de corte via I2C
-            // Aqui você deveria chamar uma função que faz a leitura via I2C, por exemplo:
-            float nova_frequencia_corte1 = ler_frequencia_corte_I2C(1);  // Função fictícia que lê a frequência de corte do primeiro dispositivo
-            float nova_frequencia_corte2 = ler_frequencia_corte_I2C(2);  // Função fictícia que lê a frequência de corte do segundo dispositivo
-
-            // Atualiza os coeficientes do filtro com os novos valores de frequência de corte
-            gerar_filtro_FIR(coeficientes_filtro1, ORDEM, nova_frequencia_corte1, SAMPLE_RATE);
-            gerar_filtro_FIR(coeficientes_filtro2, ORDEM, nova_frequencia_corte2, SAMPLE_RATE);
-
-            printf("Frequências de corte atualizadas: %.2f Hz, %.2f Hz\n", nova_frequencia_corte1, nova_frequencia_corte2);
-
-            // Reseta o contador de buffers
-            contador_buffers = 0;
         }
 
         // Processa o áudio capturado do dispositivo 1 com o primeiro filtro FIR
@@ -105,6 +139,8 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
         // Incrementa o contador de buffers
         contador_buffers++;
     }
+
+    close(file);  // Fecha o dispositivo I2C
 }
 
 int main() {
@@ -117,15 +153,15 @@ int main() {
     snd_pcm_hw_params_t *params_capture2;
     snd_pcm_hw_params_t *params_playback;
 
-    // Frequência de corte inicial
-    float frequencia_corte1 = 1000.0f;  // Exemplo de frequência de corte para o primeiro dispositivo
-    float frequencia_corte2 = 2000.0f;  // Exemplo de frequência de corte para o segundo dispositivo
-
     // Criar os coeficientes dos dois filtros FIR
     float coeficientes_filtro1[ORDEM];
     float coeficientes_filtro2[ORDEM];
 
-    // Gerar os filtros FIR com as frequências de corte correspondentes
+    // Frequências de corte iniciais
+    float frequencia_corte1 = 1000.0f;
+    float frequencia_corte2 = 2000.0f;
+
+    // Gerar os filtros FIR com as frequências de corte iniciais
     gerar_filtro_FIR(coeficientes_filtro1, ORDEM, frequencia_corte1, SAMPLE_RATE);
     gerar_filtro_FIR(coeficientes_filtro2, ORDEM, frequencia_corte2, SAMPLE_RATE);
 
@@ -160,7 +196,7 @@ int main() {
         return 1;
     }
 
-    // Configuração do dispositivo de captura 2 (semelhante)
+    // Configuração do dispositivo de captura 2
     snd_pcm_hw_params_alloca(&params_capture2);
     snd_pcm_hw_params_any(pcm_handle_capture2, params_capture2);
     snd_pcm_hw_params_set_access(pcm_handle_capture2, params_capture2, SND_PCM_ACCESS_RW_INTERLEAVED);
@@ -184,13 +220,8 @@ int main() {
         return 1;
     }
 
-    // Chama a função de callback de áudio
+    // Inicia o callback de áudio
     audio_callback(pcm_handle_capture1, pcm_handle_capture2, pcm_handle_playback, coeficientes_filtro1, coeficientes_filtro2);
-
-    // Fecha os dispositivos de captura e reprodução
-    snd_pcm_close(pcm_handle_capture1);
-    snd_pcm_close(pcm_handle_capture2);
-    snd_pcm_close(pcm_handle_playback);
 
     return 0;
 }
