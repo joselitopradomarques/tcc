@@ -6,14 +6,17 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <linux/i2c-dev.h>
+#include <sys/ioctl.h>
 
 #define PCM_DEVICE_1 "hw:3,0"  // Dispositivo 1 de captura
 #define PCM_DEVICE_2 "hw:4,0"  // Dispositivo 2 de captura (ajuste conforme necessário)
-#define BUFFER_SIZE 1024  // Ajuste conforme necessário
+#define BUFFER_SIZE 512  // Ajuste conforme necessário
 #define SAMPLE_RATE 44100  // Taxa de amostragem
 #define I2C_DEVICE "/dev/i2c-1"  // Caminho do dispositivo I2C (ajuste conforme necessário)
-#define PCF8591_ADDR 0x48  // Endereço do dispositivo I2C (ajuste conforme necessário)
-#define N_BUFFERS_UPDATE 10  // Atualizar as frequências de corte a cada N buffers
+#define PCF8591_ADDRESS 0x48 // Endereço I2C do PCF8591 (verifique com o i2cdetect)
+#define CHANNEL_A0 0x48  // Canal A0 (entrada analógica 0)
+#define CHANNEL_A1 0x49  // Canal A1 (entrada analógica 1)
+#define N_BUFFERS_UPDATE 100  // Atualizar as frequências de corte a cada N buffers
 
 int abrir_i2c() {
     int file = open(I2C_DEVICE, O_RDWR);
@@ -24,25 +27,53 @@ int abrir_i2c() {
     return file;
 }
 
-int ler_valor_i2c(int file) {
-    unsigned char buffer[2];
-    // Envia o comando para ler o valor da entrada analógica
-    buffer[0] = 0x01;  // Comando de leitura (ajuste conforme necessário)
-    if (write(file, buffer, 1) != 1) {
-        perror("Erro ao escrever no barramento I2C");
+
+int ler_valor_i2c(int file, unsigned char channel) {
+    unsigned char config;
+
+    // Definir o canal de entrada (A0 ou A1) no PCF8591
+    if (channel == CHANNEL_A0) {
+        config = 0x40;  // Configuração para canal A0
+    } else if (channel == CHANNEL_A1) {
+        config = 0x41;  // Configuração para canal A1
+    } else {
+        fprintf(stderr, "Canal inválido\n");
+        return -1;
+    }
+
+    // Define o endereço do dispositivo I2C (PCF8591)
+    if (ioctl(file, I2C_SLAVE, PCF8591_ADDRESS) < 0) {
+        perror("Erro ao selecionar o dispositivo I2C");
         exit(1);
     }
 
-    // Lê o valor
-    if (read(file, buffer, 2) != 2) {
-        perror("Erro ao ler do barramento I2C");
+    // Enviar comando para selecionar o canal
+    if (write(file, &config, 1) != 1) {
+        perror("Erro ao escrever no dispositivo I2C");
         exit(1);
     }
-    // Retorna o valor lido (ajuste conforme necessário)
-    return (int)buffer[1];
+
+    // Ler o valor (duas leituras necessárias: a primeira é lixo)
+    unsigned char buffer[1];
+    
+    // Leitura "lixo"
+    if (read(file, buffer, 1) != 1) {
+        perror("Erro ao ler valor de conversão inicial (lixo)");
+        exit(1);
+    }
+
+    // Leitura válida
+    if (read(file, buffer, 1) != 1) {
+        perror("Erro ao ler valor de conversão válida");
+        exit(1);
+    }
+
+    // O valor retornado é de 8 bits
+    return (int)buffer[0];  // Retornar o valor lido (0 a 255)
 }
 
-void processar_audio(char* buffer, int size, float* coeficientes_filtro) {
+
+void processar_audio(short int* buffer, int size, float* coeficientes_filtro) {
     // Função onde o processamento de áudio será feito
     printf("Processando áudio...\n");
 
@@ -62,8 +93,9 @@ void processar_audio(char* buffer, int size, float* coeficientes_filtro) {
 }
 
 void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_capture2, snd_pcm_t *pcm_handle_playback, float* coeficientes_filtro1, float* coeficientes_filtro2) {
-    char buffer1[BUFFER_SIZE];
-    char buffer2[BUFFER_SIZE];
+    short buffer1[BUFFER_SIZE];
+    short buffer2[BUFFER_SIZE];
+
     int rc;
 
     // Abrir o dispositivo I2C
@@ -78,9 +110,9 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
         // A cada N buffers, atualiza as frequências de corte
         if (contador_buffers % N_BUFFERS_UPDATE == 0) {
             // Lê os valores das frequências de corte do dispositivo I2C
-            int frequencia_corte1_valor = ler_valor_i2c(file);
-            int frequencia_corte2_valor = ler_valor_i2c(file);
-
+            int frequencia_corte1_valor = ler_valor_i2c(file, CHANNEL_A0);
+            int frequencia_corte2_valor = ler_valor_i2c(file, CHANNEL_A1);
+            printf("Valor de corte1: %d, Valor de corte2: %d\n", frequencia_corte1_valor, frequencia_corte2_valor);
             // Converte os valores lidos para frequências de corte (ajuste conforme necessário)
             float frequencia_corte1 = frequencia_corte1_valor * 1000.0f / 255.0f;  // Exemplo de conversão
             float frequencia_corte2 = frequencia_corte2_valor * 1000.0f / 255.0f;  // Exemplo de conversão
@@ -91,7 +123,7 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
         }
 
         // Captura o áudio do primeiro dispositivo de entrada
-        rc = snd_pcm_readi(pcm_handle_capture1, buffer1, BUFFER_SIZE);
+        rc = snd_pcm_readi(pcm_handle_capture1, buffer1, BUFFER_SIZE);  
         if (rc == -EPIPE) {
             // Buffer de captura estourado, reconfigure
             snd_pcm_prepare(pcm_handle_capture1);
