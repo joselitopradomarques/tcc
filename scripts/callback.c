@@ -10,7 +10,7 @@
 
 #define PCM_DEVICE_1 "hw:3,0"  // Dispositivo 1 de captura
 #define PCM_DEVICE_2 "hw:4,0"  // Dispositivo 2 de captura (ajuste conforme necessário)
-#define BUFFER_SIZE 512  // Ajuste conforme necessário
+#define BUFFER_SIZE 2  // Ajuste conforme necessário
 #define SAMPLE_RATE 44100  // Taxa de amostragem
 #define I2C_DEVICE "/dev/i2c-1"  // Caminho do dispositivo I2C (ajuste conforme necessário)
 #define PCF8591_ADDRESS 0x48 // Endereço I2C do PCF8591 (verifique com o i2cdetect)
