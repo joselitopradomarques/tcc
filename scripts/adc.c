@@ -6,8 +6,8 @@
 #include <sys/ioctl.h>
 
 #define PCF8591_ADDRESS 0x48 // Endereço I2C do PCF8591 (verifique com o i2cdetect)
-#define CHANNEL_A0 0x48  // Canal A0 (entrada analógica 0)
-#define CHANNEL_A1 0x49  // Canal A1 (entrada analógica 1)
+#define CHANNEL_A0 0x40  // Canal A0 (entrada analógica 0)
+#define CHANNEL_A1 0x41  // Canal A1 (entrada analógica 1)
 
 int main() {
     int file;

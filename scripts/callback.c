@@ -10,6 +10,7 @@
 
 #define PCM_DEVICE_1 "hw:3,0"  // Dispositivo 1 de captura
 #define PCM_DEVICE_2 "hw:4,0"  // Dispositivo 2 de captura (ajuste conforme necessário)
+#define PCM_DEVICE_3 "hw:2,0"  // Dispositivo 3 de reŕodução
 #define BUFFER_SIZE 16  // Ajuste conforme necessário
 #define SAMPLE_RATE 44100  // Taxa de amostragem
 #define I2C_DEVICE "/dev/i2c-1"  // Caminho do dispositivo I2C (ajuste conforme necessário)
@@ -99,14 +100,14 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
     int rc;
 
     // Abrir o dispositivo I2C
-    int file = abrir_i2c();
+    
 
     // Contador de buffers processados
     int contador_buffers = 0;
 
     while (1) {
         clock_t start_time = clock();  // Captura o tempo antes do processamento
-
+        int file = abrir_i2c();
         // A cada N buffers, atualiza as frequências de corte
         if (contador_buffers % N_BUFFERS_UPDATE == 0) {
             // Lê os valores das frequências de corte do dispositivo I2C
@@ -167,12 +168,12 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
         // Calcula e imprime o tempo de processamento dos buffers
         double time_taken = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
         printf("Tempo de processamento dos buffers: %.6f segundos\n", time_taken);
-
         // Incrementa o contador de buffers
         contador_buffers++;
+        close(file);  // Fecha o dispositivo I2C
     }
 
-    close(file);  // Fecha o dispositivo I2C
+    
 }
 
 int main() {
@@ -211,7 +212,7 @@ int main() {
     }
 
     // Abre dispositivo de reprodução
-    if (snd_pcm_open(&pcm_handle_playback, PCM_DEVICE_1, SND_PCM_STREAM_PLAYBACK, 0) < 0) {
+    if (snd_pcm_open(&pcm_handle_playback, PCM_DEVICE_3, SND_PCM_STREAM_PLAYBACK, 0) < 0) {
         fprintf(stderr, "Erro ao abrir o dispositivo de reprodução\n");
         return 1;
     }
