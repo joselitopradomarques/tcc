@@ -10,13 +10,13 @@
 
 #define PCM_DEVICE_1 "hw:3,0"  // Dispositivo 1 de captura
 #define PCM_DEVICE_2 "hw:4,0"  // Dispositivo 2 de captura (ajuste conforme necessário)
-#define BUFFER_SIZE 2  // Ajuste conforme necessário
+#define BUFFER_SIZE 16  // Ajuste conforme necessário
 #define SAMPLE_RATE 44100  // Taxa de amostragem
 #define I2C_DEVICE "/dev/i2c-1"  // Caminho do dispositivo I2C (ajuste conforme necessário)
 #define PCF8591_ADDRESS 0x48 // Endereço I2C do PCF8591 (verifique com o i2cdetect)
 #define CHANNEL_A0 0x48  // Canal A0 (entrada analógica 0)
 #define CHANNEL_A1 0x49  // Canal A1 (entrada analógica 1)
-#define N_BUFFERS_UPDATE 100  // Atualizar as frequências de corte a cada N buffers
+#define N_BUFFERS_UPDATE 1000  // Atualizar as frequências de corte a cada N buffers
 
 int abrir_i2c() {
     int file = open(I2C_DEVICE, O_RDWR);
