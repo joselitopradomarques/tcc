@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <alsa/asoundlib.h>
-#include <time.h>  // Inclua a biblioteca de tempo para controle do tempo de captura
+#include <time.h>
+#include <pthread.h>  // Inclua a biblioteca para threads
 
 #define DEVICE "hw:4,0"  // Defina o dispositivo desejado (hw:3,0)
 #define PCM_CAPTURE_FILE "captured_audio.bin"  // Arquivo de captura de áudio em formato binário
@@ -10,14 +11,14 @@
 #define CHANNELS 2         // Número de canais (Estéreo)
 #define FORMAT SND_PCM_FORMAT_S16_LE  // Formato de áudio (16 bits, little-endian)
 
-int main() {
+void* capture_audio(void* arg) {
     int rc;
     snd_pcm_t *pcm_handle;
     snd_pcm_hw_params_t *params;
     unsigned int rate = SAMPLE_RATE;
     snd_pcm_uframes_t buffer_size = 1024;  // Tamanho do buffer
     int periods = 2;  // Número de períodos
-    short *buffer;  // Buffer para os dados capturados
+    void *buffer;  // Buffer para os dados capturados (agora um ponteiro void)
 
     // Inicializar a captura com logging
     printf("Iniciando configuração ALSA...\n");
@@ -26,7 +27,7 @@ int main() {
     rc = snd_pcm_open(&pcm_handle, DEVICE, SND_PCM_STREAM_CAPTURE, 0);
     if (rc < 0) {
         fprintf(stderr, "Erro ao abrir o dispositivo %s: %s\n", DEVICE, snd_strerror(rc));
-        return -1;
+        return NULL;
     }
     printf("Dispositivo PCM aberto com sucesso: %s\n", DEVICE);
 
@@ -38,59 +39,59 @@ int main() {
     rc = snd_pcm_hw_params_set_access(pcm_handle, params, SND_PCM_ACCESS_RW_INTERLEAVED);
     if (rc < 0) {
         fprintf(stderr, "Erro ao configurar acesso intercalado: %s\n", snd_strerror(rc));
-        return -1;
+        return NULL;
     }
 
     rc = snd_pcm_hw_params_set_format(pcm_handle, params, FORMAT);
     if (rc < 0) {
         fprintf(stderr, "Erro ao configurar formato: %s\n", snd_strerror(rc));
-        return -1;
+        return NULL;
     }
     printf("Formato configurado com sucesso: S16_LE\n");
 
     rc = snd_pcm_hw_params_set_channels(pcm_handle, params, CHANNELS);  // Estéreo
     if (rc < 0) {
         fprintf(stderr, "Erro ao configurar canais: %s\n", snd_strerror(rc));
-        return -1;
+        return NULL;
     }
     printf("Canais configurados com sucesso: %d\n", CHANNELS);
 
     rc = snd_pcm_hw_params_set_rate_near(pcm_handle, params, &rate, 0);
     if (rc < 0) {
         fprintf(stderr, "Erro ao configurar taxa de amostragem: %s\n", snd_strerror(rc));
-        return -1;
+        return NULL;
     }
     printf("Taxa de amostragem configurada com sucesso: %d Hz\n", rate);
 
     rc = snd_pcm_hw_params_set_period_size_near(pcm_handle, params, &buffer_size, 0);
     if (rc < 0) {
         fprintf(stderr, "Erro ao configurar tamanho do frame: %s\n", snd_strerror(rc));
-        return -1;
+        return NULL;
     }
     printf("Tamanho do frame configurado com sucesso: %ld frames\n", buffer_size);
 
     rc = snd_pcm_hw_params_set_periods_near(pcm_handle, params, &periods, 0);
     if (rc < 0) {
         fprintf(stderr, "Erro ao configurar número de períodos: %s\n", snd_strerror(rc));
-        return -1;
+        return NULL;
     }
 
     // Aplicar os parâmetros ao dispositivo
     rc = snd_pcm_hw_params(pcm_handle, params);
     if (rc < 0) {
         fprintf(stderr, "Erro ao configurar os parâmetros de hardware: %s\n", snd_strerror(rc));
-        return -1;
+        return NULL;
     }
 
     // Liberar a memória alocada para os parâmetros
     snd_pcm_hw_params_free(params);
 
-    // Alocar memória para o buffer de captura
-    buffer = (short *) malloc(buffer_size * CHANNELS * sizeof(short)); // 16 bits por amostra (S16_LE)
+    // Alocar memória para o buffer de captura (usando void*)
+    buffer = malloc(buffer_size * CHANNELS * sizeof(short)); // O tipo real de buffer será determinado ao usar
 
     if (buffer == NULL) {
         perror("Erro ao alocar memória para o buffer");
-        return -1;
+        return NULL;
     }
 
     // Variáveis de controle de tempo
@@ -102,7 +103,7 @@ int main() {
     FILE *bin_file = fopen(PCM_CAPTURE_FILE, "wb");
     if (!bin_file) {
         printf("Erro ao abrir o arquivo para escrita!\n");
-        return -1;
+        return NULL;
     }
 
     while (1) {
@@ -114,10 +115,12 @@ int main() {
 
         // Captura o áudio em frames
         int frames = snd_pcm_readi(pcm_handle, buffer, buffer_size);
+        printf("Frames lidos: %d\n", frames);  // Adicione esta linha para depuração
         if (frames < 0) {
             fprintf(stderr, "Erro de captura: %s\n", snd_strerror(frames));
             break;
         }
+
 
         // Escrever os dados capturados no arquivo binário
         fwrite(buffer, sizeof(short), frames * CHANNELS, bin_file);  // 2 canais (estéreo)
@@ -131,6 +134,21 @@ int main() {
     free(buffer);
 
     printf("Captura de áudio finalizada e salva em %s\n", PCM_CAPTURE_FILE);
+
+    return NULL;
+}
+
+int main() {
+    pthread_t capture_thread;  // Declaração da thread
+
+    // Criar a thread para captura de áudio
+    if (pthread_create(&capture_thread, NULL, capture_audio, NULL) != 0) {
+        fprintf(stderr, "Erro ao criar a thread de captura\n");
+        return -1;
+    }
+
+    // Aguardar a thread de captura terminar
+    pthread_join(capture_thread, NULL);
 
     return 0;
 }
