@@ -107,6 +107,9 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
 
     while (1) {
         clock_t start_time = clock();  // Captura o tempo antes do processamento
+
+
+        /*
         int file = abrir_i2c();
         // A cada N buffers, atualiza as frequências de corte
         if (contador_buffers % N_BUFFERS_UPDATE == 0) {
@@ -122,6 +125,8 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
             gerar_filtro_FIR(coeficientes_filtro1, ORDEM, frequencia_corte1, SAMPLE_RATE);
             gerar_filtro_FIR(coeficientes_filtro2, ORDEM, frequencia_corte2, SAMPLE_RATE);
         }
+
+        */
 
         // Captura o áudio do primeiro dispositivo de entrada
         rc = snd_pcm_readi(pcm_handle_capture1, buffer1, BUFFER_SIZE);  
@@ -141,6 +146,14 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
             fprintf(stderr, "Erro ao capturar áudio do dispositivo 2: %s\n", snd_strerror(rc));
         }
 
+        // Conversão de 24 bits para 16 bits para o buffer2
+        for (int i = 0; i < BUFFER_SIZE; i++) {
+            int valor_24_bits = buffer2[i];          // Buffer com dados de 24 bits
+            int16_t valor_16_bits = (int16_t)(valor_24_bits >> 8);  // Trunca para 16 bits
+
+            buffer2[i] = valor_16_bits;  // Armazena o valor truncado de volta no buffer2
+        }
+
         // Processa o áudio capturado do dispositivo 1 com o primeiro filtro FIR
         processar_audio(buffer1, BUFFER_SIZE, coeficientes_filtro1);
 
@@ -149,28 +162,18 @@ void audio_callback(snd_pcm_t *pcm_handle_capture1, snd_pcm_t *pcm_handle_captur
 
         // Após o processamento, os buffers contêm o áudio já filtrado ou modificado.
         // Agora, podemos enviar estes buffers para reprodução
-        rc = snd_pcm_writei(pcm_handle_playback, buffer1, BUFFER_SIZE);
-        if (rc == -EPIPE) {
-            snd_pcm_prepare(pcm_handle_playback);
-        } else if (rc < 0) {
-            fprintf(stderr, "Erro ao reproduzir áudio do buffer 1: %s\n", snd_strerror(rc));
-        }
-
-        rc = snd_pcm_writei(pcm_handle_playback, buffer2, BUFFER_SIZE);
-        if (rc == -EPIPE) {
-            snd_pcm_prepare(pcm_handle_playback);
-        } else if (rc < 0) {
-            fprintf(stderr, "Erro ao reproduzir áudio do buffer 2: %s\n", snd_strerror(rc));
-        }
 
         clock_t end_time = clock();  // Captura o tempo após o processamento
 
         // Calcula e imprime o tempo de processamento dos buffers
         double time_taken = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
         printf("Tempo de processamento dos buffers: %.6f segundos\n", time_taken);
+        
+        /*
         // Incrementa o contador de buffers
         contador_buffers++;
         close(file);  // Fecha o dispositivo I2C
+        */
     }
 
     
@@ -220,10 +223,10 @@ int main() {
     // Configuração do dispositivo de captura 1
     snd_pcm_hw_params_alloca(&params_capture1);
     snd_pcm_hw_params_any(pcm_handle_capture1, params_capture1);
-    snd_pcm_hw_params_set_access(pcm_handle_capture1, params_capture1, SND_PCM_ACCESS_RW_INTERLEAVED);
+    snd_pcm_hw_params_set_access(pcm_handle_capture1, params_capture1, SND_PCM_ACCESS_RW_INTERLEAVED );
     snd_pcm_hw_params_set_format(pcm_handle_capture1, params_capture1, SND_PCM_FORMAT_S16_LE);  // 16 bits por amostra
     snd_pcm_hw_params_set_channels(pcm_handle_capture1, params_capture1, 2);  // Estéreo
-    snd_pcm_hw_params_set_rate_near(pcm_handle_capture1, params_capture1, &sample_rate, &dir);  // Taxa de 44100 Hz
+    //snd_pcm_hw_params_set_rate_near(pcm_handle_capture1, params_capture1, &sample_rate, &dir);  // Taxa de 44100 Hz
     if (snd_pcm_hw_params(pcm_handle_capture1, params_capture1) < 0) {
         fprintf(stderr, "Erro ao configurar o dispositivo de captura 1\n");
         return 1;
@@ -233,9 +236,9 @@ int main() {
     snd_pcm_hw_params_alloca(&params_capture2);
     snd_pcm_hw_params_any(pcm_handle_capture2, params_capture2);
     snd_pcm_hw_params_set_access(pcm_handle_capture2, params_capture2, SND_PCM_ACCESS_RW_INTERLEAVED);
-    snd_pcm_hw_params_set_format(pcm_handle_capture2, params_capture2, SND_PCM_FORMAT_S16_LE);  // 16 bits por amostra
+    snd_pcm_hw_params_set_format(pcm_handle_capture2, params_capture2, SND_PCM_FORMAT_S24_3LE);  // 16 bits por amostra
     snd_pcm_hw_params_set_channels(pcm_handle_capture2, params_capture2, 2);  // Estéreo
-    snd_pcm_hw_params_set_rate_near(pcm_handle_capture2, params_capture2, &sample_rate, &dir);  // Taxa de 44100 Hz
+    //snd_pcm_hw_params_set_rate_near(pcm_handle_capture2, params_capture2, &sample_rate, &dir);  // Taxa de 44100 Hz
     if (snd_pcm_hw_params(pcm_handle_capture2, params_capture2) < 0) {
         fprintf(stderr, "Erro ao configurar o dispositivo de captura 2\n");
         return 1;
