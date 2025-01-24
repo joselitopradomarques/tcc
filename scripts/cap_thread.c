@@ -4,11 +4,11 @@
 #include <pthread.h>
 #include <time.h>  // Inclua a biblioteca de tempo para controle do tempo de captura
 
-#define DEVICE_1 "hw:3,0"  // Dispositivo 1
-#define DEVICE_2 "hw:4,0"  // Dispositivo 2
+#define DEVICE_1 "hw:4,0"  // Dispositivo 1
+#define DEVICE_2 "hw:3,0"  // Dispositivo 2
 #define PCM_CAPTURE_FILE_1 "captured_audio_1.bin"  // Arquivo de captura de áudio do dispositivo 1
 #define PCM_CAPTURE_FILE_2 "captured_audio_2.bin"  // Arquivo de captura de áudio do dispositivo 2
-#define CAPTURE_TIME 10  // Tempo de captura em segundos (modificado para 10 segundos)
+#define CAPTURE_TIME 1  // Tempo de captura em segundos (modificado para 10 segundos)
 #define SAMPLE_RATE 44100  // Taxa de amostragem (44100 Hz para qualidade CD)
 #define CHANNELS_1 2        // Número de canais (Estéreo para o dispositivo 1)
 #define CHANNELS_2 2        // Número de canais (Estéreo para o dispositivo 2)
@@ -21,6 +21,24 @@ typedef struct {
     snd_pcm_format_t format;
     int channels;
 } capture_params_t;
+
+void convert_s24_to_s16(void *buffer, int frames, int channels);
+
+void convert_s24_to_s16(void *buffer, int frames, int channels) {
+    unsigned char *buf = (unsigned char *)buffer;
+    int i, j;
+    for (i = 0; i < frames; i++) {
+        for (j = 0; j < channels; j++) {
+            int index = (i * channels + j) * 3;  // Índice para 24 bits
+            int value = (buf[index] << 16) | (buf[index + 1] << 8) | buf[index + 2];
+
+            // Ajuste para 16 bits, truncando ou fazendo outro tipo de ajuste
+            short *output = (short *)(buf + i * channels * 2 + j * 2);
+            *output = (short)(value >> 8);  // Simples truncamento de 24 para 16 bits
+        }
+    }
+}
+
 
 void *capture_audio(void *arg) {
     capture_params_t *params = (capture_params_t *)arg;
@@ -125,6 +143,11 @@ void *capture_audio(void *arg) {
         if (frames < 0) {
             fprintf(stderr, "Erro de captura no dispositivo %s: %s\n", params->device, snd_strerror(frames));
             break;
+        }
+
+        // **Converter 24 bits para 16 bits (apenas para o dispositivo 1)**
+        if (params->format == SND_PCM_FORMAT_S24_3LE) {
+            convert_s24_to_s16(buffer, frames, params->channels);  // Aplica a conversão
         }
 
         // Escrever os dados capturados no arquivo binário
