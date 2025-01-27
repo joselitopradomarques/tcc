@@ -1,8 +1,15 @@
+/*
+gcc -o captura captura.c -lasound
+./captura
+*/
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <alsa/asoundlib.h>
 
-#define PCM_DEVICE "hw:3,0"  // Ajuste para o dispositivo correto
+#define PCM_DEVICE "hw:,0"  // Ajuste para o dispositivo correto
 #define RATE 44100           // Taxa de amostragem
 #define CHANNELS 2           // Número de canais (estéreo)
 #define SECONDS 10           // Duração da captura em segundos
@@ -14,7 +21,7 @@ int main() {
     snd_pcm_t *pcm_handle;
     snd_pcm_hw_params_t *params;
     unsigned int rate = RATE;
-    int dir;
+    int dir;    // Direção inicial, pode ser qualquer valor (não será usado diretamente)
     snd_pcm_uframes_t frames = FRAME_SIZE;  // Definindo o tamanho do frame
     int buffer_size;
 

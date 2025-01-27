@@ -4,8 +4,8 @@
 #include <pthread.h>
 #include <time.h>  // Inclua a biblioteca de tempo para controle do tempo de captura
 
-#define DEVICE_1 "hw:4,0"  // Dispositivo 1
-#define DEVICE_2 "hw:3,0"  // Dispositivo 2
+#define DEVICE_1 "hw:3,0"  // Dispositivo 1
+#define DEVICE_2 "hw:4,0"  // Dispositivo 2
 #define PCM_CAPTURE_FILE_1 "captured_audio_1.bin"  // Arquivo de captura de áudio do dispositivo 1
 #define PCM_CAPTURE_FILE_2 "captured_audio_2.bin"  // Arquivo de captura de áudio do dispositivo 2
 #define CAPTURE_TIME 1  // Tempo de captura em segundos (modificado para 10 segundos)

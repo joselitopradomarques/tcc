@@ -4,7 +4,7 @@
 #include <time.h>
 #include <pthread.h>  // Inclua a biblioteca para threads
 
-#define DEVICE "hw:4,0"  // Defina o dispositivo desejado (hw:3,0)
+#define DEVICE "hw:3,0"  // Defina o dispositivo desejado (hw:3,0)
 #define PCM_CAPTURE_FILE "captured_audio.bin"  // Arquivo de captura de áudio em formato binário
 #define CAPTURE_TIME 10  // Tempo de captura em segundos (modificado para 10 segundos)
 #define SAMPLE_RATE 44100  // Taxa de amostragem (44100 Hz para qualidade CD)
