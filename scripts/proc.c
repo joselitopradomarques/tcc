@@ -1,5 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>  // Necessário para usar a função sin() e PI
+#include "proc.h"
+
+#define PI 3.14159265358979323846  // Definindo PI
+// Função para aplicar o filtro FIR em cada buffer circular
+void aplicar_filtro_FIR_buffer(short *buffer_sinal, short *buffer_sinal_filtrado, int buffer_size, float *coeficientes, int ordem) {
+    // Aplicar o filtro FIR em um único buffer
+    for (int j = 0; j < buffer_size; j++) {
+        float acumulador = 0.0;
+        // Aplicar FIR para cada amostra no buffer
+        for (int k = 0; k < ordem; k++) {
+            if (j - k >= 0) {
+                acumulador += coeficientes[k] * buffer_sinal[j - k];
+            }
+        }
+        // Limitar a amplitude para valores de 16 bits
+        if (acumulador > MAX_16BIT) acumulador = MAX_16BIT;
+        if (acumulador < -MAX_16BIT) acumulador = -MAX_16BIT;
+        buffer_sinal_filtrado[j] = (short)acumulador;
+    }
+}
 
 int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
     FILE *file = fopen(filename, "rb");
@@ -53,6 +74,7 @@ int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
 
     return 0;
 }
+
 int ler_dois_wav_estereo(short **sinal1, short **sinal2, int *tamanho1, int *tamanho2) {
     // Definindo os caminhos dos arquivos WAV diretamente dentro da função
     const char *filename1 = "/home/joselito/git/tcc/datas/audio01.wav";
@@ -93,7 +115,6 @@ int ler_dois_wav_estereo(short **sinal1, short **sinal2, int *tamanho1, int *tam
 
 // Função para gerar buffers a partir dos sinais de áudio sinal1 e sinal2
 // Os sinais são divididos em buffers de tamanho definido pelo usuário
-// Função para gerar buffers a partir dos sinais de áudio sinal1 e sinal2
 int gerar_buffers_circulares(short *sinal1, short *sinal2, int tamanho, int buffer_size, short ***buffers_sinal1, short ***buffers_sinal2, int *num_buffers) {
     *num_buffers = (tamanho + buffer_size - 1) / buffer_size;  // Calculando o número de buffers necessários
 
@@ -128,8 +149,6 @@ int gerar_buffers_circulares(short *sinal1, short *sinal2, int tamanho, int buff
     return 0;  // Sucesso
 }
 
-
-
 // Função filtro_exemplo
 void filtro_exemplo(short *buffer, int buffer_size) {
     for (int i = 1; i < buffer_size - 1; i++) {
@@ -139,26 +158,78 @@ void filtro_exemplo(short *buffer, int buffer_size) {
 
 // Função para processar os buffers de sinal1 e sinal2
 // Aplica o filtro a cada buffer dos dois sinais
-
-int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size) {
+int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro) {
     // Verificar se os buffers estão alocados corretamente
     if (!buffers_sinal1 || !buffers_sinal2) {
         printf("Erro: buffers não alocados corretamente.\n");
         return -1;
     }
 
-    // Aplicar o filtro em cada buffer (acesso circular)
-    for (int i = 0; i < num_buffers; i++) {
-        if ((*buffers_sinal1)[i] != NULL) {
-            filtro_exemplo((*buffers_sinal1)[i], buffer_size);
-        }
-        if ((*buffers_sinal2)[i] != NULL) {
-            filtro_exemplo((*buffers_sinal2)[i], buffer_size);
-        }
+    // Alocar buffers filtrados
+    short **buffers_sinal1_filtrado = (short **)malloc(num_buffers * sizeof(short *));
+    short **buffers_sinal2_filtrado = (short **)malloc(num_buffers * sizeof(short *));
+    if (!buffers_sinal1_filtrado || !buffers_sinal2_filtrado) {
+        printf("Erro: falha ao alocar buffers filtrados.\n");
+        return -1;
     }
+
+    // Inicializar buffers filtrados
+    for (int i = 0; i < num_buffers; i++) {
+        buffers_sinal1_filtrado[i] = (short *)malloc(buffer_size * sizeof(short));
+        buffers_sinal2_filtrado[i] = (short *)malloc(buffer_size * sizeof(short));
+    }
+
+    // Alocar buffer para a média dos buffers filtrados
+    short *buffer_media = (short *)malloc(buffer_size * sizeof(short));
+    if (!buffer_media) {
+        printf("Erro: falha ao alocar o buffer de média.\n");
+        return -1;
+    }
+
+    // Processar os buffers e aplicar o filtro FIR
+    for (int i = 0; i < num_buffers; i++) {
+        // Atualizar coeficientes a cada 10 buffers
+        if (i > 0 && i % 10 == 0) {
+            // Atualizar os coeficientes, se necessário
+            // alterar_coeficientes(coeficientes_filtro, nova_ordem_filtro);
+        }
+
+        // Aplicar o filtro FIR para o sinal1
+        if ((*buffers_sinal1)[i] != NULL) {
+            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro, ordem_filtro);
+        }
+
+        // Aplicar o filtro FIR para o sinal2
+        if ((*buffers_sinal2)[i] != NULL) {
+            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro, ordem_filtro);
+        }
+
+        // Calcular a média dos buffers filtrados
+        for (int j = 0; j < buffer_size; j++) {
+            buffer_media[j] = (buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2;
+        }
+
+        // Aqui, o buffer_media pode ser usado para mais processamento ou armazenado conforme necessário
+
+        // Exemplo de uso do buffer_media: o buffer_media pode ser processado mais uma vez ou armazenado
+        // processar_buffer_media(buffer_media, buffer_size);
+    }
+
+    // Liberação dos buffers filtrados e buffer de média
+    for (int i = 0; i < num_buffers; i++) {
+        free(buffers_sinal1_filtrado[i]);
+        free(buffers_sinal2_filtrado[i]);
+    }
+    free(buffers_sinal1_filtrado);
+    free(buffers_sinal2_filtrado);
+    free(buffer_media);
 
     return 0; // Sucesso no processamento dos buffers
 }
+
+
+
+
 
 void liberar_buffers(short **buffers_sinal1, short **buffers_sinal2, int num_buffers) {
     // Verifica e libera buffers_sinal1
@@ -183,6 +254,19 @@ void liberar_buffers(short **buffers_sinal1, short **buffers_sinal2, int num_buf
         }
         // Liberar o array de ponteiros buffers_sinal2
         free(buffers_sinal2);
+    }
+}
+
+// Função para gerar coeficientes do filtro FIR
+void gerar_filtro_FIR(float *coeficientes, int ordem, float corte, float taxa_amostragem) {
+    int n = ordem;
+    float wc = 2 * PI * corte / taxa_amostragem;  // Frequência de corte normalizada
+    for (int i = 0; i < n; i++) {
+        if (i == (n - 1) / 2) {
+            coeficientes[i] = 1 - (wc / PI); 
+        } else {
+            coeficientes[i] = -sin(wc * (i - (n - 1) / 2)) / (PI * (i - (n - 1) / 2));  // Inverte a fase
+        }
     }
 }
 

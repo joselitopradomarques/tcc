@@ -1,3 +1,5 @@
+// princ.c
+// gcc -o princ princ.c proc.c -lpthread -lm
 #include <stdio.h>
 #include <stdlib.h>
 #include "proc.h"
@@ -8,6 +10,10 @@ int main() {
     int buffer_size = 1024; // Tamanho dos buffers (pode ser ajustado conforme necessário)
     short **buffers_sinal1 = NULL, **buffers_sinal2 = NULL;
     int num_buffers = 0;
+
+    // Definição do filtro FIR
+    int ordem_filtro = 5;  // Definir a ordem do filtro FIR
+    float coeficientes_filtro[] = {0.1, 0.15, 0.5, 0.15, 0.1}; // Exemplo de coeficientes FIR
 
     // Ler os dois arquivos WAV estéreo
     if (ler_dois_wav_estereo(&sinal1, &sinal2, &tamanho1, &tamanho2) != 0) {
@@ -38,8 +44,8 @@ int main() {
         return -1;
     }
 
-    // Processar os buffers circulares (aplicar filtro básico)
-    if (processar_buffers_circulares(&buffers_sinal1, &buffers_sinal2, num_buffers, buffer_size) != 0) {
+    // Processar os buffers circulares aplicando o filtro FIR
+    if (processar_buffers_circulares(&buffers_sinal1, &buffers_sinal2, num_buffers, buffer_size, coeficientes_filtro, ordem_filtro) != 0) {
         printf("Erro ao processar os buffers circulares.\n");
         free(sinal1);
         free(sinal2);
@@ -50,7 +56,7 @@ int main() {
     printf("Buffers processados com sucesso.\n");
 
     // Aqui você pode adicionar código para salvar os buffers processados ou realizar outras operações
-    
+
     // Liberar memória alocada
     liberar_buffers(buffers_sinal1, buffers_sinal2, num_buffers);
     free(sinal1);
