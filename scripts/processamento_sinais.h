@@ -1,31 +1,30 @@
-// processamento_sinais.h
-
 #ifndef PROCESSAMENTO_SINAIS_H
 #define PROCESSAMENTO_SINAIS_H
 
-#include "filter_final.h" // Inclui o cabeçalho que define a constante ORDEM
+#include <stdio.h>
 
-// Definições e protótipos das funções
+// Definições e constantes
+#define SAMPLE_RATE 44100
+#define ORDEM 64  // Ordem do filtro FIR, você pode ajustar conforme necessário
 
-// Função que soma dois sinais de entrada
+// Funções de processamento de sinais
 void somar_sinais(short *sinal1, short *sinal2, short *resultado, int tamanho);
-
-// Função para aplicar os efeitos (delay ou reverb)
+void executar_arquivo_wav(const char* arquivo);
 void apply_effect_to_audio(int effect_choice, float effect_amount);
-
-// Função para execução final
+void executar_filtragem_e_soma(float frequencia_corte);
 void aplicar_filtragem_e_efeito(float frequencia_corte, int fx_select, float effectAmount);
 
-// Função para executar a filtragem dos dois sinais e somá-los
-void executar_filtragem_e_soma(float frequencia_corte);
+// Funções auxiliares de leitura e escrita de arquivos WAV
+int ler_wav_estereo(const char *caminho_arquivo, short **sinal, int *tamanho);
+int escrever_wav_estereo(const char *caminho_arquivo, short *sinal, int tamanho);
 
-// Arquivos de entrada e saída definidos aqui (podem ser modificados conforme necessidade)
-#define INPUT_FILE_1 "/home/joselito/git/tcc/datas/audio01.wav"
-#define INPUT_FILE_2 "/home/joselito/git/tcc/datas/audio02.wav"
-#define OUTPUT_FILE_DELAY "/home/joselito/git/tcc/scripts/saida_delay.wav"
-#define OUTPUT_FILE_REVERB "/home/joselito/git/tcc/scripts/saida_reverb.wav"
-#define OUTPUT_FILE_FILTRADA_1 "/home/joselito/git/tcc/scripts/saida_filtrada_1.wav"
-#define OUTPUT_FILE_FILTRADA_2 "/home/joselito/git/tcc/scripts/saida_filtrada_2.wav"
-#define OUTPUT_FILE_FILTRADA_SOMA "/home/joselito/git/tcc/scripts/saida_filtrada_soma.wav"
+// Funções de filtragem
+void gerar_filtro_FIR(float *coeficientes, int ordem, float frequencia_corte, int taxa_amostragem);
+void aplicar_filtro_FIR(short *entrada, short *saida, int tamanho, float *coeficientes, int ordem);
+
+// Funções de efeitos
+void apply_delay_to_audio(const char *input_file, const char *output_file, float effect_amount);
+void applyReverbEffect(const char *input_file, const char *output_file, float effect_amount);
+float calcular_nova_frequencia_corte(float frequencia_corte);
 
 #endif // PROCESSAMENTO_SINAIS_H
