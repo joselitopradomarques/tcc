@@ -1,8 +1,9 @@
 \chapter[Metodologia]{Metodologia}
 
-Nesta seção serão abordados a delineação da proposta geral, os requisitos funcionais e não funcionais do sistema. Em seguida, um fluxograma geral pretende dividir o funcionamento final em subblocos, cada qual com um fluxograma detalhado com as operações que os sinais sofrerão.
-Para a validação do fluxo de dados almejado, utilizou-se um software de síntese musical, no qual foi possível a implementação e testes dos subblocos. 
-Com a prova de conceito realizada, em seguida há uma subseção denominada de Proposta de Implementação, na qual detalhes tanto acerca da implementação em hardware quanto em software, bem como a interface do usuário, são elucidados.
+Essa seção é dividida em dois grandes blocos, que elucidam duas grandes etapas do projeto. Primeiramente, tem-se a prova de conceito, no qual fluxogramas visam explanar a lógica de funcionamento, apontando qual é a entrada e a saída daquele bloco, bem como, qual é o processamento realizado. A prova de conceito foi implementada em um \textit{software} de síntese musical chamado \textit{PureData}.
+
+
+Em seguida, encontra-se a seção da implementação final realizada. Essa seção é divivida em duas subseções: uma dedicada ao \textit{hardware}, que explica como os sinais de controle foram obtidos e como o sinal de saída se dá para que possa ser reproduzido em um sistema de som, e outra dedicada ao \textit{software}, que engloba a aquisição do sinal através de arquivos de música no formato \textit{.wav}, explicações de aquisição de sinais analógicos convertidos para digitais, que são responsáveis pelos controles de frequência, escolha do efeito e a quantidade de efeito aplicado, além do processo de construção do filtro utilizado na aplicação.
 
 \section{Proposta Geral}
 
@@ -10,11 +11,11 @@ A evolução dos equipamentos de mixagem começou com a mixagem em vinil, e ao l
 
 Atualmente, existem dois tipos principais de equipamentos de mixagem: os mais caros, que não requerem um computador, e os mais acessíveis, que dependem de um computador, mas oferecem melhor qualidade de processamento. DJs iniciantes frequentemente enfrentam dificuldades para realizar ajustes finos nas bandas de frequência em \textit{mixers} clássicos de três bandas. Esta habilidade é crucial para destacar elementos musicais e criar novas atmosferas. À medida que um DJ desenvolve seu estilo, a mixagem torna-se mais automática, facilitando a transição entre músicas.
 
-Este projeto propõe a criação de um \textit{mixer} com um controle central que manipula dois canais de entrada (duas músicas). Em vez dos tradicionais controles de três bandas de frequência, o mixer utilizará filtros passa-altas. O controle central ajustará simultaneamente as frequências de corte de ambos os canais, permitindo uma transição suave entre as músicas.
+Este projeto propõe a criação de um \textit{mixer} com um controle central que manipula dois arquivos de música. Em vez dos tradicionais controles de três bandas de frequência, o \textit{mixer} utilizará filtros passa-altas. O controle central ajustará simultaneamente as frequências de corte de ambos os canais, permitindo uma transição suave entre as músicas.
 
-Além disso, o sistema incluirá dois efeitos, \textit{delay} e \textit{reverb}, que serão controlados automaticamente pela posição do botão central. Quando o botão estiver na posição intermediária, os efeitos serão aplicados ao máximo, diminuindo gradualmente conforme o botão se move para uma das extremidades.
+Além disso, o sistema incluirá dois efeitos, \textit{delay} e \textit{reverb}, que serão controlados através de um botão giratório, que determinará a intensidade do efeito aplicado.
 
-Em resumo, o sistema processará sinais de áudio analógicos em tempo real, utilizando filtros passa-altas e permitindo ao usuário selecionar e controlar a intensidade dos efeitos, com botões \textit{sliders} para ajuste e um botão \textit{on}/\textit{off} para seleção dos efeitos.
+Em resumo, o sistema processará arquivos de áudio que já estejam dentro da \textit{Raspberry Pi}, utilizando filtros passa-altas e permitindo ao usuário selecionar e controlar a intensidade dos efeitos, com botões \textit{knobs} para ajuste e um botão \textit{on}/\textit{off} para seleção dos efeitos.
 
 \section{Levantamento de Requisitos}
 
@@ -22,10 +23,10 @@ O levantamento de requisitos é uma etapa crucial no desenvolvimento de qualquer
 
 \subsection{Requisitos Funcionais}
 
-Assim, nessa subseção são levantados os requisitos que descrevem o que o sistema deve realizar, bem como funcionalidades e comportamentos.
+Nessa subseção, são levantados os requisitos que descrevem o que o sistema deve realizar, bem como funcionalidades e comportamentos.
 \begin{itemize}
-    \item O sistema deve permitir ao \textit{DJ} utilizar tanto \textit{CDJs} quanto toca-discos.
-    \item O sistema deve permitir ao \textit{DJ} controlar a presença dos dois \textit{canais}.
+    \item O sistema deve permitir ao \textit{DJ} utilizar arquivos \textit{.wav}.
+    \item O sistema deve permitir ao \textit{DJ} controlar a frequência de corte.
     \item O sistema deve permitir ao \textit{DJ} controlar a presença dos efeitos.
 \end{itemize}
 
@@ -33,27 +34,21 @@ Assim, nessa subseção são levantados os requisitos que descrevem o que o sist
 Já nesta subseção, há a descrição de como o sistema deve se comportar em relação ao desempenho, segurança, usabilidade e outros atributos qualitativos.  
 \begin{itemize}
     \item O sistema deve responder aos comandos do \textit{DJ} com latência mínima, garantindo uma experiência de mixagem fluida.
-    \item A interface do usuário deve ser intuitiva e fácil de usar, permitindo que o \textit{DJ} faça ajustes rapidamente durante a performance.
     \item O sistema deve ser confiável e estável, capaz de lidar com longos períodos de uso contínuo sem falhas.
     \item O sistema deve oferecer uma qualidade de som de alta fidelidade, garantindo que o áudio reproduzido seja claro e com mínimas distorções.
     \item A interface do mixer deve incluir botões físicos ou controles táteis para ajuste de frequência e efeitos de áudio.
     \item A interface do mixer deve ser organizada de forma lógica e intuitiva, com controles agrupados por função para facilitar a navegação.
     \item A interface deve possuir indicações claras das funções dos botões de interação com o usuário.
-    \item O sistema deve ser compatível com uma variedade de dispositivos de áudio externos, como \textit{CDJs} e toca-discos.
-    \item O sistema deve ser alimentado por uma fonte de energia padrão, como uma tomada elétrica.
-    \item O sistema deve incluir interfaces de entrada e saída de áudio padrão \textit{RCA}.
-    \item O sistema deve ser capaz de lidar com até dois \textit{canais} de áudio simultaneamente, sem comprometer a qualidade do som ou a responsividade dos controles.
+    \item O sistema deve incluir interface de saída de áudio padrão \textit{RCA}.
     \item O sistema deve suportar uma ampla gama de frequências de áudio, garantindo que os graves sejam reproduzidos com profundidade e os agudos sejam nítidos e claros.
-    \item O sistema deve ser projetado para minimizar o risco de danos aos equipamentos de áudio conectados, oferecendo proteção contra sobrecarga ou curto-circuito.
-    \item O sistema deve ser projetado para facilitar a manutenção e reparo, com acesso fácil aos componentes internos e documentação clara sobre procedimentos de serviço.
-    \item O sistema deve ser capaz de se comunicar perfeitamente com qualquer dispositivo de reprodução de música profissional, tanto como canal de entrada quanto como sistema de som de saída.
+    \item O sistema deve ser projetado para minimizar o risco de danos aos equipamentos de áudio conectados.
 \end{itemize}
 
 
 
 \section{Fluxograma do Mixer}
 
-O \textit{mixer} proposto é composto por subblocos de funcionamento interligados, conforme ilustrado na Figura \ref{fig52}.
+O \textit{mixer} proposto é composto por sub-blocos de funcionamento interligados, conforme ilustrado na Figura \ref{fig52}.
 
 De forma geral, o sistema opera em um ciclo contínuo de leitura de sinais, tanto das músicas quanto dos controles, e realiza modificações de parâmetros para processar os sinais, que, por fim, são reproduzidos. Cada ciclo pode ser representado na Figura \ref{fig52}.
 
@@ -64,7 +59,7 @@ De forma geral, o sistema opera em um ciclo contínuo de leitura de sinais, tant
     \label{fig52}
 \end{figure}
 
-Os sinais provenientes dos dispositivos de reprodução de música entram no sistema e são convertidos para sinais digitais. Simultaneamente, é feita uma leitura dos valores atuais dos controles disponíveis na interface.
+Os sinais provenientes de arquivos de música \textit{.wav} locais entram no sistema e são divididos em \textit{buffers}. Simultaneamente, é feita uma leitura dos valores atuais dos controles disponíveis na interface.
 
 Com os valores dos parâmetros obtidos, a filtragem dos sinais e o processamento dos efeitos são realizados novamente para ajustar o comportamento dos sinais conforme os novos valores dos controles.
 
@@ -74,16 +69,16 @@ Nas subseções abaixo, cada bloco presente no fluxograma geral do sistema (Figu
 
 \subsection{Bloco de Leitura de Sinais}
 
-Os sinais analógicos lidos incluem os sinais de música e os sinais de controle provenientes de dois potenciômetros e um botão de duas posições. Os potenciômetros são utilizados para ajustar a frequência central e a quantidade de efeito desejado, enquanto o botão de duas posições é utilizado para selecionar o efeito desejado.
+Os sinais lidos incluem os sinais provenientes de arquivos digitais e os de controle provenientes de dois potenciômetros e um botão de duas posições. Os potenciômetros são utilizados para ajustar a frequência central e a quantidade de efeito desejado, enquanto o botão de duas posições é utilizado para selecionar o efeito desejado.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figuras/fig54.png}
-    \caption{bloco de leitura de sinais analógicos}
+    \caption{bloco de leitura de sinais}
     \label{fig54}
 \end{figure}
 
-Assim, conforme a Figura \ref{fig54}, todos os sinais analógicos passarão por uma conversão analógico-digital, para que, em seguida, algumas variáveis tenham seus valores atualizados.
+Assim, conforme a Figura \ref{fig54}, todos os sinais analógicos de controle passarão por uma conversão analógico-digital, para que, em seguida, algumas variáveis tenham seus valores atualizados. Enquanto isso, os sinais de música obtidos de arquivos digitais já se encontram em formato digital, mas são transformados em sequência de \textit{buffers}.
 
 \subsection{Bloco de Filtragem}
 
@@ -106,7 +101,7 @@ No bloco de filtragem, todos os sinais analógicos já estão codificados de for
 
 No subfluxograma da Figura \ref{fig55}, \textit{fc} representa a frequência de corte central, lida e convertida a partir do botão central; \textit{fc$_{1}$} é a frequência de corte para o filtro passa-altas 1 (HPF1) e \textit{fc$_{2}$} é a frequência de corte para o filtro passa-altas 2 (HPF2).
 
-Ao final deste processo, os sinais dos dois canais são combinados, resultando no sinal \textit{signal\_master}, que é enviado tanto para o bloco de processamento de efeitos quanto para o bloco final de combinação dos sinais: o sinal de efeito e a combinação dos canais 1 e 2.
+Ao final deste processo, os sinais dos dois canais são combinados, resultando no sinal \textit{signal\_master}, que é enviado ao bloco de processamento de efeitos.
 
 \subsection{Bloco de Efeitos}
 
@@ -119,37 +114,11 @@ Os efeitos do \textit{mixer} podem ter seus parâmetros de reverberação e atra
     \label{fig56}
 \end{figure}
 
-Além disso, o usuário pode selecionar qual efeito deseja utilizar através de um botão de duas posições, conforme ilustrado na Figura \ref{fig56}. Os parâmetros de seleção e quantidade de efeitos são obtidos do bloco de leitura de sinais. Ao final deste bloco, o sinal isolado do efeito, com o efeito aplicado, é atribuído ao \textit{signal\_fx}.
-
-\subsection{Bloco de Automação de Efeitos}
-
-No \textit{mixer} proposto, o volume do efeito é ajustado automaticamente conforme a frequência central, como ilustrado na Figura \ref{fig57}. Quando a frequência de corte central (\textit{fc}) está nas extremidades do intervalo, o volume do efeito é nulo. À medida que a \textit{fc} se aproxima da posição central da banda de frequência, o volume do efeito aumenta gradualmente.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figuras/fig57.png}
-    \caption{bloco de automação do volume de efeitos}
-    \label{fig57}
-\end{figure}
-
-Para calcular o ganho do efeito, uma expressão é utilizada para converter o valor da \textit{fc} em \textit{volume\_fx}, que representa o ganho do \textit{signal\_fx}.
-
-\subsection{Bloco Mixer}
-
-O processo de mistura de dois sinais é conhecido como \textit{mixing}. Neste \textit{mixer}, há dois momentos distintos em que os sinais são misturados: primeiro, os sinais dos canais 1 e 2 são combinados; depois, os sinais já combinados dos canais 1 e 2 são misturados com o sinal do efeito. Este bloco refere-se à mistura final, ou seja, a segunda etapa do processo.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figuras/fig58.png}
-    \caption{bloco de mistura final de sinais}
-    \label{fig58}
-\end{figure}
-
-No subfluxograma da Figura \ref{fig58}, o sinal do efeito é ajustado em termos de atenuação ou amplificação com base no volume calculado pelo bloco de automação de efeitos. Este sinal de efeito, com o volume ajustado, é então misturado com o sinal proveniente do bloco de filtragem, resultando no sinal de saída, \textit{signal\_output}. No entanto, este sinal ainda está no domínio digital.
+Além disso, o usuário pode selecionar qual efeito deseja utilizar através de um botão de duas posições, conforme ilustrado na Figura \ref{fig56}. Os parâmetros de seleção e quantidade de efeitos são obtidos do bloco de leitura de sinais. Ao final deste bloco, o sinal filtrado, já com o efeito aplicado, é atribuído ao \textit{signal\_master}.
 
 \subsection{Bloco de Conversão DA}
 
-O sinal de saída obtido pelo bloco \textit{mixer} precisa ser convertido de digital para analógico para que possa ser reproduzido em um sistema de som.
+O sinal de saída obtido pelo bloco \textit{Efeito} precisa ser convertido de digital para analógico para que possa ser reproduzido em um sistema de som.
 
 \begin{figure}[h]
     \centering
@@ -158,7 +127,7 @@ O sinal de saída obtido pelo bloco \textit{mixer} precisa ser convertido de dig
     \label{fig59}
 \end{figure}
 
-Conforme mostrado na Figura \ref{fig59}, o sinal digital passará por um processo de conversão digital-analógico, seguido por filtragem e amplificação de potência para que possa ser finalmente reproduzido por caixas de som.
+Conforme mostrado na Figura \ref{fig59}, o sinal digital passará por um processo de conversão digital-analógico, para que possa ser finalmente reproduzido por caixas de som.
 
 \newpage
 \section{Prova de Conceito}
@@ -173,16 +142,15 @@ Esse ambiente permite a criação de sistemas de processamento de áudio utiliza
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig78.png}
-    \caption{funcionalidades do \textit{PureData}}
+    \includegraphics[width=0.3\textwidth]{figuras/fig79.jpg}
+    \caption{Silent Drum de Jaime Oliver}
     \label{fig78}
 \end{figure}
 
-Como ilustrado na Figura \ref{fig78}, algumas funcionalidades do PureData envolvem a síntese de som, utilizando ondas fundamentais como senoidais, quadradas, dente de serra ou ruídos. Além disso, é possível criar máquinas de ritmos com percussões, sequenciadores e efeitos de áudio.
+O \textit{PureData} contém uma extensa comunidade que desenvolve diversos tipos de projetos como instalações de arte interativas, geradores de música ambientes totalmente automatizados, uma bateria que utiliza visão computacional para controle da música, como se encontra na Figura \ref{fig78}, emuladores de equipamentos musicais, 
+Outras aplicações incluem gravação, processamento e edição de áudio, \textit{samplers} e instalações de arte interativas que podem integrar sensores ou sistemas de áudio multicanal, além de projetos de projeção mapeada e muitos outros.
 
-Outras aplicações incluem gravação, processamento e edição de áudio, samplers e instalações de arte interativas que podem integrar sensores ou sistemas de áudio multicanal, além de projetos de projeção mapeada e muitos outros.
-
-No \textit{PureData}, foi possível desenvolver uma prova de conceito que abrange a lógica do botão central para controle das frequências de corte, bem como o funcionamento dos efeitos. Para simular os sinais de entrada, foram utilizados arquivos WAV locais.
+No \textit{PureData}, foi possível desenvolver uma prova de conceito que abrange a lógica do botão central para controle das frequências de corte, bem como o funcionamento dos efeitos. Para simular os sinais de entrada, foram utilizados arquivos \textit{.wav} locais.
 
 A demonstração do sistema se divide em duas principais funcionalidades: filtragem e efeitos.
 
@@ -281,74 +249,53 @@ No \textit{PureData}, o bloco de automação do volume dos efeitos é implementa
 
 Finalmente, o sinal dos efeitos é multiplicado pelo volume dos efeitos e, em seguida, somado ao sinal filtrado, resultando no sinal de saída. Esse sinal é processado por um bloco de conversão digital-analógico e, por fim, é reproduzido. O bloco que realiza a soma dos sinais está representado na Figura \ref{fig51}.
 
+\newpage
 \section{Proposta de Implementação}
 
-[Inserir um texto que diga como a proposta de implementação está estruturada]
+Em linhas gerais, a proposta de implementação desse projeto envolve a utilização de uma \textit{Raspberry Pi} para a escolha das músicas a serem enviadas ao \textit{mixer}, para a aquisição de sinais analógicos responsáveis pelos controles de frequência e efeitos, além de, através do conector de 3,5 mm da placa, realizar a ligação ao equipamento de sistema de som para a reprodução. 
 
 \subsection{Implementação em Hardware}
 
-Esta seção descreve a proposta de implementação em hardware para o sistema de mixagem de áudio, abrangendo conectores, botões e outros componentes essenciais.
+Esta seção descreve a proposta de implementação em \textit{hardware} para o sistema de mixagem de áudio, abrangendo conectores, botões e outros componentes essenciais.
 
-
-
-\paragraph{Conectores}
-Para a aquisição dos sinais de áudio, o \textit{mixer} será equipado com conectores \textit{RCA}. Essa escolha se deve à padronização amplamente adotada pela indústria e à facilidade de uso e disponibilidade de cabos e entradas \textit{RCA}, como ilustrado na Figura \ref{fig22}.
-
-Serão utilizados dois conectores \textit{RCA} para cada canal, totalizando 4 conectores para entrada e 2 para saída, o que resulta em um total de 6 conectores \textit{RCA}.
-
-\paragraph{Botões}
-A interação do usuário é crucial para ajustar parâmetros como frequência de corte, quantidade de efeitos e seleção do efeito desejado. Para isso, serão utilizados dois \textit{sliders} e uma chave de duas posições.
+\subsubsection*{Botões}
+A interação do usuário é crucial para ajustar parâmetros como frequência de corte, quantidade de efeitos e seleção do efeito desejado. Para isso, serão utilizados dois \textit{knobs} e uma chave.
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figuras/fig61.png}
-    \caption{botão \textit{slider} horizontal para frequência central \cite{robocore}}
+    \includegraphics[width=0.3\textwidth]{figuras/fig61.jpg}
+    \caption{botão \textit{knob} para frequência central e efeitos \cite{robocore}}
     \label{fig61}
 \end{figure}
 
-Os \textit{sliders} serão equipados com potenciômetros. Eles são alimentados por uma tensão, e sua posição é medida por uma tensão de saída proporcional à tensão de entrada. Essa configuração é preferida devido à precisão oferecida pelo ajuste com dois dedos, que proporciona uma mudança de frequência precisa. A Figura \ref{fig61} mostra um exemplo esperado de um \textit{slider} horizontal para ajustar a frequência central.
+Os \textit{knobs} serão equipados com potenciômetros. Eles são alimentados por uma tensão, e sua posição é medida por uma tensão de saída proporcional à tensão de entrada. Essa configuração é preferida devido à precisão oferecida pelo ajuste com dois dedos, que proporciona uma mudança de frequência precisa. A Figura \ref{fig61} mostra um exemplo esperado de um \textit{knob} para ajustar a frequência central e de intensidade de efeitos.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{figuras/fig62.png}
-    \caption{botão de duas posições para seleção do efeito \cite{evea}}
+    \caption{botão para seleção do efeito \cite{evea}}
     \label{fig62}
 \end{figure}
 
-A chave de duas posições será utilizada para selecionar entre dois efeitos distintos, gerando dois níveis de tensão: um nulo e outro de alimentação. Cada nível corresponderá a um efeito diferente. Um exemplo de botão para essa finalidade é mostrado na Figura \ref{fig62}.
+A chave será utilizada para selecionar entre dois efeitos distintos, gerando dois níveis de tensão: um nulo e outro de alimentação. Cada nível corresponderá a um efeito diferente. Um exemplo de botão para essa finalidade é mostrado na Figura \ref{fig62}.
 
 Para ajustar a quantidade de efeitos desejada, será utilizado um botão semelhante ao \textit{slider}, com a mesma abordagem de controle e ajuste.
 
-\paragraph{Conversão AD}
-A conversão analógica-digital será empregada em duas categorias de sinais: áudio e controle. Para cada categoria, diferentes níveis de quantização serão utilizados: um alto para garantir a definição das músicas convertidas e outro baixo para permitir a precisão necessária na identificação do efeito desejado (com dois níveis) ou da frequência central.
- 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/fig63.jpg}
-    \caption{conversor analógico-digital de 16 \textit{bits} \cite{walmartRobotHuman}}
-    \label{fig63}
-\end{figure}
+\paragraph*{Conversão AD}
 
-Para a conversão dos sinais analógicos de áudio, serão utilizados conversores de 16 \textit{bits}, como o mostrado na Figura \ref{fig63}. 
+A conversão analógica-digital será empregada na aquisição dos sinais de controle, ou seja, para dois potenciômetros, utilizando um conversor PCF8591, Figura \ref{fig64}, que conta com uma resolução de 8 \textit{bits}. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{figuras/fig64.jpg}
-    \caption{conversor analógico-digital de 16 \textit{bits} \cite{eletroniklvEletronikComponentes}}
+    \caption{PF8591 - conversor analógico-digital de 8 \textit{bits} \cite{saravaticomponentes}}
     \label{fig64}
 \end{figure}
 
-Para os sinais de controle, a conversão será realizada por um conversor analógico digital, também de 16 \textit{bits}, porém, com uma taxa de amostragem por segundo menor. Para que esses sinais de controle sejam lidos, basta que a porta digital da \textit{Raspberry Pi} esteja habilitada para leitura. Figura \ref{fig64}.
+Para que esses sinais de controle sejam lidos, a comunicação I2C da \textit{Raspberry Pi} deve estar habilidada para a leitura.
 
-\paragraph{Protocolos de Comunicação}
-Com conversores analógico-digital adequados, os sinais podem ser adquiridos e interpretados pela \textit{Raspberry Pi}. Existem várias maneiras de adquirir esses sinais analógicos a partir de um dispositivo, sendo uma das mais eficientes o uso de protocolos de comunicação serial, que permitem a transmissão e/ou recepção de sinais através de um canal de comunicação.
-
-Para esta aplicação, recomenda-se o uso de diferentes canais de comunicação para sinais de áudio e sinais de controle. Os protocolos de comunicação devem ser compatíveis com os conversores utilizados.
-
-Para a recepção de sinais de áudio, o \textit{mixer} utilizará o protocolo I2C, que é suportado pelos conversores selecionados. Já para a recepção dos sinais de controle, os protocolos disponíveis incluem UART (\textit{Asynchronous Receiver/Transmitter}), I2C (\textit{Inter-Integrated Circuit}) ou SPI (\textit{Serial Peripheral Interface}).
-
-\paragraph{Raspberry Pi}
+\paragraph*{Raspberry Pi}
 
 A unidade de processamento é o dispositivo responsável pela realização do processamento dos sinais. 
 
@@ -361,9 +308,29 @@ A unidade de processamento é o dispositivo responsável pela realização do pr
 
 Para essa tarefa, será utilizada uma \textit{Raspberry Pi}, que oferece um bom poder de processamento e flexibilidade em termos de linguagens de programação suportadas. A \textit{Raspberry Pi} é mostrada na Figura \ref{fig65}.
 
-\paragraph{Conversão DA}
+\paragraph*{Conversão DA}
 
 A conversão digital-analógico é necessária para que o sinal final, após o processamento, possa ser reproduzido por sistemas de áudio que utilizam sinais analógicos. A \textit{Raspberry Pi} possui uma saída/entrada de áudio com conector de 3.5mm, conforme ilustrado na Figura \ref{fig20}.
+
+\paragraph*{Diagrama de Conexões}
+
+O diagrama de pinagem, Figura tal  contém o conversor AD e a \textit{Raspberry Pi 4 B}. hjjjjjjjjjjjjjjjjjjjjjjjjjjj
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figuras/fig80.png}
+    \caption{Diagrama de Conexões}
+    \label{fig80}
+\end{figure}
+
+\paragraph*{Lista de Materiais}
+- 1 Raspberry
+- 2 potenciômetros
+- 1 botão hh de 2 posições
+- 1 cabo 3,5 mm
+- 1 cabo USB-C e USB-A
+- 1 computador para acesso remoto
+
 
 \subsection{Implementação em Software}
 
@@ -371,23 +338,5 @@ Na \textit{Raspberry Pi}, após a conversão e aquisição dos sinais, é necess
 
 \subsection{Protótipo de Interface de Usuário}
 
-A interface do usuário será projetada de forma semelhante a um \textit{mixer} atual, com dois botões \textit{sliders} horizontais e um botão de duas posições. Na parte traseira do dispositivo, estarão localizados os conectores \textit{RCA} e a entrada de alimentação.
-
-
-\section{Implementação em \textit{Software}}
-
-A aplicação estará embarcada em uma \textit{Raspberry Pi} através da linguagem C++, com a implementação de inúmeras classes e métodos dedicadas a cada funcionalidade necessária. Nas seções abaixo, uma explanação de cada classe ou método utilizada para determinada funcionalidade.
-
-\subsection{Filtragem}
-
-Um filtro passa-altas deverá ser projetado para a aplicaçaõ sobre os sinais de áudio. Porém, diante de inúmeras opções, deve-se estabelecer um método que chegue ao filtro adequado em função de inúmeros fatores como demanda computacional, latência, fatores como ganho e atenuação em bandas. Dessa forma, uma metodologia de análise de desempenho foi estabelecida para elencar o filtro adequado para essa aplicação em específico. Esse método visa elencar qual classificação, tipo, $f_c$, banda de transição, ordem e outros parâmetros para otimizar o funcionamento em tempo real do filtro.
-1) Determinação de Classificação de Filtro
-2) Tipo de Filtro
-3) Especificações de filtros
-
-4) Filtro determinado
-
-
-\subsection{Efeitos - \textit{Delay}}
-\subsection{Efeitos - \textit{Reverb}}
+A interface do usuário será projetada de forma semelhante a um \textit{mixer} atual, com dois botões \textit{sliders} horizontais e um botão de duas posições. Além disso, haverá um cabo 3,5 mm para que se possa conectar a um sistema de som externo.
 
