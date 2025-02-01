@@ -3,6 +3,7 @@
     "files.associations": {
         "processamento_sinais.h": "c",
         "filter_final.h": "c",
-        "reverb.h": "c"
+        "reverb.h": "c",
+        "proc.h": "c"
     }
 }

@@ -12,8 +12,11 @@ int main() {
     int num_buffers = 0;
 
     // Definição do filtro FIR
-    int ordem_filtro = 5;  // Definir a ordem do filtro FIR
-    float coeficientes_filtro[] = {0.1, 0.15, 0.5, 0.15, 0.1}; // Exemplo de coeficientes FIR
+    int ordem_filtro = 1;  // Ordem mínima do filtro (equivale a um atraso de uma amostra)
+    float coeficientes_filtro[] = {1.0};  // Coeficiente de um filtro passa-tudo
+
+    // Definição para efeito Reverb
+    float wetness = 1.0f; // Defina o valor apropriado para o efeito
 
     // Ler os dois arquivos WAV estéreo
     if (ler_dois_wav_estereo(&sinal1, &sinal2, &tamanho1, &tamanho2) != 0) {
@@ -45,7 +48,7 @@ int main() {
     }
 
     // Processar os buffers circulares aplicando o filtro FIR
-    if (processar_buffers_circulares(&buffers_sinal1, &buffers_sinal2, num_buffers, buffer_size, coeficientes_filtro, ordem_filtro) != 0) {
+    if (processar_buffers_circulares(&buffers_sinal1, &buffers_sinal2, num_buffers, buffer_size, coeficientes_filtro, ordem_filtro, wetness) != 0) {
         printf("Erro ao processar os buffers circulares.\n");
         free(sinal1);
         free(sinal2);

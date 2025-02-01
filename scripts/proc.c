@@ -2,8 +2,11 @@
 #include <stdlib.h>
 #include <math.h>  // Necessário para usar a função sin() e PI
 #include "proc.h"
+#include "reverb.h"
 
 #define PI 3.14159265358979323846  // Definindo PI
+#define SAMPLE_RATE 44100
+
 // Função para aplicar o filtro FIR em cada buffer circular
 void aplicar_filtro_FIR_buffer(short *buffer_sinal, short *buffer_sinal_filtrado, int buffer_size, float *coeficientes, int ordem) {
     // Aplicar o filtro FIR em um único buffer
@@ -77,8 +80,8 @@ int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
 
 int ler_dois_wav_estereo(short **sinal1, short **sinal2, int *tamanho1, int *tamanho2) {
     // Definindo os caminhos dos arquivos WAV diretamente dentro da função
-    const char *filename1 = "/home/joselito/git/tcc/datas/audio01.wav";
-    const char *filename2 = "/home/joselito/git/tcc/datas/audio02.wav";
+    const char *filename1 = "/home/joselito/git/tcc/datas/song01.wav";
+    const char *filename2 = "/home/joselito/git/tcc/datas/silencio_6minutos.wav";
 
     // Ler o primeiro arquivo WAV
     short *sinal_temp1 = NULL;
@@ -155,14 +158,60 @@ void filtro_exemplo(short *buffer, int buffer_size) {
         buffer[i] = (buffer[i - 1] + buffer[i] + buffer[i + 1]) / 3;
     }
 }
+// Função para salvar o arquivo WAV com o sinal filtrado em estéreo
+int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
+    FILE *file = fopen(filename, "wb");
+    if (!file) {
+        printf("Erro ao abrir o arquivo WAV para escrita: %s\n", filename);
+        return -1;
+    }
 
+    // Escrever cabeçalho WAV simples (44 bytes)
+    unsigned int chunk_size = 36 + tamanho * 2 * sizeof(short);  // 2 canais
+    unsigned short audio_format = 1; // PCM
+    unsigned short num_channels = 2; // Estéreo
+    unsigned int sample_rate = SAMPLE_RATE;
+    unsigned int byte_rate = SAMPLE_RATE * 2 * sizeof(short);  // 2 canais
+    unsigned short block_align = 2 * sizeof(short);  // 2 canais
+    unsigned short bits_per_sample = 16;
+
+    // Cabeçalho RIFF
+    fwrite("RIFF", sizeof(char), 4, file);
+    fwrite(&chunk_size, sizeof(unsigned int), 1, file);
+    fwrite("WAVE", sizeof(char), 4, file);
+
+    // Sub-chunk 1 "fmt "
+    fwrite("fmt ", sizeof(char), 4, file);
+    unsigned int sub_chunk1_size = 16;
+    fwrite(&sub_chunk1_size, sizeof(unsigned int), 1, file);
+    fwrite(&audio_format, sizeof(unsigned short), 1, file);
+    fwrite(&num_channels, sizeof(unsigned short), 1, file);
+    fwrite(&sample_rate, sizeof(unsigned int), 1, file);
+    fwrite(&byte_rate, sizeof(unsigned int), 1, file);
+    fwrite(&block_align, sizeof(unsigned short), 1, file);
+    fwrite(&bits_per_sample, sizeof(unsigned short), 1, file);
+
+    // Sub-chunk 2 "data"
+    unsigned int sub_chunk2_size = tamanho * 2 * sizeof(short);  // 2 canais
+    fwrite("data", sizeof(char), 4, file);
+    fwrite(&sub_chunk2_size, sizeof(unsigned int), 1, file);
+    // Escrever o sinal filtrado em estéreo
+    fwrite(sinal, sizeof(short), tamanho * 2, file);
+
+    fclose(file);
+    return 0;
+}
 // Função para processar os buffers de sinal1 e sinal2
 // Aplica o filtro a cada buffer dos dois sinais
-int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro) {
+// Função para processar os buffers de sinal1 e sinal2
+// Aplica o filtro a cada buffer dos dois sinais e armazena o sinal completo em um arquivo WAV
+int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro, float wetness) {
+    const char *filename = "sinal_processado.wav";
+
     // Verificar se os buffers estão alocados corretamente
     if (!buffers_sinal1 || !buffers_sinal2) {
         printf("Erro: buffers não alocados corretamente.\n");
-        return -1;
+        return -1;  // Retorna erro
     }
 
     // Alocar buffers filtrados
@@ -170,28 +219,36 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     short **buffers_sinal2_filtrado = (short **)malloc(num_buffers * sizeof(short *));
     if (!buffers_sinal1_filtrado || !buffers_sinal2_filtrado) {
         printf("Erro: falha ao alocar buffers filtrados.\n");
-        return -1;
+        return -1;  // Retorna erro
     }
 
     // Inicializar buffers filtrados
     for (int i = 0; i < num_buffers; i++) {
         buffers_sinal1_filtrado[i] = (short *)malloc(buffer_size * sizeof(short));
         buffers_sinal2_filtrado[i] = (short *)malloc(buffer_size * sizeof(short));
+        if (!buffers_sinal1_filtrado[i] || !buffers_sinal2_filtrado[i]) {
+            printf("Erro: falha ao alocar memória para buffer de sinal.\n");
+            return -1;  // Retorna erro
+        }
     }
 
-    // Alocar buffer para a média dos buffers filtrados
-    short *buffer_media = (short *)malloc(buffer_size * sizeof(short));
-    if (!buffer_media) {
-        printf("Erro: falha ao alocar o buffer de média.\n");
-        return -1;
+    // Alocar array para o sinal completo (todos os buffers combinados)
+    int tamanho_total_sinal = num_buffers * buffer_size;  // Total de amostras no sinal final
+    short *sinal_completo = (short *)malloc(tamanho_total_sinal * sizeof(short));
+    if (!sinal_completo) {
+        printf("Erro: falha ao alocar o array do sinal completo.\n");
+        return -1;  // Retorna erro
     }
 
-    // Processar os buffers e aplicar o filtro FIR
+    //float feedback = 1.0f;           // Exemplo de valor para feedback
+
+
+    // Processar os buffers, aplicar o filtro FIR e o reverb
+    int posicao = 0;  // Variável para controle da posição no sinal_completo
     for (int i = 0; i < num_buffers; i++) {
-        // Atualizar coeficientes a cada 10 buffers
+        // Atualizar coeficientes a cada 10 buffers (se necessário)
         if (i > 0 && i % 10 == 0) {
-            // Atualizar os coeficientes, se necessário
-            // alterar_coeficientes(coeficientes_filtro, nova_ordem_filtro);
+            // altere_coeficientes(coeficientes_filtro, nova_ordem_filtro);
         }
 
         // Aplicar o filtro FIR para o sinal1
@@ -204,28 +261,44 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
             aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro, ordem_filtro);
         }
 
-        // Calcular a média dos buffers filtrados
+        // Calcular a média dos buffers filtrados e preencher media_buffers
+        float *media_buffer = (float *)malloc(buffer_size * sizeof(float));  // Alocar buffer temporário para a média do buffer atual
         for (int j = 0; j < buffer_size; j++) {
-            buffer_media[j] = (buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2;
+            media_buffer[j] = (float)(buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2.0f;
         }
 
-        // Aqui, o buffer_media pode ser usado para mais processamento ou armazenado conforme necessário
+        // Aplicar o reverb no buffer de média
+        applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
 
-        // Exemplo de uso do buffer_media: o buffer_media pode ser processado mais uma vez ou armazenado
-        // processar_buffer_media(buffer_media, buffer_size);
+        // Copiar o buffer processado para o sinal completo
+        for (int j = 0; j < buffer_size; j++) {
+            sinal_completo[posicao++] = (short)media_buffer[j];  // Converter de volta para short antes de adicionar ao sinal completo
+        }
+
+        // Liberar memória do buffer de média após o uso
+        free(media_buffer);
     }
 
-    // Liberação dos buffers filtrados e buffer de média
+    // Salvar o sinal completo no arquivo WAV
+    if (escrever_wav_estereo(filename, sinal_completo, tamanho_total_sinal) != 0) {
+        printf("Erro ao salvar o arquivo WAV.\n");
+        return -1;  // Retorna erro
+    }
+
+    // Liberação dos buffers filtrados e sinal completo
     for (int i = 0; i < num_buffers; i++) {
         free(buffers_sinal1_filtrado[i]);
         free(buffers_sinal2_filtrado[i]);
     }
     free(buffers_sinal1_filtrado);
     free(buffers_sinal2_filtrado);
-    free(buffer_media);
+    free(sinal_completo);
 
-    return 0; // Sucesso no processamento dos buffers
+    return 0;  // Retorna sucesso
 }
+
+
+
 
 
 
