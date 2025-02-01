@@ -24,7 +24,7 @@ int gerar_buffers_circulares(short *sinal1, short *sinal2, int tamanho, int buff
 void filtro_exemplo(short *buffer, int buffer_size);
 
 // Função para processar os buffers com filtro
-int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro, float wetness);
+int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro);
 
 
 // Função para liberar a memória dos buffers

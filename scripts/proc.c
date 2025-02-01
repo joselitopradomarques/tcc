@@ -3,6 +3,7 @@
 #include <math.h>  // Necessário para usar a função sin() e PI
 #include "proc.h"
 #include "reverb.h"
+#include "delay.h"
 
 #define PI 3.14159265358979323846  // Definindo PI
 #define SAMPLE_RATE 44100
@@ -158,6 +159,8 @@ void filtro_exemplo(short *buffer, int buffer_size) {
         buffer[i] = (buffer[i - 1] + buffer[i] + buffer[i + 1]) / 3;
     }
 }
+
+
 // Função para salvar o arquivo WAV com o sinal filtrado em estéreo
 int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
     FILE *file = fopen(filename, "wb");
@@ -201,12 +204,16 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
     fclose(file);
     return 0;
 }
+
+
+
 // Função para processar os buffers de sinal1 e sinal2
-// Aplica o filtro a cada buffer dos dois sinais
-// Função para processar os buffers de sinal1 e sinal2
-// Aplica o filtro a cada buffer dos dois sinais e armazena o sinal completo em um arquivo WAV
-int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro, float wetness) {
+int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro) {
+    
     const char *filename = "sinal_processado.wav";
+    
+    // Definição para efeito Reverb
+    float wetness = 1.0f; // Defina o valor apropriado para o efeito
 
     // Verificar se os buffers estão alocados corretamente
     if (!buffers_sinal1 || !buffers_sinal2) {
@@ -240,10 +247,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         return -1;  // Retorna erro
     }
 
-    //float feedback = 1.0f;           // Exemplo de valor para feedback
-
-
-    // Processar os buffers, aplicar o filtro FIR e o reverb
+    // Processar os buffers, aplicar o filtro FIR e o delay
     int posicao = 0;  // Variável para controle da posição no sinal_completo
     for (int i = 0; i < num_buffers; i++) {
         // Atualizar coeficientes a cada 10 buffers (se necessário)
@@ -267,8 +271,9 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
             media_buffer[j] = (float)(buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2.0f;
         }
 
-        // Aplicar o reverb no buffer de média
-        applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
+        // Aplicar o delay no buffer de média (feedback = 0.6f)
+        aplicar_delay(media_buffer, buffer_size, wetness, 0.3f);
+        //  applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
 
         // Copiar o buffer processado para o sinal completo
         for (int j = 0; j < buffer_size; j++) {
@@ -296,13 +301,6 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
 
     return 0;  // Retorna sucesso
 }
-
-
-
-
-
-
-
 
 void liberar_buffers(short **buffers_sinal1, short **buffers_sinal2, int num_buffers) {
     // Verifica e libera buffers_sinal1
