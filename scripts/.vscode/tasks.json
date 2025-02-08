@@ -2,27 +2,38 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "java (build)",
-            "paths": [
-                "${workspace}"
+            "label": "Compilar Arquivo C",
+            "type": "shell",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-g",
+                "princ.c",
+                "proc.c",
+                "delay.c",
+                "-lpthread",
+                "-lm",
+                "-o",
+                "princ"
             ],
-            "isFullBuild": true,
-            "group": "build",
-            "problemMatcher": [],
-            "label": "java (build): Build Workspace",
-            "detail": "$(tools) Build all the Java projects in workspace."
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compilar o projeto C"
         },
         {
             "type": "cppbuild",
             "label": "C/C++: gcc arquivo de build ativo",
             "command": "/usr/bin/gcc",
             "args": [
-				"-fdiagnostics-color=always",
-				"-g",
-				"${file}",
-				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}",
-				"-lasound"
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -30,10 +41,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "detail": "Tarefa gerada pelo Depurador."
         }
     ]

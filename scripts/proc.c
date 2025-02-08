@@ -81,8 +81,8 @@ int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
 
 int ler_dois_wav_estereo(short **sinal1, short **sinal2, int *tamanho1, int *tamanho2) {
     // Definindo os caminhos dos arquivos WAV diretamente dentro da função
-    const char *filename1 = "/home/joselito/git/tcc/datas/song01.wav";
-    const char *filename2 = "/home/joselito/git/tcc/datas/silencio_6minutos.wav";
+    const char *filename1 = "/home/joselito/git/tcc/scripts/song12.wav";
+    const char *filename2 = "/home/joselito/git/tcc/scripts/silencio_6minutos.wav";
 
     // Ler o primeiro arquivo WAV
     short *sinal_temp1 = NULL;
@@ -205,15 +205,13 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
     return 0;
 }
 
-
-
 // Função para processar os buffers de sinal1 e sinal2
 int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro) {
     
     const char *filename = "sinal_processado.wav";
     
     // Definição para efeito Reverb
-    float wetness = 1.0f; // Defina o valor apropriado para o efeito
+    float wetness = 0.0f; // Defina o valor apropriado para o efeito
 
     // Verificar se os buffers estão alocados corretamente
     if (!buffers_sinal1 || !buffers_sinal2) {
@@ -251,7 +249,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     int posicao = 0;  // Variável para controle da posição no sinal_completo
     for (int i = 0; i < num_buffers; i++) {
         // Atualizar coeficientes a cada 10 buffers (se necessário)
-        if (i > 0 && i % 10 == 0) {
+        if (i % 10 == 0) {
             // altere_coeficientes(coeficientes_filtro, nova_ordem_filtro);
         }
 
@@ -272,8 +270,8 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         }
 
         // Aplicar o delay no buffer de média (feedback = 0.6f)
-        aplicar_delay(media_buffer, buffer_size, wetness, 0.3f);
-        //  applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
+        //aplicar_delay(media_buffer, buffer_size, wetness, 0.3f);
+        applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
 
         // Copiar o buffer processado para o sinal completo
         for (int j = 0; j < buffer_size; j++) {

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SAMPLE_RATE 44100
+#define SAMPLE_RATE 48000
 #define NUM_CHANNELS 2
 #define BITS_PER_SAMPLE 16
 #define DURATION_SECONDS 360 // 6 minutos

@@ -4,6 +4,8 @@
         "processamento_sinais.h": "c",
         "filter_final.h": "c",
         "reverb.h": "c",
-        "proc.h": "c"
+        "proc.h": "c",
+        "delay.h": "c",
+        "capture.h": "c"
     }
 }

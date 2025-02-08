@@ -1,8 +1,9 @@
 // princ.c
-// gcc -o princ princ.c proc.c -lpthread -lm
+// gcc -o princ princ.c proc.c delay.c -lpthread -lm
 #include <stdio.h>
 #include <stdlib.h>
 #include "proc.h"
+
 
 int main() {
     short *sinal1 = NULL, *sinal2 = NULL;
