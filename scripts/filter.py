@@ -1,180 +1,118 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.io import wavfile
-from scipy.signal import firwin
-from scipy.fft import fft
+from scipy.signal import firwin, lfilter, freqz
+import wave
+import struct
+import scipy.io.wavfile as wav
 
-# Definir parâmetros
-fs = 44100  # Frequência de amostragem (Hz)
-fc = 300     # Frequência de corte (Hz)
-# Ajustar a ordem e janela para maior atenuação
-ordem = 500
-janela = 'blackman'
+# Função para carregar o arquivo WAV usando a biblioteca wave
+def load_audio(filename):
+    with wave.open(filename, 'rb') as wav_file:
+        # Obter os parâmetros do arquivo WAV
+        sample_rate = wav_file.getframerate()
+        num_frames = wav_file.getnframes()
+        num_channels = wav_file.getnchannels()
 
+        # Ler os frames de áudio
+        frames = wav_file.readframes(num_frames)
 
-# Nome do arquivo de entrada e saída
-input_wav = '/home/joselito/git/tcc/datas/audio02.wav'  # Caminho do arquivo de entrada
-output_wav = '/home/joselito/git/tcc/datas/saida_filtrada.wav'  # Caminho completo do arquivo de saída
-output_txt = '/home/joselito/git/tcc/datas/valores_brutos.txt'  # Caminho completo do arquivo de saída .txt
+        # Desempacotar os dados dos frames (considerando que os dados são em 16 bits)
+        audio_data = np.array(struct.unpack('<' + 'h' * (num_frames * num_channels), frames))
+        
+        # Se for estéreo, converter para mono tirando a média dos canais
+        if num_channels == 2:
+            audio_data = (audio_data[::2] + audio_data[1::2]) / 2
 
-# Função para normalizar o sinal entre -1 e 1, assumindo sinal de 16 bits
-def normalizar_sinal(sinal):
-    max_possible_val = 32767  # Máximo valor absoluto possível em 16 bits
-    sinal_normalizado = sinal / max_possible_val  # Normalizar em função do valor máximo de 16 bits
-    return sinal_normalizado
+    return sample_rate, audio_data
 
-# Função para desnormalizar o sinal após a filtragem
-def desnormalizar_sinal(sinal_normalizado):
-    max_possible_val = 32767  # Retorna ao valor máximo de 16 bits
-    return sinal_normalizado * max_possible_val
-
-
-# Função para ler e escrever arquivos WAV
-def ler_wav(filename):
-    fs, sinal = wavfile.read(filename)
-    return fs, sinal
-
-def escrever_wav(filename, fs, sinal):
-    wavfile.write(filename, fs, sinal.astype(np.int16))
-
-# Função para projetar filtro FIR
-def fir_filter_design(numtaps, window, fc, fs):
-    if numtaps % 2 == 0:
-        numtaps += 1  # Garantir que seja ímpar
-    coeficientes = firwin(numtaps, fc, window=window, fs=fs, pass_zero=False)
-    return coeficientes
-
-# Função para aplicar filtro FIR ao sinal, processando canais separadamente
-def aplicar_filtro_multicanal(sinal, coeficientes):
-    if sinal.ndim == 1:  # Sinal mono
-        return np.convolve(sinal, coeficientes, mode='same')
-    else:  # Sinal com múltiplos canais (por exemplo, estéreo)
-        sinal_filtrado = np.zeros_like(sinal)
-        for canal in range(sinal.shape[1]):
-            sinal_filtrado[:, canal] = np.convolve(sinal[:, canal], coeficientes, mode='same')
-        return sinal_filtrado
+# Função para aplicar o filtro FIR
+def apply_fir_filter(data, sample_rate, cutoff_freq, order):
+    # Gera os coeficientes FIR para o filtro passa-alta com janela Hamming
+    nyquist = 0.5 * sample_rate
+    normal_cutoff = cutoff_freq / nyquist
+    order = 33 if order % 2 == 0 else order  # Garante que a ordem seja ímpar
+    fir_coeff = firwin(order, normal_cutoff, pass_zero=False, window='hamming')
     
-# Função para imprimir os coeficientes no formato C
-def imprimir_coeficientes_em_c(coeficientes):
-    coeficientes_c = ', '.join([f'{coef:.8f}' for coef in coeficientes])
-    print(f'float coeficientes[ORDEM] = {{ {coeficientes_c} }};')
-# Código principal
-# 1. Projetar o filtro FIR
-coeficientes = fir_filter_design(ordem, janela, fc, fs)
-
-# 2. Imprimir os coeficientes no formato adequado para código em C
-imprimir_coeficientes_em_c(coeficientes)
-# Função para plotar o espectro linear do sinal
-def plot_spectrum_linear(sinal, fs, title):
-    N = len(sinal)
-    T = 1.0 / fs
-    yf = fft(sinal)
-    xf = np.fft.fftfreq(N, T)[:N//2]
-    magnitude = 2.0 / N * np.abs(yf[:N//2])
+    # Aplica o filtro no áudio
+    filtered_data = lfilter(fir_coeff, 1.0, data)
     
-    plt.figure(figsize=(10, 6))
-    plt.plot(xf, magnitude)
-    plt.title(title)
-    plt.xlabel('Frequência (Hz)')
-    plt.ylabel('Magnitude (Linear)')
+    return filtered_data, fir_coeff
+
+# Função para salvar o áudio filtrado em um novo arquivo WAV
+def save_filtered_audio(filename, sample_rate, filtered_data):
+    # Converte o áudio filtrado para 16 bits
+    filtered_data_int16 = np.int16(filtered_data)
+
+    # Salva o áudio filtrado
+    wav.write(filename, sample_rate, filtered_data_int16)
+
+# Função para visualizar a resposta em frequência do filtro
+def plot_frequency_response(fir_coeff, sample_rate):
+    w, h = freqz(fir_coeff, worN=8000)
+    plt.plot(0.5 * sample_rate * w / np.pi, np.abs(h), 'b')
+    plt.axvline(cutoff_freq, color='k')
+    plt.xlim(20, 0.5 * sample_rate)  # Limitar para a faixa de frequência audível (20 Hz até Nyquist)
+    plt.xscale('log')  # Definir o eixo de frequência em escala logarítmica
+    plt.title("Resposta em Frequência do Filtro Passa-Alta")
+    plt.xlabel('Frequência [Hz]')
+    plt.ylabel('Magnitude')
     plt.grid(True)
-    plt.show()
 
-# Função para plotar a composição em frequência (espectro) em dB com escala logarítmica
-def plot_spectrum_db_log(sinal, fs, title):
-    N = len(sinal)
-    T = 1.0 / fs
-    yf = fft(sinal)
-    xf = np.fft.fftfreq(N, T)[:N//2]
-    magnitude = 2.0 / N * np.abs(yf[:N//2])
-    magnitude_db = 20 * np.log10(magnitude)  # Converte para dB
-    
-    # Evitar problemas logarítmicos com valores zero ou negativos
-    magnitude_db[magnitude_db == -np.inf] = -100  # Definir um valor mínimo para dB
-    
+# Função para plotar o áudio original vs áudio filtrado
+def plot_audio_comparison(original, filtered, sample_rate, duration=2):
+    # Calcula o número de amostras correspondentes à duração de 2 segundos
+    num_samples = int(duration * sample_rate)
+
+    # Normalizar os dados de áudio para o intervalo [-1, 1] usando o valor máximo absoluto entre ambos os áudios
+    max_amplitude = max(np.max(np.abs(original[:num_samples])), np.max(np.abs(filtered[:num_samples])))
+    original_normalized = original[:num_samples] / max_amplitude
+    filtered_normalized = filtered[:num_samples] / max_amplitude
+
+    # Define o tempo normalizado para 2 segundos
+    time = np.arange(num_samples) / sample_rate
+
+    # Plota o áudio original e filtrado para os primeiros 2 segundos
     plt.figure(figsize=(10, 6))
-    plt.semilogx(xf, magnitude_db)  # Frequência em escala logarítmica
-    plt.title(title)
-    plt.xlabel('Frequência (Hz) [Escala Logarítmica]')
-    plt.ylabel('Magnitude (dB)')
-    plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+
+    # Plot do áudio original
+    plt.subplot(2, 1, 1)
+    plt.plot(time, original_normalized)
+    plt.title("Áudio Original (2 segundos)")
+    plt.xlabel("Tempo [s]")
+    plt.ylabel("Amplitude Normalizada")
+
+    # Plot do áudio filtrado
+    plt.subplot(2, 1, 2)
+    plt.plot(time, filtered_normalized)
+    plt.title("Áudio Filtrado (2 segundos)")
+    plt.xlabel("Tempo [s]")
+    plt.ylabel("Amplitude Normalizada")
+
+    plt.tight_layout()
     plt.show()
 
-# Função para plotar o sinal no domínio do tempo
-def plot_time_signal(sinal, fs, title):
-    plt.figure(figsize=(10, 6))
-    plt.plot(np.arange(len(sinal)) / fs, sinal)
-    plt.title(title)
-    plt.xlabel('Tempo (s)')
-    plt.ylabel('Amplitude')
-    plt.grid(True)
-    plt.show()
+# Testando o filtro com uma ordem específica
+filename = '/home/joselito/git/tcc/audio_files/ref_000_cortado.wav'  # Substitua com o caminho do seu arquivo WAV
+cutoff_freq = 300  # Frequência de corte em Hz (ajuste conforme necessário)
+order = 129  # Ordem do filtro (ajuste conforme necessário)
 
-# Função para salvar os valores brutos do sinal em um arquivo de texto
-def salvar_valores_brutos_em_txt(sinal, filename):
-    # Abrir o arquivo para escrita
-    with open(filename, 'w') as f:
-        # Escrever os valores de cada amostra do sinal
-        for i in range(sinal.shape[0]):
-            f.write(f'{sinal[i, 0]}\n')  # Salvando apenas o primeiro canal, se for estéreo
+# Carregar áudio
+sample_rate, audio_data = load_audio(filename)
 
-# Função para extrair e plotar 2 segundos do sinal filtrado no domínio do tempo
-def plot_2s_filtered_signal(sinal_filtrado, fs, title):
-    # Definir a quantidade de amostras para 2 segundos
-    samples_2s = int(2 * fs)  # 2 segundos de sinal (fs = frequência de amostragem)
-    
-    # Garantir que o sinal tenha pelo menos 2 segundos de dados
-    if len(sinal_filtrado) < samples_2s:
-        print("O sinal filtrado é menor que 2 segundos.")
-        sinal_filtrado_2s = sinal_filtrado  # Usar o sinal inteiro se for menor que 2 segundos
-    else:
-        sinal_filtrado_2s = sinal_filtrado[:samples_2s]  # Pegar apenas os primeiros 2 segundos
-    
-    # Plotar o sinal no domínio do tempo
-    plt.figure(figsize=(10, 6))
-    plt.plot(np.arange(len(sinal_filtrado_2s)) / fs, sinal_filtrado_2s)
-    plt.title(title)
-    plt.xlabel('Tempo (s)')
-    plt.ylabel('Amplitude')
-    plt.grid(True)
-    plt.show()
+# Aplicar filtro e plotar resultados
+print(f"Aplicando filtro com ordem {order}...")
+filtered_audio, fir_coeff = apply_fir_filter(audio_data, sample_rate, cutoff_freq, order)
 
-# Carregar arquivo WAV de entrada
-fs, sinal = ler_wav(input_wav)
+# Plotar resposta em frequência com escala logarítmica no eixo das frequências
+plot_frequency_response(fir_coeff, sample_rate)
 
-# 1. Salvar os valores brutos do sinal em um arquivo de texto
-salvar_valores_brutos_em_txt(sinal, output_txt)
-print(f'Valores brutos do sinal salvos em: {output_txt}')
+# Plotar comparação entre áudio original e filtrado (apenas 2 segundos)
+plot_audio_comparison(audio_data, filtered_audio, sample_rate)
 
-# 2. Plotar o sinal original (valores brutos)
-plot_time_signal(sinal[:, 0], fs, 'Sinal Original (Valores Brutos)')
+# Salvar o áudio filtrado em um novo arquivo WAV
+output_filename = '/home/joselito/git/tcc/audio_files/ref_300_cortado_filtrado.wav'  # Caminho do arquivo de saída
+save_filtered_audio(output_filename, sample_rate, filtered_audio)
+print(f"Áudio filtrado salvo em: {output_filename}")
 
-# 3. Plotar o espectro do sinal original sem normalização
-plot_spectrum_db_log(sinal[:, 0], fs, 'Espectro do Sinal Original (Sem Normalização)')
-
-# 4. Normalizar o sinal e plotar o espectro
-sinal_normalizado = normalizar_sinal(sinal)
-
-# Plotar espectro do sinal normalizado em dB (escala log)
-plot_spectrum_db_log(sinal_normalizado[:, 0], fs, 'Espectro do Sinal Normalizado (dB)')
-
-# Plotar espectro do sinal normalizado em escala linear
-plot_spectrum_linear(sinal_normalizado[:, 0], fs, 'Espectro do Sinal Normalizado (Linear)')
-
-# Projetar filtro FIR
-coeficientes = fir_filter_design(ordem, janela, fc, fs)
-
-# Aplicar o filtro ao sinal normalizado
-sinal_filtrado = aplicar_filtro_multicanal(sinal_normalizado, coeficientes)
-plot_spectrum_db_log(sinal_filtrado[:, 0], fs, 'Espectro do Sinal Normalizado Filtrado (dB)')
-# 5. Desnormalizar o sinal filtrado
-sinal_filtrado_desnormalizado = desnormalizar_sinal(sinal_filtrado)
-
-# 6. Plotar o espectro do sinal filtrado desnormalizado
-plot_spectrum_db_log(sinal_filtrado_desnormalizado[:, 0], fs, 'Espectro do Sinal Filtrado Desnormalizado')
-
-# 7. Salvar o arquivo WAV filtrado e desnormalizado
-escrever_wav(output_wav, fs, sinal_filtrado_desnormalizado)
-
-# 8. Plotar os primeiros 2 segundos do sinal filtrado no domínio do tempo
-plot_2s_filtered_signal(sinal_filtrado_desnormalizado[:, 0], fs, '2 Segundos do Sinal Filtrado no Domínio do Tempo')
+# Mostrar os gráficos
+plt.show()

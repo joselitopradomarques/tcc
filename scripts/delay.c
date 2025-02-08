@@ -6,123 +6,58 @@ Esse arquivo contém as funções essenciais para a implementação do efeito de
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "delay.h"
 
-// Inicializa o buffer de delay
-void init_delay_buffer(DelayBuffer *db, int delay_ms) {
-    if (delay_ms == 0) {
-        // Se o delay for 0, o buffer não é necessário
-        db->buffer_size = 0;
-        db->buffer = NULL;
-        db->write_index = 0;
-        return;
+#define MAX_DELAY_MS 1000  // Delay máximo em milissegundos
+#define SAMPLE_RATE 48000  // Taxa de amostragem (assumindo 44.1kHz)
+#define MAX_DELAY_SAMPLES (SAMPLE_RATE * MAX_DELAY_MS / 1000)  // Delay máximo em número de amostras
+
+// Defina delay_buffer e delay_buffer_pos globalmente
+float *delay_buffer = NULL;  // Variável global
+int delay_buffer_pos = 0;    // Variável global
+
+void aplicar_delay(float *buffer, int buffer_size, float wetness, float feedback) {
+    int delay_ms = 500;  // Definindo o delay em milissegundos (exemplo de 500ms)
+    int delay_samples = (SAMPLE_RATE * delay_ms) / 1000;  // Convertendo delay de ms para amostras
+    if (delay_samples > MAX_DELAY_SAMPLES) {
+        delay_samples = MAX_DELAY_SAMPLES;  // Limitar o delay ao máximo permitido
     }
 
-    // Inicialização normal para delay > 0
-    db->buffer_size = (SAMPLE_RATE * delay_ms) / 1000;
-    db->buffer = (float *)calloc(db->buffer_size, sizeof(float));
-    if (db->buffer == NULL) {
-        fprintf(stderr, "Erro ao alocar memória para o buffer de delay.\n");
-        exit(1);
-    }
-    db->write_index = 0;
-}
-
-// Função para prevenir o clipping, limitando os valores de áudio entre -1.0 e 1.0
-float prevent_clipping(float sample) {
-    if (sample > 1.0f) {
-        return 1.0f;
-    } else if (sample < -1.0f) {
-        return -1.0f;
-    }
-    return sample;
-}
-
-// Função para processar o delay com atenuação
-float process_delay(DelayBuffer *db, float input, int delay_ms, float attenuation) {
-    if (delay_ms == 0 || db->buffer == NULL) {
-        // Se o delay for 0, retorne a amostra original sem processar
-        return input;
-    }
-
-    // Calcula o número de amostras do delay
-    int delay_samples = (SAMPLE_RATE * delay_ms) / 1000;
-    int read_index = (db->write_index - delay_samples + db->buffer_size) % db->buffer_size;
-    float delayed_sample = db->buffer[read_index];
-
-    // Aplica a atenuação no sinal de delay
-    delayed_sample *= attenuation;
-
-    // Escreve a nova amostra no buffer
-    db->buffer[db->write_index] = input;
-    db->write_index = (db->write_index + 1) % db->buffer_size;
-
-    // Retorna o sinal de delay somado com o original, aplicado a prevenção de clipping
-    return prevent_clipping(input + delayed_sample);
-}
-
-
-
-void apply_delay_to_audio(const char *input_filename, const char *output_filename, float delay_factor) {
-    // Verifica se o fator de delay está dentro do intervalo [0, 1]
-    if (delay_factor < 0.0f || delay_factor > 1.0f) {
-        printf("Erro: O fator de delay deve estar entre 0 e 1.\n");
-        exit(1);
-    }
-
-    // Converte o fator de delay (0 a 1) para o valor em milissegundos (0 a 1000 ms)
-    int delay_time = (int)(delay_factor * 1000);
-
-    // Definir a atenuação fixa para suavizar o efeito de delay
-    float attenuation = 0.6;  // 30% da intensidade do delay
-
-    // Abre o arquivo de entrada para leitura
-    SF_INFO sf_info;
-    SNDFILE *infile = sf_open(input_filename, SFM_READ, &sf_info);
-    if (!infile) {
-        printf("Erro ao abrir o arquivo de entrada: %s\n", input_filename);
-        exit(1);
-    }
-
-    // Verifica se o formato do arquivo de áudio é estéreo
-    if (sf_info.channels != 2) {
-        printf("Somente áudio estéreo é suportado neste exemplo.\n");
-        sf_close(infile);
-        exit(1);
-    }
-
-    // Inicializa os buffers de delay para os canais esquerdo e direito
-    DelayBuffer db_left, db_right;
-    init_delay_buffer(&db_left, delay_time);
-    init_delay_buffer(&db_right, delay_time);
-
-    // Abre o arquivo de saída para escrita
-    SNDFILE *outfile = sf_open(output_filename, SFM_WRITE, &sf_info);
-    if (!outfile) {
-        printf("Erro ao abrir o arquivo de saída: %s\n", output_filename);
-        sf_close(infile);
-        exit(1);
-    }
-
-    // Processa o áudio e aplica o delay
-    float buffer[2 * SAMPLE_RATE];  // Buffer para os dois canais (estéreo)
-    sf_count_t read_count;
-    while ((read_count = sf_readf_float(infile, buffer, SAMPLE_RATE)) > 0) {
-        for (sf_count_t i = 0; i < read_count; i++) {
-            // Aplica o efeito de delay com atenuação no canal esquerdo
-            buffer[2 * i] = process_delay(&db_left, buffer[2 * i], delay_time, attenuation);  // Canal esquerdo
-
-            // Aplica o efeito de delay com atenuação no canal direito
-            buffer[2 * i + 1] = process_delay(&db_right, buffer[2 * i + 1], delay_time, attenuation);  // Canal direito
+    // Alocar o buffer de delay se ainda não estiver alocado
+    if (delay_buffer == NULL) {
+        delay_buffer = (float *)calloc(MAX_DELAY_SAMPLES, sizeof(float));  // Zerar o buffer inicialmente
+        if (delay_buffer == NULL) {
+            printf("Erro ao alocar memória para o buffer de delay.\n");
+            return;
         }
-
-        // Grava os dados processados no arquivo de saída
-        sf_writef_float(outfile, buffer, read_count);
     }
 
-    // Fecha os arquivos e libera a memória
-    sf_close(infile);
-    sf_close(outfile);
-    if (db_left.buffer != NULL) free(db_left.buffer);
-    if (db_right.buffer != NULL) free(db_right.buffer);
+    for (int i = 0; i < buffer_size; i++) {
+        // Obter o valor atrasado do buffer
+        float delayed_sample = delay_buffer[delay_buffer_pos];  
+
+        // Aplicar o delay ao sinal atual e aplicar o wetness (mistura do sinal atrasado)
+        float output_sample = (1.0f - wetness) * buffer[i] + wetness * delayed_sample;
+
+        // Aplicar feedback (realimentação) ao sinal atrasado
+        float feedback_sample = delayed_sample * feedback;
+
+        // Atualizar o buffer de delay com a amostra atual somada ao feedback
+        delay_buffer[delay_buffer_pos] = buffer[i] + feedback_sample;
+
+        // Avançar a posição do buffer de delay
+        delay_buffer_pos = (delay_buffer_pos + 1) % delay_samples;
+
+        // Escrever a amostra processada no buffer de saída
+        buffer[i] = output_sample;
+    }
+}
+
+void liberar_delay() {
+    // Liberar o buffer de delay global
+    if (delay_buffer != NULL) {
+        free(delay_buffer);
+        delay_buffer = NULL;  // Resetando o ponteiro para evitar uso posterior inválido
+    }
 }

@@ -314,29 +314,181 @@ A conversão digital-analógico é necessária para que o sinal final, após o p
 
 \paragraph*{Diagrama de Conexões}
 
-O diagrama de pinagem, Figura tal  contém o conversor AD e a \textit{Raspberry Pi 4 B}. hjjjjjjjjjjjjjjjjjjjjjjjjjjj
+O diagrama de pinagem, Figura \ref{fig80},  contém o conversor AD e a \textit{Raspberry Pi 4 B}, e compreende as conexões necessárias para que os sinais de controle sejam lidos pelo conversor PCF8591 e transferidos via I2C para a \textit{Raspberry}.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figuras/fig80.png}
+    \includegraphics[width=1\textwidth]{figuras/fig80.png}
     \caption{Diagrama de Conexões}
     \label{fig80}
 \end{figure}
 
+No circuito integrado PCF8591, as entradas A0, A1 e A2 correspondem à configuração do endereço I2C, necessário para que a \textit{Raspberry} consiga identificar o dispositivo e receber as leituras realizadas. Naturalmente, esse dispositivo possui endereço \textit{0x48}. Porém, quando os pinos A0, A1 e A2 estavam abertos, havia uma flutuação do endereço. Para estabilizar o endereço, foi necessário o aterramento dessas entradas de endereço. 
+
+Além disso, as entradas utilizadas para as leituras dos \textit{knobs} seletor de frequência de corte (AIN0) e da intensidade do efeito (AIN1), utilizou-se as duas primeiras entradas. Para que se obtenha as leituras específicas dessa entrada, no código de aquisição de sinal, selecionou-se as entradas \textit{0x40} e \textit{0x41}, correspondentes respectivamente às entradas \textit{AIN0} e \textit{AIN1}.
+
+Outro componente utilziado foi a chave de duas posições, no diagrama \ref{fig80}, denominado de \textit{SW1}. Essa chave é capaz de mandar ao GPIO da \textit{Raspberry} o nível lógico alto (3V3) ou baixo (GND). Com esses níveis, é possível descobrir se o usuário deseja que o efeito 1 ou o 2 seja executado naquele momento.
+
+Para a reprodução do sinal de saída, utilizou-se a entrada de 3,5 m nativa da \textit{Raspberry}.
+
 \paragraph*{Lista de Materiais}
-- 1 Raspberry
-- 2 potenciômetros
-- 1 botão hh de 2 posições
-- 1 cabo 3,5 mm
-- 1 cabo USB-C e USB-A
-- 1 computador para acesso remoto
+
+Para a implementação desse projeto, fez-se necessária a utilização dos componentes abaixo:
+
+\begin{itemize}[left=0pt, label=$\bullet$, itemsep=5pt] % Customize a lista
+    \item 1 Raspberry Pi
+    \item 1 CI conversor AD/DA PCF8591
+    \item 2 potenciômetros de 10 k$\Omega$
+    \item 1 chave HH de 2 posições
+    \item 1 cabo 3,5 mm
+    \item 1 fonte 5 VDC com cabo USB-C
+    \item 1 computador para acesso remoto
+\end{itemize}
+
+Para realizar a alimentação da \textit{Raspberry}, faz-se necessária a fonte com um cabo USB-C. 
 
 
 \subsection{Implementação em Software}
 
-Na \textit{Raspberry Pi}, após a conversão e aquisição dos sinais, é necessário realizar o processamento para obter o sinal final. Devido à sua eficiência no processamento, a linguagem C será utilizada para a implementação do sistema.
+Para a implementação do processamento de sinais de áudio, o código foi estruturado em várias bibliotecas, cada uma contendo funções específicas para cada etapa do processamento. O fluxo começa com a declaração das variáveis necessárias para iniciar a aquisição dos sinais. Em seguida, os arquivos de áudio no formato \textit{.wav} são lidos e processados utilizando uma lógica de \textit{buffers}, que segmenta os dados para permitir um processamento contínuo e eficiente.
+
+Com os segmentos de dados em mãos, diferentes processamentos são realizados, como filtragem e aplicação de efeitos. Após o processamento, os sinais são então reproduzidos.
+
+[INSERIR UM DIAGRAMA DE ESTADOS PARA ESSA APLICAÇÃO]
+
+Além disso, de forma cíclica, são realizadas aquisições de sinais de controle que permitem ajustar, em tempo real, parâmetros como a frequência de corte, a seleção dos efeitos e a intensidade aplicada.
+
+\paragraph*{Definição e Alocação Inicial de Buffers}
+
+No início da função principal, \verb|int main() {}|, são declarados ponteiros que terão papel fundamental ao longo do processamento de áudio. Esses ponteiros, \verb|*sinal1| e \verb|*sinal2|, irão armazenar os sinais de áudio completos, um para cada canal de áudio. Além disso, são definidos ponteiros para buffers, \verb|**buffers_sinal1| e \verb|**buffers_sinal2|, que serão usados para armazenar segmentos do sinal durante o processamento.
+
+O tamanho do \textit{buffer} é definido pela variável \verb|buffer_size|, que pode ser ajustada de acordo com a necessidade da aplicação. No exemplo, o tamanho padrão do \textit{buffer} foi definido como 1024 amostras, o que permitirá um processamento em blocos de dados, facilitando a aplicação de filtros e efeitos. A quantidade total de \textit{buffers} a ser utilizada durante a execução será determinada posteriormente com base no tamanho total dos sinais de áudio.
+
+Este trecho inicial de código configura as variáveis básicas necessárias para garantir que o processamento ocorra em partes menores (segmentos), o que é essencial para operações eficientes em tempo real.
+
+\paragraph*{Aquisição de Sinais de Áudio}
+
+Para iniciar o processamento, a aquisição dos sinais é realizada por meio da leitura de arquivos \textit{.wav} locais, sendo que duas funções principais são responsáveis por essa tarefa: \verb|ler_wav_estereo| e \verb|ler_dois_wav_estereo|.
+
+A função \verb|int ler_wav_estereo()| armazena os dados do arquivo \textit{WAV} em um \textit{buffer}. O arquivo de áudio é aberto e, caso ocorra algum erro, uma mensagem é exibida. Após a abertura do arquivo, seu cabeçalho é analisado para obter informações essenciais como número de canais, taxa de amostragem, \textit{bits} por amostra e tamanho total. Com esses dados, a memória é alocada para armazenar os sinais, que são então lidos e salvos.
+
+Já a função \verb|ler_dois_wav_estereo()| faz uso de \verb|ler_wav_estereo()| para ler os dois arquivos a partir dos caminhos definidos. Ao invocar \verb|ler_wav_estereo()|, os sinais são alocados em \textit{arrays}.
+
+
+
+\paragraph*{Geração dos Buffers}
+
+O processamento de áudio realizado por esta aplicação é dinâmico, pois se adapta às novas variáveis de controle, como frequência de corte, escolha e intensidade de efeitos. Para garantir um processamento contínuo e eficiente, foi utilizada a função \linebreak \verb|gerar_buffers_circulares|, que cria \textit{buffers} de tamanho regular, os quais são utilizados como entradas para as funções de processamento. A função \verb|gerar_buffers_circulares| é responsável por gerar os \textit{buffers} circulares a partir dos sinais de áudio, alocando as memórias necessárias para armazená-los e preenchendo-os de forma a permitir o processamento contínuo dos sinais.
+
+Antes de iniciar processamento, a função \verb|gerar_buffers_circulares| gera os \textit{buffers} circulares a partir dos dois sinais de áudio (\verb|sinal1| e \verb|sinal2|), alocando as memórias necessárias para armazená-los. Em vez de utilizar \textit{buffers} clássicos, a função adota o conceito de \textit{buffer} circular, permitindo que, ao atingir o final de um \textit{buffer}, o processamento continue a partir do início, assegurando um fluxo contínuo dos sinais. Primeiramente, a função calcula o número de \textit{buffers} necessários com base no tamanho total dos sinais e no tamanho de cada \textit{buffer}. Em seguida, ela aloca memória para os ponteiros que armazenarão os \textit{buffers} e, dentro de um laço, aloca memória para cada \textit{buffer} individualmente. Após garantir a alocação bem-sucedida, a função preenche os \textit{buffers} com os sinais, utilizando acesso circular para garantir que, ao atingir o final do sinal, os dados continuem sendo lidos a partir do início. Se algum erro ocorrer durante a alocação, a função retorna -1 após imprimir uma mensagem de erro; caso contrário, ela retorna 0, indicando que os \textit{buffers} foram criados e preenchidos com sucesso.
+
+\paragraph*{Aquisição dos Parâmetros de Controle}
+
+1) Explicar onde esses parâmetros são utilizados
+2) Explicar quais componentes realizam essa aquisição
+3) Explicar Qual a resolução desses sinais
+4) Explicar com qual frequência ele é atualizados
+5) Explicar como se obtém a frequência
+5) Explicar o código que realiza essa aquisição e atribuição
+
+\paragraph*{Conversão de Frequências de Corte}
+
+1) Explicar como a frequência 2 é obtida
+
+\paragraph*{Parâmetros do Filtro FIR}
+
+A obtenção de um filtro tradicionalmente parte de especificações como banda de transição desejada em determinada frequência de corte, atenuações na banda rejeitada, erros e outros parâmetros. Porém, para a obtenção do filtro para essa aplicação, utilizou-se um método empírico. Esse método consistiu na obtenção da concentração de potência em uma música de referência antes e depois de uma filtragem, realizada no \textit{PureData}. 
+
+Através de um código em \textit{Python}, aplicou-se uma DFT para se obter a contribuição, em relação à potência, da faixa entre 20 e 300 Hz. Em seguida, uma filtragem padrão do \textit{software} foi realizada e novamente se obteve a concentração de potência dessa faixa. Com as duas concentrações, antes e depois da filtragem, obteve-se um parâmetro para realizar uma iteração para elencar a ordem necessária para que a rejeição da banda obtivesse o mesmo comportamento.
+
+Assim, utilizando outro código em \textit{Python}, implementou-se um filtro que retornasse essa concentração após a filtragem. O código iterou a ordem do filtro até que se obtivesse uma atenuação maior que a obtida pelo \textit{PureData} e se chegou a ordem 121. 
+
+A seguir, foi necessário descobrir qual janelamento produziria esse desempenho de atenuação através de um teste que retornou a concentração de potência na banda rejeitada com ordem 121 em 11 tipos de janelas. O janelamento que obteve melhor resultado foi o \textit{Hamming}. Dessa forma, o filtro para a aplicação foi obtido. 
+
+\paragraph*{Matriz de Coeficientes do Filtro FIR}
+
+Quando o valor analógico do potenciômetro é quantizado, obteve-se 256 níveis de quantizações já que o conversor analógico digital escolhido possui resolução de 8 \textit{bits}. Dessa forma, o código possui 256 frequências possíveis para realizar o processamento, ou seja, 256 combinações possíveis de coeficientes para o filtro. Dessa forma, antes de se realizar o processamento, esses coeficientes são calculados e alocados em um vetor, para que, conforme novas frequências de corte sejam obtidas, utiliza-se os coeficientes já criados e alocados nesse vetor, ao invés de realizar o cálculo novamente. Essa solução foi aplicada para evitar o cálculo dos coeficientes a cada ciclo.
+
+A função \verb|generate_hamming_highpass_filter()| realiza duas etapas principais para gerar os coeficientes do filtro passa-altas, pois utiliza o método de janelamento para projeto de filtro FIR, ou seja, obtém-se o filtro ideal para determinada frequência de corte, e em seguida, obtém-se os coeficientes para a janela escolhida, conforme a ordem determinada. De forma mais detalhada, primeiramente, calcula-se a resposta ideal do filtro utilizando a função \textit{sinc}. A resposta ideal é obtida na frequência de corte normalizada em função da frequência de \textit{Nyquist}; e os coeficientes são obtidos para permitir a passagem das altas frequências enquanto atenuam as baixas. Aplica-se a janela de \textit{Hamming} para suavizar a resposta do filtro ideal e minimizar o efeito \textit{Gibbs} nos extremos do filtro, melhorando sua resposta em frequência.
+
+A matriz resultante contém os coeficientes dos filtros para todas possíveis frequências de corte, cuja quantidade é limitada pela quantização dos valores analógicos no vetor \verb|frequencias_log[]|.
+
+\paragraph*{Aplicação do Filtro FIR}
+
+A função \verb|aplicar_filtro_FIR_buffer| aplica o filtro FIR a um sinal armazenado em um \textit{buffer} circular. O objetivo da função é percorrer cada amostra do sinal e aplicar os coeficientes do filtro FIR. A função recebe como parâmetros o \verb|buffer_sinal|, que é o sinal de entrada, o \verb|buffer_sinal_filtrado|, que armazenará o sinal após a filtragem, o \verb|buffer_size|, que indica o tamanho do \textit{buffer}, os \verb|coeficientes|, que contém os coeficientes do filtro FIR, e a \verb|ordem|, que define o número de coeficientes a serem usados no cálculo da soma ponderada.
+
+Após processar todas as amostras anteriores, a função limita o valor do \verb|acumulador| para garantir que o valor filtrado não ultrapasse os limites de 16 bits, ajustando-o para o valor máximo (\verb|MAX_16BIT|) ou mínimo (\verb|-MAX_16BIT|) permitido. Essa etapa é importante para evitar distorções causadas por estouros de valores. Finalmente, o valor filtrado é armazenado no \verb|buffer_sinal_filtrado[j]|, que contém o sinal de saída filtrado.
+
+O processo de aplicar os coeficientes do filtro FIR a cada amostra do sinal, através da soma ponderada das amostras anteriores, é o mecanismo gerado a partir de um comportamento do sinal no domínio da frequência, a partir da frequência de corte e da ordem do filtro, que modificam os sinais no domínio do tempo, permitindo que a operação de rejeição de determinada banda seja efetiva nos sinais representados no tempo. E é dessa forma que se pode sentir, ao escutar o som filtrado, que determinados elementos foram excluídos dos sinais.
+
+\paragraph*{Efeito - Delay}
+
+Para o processamento do \textit{delay} no sinal de áudio, implementou-se uma biblioteca denominada \verb|delay.h|, que contém duas funções: \verb|aplicar_delay()|, responsável por aplicar o efeito nos \textit{buffers} e \verb|liberar_delay()|, responsável por limpar os \textit{buffers} após a utilização dos \textit{buffers} processados. 
+
+O arquivo \verb|delay.c| declara globalmente um ponteiro para o \textit{buffer} circular onde as amostras são armazenadas, bem como uma variável para a localização dentro do \textit{buffer}. Os parâmetros para essa função são \verb|float *buffer|, \verb|int buffer_size|, \verb|float wetness| e \verb|float feedback|, sendo respectivamente, o ponteiro para o \textit{buffer} que contém as amostras a serem processadas, o tamanho do \textit{buffer} de áudio utilizado, o parâmetro que determina a composição do sinal final entre o sinal filtrado e o sinal com efeito e a quantidade de realimentação do sinal atrasado.
+
+A função começa definindo o valor do delay: o delay é inicialmente definido como 500 milissegundos e depois convertido para amostras (\textit{delay\_samples}), com base na taxa de amostragem. Se esse valor exceder o máximo permitido (\textit{MAX\_DELAY\_SAMPLES}), ele é limitado. 
+
+Para cada amostra no buffer de áudio, a função obtém a amostra atrasada do \textit{delay\_buffer} com base na posição atual. Em seguida, a nova amostra é uma mistura do sinal original (\textit{buffer[i]}) com o sinal atrasado, controlada pelo parâmetro \textit{wetness}. O sinal atrasado também recebe uma realimentação proporcional ao parâmetro \textit{feedback}, o que faz com que ele seja repetido várias vezes, criando um efeito de eco contínuo. 
+
+O \textit{delay\_buffer} é atualizado com a nova amostra somada ao sinal de feedback. A posição do \textit{delay\_buffer} é incrementada ciclicamente, reiniciando quando atinge o tamanho máximo de delay (\textit{delay\_samples}). Finalmente, a amostra processada é armazenada no \textit{buffer[i]}, substituindo o valor original.
+
+\paragraph*{Efeito - Reverb}
+
+O efeito \textit{reverb} utiliza o conceito presente no efeito \textit{delay} para ser implementado, com a diferença de que neste efeito, uma série de ecos são aplicados tão rapidamente e de forma difusa que se cria uma sensação de espacialidade ao som. Portanto, os ecos do \textit{reverb} são muito mais curtos e mais numerosos em relação ao \textit{delay}, para que se dê uma sensação de profundidade, como se o som estivesse sendo aplicado a um ambiente real.
+
+Para a implementação desse efeito tão usual na mixagem de \textit{Djs}, defini-se os seguintes parâmetros: \verb|buffer_size|, que dita a quantidade de amostras em um \textit{buffer}, \verb|sample_rate|, que é a frequência de amostragem do sinal corrente, e \verb|maxDelay|, que é o máximo atraso a ser utilizado no \textit{delay}, que nesse caso foi 0.5 segundos, devido a um cálculo realizado de tempo por batida na música, levando em consideração 125 BPM.
+
+O processo de aplicação do efeito \textit{reverb} se inicia com a alocação de um \textit{buffer} para armazenar o atraso de cada amostra, levando em conta o parâmetro de atraso máximo.
+
+Em seguida, utilizando o tamanho padrão do \textit{buffer}, aplica-se o efeito de \textit{reverb}, ou seja, o sinal atrasado do \textit{delay} é recuperado em sinais posteriores, de forma que o parâmetro \textit{wetness} indica a presença do efeito e do sinal original; quanto maior o \textit{wetness}, mais a amostra com efeitos é aplicada ao sinal de saída. A reintrodução de amostras anteriores é controlada pelo parâmetro \textit{feedback}, enquanto o peso para o sinal sem efeito e o com efeito é regulado pelo parâmetro \textit{wetness}. Dessa forma, é realizado o efeito \textit{reverb} nesse caso, por um banco de atrasos.
+
+Portanto, o processamento desse efeito ocorre amostra por amostra presente no buffer utilizando as seguintes etapas:
+
+O \textit{loop} \verb|for (int i = 0; i < numSamples; i++)| percorre cada amostra do sinal de áudio (\textit{buffer}), processando uma amostra de cada vez.
+
+
+A variável \verb|drySignal| armazena o valor da amostra original (não processada), extraída do \verb|buffer[i]|.
+
+A variável \verb|wetSignal| é preenchida com o valor da amostra do \textit{buffer} de \textit{delay} na posição atual \verb|delayIndex| (\textit{buffer} esse que é iniciado com zeros, mas que ao longo dos ciclos, funciona como a memória do efeito). Esse valor representa o sinal com o efeito de \textit{reverb} aplicado (atraso e \textit{feedback}).
+
+A fórmula \sloppy
+\texttt{buffer[i] = (1.0f - wetness) * drySignal + wetness * wetSignal} calcula a mistura entre o sinal original (seco) e o sinal processado (molhado), com base no valor de \verb|wetness|. Quanto maior o valor de \verb|wetness|, maior será a contribuição do sinal com \textit{reverb} no resultado final.
+
+A variável \verb|feedbackSignal| é calculada como \verb|wetSignal * feedback|, que determina a quantidade de \textit{feedback} a ser aplicada ao \textit{buffer} de \textit{delay}. O valor de \verb|feedback| controla a intensidade do efeito de \textit{reverb} (quanto maior o \textit{feedback}, mais ecos serão gerados).
+
+O \textit{buffer} de \textit{delay} \verb|delayBuffer[delayIndex]| é atualizado com o valor do sinal seco (\verb|drySignal|) somado ao \verb|feedbackSignal|. Isso garante que a amostra processada seja armazenada no \textit{buffer} de \textit{delay} para ser reutilizada em iterações futuras, criando o efeito de eco do \textit{reverb}.
+
+O índice \verb|delayIndex| é incrementado e ajustado para garantir que ele seja cíclico. O cálculo \verb|(delayIndex + 1) % maxDelay| faz com que o índice retorne ao início do \textit{buffer} quando atingir o limite máximo (\verb|maxDelay|), mantendo o processamento contínuo das amostras.
+
+Em resumo, o código processa cada amostra do áudio, aplica a mistura do sinal original com o sinal atrasado (com o efeito de \textit{reverb}), aplica \textit{feedback} para intensificar os ecos, e atualiza o \textit{buffer} de \textit{delay} de forma cíclica para criar o efeito de \textit{reverb} contínuo.
+
+
+\paragraph*{Reprodução dos Buffers}
+
+A reprodução das amostras é acionada a cada final de ciclo de processamento dos \textit{buffers}. Para tal tarefa, utilizou-se uma biblioteca de áudio chamada \textit{PortAudio} para implementar duas funções que cobrem as seguintes tarefas: inicialização do \textit{PortAudio} e a reprodução do \textit{buffer}.
+
+A função \verb|inicializar_audio()| tem como objetivo inicializar o sistema de áudio, configurar o fluxo de saída de áudio e prepará-lo para a reprodução. Essas etapas foram implementadas, primeiramente, declarando uma variável global \verb|PaStream *stream|, e em seguida, com a inicialização do sistema de áudio através da função \verb|Pa_Initialize()|. Após a inicialização, configura-se o fluxo de dados com parâmetros como quantidade de canais de saída, tipo de dados, taxa de amostragem e tamanho do bloco, através da função \verb|Pa_OpenDefaultStream()|. Por fim, com o sistema de áudio e o fluxo inicializados e configurados, inicia-se a transmissão com a função \verb|Pa_StartStream()|. Portanto, a execução da função \verb|inicializar_audio()| é realizada apenas uma vez. 
+
+A função que realizará propriamente a reprodução do áudio é a \verb|reproduzir_buffer()|, de modo que envia um \textit{buffer} para o dispositivo de saída de áudio, previamente configurado. Para realizar essa funcionalidade, a função \verb|Pa_WriteStream()| é invocada junto com os seguintes parâmetros: \verb|stream|, variável global, \verb|media_buffer|, amostras processadas após a aplicação dos efeitos, e \textit{buffer\_size}, o tamanho do \textit{buffer}. Dessa forma, \verb|reproduzir_buffer()| é invocada de forma recursiva, a cada final de ciclo de processamento de um \textit{buffer}.
+
+\paragraph*{Processamento dos Buffers}
+
+Com as funções que realizam cada etapa do processamento definidas e com suas entradas e saídas alinhadas, há uma função que reune a chamada dessas funções anteriores para cada \textit{buffer} denominada de \verb|int processar_buffers_circulares|.
+
+
+Em seguida, inicia-se uma sequência de declarações e alocações de vetores e \textit{buffers} que serão consultados ou manipulados ao longo do processamento contínuo. Primeiramente, declara-se dois vetores essenciais para o processo de filtragem sendo um responsável pelas frequências de corte possíveis e outro pelos coeficientes do filtro FIR. Com os vetores declarados, chama-se as funções \verb|gerar_pontos_logaritmicos()| e \verb|gerar_matriz_coeficientes()|, que utilizarão esses vetores para alocar as frequências de corte e todos os conjuntos possíveis de coeficientes para essa aplicação. 
+
+Alocações de espaço para os ponteiros dos \textit{buffers}, que serão utilizados para os sinais filtrados, são realizadas utilizando a função \verb|malloc()|, de forma que ambos canais estão contemplados por esses ponteiros. Na sequência, os \textit{buffers} em si são alocados de forma iterativa até que se crie espaços para o número total de \textit{buffers} definidos pela duração das músicas. Para as duas etapas de alocações, são realizados testes que verificam o êxito da criação e apontamento das memórias solicitadas.
+
+Subsequentemente, inicia-se propriamente o processo contínuo de processamento dos sinais. Adquiri-se os parâmetros de controle (frequência de corte, seleção e intensidade do efeito) que serão usados nas funções específicas de cada etapa, e os coeficientes do filtro FIR são escolhidos em função da frequência de corte e alocados em um vetor denominado \verb|coeficientes_filtro[ORDER]|.
+
+Assim, a função \verb|aplicar_filtro_FIR_buffer()| é chamada utilizando como parâmetros os \textit{buffers} do sinal original e do sinal filtrado, seus tamanhos, os coeficientes e a ordem do filtro, e aplicada aos dois canais; ou seja, aos \textit{buffers} dos dois canais. Os sinais filtrados se encontram em \verb|buffers_sinali_filtrado| e uma média entre os dois conjuntos de amostras é realizada e alocada em um outro \textit{buffer} denominado \verb|media_buffer|, de forma que a união entre os dois canais de entrada é realizada.
+
+A próxima etapa do processamento diz respeito aos efeitos. Um teste do valor booleano da seleção do efeito é realizado para verificar qual efeito deve ser aplicado. Assim, chama-se a função adequada, seja \verb|aplicar_delay()| ou \verb|applyReverbEffectBuffer()|, utilizando como parâmetros de entrada \verb|media_buffer|, \textit{buffer\_size} e \textit{wetness}, que determina a intensidade do efeito aplicado. 
+
+Em seguida, a reprodução do \textit{buffer} final obtido pós aplicação do efeito utilizando a função para essa etapa.
 
 \subsection{Protótipo de Interface de Usuário}
 
 A interface do usuário será projetada de forma semelhante a um \textit{mixer} atual, com dois botões \textit{sliders} horizontais e um botão de duas posições. Além disso, haverá um cabo 3,5 mm para que se possa conectar a um sistema de som externo.
-

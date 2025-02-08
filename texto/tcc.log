@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  8 FEB 2025 12:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  7 FEB 2025 20:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1344,29 +1344,58 @@ Package pdftex.def Info: figuras/fig65.jpg  used on input line 304.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [63 <./figuras/fig61.jpg> <./figuras/fig62.png>]
-<figuras/fig80.png, id=1002, 1349.04pt x 661.47125pt>
+<figuras/fig80.png, id=1003, 1349.04pt x 661.47125pt>
 File: figuras/fig80.png Graphic file (type png)
 <use figuras/fig80.png>
 Package pdftex.def Info: figuras/fig80.png  used on input line 321.
-(pdftex.def)             Requested size: 227.5pt x 111.54022pt.
+(pdftex.def)             Requested size: 455.0pt x 223.09056pt.
+ [64 <./figuras/fig64.jpg> <./figuras/fig65.jpg>] [65 <./figuras/fig80.png>] [66]
+Underfull \hbox (badness 4543) in paragraph at lines 381--382
+\T1/lmr/m/n/12 Para garan-tir um pro-ces-sa-mento con-tínuo e efi-ciente, foi uti-lizada a função
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (1.68251pt too wide) in paragraph at lines 383--384
+\T1/lmr/m/it/12 buffers \T1/lmr/m/n/12 cir-cu-lares a par-tir dos dois sinais de áu-dio ([][]\T1/lmtt/m/n/12 sinal1 []\T1/lmr/m/n/12 e [][]\T1/lmtt/m/n/12 sinal2[]\T1/lmr/m/n/12 ), alo-cando as memórias
+ []
 
-[64 <./figuras/fig64.jpg> <./figuras/fig65.jpg>]) (./editaveis/resultados.tex [65 <./figuras/fig80.png>] [66
+[67] [68] [69]
+Overfull \hbox (2.60538pt too wide) in paragraph at lines 426--427
+\T1/lmr/m/n/12 de-nom-i-nada [][]\T1/lmtt/m/n/12 delay.h[]\T1/lmr/m/n/12 , que con-tém duas funções: [][]\T1/lmtt/m/n/12 aplicar_delay()[]\T1/lmr/m/n/12 , re-spon-sável por aplicar
+ []
 
-] [67]
-<figuras/fig40.png, id=1031, 1011.78pt x 433.62pt>
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 455--457
+[]\T1/lmr/m/n/12 A fór-mula \T1/lmtt/m/n/12 buffer[i] = (1.0f - wetness) * drySignal + wetness *
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 455--457
+\T1/lmtt/m/n/12 wetSignal \T1/lmr/m/n/12 cal-cula a mis-tura en-tre o sinal orig-i-nal (seco) e o sinal pro-ces-sado
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
+[]\T1/lmr/m/n/12 A função que re-alizará pro-pri-a-mente a re-pro-dução do áu-dio é a
+ []
+
+[72]) (./editaveis/resultados.tex [73] [74
+
+] [75]
+<figuras/fig40.png, id=1078, 1011.78pt x 433.62pt>
 File: figuras/fig40.png Graphic file (type png)
 <use figuras/fig40.png>
 Package pdftex.def Info: figuras/fig40.png  used on input line 30.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig41.png, id=1034, 1011.78pt x 433.62pt>
+<figuras/fig41.png, id=1081, 1011.78pt x 433.62pt>
 File: figuras/fig41.png Graphic file (type png)
 <use figuras/fig41.png>
 Package pdftex.def Info: figuras/fig41.png  used on input line 39.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig24.png, id=1036, 1011.78pt x 433.62pt>
+<figuras/fig24.png, id=1083, 1011.78pt x 433.62pt>
 File: figuras/fig24.png Graphic file (type png)
 <use figuras/fig24.png>
 Package pdftex.def Info: figuras/fig24.png  used on input line 48.
@@ -1375,7 +1404,7 @@ Package pdftex.def Info: figuras/fig24.png  used on input line 48.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig25.png, id=1038, 1011.78pt x 433.62pt>
+<figuras/fig25.png, id=1085, 1011.78pt x 433.62pt>
 File: figuras/fig25.png Graphic file (type png)
 <use figuras/fig25.png>
 Package pdftex.def Info: figuras/fig25.png  used on input line 57.
@@ -1383,13 +1412,13 @@ Package pdftex.def Info: figuras/fig25.png  used on input line 57.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[68 <./figuras/fig40.png> <./figuras/fig41.png>]
-<figuras/fig28.png, id=1048, 1011.78pt x 433.62pt>
+[76 <./figuras/fig40.png> <./figuras/fig41.png>]
+<figuras/fig28.png, id=1095, 1011.78pt x 433.62pt>
 File: figuras/fig28.png Graphic file (type png)
 <use figuras/fig28.png>
 Package pdftex.def Info: figuras/fig28.png  used on input line 69.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig29.png, id=1050, 1011.78pt x 433.62pt>
+<figuras/fig29.png, id=1097, 1011.78pt x 433.62pt>
 File: figuras/fig29.png Graphic file (type png)
 <use figuras/fig29.png>
 Package pdftex.def Info: figuras/fig29.png  used on input line 78.
@@ -1398,18 +1427,18 @@ Package pdftex.def Info: figuras/fig29.png  used on input line 78.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig26.png, id=1053, 1011.78pt x 433.62pt>
+<figuras/fig26.png, id=1100, 1011.78pt x 433.62pt>
 File: figuras/fig26.png Graphic file (type png)
 <use figuras/fig26.png>
 Package pdftex.def Info: figuras/fig26.png  used on input line 87.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-[69 <./figuras/fig24.png> <./figuras/fig25.png> <./figuras/fig28.png>]
-<figuras/fig27.png, id=1062, 1011.78pt x 433.62pt>
+[77 <./figuras/fig24.png> <./figuras/fig25.png> <./figuras/fig28.png>]
+<figuras/fig27.png, id=1110, 1011.78pt x 433.62pt>
 File: figuras/fig27.png Graphic file (type png)
 <use figuras/fig27.png>
 Package pdftex.def Info: figuras/fig27.png  used on input line 96.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig30.png, id=1066, 1011.78pt x 433.62pt>
+<figuras/fig30.png, id=1114, 1011.78pt x 433.62pt>
 File: figuras/fig30.png Graphic file (type png)
 <use figuras/fig30.png>
 Package pdftex.def Info: figuras/fig30.png  used on input line 105.
@@ -1418,35 +1447,35 @@ Package pdftex.def Info: figuras/fig30.png  used on input line 105.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[70 <./figuras/fig29.png> <./figuras/fig26.png> <./figuras/fig27.png>]
-<figuras/fig31.png, id=1075, 1011.78pt x 433.62pt>
+[78 <./figuras/fig29.png> <./figuras/fig26.png> <./figuras/fig27.png>]
+<figuras/fig31.png, id=1124, 1011.78pt x 433.62pt>
 File: figuras/fig31.png Graphic file (type png)
 <use figuras/fig31.png>
 Package pdftex.def Info: figuras/fig31.png  used on input line 114.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
- [71 <./figuras/fig30.png> <./figuras/fig31.png>]
-<figuras/fig66.png, id=1091, 1011.78pt x 433.62pt>
+ [79 <./figuras/fig30.png> <./figuras/fig31.png>]
+<figuras/fig66.png, id=1139, 1011.78pt x 433.62pt>
 File: figuras/fig66.png Graphic file (type png)
 <use figuras/fig66.png>
 Package pdftex.def Info: figuras/fig66.png  used on input line 136.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig67.png, id=1094, 1011.78pt x 433.62pt>
+<figuras/fig67.png, id=1142, 1011.78pt x 433.62pt>
 File: figuras/fig67.png Graphic file (type png)
 <use figuras/fig67.png>
 Package pdftex.def Info: figuras/fig67.png  used on input line 145.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
- [72 <./figuras/fig66.png> <./figuras/fig67.png>]
-<figuras/fig68.png, id=1104, 1011.78pt x 433.62pt>
+ [80 <./figuras/fig66.png> <./figuras/fig67.png>]
+<figuras/fig68.png, id=1152, 1011.78pt x 433.62pt>
 File: figuras/fig68.png Graphic file (type png)
 <use figuras/fig68.png>
 Package pdftex.def Info: figuras/fig68.png  used on input line 156.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig69.png, id=1106, 1011.78pt x 433.62pt>
+<figuras/fig69.png, id=1154, 1011.78pt x 433.62pt>
 File: figuras/fig69.png Graphic file (type png)
 <use figuras/fig69.png>
 Package pdftex.def Info: figuras/fig69.png  used on input line 165.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig70.png, id=1108, 1011.78pt x 433.62pt>
+<figuras/fig70.png, id=1156, 1011.78pt x 433.62pt>
 File: figuras/fig70.png Graphic file (type png)
 <use figuras/fig70.png>
 Package pdftex.def Info: figuras/fig70.png  used on input line 180.
@@ -1455,51 +1484,51 @@ Package pdftex.def Info: figuras/fig70.png  used on input line 180.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figuras/fig71.png, id=1110, 1011.78pt x 433.62pt>
+<figuras/fig71.png, id=1158, 1011.78pt x 433.62pt>
 File: figuras/fig71.png Graphic file (type png)
 <use figuras/fig71.png>
 Package pdftex.def Info: figuras/fig71.png  used on input line 189.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-[73 <./figuras/fig68.png> <./figuras/fig69.png>] [74 <./figuras/fig70.png> <./figuras/fig71.png>]
-<figuras/fig72.png, id=1125, 1011.78pt x 433.62pt>
+[81 <./figuras/fig68.png> <./figuras/fig69.png>] [82 <./figuras/fig70.png> <./figuras/fig71.png>]
+<figuras/fig72.png, id=1172, 1011.78pt x 433.62pt>
 File: figuras/fig72.png Graphic file (type png)
 <use figuras/fig72.png>
 Package pdftex.def Info: figuras/fig72.png  used on input line 200.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig73.png, id=1127, 1011.78pt x 433.62pt>
+<figuras/fig73.png, id=1174, 1011.78pt x 433.62pt>
 File: figuras/fig73.png Graphic file (type png)
 <use figuras/fig73.png>
 Package pdftex.def Info: figuras/fig73.png  used on input line 209.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
- [75 <./figuras/fig72.png> <./figuras/fig73.png>]
-<figuras/fig74.png, id=1135, 1011.78pt x 433.62pt>
+ [83 <./figuras/fig72.png> <./figuras/fig73.png>]
+<figuras/fig74.png, id=1183, 1011.78pt x 433.62pt>
 File: figuras/fig74.png Graphic file (type png)
 <use figuras/fig74.png>
 Package pdftex.def Info: figuras/fig74.png  used on input line 223.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig75.png, id=1137, 1011.78pt x 433.62pt>
+<figuras/fig75.png, id=1185, 1011.78pt x 433.62pt>
 File: figuras/fig75.png Graphic file (type png)
 <use figuras/fig75.png>
 Package pdftex.def Info: figuras/fig75.png  used on input line 232.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig76.png, id=1139, 1011.78pt x 433.62pt>
+<figuras/fig76.png, id=1187, 1011.78pt x 433.62pt>
 File: figuras/fig76.png Graphic file (type png)
 <use figuras/fig76.png>
 Package pdftex.def Info: figuras/fig76.png  used on input line 241.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
- [76 <./figuras/fig74.png> <./figuras/fig75.png> <./figuras/fig76.png>]
-<figuras/fig77.png, id=1148, 1011.78pt x 433.62pt>
+ [84 <./figuras/fig74.png> <./figuras/fig75.png> <./figuras/fig76.png>]
+<figuras/fig77.png, id=1196, 1011.78pt x 433.62pt>
 File: figuras/fig77.png Graphic file (type png)
 <use figuras/fig77.png>
 Package pdftex.def Info: figuras/fig77.png  used on input line 251.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-) (./editaveis/conclusao.tex [77 <./figuras/fig77.png>] [78
+) (./editaveis/conclusao.tex [85 <./figuras/fig77.png>] [86
 
 ]) (./tcc.bbl (./tcc.brf)
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
- [79] [80
+ [87] [88
 
 ]
 bibitemlist
@@ -1513,9 +1542,9 @@ Underfull \hbox (badness 2452) in paragraph at lines 53--53
 [][]$\T1/lmr/m/n/12 <[]https : / / www . evea-[]solutions . com / en / switchs-[]and-[]leds / 
  []
 
-[81] [82]) (./tcc.ind) 
+[89] [90]) (./tcc.ind) 
 AED: lastpage setting LastPage
-[83]
+[91]
 \tf@lof=\write6
 \openout6 = `tcc.lof'.
 
@@ -1527,21 +1556,21 @@ AED: lastpage setting LastPage
 
  (./tcc.aux)
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: 14B9FC1F9147F3E9F7DCC023922B4599;5428.
+(rerunfilecheck)             Checksum: E28AC27E7F1F33EAC5DD633A8A0B48DC;5428.
  ) 
 Here is how much of TeX's memory you used:
- 17623 strings out of 480247
- 282349 string characters out of 5896151
+ 17646 strings out of 480247
+ 282622 string characters out of 5896151
  614937 words of memory out of 5000000
- 34838 multiletter control sequences out of 15000+600000
+ 34841 multiletter control sequences out of 15000+600000
  543718 words of font info for 68 fonts, out of 8000000 for 9000
  26 hyphenation exceptions out of 8191
- 80i,13n,96p,1831b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 80i,13n,96p,1831b,590s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (85 pages, 14383201 bytes).
+Output written on tcc.pdf (93 pages, 14413816 bytes).
 PDF statistics:
- 1639 PDF objects out of 1728 (max. 8388607)
- 1352 compressed objects within 14 object streams
- 283 named destinations out of 1000 (max. 500000)
+ 1690 PDF objects out of 1728 (max. 8388607)
+ 1395 compressed objects within 14 object streams
+ 303 named destinations out of 1000 (max. 500000)
  904 words of extra memory for PDF output out of 10000 (max. 10000000)
 
