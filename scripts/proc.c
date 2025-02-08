@@ -4,15 +4,15 @@
 #include "proc.h"
 #include "reverb.h"
 #include "delay.h"
+#include "filt.h"
 
 #define PI 3.14159265358979323846  // Definindo PI
-#define SAMPLE_RATE 44100
 
 // Função para aplicar o filtro FIR em cada buffer circular
-void aplicar_filtro_FIR_buffer(short *buffer_sinal, short *buffer_sinal_filtrado, int buffer_size, float *coeficientes, int ordem) {
+void aplicar_filtro_FIR_buffer(short *buffer_sinal, short *buffer_sinal_filtrado, int buffer_size, double *coeficientes, int ordem) {
     // Aplicar o filtro FIR em um único buffer
     for (int j = 0; j < buffer_size; j++) {
-        float acumulador = 0.0;
+        double acumulador = 0.0;  // Alterado para double
         // Aplicar FIR para cada amostra no buffer
         for (int k = 0; k < ordem; k++) {
             if (j - k >= 0) {
@@ -25,6 +25,7 @@ void aplicar_filtro_FIR_buffer(short *buffer_sinal, short *buffer_sinal_filtrado
         buffer_sinal_filtrado[j] = (short)acumulador;
     }
 }
+
 
 int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
     FILE *file = fopen(filename, "rb");
@@ -81,7 +82,7 @@ int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
 
 int ler_dois_wav_estereo(short **sinal1, short **sinal2, int *tamanho1, int *tamanho2) {
     // Definindo os caminhos dos arquivos WAV diretamente dentro da função
-    const char *filename1 = "/home/joselito/git/tcc/datas/song01.wav";
+    const char *filename1 = "/home/joselito/git/tcc/datas/song02.wav";
     const char *filename2 = "/home/joselito/git/tcc/datas/silencio_6minutos.wav";
 
     // Ler o primeiro arquivo WAV
@@ -113,6 +114,10 @@ int ler_dois_wav_estereo(short **sinal1, short **sinal2, int *tamanho1, int *tam
     // Se tudo estiver correto, copiar os dados de áudio para os arrays finais
     *sinal1 = sinal_temp1;
     *sinal2 = sinal_temp2;
+
+    // Adicionando os prints para verificar os tamanhos dos sinais
+    printf("Tamanho de sinal1: %d amostras\n", *tamanho1);
+    printf("Tamanho de sinal2: %d amostras\n", *tamanho2);
 
     return 0; // Sucesso na leitura dos dois arquivos
 }
@@ -152,14 +157,6 @@ int gerar_buffers_circulares(short *sinal1, short *sinal2, int tamanho, int buff
 
     return 0;  // Sucesso
 }
-
-// Função filtro_exemplo
-void filtro_exemplo(short *buffer, int buffer_size) {
-    for (int i = 1; i < buffer_size - 1; i++) {
-        buffer[i] = (buffer[i - 1] + buffer[i] + buffer[i + 1]) / 3;
-    }
-}
-
 
 // Função para salvar o arquivo WAV com o sinal filtrado em estéreo
 int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
@@ -205,15 +202,27 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
     return 0;
 }
 
-
-
 // Função para processar os buffers de sinal1 e sinal2
-int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro) {
+int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size) {
     
     const char *filename = "sinal_processado.wav";
     
     // Definição para efeito Reverb
     float wetness = 1.0f; // Defina o valor apropriado para o efeito
+
+    // Declaração de arrays para coeficientes e frequências de corte
+    double frequencias_log[N_FREQUENCIES];
+    double matriz_coeficientes[N_FREQUENCIES][ORDER];
+
+     // Gerar as frequências logarítmicas e os coeficientes
+    gerar_pontos_logaritmicos(frequencias_log);
+    gerar_matriz_coeficientes(matriz_coeficientes, frequencias_log);
+
+    // Imprimir os valores
+    for (int i = 0; i < N_FREQUENCIES; i++) {
+        //printf("frequencias_log[%d] = %f\n", i, frequencias_log[i]);
+    }
+
 
     // Verificar se os buffers estão alocados corretamente
     if (!buffers_sinal1 || !buffers_sinal2) {
@@ -250,19 +259,59 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     // Processar os buffers, aplicar o filtro FIR e o delay
     int posicao = 0;  // Variável para controle da posição no sinal_completo
     for (int i = 0; i < num_buffers; i++) {
+
+        int freq_line = 0;
         // Atualizar coeficientes a cada 10 buffers (se necessário)
-        if (i > 0 && i % 10 == 0) {
+        if (i % 10 == 0) {
             // altere_coeficientes(coeficientes_filtro, nova_ordem_filtro);
         }
 
+        double coeficientes_filtro[ORDER] = {1.0};  // Teste com coeficientes simples
+
+        // double coeficientes_filtro[ORDER] = {1.0};
+        /*
+        double coeficientes_filtro[ORDER];
+        for (int k = 0; k < ORDER; k++) {
+            coeficientes_filtro[k] = (double)matriz_coeficientes[freq_line][k]; // Atribui os coeficientes da linha desejada
+        }
+        
+        // Imprimir os coeficientes de filtro para depuração
+        
+        printf("Coeficientes do filtro para a linha %d:\n", freq_line);
+        for (int k = 0; k < ORDER; k++) {
+            printf("coeficientes_filtro[%d] = %f\n", k, coeficientes_filtro[k]);
+        }
+
+        // Interromper o programa (opcional)
+        exit(1);  // Finaliza o programa aqui
+        
+       double coeficientes_filtro[ORDER] = {
+    0.000119, 0.000120, 0.000123, 0.000127, 0.000134, 0.000142, 0.000153, 0.000165, 
+    0.000178, 0.000194, 0.000211, 0.000230, 0.000251, 0.000273, 0.000296, 0.000321, 
+    0.000347, 0.000375, 0.000404, 0.000433, 0.000464, 0.000496, 0.000529, 0.000563, 
+    0.000597, 0.000632, 0.000667, 0.000703, 0.000739, 0.000775, 0.000811, 0.000848, 
+    0.000884, 0.000920, 0.000956, 0.000992, 0.001027, 0.001061, 0.001095, 0.001128, 
+    0.001160, 0.001191, 0.001221, 0.001250, 0.001278, 0.001304, 0.001329, 0.001353, 
+    0.001375, 0.001396, 0.001415, 0.001433, 0.001448, 0.001462, 0.001475, 0.001485, 
+    0.001494, 0.001500, 0.001505, 0.001508, 0.903871, 0.001508, 0.001505, 0.001500, 
+    0.001494, 0.001485, 0.001475, 0.001462, 0.001448, 0.001433, 0.001415, 0.001396, 
+    0.001375, 0.001353, 0.001329, 0.001304, 0.001278, 0.001250, 0.001221, 0.001191, 
+    0.001160, 0.001128, 0.001095, 0.001061, 0.001027, 0.000992, 0.000956, 0.000920, 
+    0.000884, 0.000848, 0.000811, 0.000775, 0.000739, 0.000703, 0.000667, 0.000632, 
+    0.000597, 0.000563, 0.000529, 0.000496, 0.000464, 0.000433, 0.000404, 0.000375, 
+    0.000347, 0.000321, 0.000296, 0.000273, 0.000251, 0.000230, 0.000211, 0.000194, 
+    0.000178, 0.000165, 0.000153, 0.000142, 0.000134, 0.000127, 0.000123, 0.000120, 
+    0.000119
+    };
+    */
         // Aplicar o filtro FIR para o sinal1
         if ((*buffers_sinal1)[i] != NULL) {
-            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro, ordem_filtro);
+            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro, ORDER);
         }
 
         // Aplicar o filtro FIR para o sinal2
         if ((*buffers_sinal2)[i] != NULL) {
-            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro, ordem_filtro);
+            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro, ORDER);
         }
 
         // Calcular a média dos buffers filtrados e preencher media_buffers
@@ -272,7 +321,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         }
 
         // Aplicar o delay no buffer de média (feedback = 0.6f)
-        aplicar_delay(media_buffer, buffer_size, wetness, 0.3f);
+        //aplicar_delay(media_buffer, buffer_size, wetness, 0.3f);
         //  applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
 
         // Copiar o buffer processado para o sinal completo

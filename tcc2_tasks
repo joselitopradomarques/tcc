@@ -2,7 +2,7 @@ TCC2 - Tasks
 
 
 -----------------------------------------------------------------------------
-Legenda: FD - Fazer Depois significa que farei quando o texto estiver fechado
+Legenda: FD - Fazer Depois: significa que farei quando o texto estiver fechado
 -----------------------------------------------------------------------------
 
 
@@ -54,33 +54,48 @@ Legenda: FD - Fazer Depois significa que farei quando o texto estiver fechado
 	- Proposta de Implementação: Ok
 		- Implementação em Hardware:
 			- Adicionar um diagrama de ligações - Ok
-			- Adicionar uma lista de materiais
-		- Implementação em Software
+			- Adicionar uma lista de materiais - Ok
+		- Implementação em Software - Ok
+			- Definição e Alocação Inicial de Buffers - OK
+			- Aquisição de Sinais de Áudio - OK
+			- Geração de Buffers - OK
+			- Aquisição dos Parâmetros de Controle - [Criar função]
+			- Conversão de Frequências de Corte - [Criar função]
+			- Parâmetros do Filtro FIR - OK
+			- Matriz de Coeficientes do Filtro FIR - OK
+			- Aplicação do Filtro FIR - OK
+			- Efeito - Delay - OK
+			- Efeito - Reverb - OK
+			- Reprodução dos Buffers
+			- Processamento dos Buffers - OK
+			- Liberação dos Buffers
 -----------------------------------------------------------------------------
 -> Resultados
-	- Mantém os resultados do PureData
 	- Deixar claro a diferença entre os resultados da prova de conceito e do meu sistema
+	- Gráficos no tempo: colocar a unidade de quantização na esquerda
+	--------------------------------------------------------
+	- Esclarecer que para visualizar melhor as aplicações dos processamentos, criou-se um arquivo wav em branco e se utilizou esse para poder isolar um canal.
+	- Filtragem: utilizar apenas a primeira música.
+	    - 0   Hz: domínio do tempo e STFT
+	    - 20  Hz: domínio do tempo e STFT
+	    - 300 Hz: domínio do tempo e STFT
+	    - 4  kHz: domínio do tempo e STFT
+	    - 22 kHz: domínio do tempo e STFT
+	--------------------------------------------------------
+	- Efeito - Delay
+	    -  0.00: domínio do tempo [música sem modificação]
+	    -  0.25: domínio do tempo
+	    -  0.50: domínio do tempo
+	    -  0.75: domínio do tempo
+	    -  1.00: domínio do tempo
+	--------------------------------------------------------
+	- Efeito - Reverb
+	    -  0.00: domínio do tempo [música sem modificação]
+	    -  0.25: domínio do tempo
+	    -  0.50: domínio do tempo
+	    -  0.75: domínio do tempo
+	    -  1.00: domínio do tempo
 -----------------------------------------------------------------------------
 -> Conclusão
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-> Implementações Futuras

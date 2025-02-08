@@ -10,7 +10,7 @@ Esse arquivo contém as funções essenciais para a implementação do efeito de
 #include "delay.h"
 
 #define MAX_DELAY_MS 1000  // Delay máximo em milissegundos
-#define SAMPLE_RATE 44100  // Taxa de amostragem (assumindo 44.1kHz)
+#define SAMPLE_RATE 48000  // Taxa de amostragem (assumindo 44.1kHz)
 #define MAX_DELAY_SAMPLES (SAMPLE_RATE * MAX_DELAY_MS / 1000)  // Delay máximo em número de amostras
 
 // Defina delay_buffer e delay_buffer_pos globalmente

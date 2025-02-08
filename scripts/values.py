@@ -1,63 +1,83 @@
-import wave
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.signal import firwin, lfilter, freqz
+import wave
+import struct
 
-# Caminho dos arquivos WAV
-filename_filtered = '/home/joselito/git/tcc/datas/saida_filtrada_estereo.wav'
-filename_original = '/home/joselito/git/tcc/datas/audio02.wav'
-
-# Função para carregar o áudio de um arquivo WAV
+# Função para carregar o arquivo WAV usando a biblioteca wave
 def load_audio(filename):
-    with wave.open(filename, 'r') as wav_file:
-        framerate = wav_file.getframerate()
-        n_frames = wav_file.getnframes()
-        n_channels = wav_file.getnchannels()  # Número de canais (1 para mono, 2 para estéreo)
-        audio_data = wav_file.readframes(n_frames)
+    with wave.open(filename, 'rb') as wav_file:
+        # Obter os parâmetros do arquivo WAV
+        sample_rate = wav_file.getframerate()
+        num_frames = wav_file.getnframes()
+        num_channels = wav_file.getnchannels()
+
+        # Ler os frames de áudio
+        frames = wav_file.readframes(num_frames)
+
+        # Desempacotar os dados dos frames (considerando que os dados são em 16 bits)
+        audio_data = np.array(struct.unpack('<' + 'h' * (num_frames * num_channels), frames))
+        
+        # Se for estéreo, converter para mono tirando a média dos canais
+        if num_channels == 2:
+            audio_data = (audio_data[::2] + audio_data[1::2]) / 2
+
+    return sample_rate, audio_data
+
+# Função para aplicar o filtro FIR
+def apply_fir_filter(data, sample_rate, cutoff_freq, order):
+    # Gera os coeficientes FIR para o filtro passa-alta com janela Hamming
+    nyquist = 0.5 * sample_rate
+    normal_cutoff = cutoff_freq / nyquist
+    order = 33 if order % 2 == 0 else order  # Garante que a ordem seja ímpar
+    fir_coeff = firwin(order, normal_cutoff, pass_zero=False, window='hamming')
     
-    # Converter os dados de áudio para um array NumPy
-    audio_samples = np.frombuffer(audio_data, dtype=np.int16)
-
-    if n_channels == 2:
-        # Para áudio estéreo, separa os canais
-        audio_samples_left = audio_samples[0::2]  # Canal esquerdo (índices pares)
-        audio_samples_right = audio_samples[1::2]  # Canal direito (índices ímpares)
-        # Retorna apenas o canal esquerdo (ou poderia escolher o direito)
-        return audio_samples_left, framerate, n_frames
-    else:
-        return audio_samples, framerate, n_frames
-
-# Carregar os dois arquivos de áudio
-audio_samples_filtered, framerate_filtered, n_frames_filtered = load_audio(filename_filtered)
-audio_samples_original, framerate_original, n_frames_original = load_audio(filename_original)
-
-# Função para calcular e plotar o espectro
-def plot_spectrum(audio_samples, framerate, title, subplot_index):
-    # Calcular a FFT do sinal
-    n = len(audio_samples)
-    spectrum = np.fft.fft(audio_samples)
-    freqs = np.fft.fftfreq(n, 1 / framerate)
+    # Aplica o filtro no áudio
+    filtered_data = lfilter(fir_coeff, 1.0, data)
     
-    # Considerar apenas a metade positiva do espectro
-    positive_freqs = freqs[:n // 2]
-    positive_spectrum = np.abs(spectrum[:n // 2])
+    return filtered_data, fir_coeff
 
-    # Plotar o espectro
-    plt.subplot(2, 1, subplot_index)  # Plotar na posição especificada
-    plt.plot(positive_freqs, positive_spectrum, label=title)
-    plt.title(f'Espectro de {title}')
-    plt.xlabel('Frequência (Hz)')
+# Função para visualizar a resposta em frequência do filtro
+def plot_frequency_response(fir_coeff, sample_rate):
+    w, h = freqz(fir_coeff, worN=8000)
+    plt.plot(0.5 * sample_rate * w / np.pi, np.abs(h), 'b')
+    plt.axvline(cutoff_freq, color='k')
+    plt.xlim(0, 0.5 * sample_rate)
+    plt.title("Resposta em Frequência do Filtro Passa-Alta")
+    plt.xlabel('Frequência [Hz]')
     plt.ylabel('Magnitude')
     plt.grid(True)
-    plt.legend()
 
-# Plotar os dois espectros na mesma página
-plt.figure(figsize=(12, 6))
+# Função para plotar o áudio original vs áudio filtrado
+def plot_audio_comparison(original, filtered, sample_rate):
+    time = np.arange(len(original)) / sample_rate
+    plt.figure(figsize=(10, 6))
+    plt.subplot(2, 1, 1)
+    plt.plot(time, original)
+    plt.title("Áudio Original")
+    plt.subplot(2, 1, 2)
+    plt.plot(time, filtered)
+    plt.title("Áudio Filtrado")
+    plt.tight_layout()
+    plt.show()
 
-# Plot do espectro para o sinal filtrado
-plot_spectrum(audio_samples_filtered, framerate_filtered, "Sinal Filtrado", 1)
+# Testando o filtro com uma ordem específica
+filename = '/home/joselito/git/tcc/datas/audio01.wav'  # Substitua com o caminho do seu arquivo WAV
+cutoff_freq = 500  # Frequência de corte em Hz (ajuste conforme necessário)
+order = 33  # Ordem do filtro (ajuste conforme necessário)
 
-# Plot do espectro para o sinal original
-plot_spectrum(audio_samples_original, framerate_original, "Sinal Original", 2)
+# Carregar áudio
+sample_rate, audio_data = load_audio(filename)
 
-plt.tight_layout()
+# Aplicar filtro e plotar resultados
+print(f"Aplicando filtro com ordem {order}...")
+filtered_audio, fir_coeff = apply_fir_filter(audio_data, sample_rate, cutoff_freq, order)
+
+# Plotar resposta em frequência
+plot_frequency_response(fir_coeff, sample_rate)
+
+# Plotar comparação entre áudio original e filtrado
+plot_audio_comparison(audio_data, filtered_audio, sample_rate)
+
+# Mostrar os gráficos
 plt.show()
