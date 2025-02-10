@@ -354,8 +354,6 @@ Para a implementação do processamento de sinais de áudio, o código foi estru
 
 Com os segmentos de dados em mãos, diferentes processamentos são realizados, como filtragem e aplicação de efeitos. Após o processamento, os sinais são então reproduzidos.
 
-[INSERIR UM DIAGRAMA DE ESTADOS PARA ESSA APLICAÇÃO]
-
 Além disso, de forma cíclica, são realizadas aquisições de sinais de controle que permitem ajustar, em tempo real, parâmetros como a frequência de corte, a seleção dos efeitos e a intensidade aplicada.
 
 \paragraph*{Definição e Alocação Inicial de Buffers}
@@ -384,16 +382,19 @@ Antes de iniciar processamento, a função \verb|gerar_buffers_circulares| gera 
 
 \paragraph*{Aquisição dos Parâmetros de Controle}
 
-1) Explicar onde esses parâmetros são utilizados
-2) Explicar quais componentes realizam essa aquisição
-3) Explicar Qual a resolução desses sinais
-4) Explicar com qual frequência ele é atualizados
-5) Explicar como se obtém a frequência
 5) Explicar o código que realiza essa aquisição e atribuição
+
+
+Os parâmetros de controle são essenciais para que a mixagem aconteça de forma ininterrupta sempre mudando o processamento conforme o desejo do usuário. Assim, três parâmetros são utilizados: frequência de controle e \textit{wetness} do efeito são variáveis que possuem 256 valores possíveis devido à conversão de 8 bits possuir essa quantidade de níveis de quantização. 
+
+A aquisição desses valores não acontece sempre, e sim, a cada leitura de 10 buffers. Essa condição foi estabelecida pois não há tanta necessidade de que essas variáveis mudem a cada nova amostra lida, além de que, 10 buffers lidos gera em torno de 250 ms de processamento com as mesmas variáveis lidas anteriormente, o que é uma taxa de latência aceitável a esse sistema. 
+
+Através de um código que realiza a leitura I2C do dispositivo PCF8591, os dois primeiros canais são lidos e atualizam os parâmetros de \verb|indice_fc1|, \verb|indice_fc2| e \verb|wetness|. Além disso, a variável booleana \verb|sel_fx| também é atualizada na mesma frequência, de modo que seu estado determina qual efeito deve ser utilizado.
+
 
 \paragraph*{Conversão de Frequências de Corte}
 
-1) Explicar como a frequência 2 é obtida
+A cada leitura de uma nova frequência de corte, esse valor é atribuído ao valor a ser utilizado para o canal 1, e, devido à lógica do sistema, um outro valor deve ser atribuído à frequência de corte 2. Existe uma simetria que dita a relação entre essas duas frequências de corte e que fica clara ao se analisar o vetor que possui as frequências possíveis. Quando o índice 1 é x, o índice 2 será 255 - x. E assim se dá o cálculo da frequência de corte do canal 2. Essa lógica foi implementada em uma simples linha de código \verb| int indice_fc2 = 255 - indice_fc1;|.
 
 \paragraph*{Parâmetros do Filtro FIR}
 
@@ -471,6 +472,13 @@ A reprodução das amostras é acionada a cada final de ciclo de processamento d
 A função \verb|inicializar_audio()| tem como objetivo inicializar o sistema de áudio, configurar o fluxo de saída de áudio e prepará-lo para a reprodução. Essas etapas foram implementadas, primeiramente, declarando uma variável global \verb|PaStream *stream|, e em seguida, com a inicialização do sistema de áudio através da função \verb|Pa_Initialize()|. Após a inicialização, configura-se o fluxo de dados com parâmetros como quantidade de canais de saída, tipo de dados, taxa de amostragem e tamanho do bloco, através da função \verb|Pa_OpenDefaultStream()|. Por fim, com o sistema de áudio e o fluxo inicializados e configurados, inicia-se a transmissão com a função \verb|Pa_StartStream()|. Portanto, a execução da função \verb|inicializar_audio()| é realizada apenas uma vez. 
 
 A função que realizará propriamente a reprodução do áudio é a \verb|reproduzir_buffer()|, de modo que envia um \textit{buffer} para o dispositivo de saída de áudio, previamente configurado. Para realizar essa funcionalidade, a função \verb|Pa_WriteStream()| é invocada junto com os seguintes parâmetros: \verb|stream|, variável global, \verb|media_buffer|, amostras processadas após a aplicação dos efeitos, e \textit{buffer\_size}, o tamanho do \textit{buffer}. Dessa forma, \verb|reproduzir_buffer()| é invocada de forma recursiva, a cada final de ciclo de processamento de um \textit{buffer}.
+
+---------------------------------------------------------
+A reprodução das amostras é acionada a cada final de ciclo de processamento dos \textit{buffers}, após a aplicação do efeito. Para tal tarefa, utilizou-se uma biblioteca de áudio já integrada à \textit{Raspberry Pi} denominada \textit{ALSA - Advanced Linux Sound Architecture} para implementar duas funções que cobrem as seguintes tarefas: inicialização do \textit{pcm\_stream} e a reprodução do \textit{buffer}.
+
+A função \verb|inicializar()| é responsável por configurar o dispositivo de áudio para que a transmissão de dados possa acontecer. Para isso, memória suficiente para um \textit{buffer} é alocada, do mesmo tamanho que todos outros \textit{buffers} definidos no sistema. Em seguida, essa função abre o dispositivo de reprodução indicado no código, que é o responsável pela saída do fone de ouvido, \textit{hw:2,0}. Após isso, realiza-se a configuração dos parâmetros de \textit{hardware} como tipo de acesso ao dispositivo, formato do áudio (16 \textit{bits - Little Endian}), número de canais e taxa de amostragem. Quando a função é executada, se a inicialização e configuração for bem-sucedida, uma mensagem é impressa no \textit{console} indicando o processo realizado.
+
+Com o canal de transmissão inicializado e configurado, a função \textit{reproduzir()} deve ser chamada em cada \textit{buffer} após a finalização do processamento dos efeitos. Para isso, um tratamento nos dados é realizado antes que ele possa ser transmitido à função, que envolve normalização das amostras a partir do maior valor absoluto do \textit{buffer}, conversão dos tipos de \textit{float} para \textit{short} (PCM de 16 \textit{bits}), e, por fim, com as amostras do \textit{buffer} normalizadas e transformadas no formato \textit{short}, a função \verb|reproduzir()| pode ser chamada para que os sinais possam ser transmitidos na saída do fone de ouvido da \textit{Raspberry Pi}.
 
 \paragraph*{Processamento dos Buffers}
 

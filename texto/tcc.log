@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  9 FEB 2025 21:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  10 FEB 2025 00:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1355,41 +1355,41 @@ File: figuras/fig80.png Graphic file (type png)
 Package pdftex.def Info: figuras/fig80.png  used on input line 321.
 (pdftex.def)             Requested size: 455.0pt x 223.09056pt.
  [66 <./figuras/fig64.jpg> <./figuras/fig65.jpg>] [67 <./figuras/fig80.png>] [68]
-Underfull \hbox (badness 4543) in paragraph at lines 381--382
+Underfull \hbox (badness 4543) in paragraph at lines 379--380
 \T1/lmr/m/n/12 Para garan-tir um pro-ces-sa-mento con-tínuo e efi-ciente, foi uti-lizada a função
  []
 
 
-Overfull \hbox (1.68251pt too wide) in paragraph at lines 383--384
+Overfull \hbox (1.68251pt too wide) in paragraph at lines 381--382
 \T1/lmr/m/it/12 buffers \T1/lmr/m/n/12 cir-cu-lares a par-tir dos dois sinais de áu-dio ([][]\T1/lmtt/m/n/12 sinal1 []\T1/lmr/m/n/12 e [][]\T1/lmtt/m/n/12 sinal2[]\T1/lmr/m/n/12 ), alo-cando as memórias
  []
 
-[69] [70] [71]
-Overfull \hbox (2.60538pt too wide) in paragraph at lines 426--427
+[69] [70]
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [71]
+Overfull \hbox (2.60538pt too wide) in paragraph at lines 427--428
 \T1/lmr/m/n/12 de-nom-i-nada [][]\T1/lmtt/m/n/12 delay.h[]\T1/lmr/m/n/12 , que con-tém duas funções: [][]\T1/lmtt/m/n/12 aplicar_delay()[]\T1/lmr/m/n/12 , re-spon-sável por aplicar
  []
 
-[72]
-Underfull \hbox (badness 10000) in paragraph at lines 455--457
+[72] [73]
+Underfull \hbox (badness 10000) in paragraph at lines 456--458
 []\T1/lmr/m/n/12 A fór-mula \T1/lmtt/m/n/12 buffer[i] = (1.0f - wetness) * drySignal + wetness *
  []
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 455--457
+Underfull \hbox (badness 1521) in paragraph at lines 456--458
 \T1/lmtt/m/n/12 wetSignal \T1/lmr/m/n/12 cal-cula a mis-tura en-tre o sinal orig-i-nal (seco) e o sinal pro-ces-sado
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [73]
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
 []\T1/lmr/m/n/12 A função que re-alizará pro-pri-a-mente a re-pro-dução do áu-dio é a
  []
 
-[74]) (./editaveis/resultados.tex [75] [76
+[75]) (./editaveis/resultados.tex [76] [77
 
-] [77]
+]
 <figuras/fig40.png, id=1121, 1011.78pt x 433.62pt>
 File: figuras/fig40.png Graphic file (type png)
 <use figuras/fig40.png>
@@ -1697,7 +1697,7 @@ Here is how much of TeX's memory you used:
  26 hyphenation exceptions out of 8191
  80i,13n,96p,1831b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (105 pages, 18146541 bytes).
+Output written on tcc.pdf (105 pages, 18149915 bytes).
 PDF statistics:
  1851 PDF objects out of 2073 (max. 8388607)
  1510 compressed objects within 16 object streams
