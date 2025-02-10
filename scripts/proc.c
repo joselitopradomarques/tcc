@@ -4,6 +4,7 @@
 #include "proc.h"
 #include "reverb.h"
 #include "delay.h"
+#include "audio.h"
 
 #define PI 3.14159265358979323846  // Definindo PI
 #define SAMPLE_RATE 44100
@@ -209,9 +210,19 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
 int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro) {
     
     const char *filename = "sinal_processado.wav";
+    const char *device = "hw:2,0"; // Dispositivo ALSA para os fones de ouvido
+    snd_pcm_t *pcm_handle;
+    snd_pcm_hw_params_t *hw_params;
+    char *audio_buffer;
     
     // Definição para efeito Reverb
     float wetness = 0.0f; // Defina o valor apropriado para o efeito
+
+    // Inicializa o dispositivo de áudio
+    if (inicializar(device, &pcm_handle, &audio_buffer, &hw_params) != 0) {
+        printf("Erro ao inicializar o stream de áudio\n");
+        return -1;  // Retorna erro caso a inicialização falhe
+    }
 
     // Verificar se os buffers estão alocados corretamente
     if (!buffers_sinal1 || !buffers_sinal2) {
@@ -272,6 +283,38 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         // Aplicar o delay no buffer de média (feedback = 0.6f)
         //aplicar_delay(media_buffer, buffer_size, wetness, 0.3f);
         applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
+
+        // Normalizar o buffer de média para o intervalo -1.0 a 1.0
+        float max_value = 0.0f;
+        for (int j = 0; j < buffer_size; j++) {
+            // Encontrar o valor máximo absoluto no buffer
+            if (fabs(media_buffer[j]) > max_value) {
+                max_value = fabs(media_buffer[j]);
+            }
+        }
+
+        // Se o valor máximo for maior que 1.0, normaliza os valores
+        if (max_value > 1.0f) {
+            float normalizing_factor = 1.0f / max_value;
+            for (int j = 0; j < buffer_size; j++) {
+                media_buffer[j] *= normalizing_factor;
+            }
+        }
+
+        // Conversão de float para short para reprodução com ALSA
+        short *buffer_reproduzivel = (short *)malloc(buffer_size * sizeof(short));
+        for (int j = 0; j < buffer_size; j++) {
+            // Converte cada valor float para short (PCM de 16 bits)
+            // Multiplicando por 32767.0f para mapear o intervalo de -1.0 a 1.0 para o intervalo de -32767 a 32767
+            buffer_reproduzivel[j] = (short)(media_buffer[j] * 32767.0f);  // 32767 é o valor máximo para PCM de 16 bits
+        }
+
+        // Reproduzir o buffer processado
+        if (reproduzir(pcm_handle, (char *)buffer_reproduzivel, buffer_size * sizeof(short)) != 1) {
+            printf("Erro ao reproduzir áudio\n");
+            free(buffer_reproduzivel);
+            return -1;  // Retorna erro se falhar na reprodução
+        }
 
         // Copiar o buffer processado para o sinal completo
         for (int j = 0; j < buffer_size; j++) {

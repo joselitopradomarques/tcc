@@ -5,22 +5,14 @@
 
 #define BUFFER_SIZE 1024
 
-// Função de inicialização: Abre arquivo, aloca buffer e configura o dispositivo de áudio ALSA
-int inicializar(const char *audio_file, const char *device, snd_pcm_t **pcm_handle, FILE **file, char **buffer, snd_pcm_hw_params_t **hw_params) {
+// Função de inicialização: Configura o dispositivo de áudio ALSA
+int inicializar(const char *device, snd_pcm_t **pcm_handle, char **buffer, snd_pcm_hw_params_t **hw_params) {
     int err;
-
-    // Abre o arquivo .wav
-    *file = fopen(audio_file, "rb");
-    if (!(*file)) {
-        fprintf(stderr, "Erro ao abrir o arquivo %s\n", audio_file);
-        return -1;
-    }
 
     // Aloca o buffer
     *buffer = (char *)malloc(BUFFER_SIZE);
     if (!(*buffer)) {
         fprintf(stderr, "Erro ao alocar memória para o buffer\n");
-        fclose(*file);
         return -1;
     }
 
@@ -28,7 +20,6 @@ int inicializar(const char *audio_file, const char *device, snd_pcm_t **pcm_hand
     if ((err = snd_pcm_open(pcm_handle, device, SND_PCM_STREAM_PLAYBACK, 0)) < 0) {
         fprintf(stderr, "Erro ao abrir o dispositivo %s: %s\n", device, snd_strerror(err));
         free(*buffer);
-        fclose(*file);
         return -1;
     }
 
@@ -45,23 +36,22 @@ int inicializar(const char *audio_file, const char *device, snd_pcm_t **pcm_hand
         fprintf(stderr, "Erro ao configurar parâmetros de hardware: %s\n", snd_strerror(err));
         snd_pcm_close(*pcm_handle);
         free(*buffer);
-        fclose(*file);
         return -1;
     }
+
+    // Se a inicialização for bem-sucedida
+    printf("Stream de áudio inicializado com sucesso no dispositivo: %s\n", device);
 
     return 0;
 }
 
-// Função de reprodução: Reproduz o áudio em buffers de forma iterativa
-int reproduzir(snd_pcm_t *pcm_handle, FILE *file, char *buffer) {
+
+// Função de reprodução: Reproduz o áudio de um buffer processado
+int reproduzir(snd_pcm_t *pcm_handle, char *media_buffer, size_t buffer_size) {
     int err;
 
-    size_t bytes_read = fread(buffer, 1, BUFFER_SIZE, file);
-    if (bytes_read == 0) {
-        return 0; // Fim do arquivo
-    }
-
-    if ((err = snd_pcm_writei(pcm_handle, buffer, bytes_read / 4)) < 0) { // Divide por 4 (2 canais * 2 bytes por amostra)
+    // Reproduz o conteúdo do media_buffer
+    if ((err = snd_pcm_writei(pcm_handle, media_buffer, buffer_size / 4)) < 0) { // Divide por 4 (2 canais * 2 bytes por amostra)
         fprintf(stderr, "Erro ao escrever no dispositivo: %s\n", snd_strerror(err));
         return -1;
     }
@@ -69,10 +59,9 @@ int reproduzir(snd_pcm_t *pcm_handle, FILE *file, char *buffer) {
     return 1; // Áudio ainda está sendo reproduzido
 }
 
-// Função de finalização: Libera recursos e fecha arquivos/dispositivos
-void finalizar(snd_pcm_t *pcm_handle, FILE *file, char *buffer) {
+// Função de finalização: Libera recursos e fecha dispositivos
+void finalizar(snd_pcm_t *pcm_handle, char *buffer) {
     snd_pcm_drain(pcm_handle); // Drena o buffer de reprodução
     snd_pcm_close(pcm_handle); // Fecha o dispositivo de áudio
     free(buffer); // Libera o buffer
-    fclose(file); // Fecha o arquivo
 }
