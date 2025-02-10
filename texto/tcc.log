@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  9 FEB 2025 21:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  9 FEB 2025 21:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1651,13 +1651,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./editaveis/conclusao.tex [96 <./figuras/fig94.png> <./figuras/fig95.png>] [97 <./figuras/fig96.png>] [98
 
-]) (./tcc.bbl (./tcc.brf)
+])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99] (./tcc.bbl (./tcc.brf)
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
- [99] [100
-
-]
+ [100]
 bibitemlist
 
 Underfull \hbox (badness 1448) in paragraph at lines 53--53
@@ -1669,7 +1670,9 @@ Underfull \hbox (badness 2452) in paragraph at lines 53--53
 [][]$\T1/lmr/m/n/12 <[]https : / / www . evea-[]solutions . com / en / switchs-[]and-[]leds / 
  []
 
-[101] [102]) (./tcc.ind) 
+[101
+
+] [102]) (./tcc.ind) 
 AED: lastpage setting LastPage
 [103]
 \tf@lof=\write6
@@ -1688,13 +1691,13 @@ Package rerunfilecheck Info: File `tcc.brf' has not changed.
 Here is how much of TeX's memory you used:
  17810 strings out of 480247
  285363 string characters out of 5896151
- 618414 words of memory out of 5000000
+ 618417 words of memory out of 5000000
  34955 multiletter control sequences out of 15000+600000
  543718 words of font info for 68 fonts, out of 8000000 for 9000
  26 hyphenation exceptions out of 8191
  80i,13n,96p,1831b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (105 pages, 18144915 bytes).
+Output written on tcc.pdf (105 pages, 18146541 bytes).
 PDF statistics:
  1851 PDF objects out of 2073 (max. 8388607)
  1510 compressed objects within 16 object streams
