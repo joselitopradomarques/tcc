@@ -8,6 +8,7 @@
 #define PI 3.14159265358979323846
 #define MAX_16BIT 32767
 #define MIN_16BIT -32768
+#define SAMPLE_RATE 44100
 
 
 int escrever_wav_estereo(const char *filename, short *sinal, int tamanho);

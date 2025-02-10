@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>  // Necessário para usar a função sin() e PI
-#include "proc.h"
-#include "reverb.h"
-#include "delay.h"
-#include "audio.h"
-
-#define PI 3.14159265358979323846  // Definindo PI
-#define SAMPLE_RATE 44100
+#include "proc.h" // Responsável pela integração das funcionalidades
+#include "reverb.h" // Responsável pelas funções de reverb
+#include "delay.h" // Responsável pelas funções de delay
+#include "audio.h" // Responsável pela interface de reprodução de áudio
+#include "filt.h" // Responsável pelas frequências de corte e coeficientes dos filtros
 
 // Função para aplicar o filtro FIR em cada buffer circular
 void aplicar_filtro_FIR_buffer(short *buffer_sinal, short *buffer_sinal_filtrado, int buffer_size, float *coeficientes, int ordem) {
@@ -217,6 +215,14 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     
     // Definição para efeito Reverb
     float wetness = 0.0f; // Defina o valor apropriado para o efeito
+
+    // Declaração de arrays para coeficientes e frequências de corte
+    float frequencias_log[N_FREQUENCIES];
+    float matriz_coeficientes[N_FREQUENCIES][ORDER];
+
+    // Gerar as frequências logarítmicas e os coeficientes
+    gerar_pontos_logaritmicos(frequencias_log);
+    gerar_matriz_coeficientes(matriz_coeficientes, frequencias_log);
 
     // Inicializa o dispositivo de áudio
     if (inicializar(device, &pcm_handle, &audio_buffer, &hw_params) != 0) {
