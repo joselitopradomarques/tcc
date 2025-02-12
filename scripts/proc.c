@@ -6,6 +6,7 @@
 #include "delay.h" // Responsável pelas funções de delay
 #include "audio.h" // Responsável pela interface de reprodução de áudio
 #include "filt.h" // Responsável pelas frequências de corte e coeficientes dos filtros
+#include "adc.h" // Responsável pela aquisição dos sinais de controle
 
 // Função para aplicar o filtro FIR em cada buffer circular
 void aplicar_filtro_FIR_buffer(short *buffer_sinal, short *buffer_sinal_filtrado, int buffer_size, float *coeficientes, int ordem) {
@@ -213,6 +214,9 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     snd_pcm_hw_params_t *hw_params;
     char *audio_buffer;
     
+    // Definição dos valores de controle
+    int fd, analogValue0, analogValue1, digitalValue;
+
     // Definição para efeito Reverb
     float wetness = 0.0f; // Defina o valor apropriado para o efeito
 
@@ -234,6 +238,12 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     if (!buffers_sinal1 || !buffers_sinal2) {
         printf("Erro: buffers não alocados corretamente.\n");
         return -1;  // Retorna erro
+    }
+
+    // Inicializar os sensores
+    fd = setup_sensors();
+    if (fd == -1) {
+        return 1;
     }
 
     // Alocar buffers filtrados
@@ -264,20 +274,37 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
 
     // Processar os buffers, aplicar o filtro FIR e o delay
     int posicao = 0;  // Variável para controle da posição no sinal_completo
+
     for (int i = 0; i < num_buffers; i++) {
         // Atualizar coeficientes a cada 10 buffers (se necessário)
         if (i % 10 == 0) {
-            // altere_coeficientes(coeficientes_filtro, nova_ordem_filtro);
+            read_analog_values(fd, &analogValue0, &analogValue1);
+            wetness = analogValue1 / 255.0;
+            digitalValue = read_digital_value();
+
+            // Utilize os valores conforme necessário
+            printf("AIN0: %d | AIN1: %d | GPIO4: %d\n", analogValue0, analogValue1, digitalValue);
+
+            // Determinando o efeito com base no valor de digitalValue
+            char* efeito = (digitalValue == 0) ? "Delay" : (digitalValue == 1) ? "Reverb" : "Nenhum";
+
+            // Acessando os valores das frequências de corte diretamente e incluindo o efeito
+            printf("Frequência de corte 1: %.2f Hz | Frequência de corte 2: %.2f Hz | Efeito: %s | Wetness: %.2f\n", 
+                frequencias_log[analogValue0], frequencias_log[255 - analogValue0], efeito, wetness);
         }
 
-        // Aplicar o filtro FIR para o sinal1
+        // Aplicar o filtro FIR para o sinal 1
         if ((*buffers_sinal1)[i] != NULL) {
-            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro, ordem_filtro);
+            // Obter coeficientes para o filtro FIR para o sinal 1 com base no índice de fc1
+            float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1
+            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro_1, ordem_filtro);
         }
 
-        // Aplicar o filtro FIR para o sinal2
+        // Aplicar o filtro FIR para o sinal 2
         if ((*buffers_sinal2)[i] != NULL) {
-            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro, ordem_filtro);
+            // Obter coeficientes para o filtro FIR para o sinal 2 com base no índice de fc2
+            float *coeficientes_filtro_2 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 2
+            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro_2, ordem_filtro);
         }
 
         // Calcular a média dos buffers filtrados e preencher media_buffers
@@ -286,9 +313,14 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
             media_buffer[j] = (float)(buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2.0f;
         }
 
-        // Aplicar o delay no buffer de média (feedback = 0.6f)
-        //aplicar_delay(media_buffer, buffer_size, wetness, 0.3f);
-        applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);
+        // Avaliar o valor de sel_Fx e aplicar o efeito correspondente
+        if (sel_Fx == 0) {
+            // Se sel_Fx for 0, aplicar o efeito de delay
+            aplicar_delay(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do delay conforme necessário
+        } else if (sel_Fx == 1) {
+            // Se sel_Fx for 1, aplicar o efeito de reverb
+            applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do reverb conforme necessário
+        }
 
         // Normalizar o buffer de média para o intervalo -1.0 a 1.0
         float max_value = 0.0f;
