@@ -303,7 +303,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         // Aplicar o filtro FIR para o sinal 2
         if ((*buffers_sinal2)[i] != NULL) {
             // Obter coeficientes para o filtro FIR para o sinal 2 com base no índice de fc2
-            float *coeficientes_filtro_2 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 2
+            float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
             aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro_2, ordem_filtro);
         }
 
@@ -314,10 +314,10 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         }
 
         // Avaliar o valor de sel_Fx e aplicar o efeito correspondente
-        if (sel_Fx == 0) {
+        if (digitalValue == 0) {
             // Se sel_Fx for 0, aplicar o efeito de delay
             aplicar_delay(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do delay conforme necessário
-        } else if (sel_Fx == 1) {
+        } else if (digitalValue == 1) {
             // Se sel_Fx for 1, aplicar o efeito de reverb
             applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do reverb conforme necessário
         }
@@ -359,8 +359,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
             sinal_completo[posicao++] = (short)media_buffer[j];  // Converter de volta para short antes de adicionar ao sinal completo
         }
 
-        // Liberar memória do buffer de média após o uso
-        free(media_buffer);
+
     }
 
     // Salvar o sinal completo no arquivo WAV
@@ -377,6 +376,8 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     free(buffers_sinal1_filtrado);
     free(buffers_sinal2_filtrado);
     free(sinal_completo);
+    // Liberar memória do buffer de média após o uso
+    free(media_buffer);
 
     return 0;  // Retorna sucesso
 }
