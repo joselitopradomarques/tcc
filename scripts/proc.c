@@ -206,7 +206,7 @@ int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
 }
 
 // Função para processar os buffers de sinal1 e sinal2
-int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size, float *coeficientes_filtro, int ordem_filtro) {
+int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size) {
     
     const char *filename = "sinal_processado.wav";
     const char *device = "hw:2,0"; // Dispositivo ALSA para os fones de ouvido
@@ -297,14 +297,14 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         if ((*buffers_sinal1)[i] != NULL) {
             // Obter coeficientes para o filtro FIR para o sinal 1 com base no índice de fc1
             float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1
-            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro_1, ordem_filtro);
+            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro_1, ORDER);
         }
 
         // Aplicar o filtro FIR para o sinal 2
         if ((*buffers_sinal2)[i] != NULL) {
             // Obter coeficientes para o filtro FIR para o sinal 2 com base no índice de fc2
             float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
-            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro_2, ordem_filtro);
+            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro_2, ORDER);
         }
 
         // Calcular a média dos buffers filtrados e preencher media_buffers
@@ -407,17 +407,3 @@ void liberar_buffers(short **buffers_sinal1, short **buffers_sinal2, int num_buf
         free(buffers_sinal2);
     }
 }
-
-// Função para gerar coeficientes do filtro FIR
-void gerar_filtro_FIR(float *coeficientes, int ordem, float corte, float taxa_amostragem) {
-    int n = ordem;
-    float wc = 2 * PI * corte / taxa_amostragem;  // Frequência de corte normalizada
-    for (int i = 0; i < n; i++) {
-        if (i == (n - 1) / 2) {
-            coeficientes[i] = 1 - (wc / PI); 
-        } else {
-            coeficientes[i] = -sin(wc * (i - (n - 1) / 2)) / (PI * (i - (n - 1) / 2));  // Inverte a fase
-        }
-    }
-}
-

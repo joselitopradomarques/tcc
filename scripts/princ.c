@@ -48,7 +48,7 @@ int main() {
     }
 
     // Processar os buffers circulares aplicando o filtro FIR
-    if (processar_buffers_circulares(&buffers_sinal1, &buffers_sinal2, num_buffers, buffer_size, coeficientes_filtro, ordem_filtro) != 0) {
+    if (processar_buffers_circulares(&buffers_sinal1, &buffers_sinal2, num_buffers, buffer_size) != 0) {
         printf("Erro ao processar os buffers circulares.\n");
         free(sinal1);
         free(sinal2);
