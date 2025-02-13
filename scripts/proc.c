@@ -359,7 +359,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
             sinal_completo[posicao++] = (short)media_buffer[j];  // Converter de volta para short antes de adicionar ao sinal completo
         }
 
-
+        free(media_buffer);
     }
 
     // Salvar o sinal completo no arquivo WAV
@@ -377,7 +377,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     free(buffers_sinal2_filtrado);
     free(sinal_completo);
     // Liberar memória do buffer de média após o uso
-    free(media_buffer);
+
 
     return 0;  // Retorna sucesso
 }

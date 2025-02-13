@@ -1,5 +1,5 @@
 // princ.c
-// gcc -o princ princ.c proc.c delay.c -lpthread -lm
+//  gcc -o princ princ.c proc.c delay.c adc.c filt.c audio.c reverb.c -lpthread -lm -lwiringPi -lasound
 #include <stdio.h>
 #include <stdlib.h>
 #include "proc.h"
