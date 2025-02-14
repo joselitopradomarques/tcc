@@ -62,7 +62,7 @@ int ler_wav_estereo(const char *filename, short **sinal, int *tamanho) {
 
     // Calcular o número de amostras considerando que é estéreo (2 canais)
     int num_samples = (file_size - 44) / (sizeof(short) * num_channels);  // 2 canais
-    *tamanho = num_samples;
+    *tamanho = num_samples*2;
 
     // Alocar memória para o sinal estéreo (2 canais)
     *sinal = (short *)malloc(num_samples * num_channels * sizeof(short));  
@@ -149,17 +149,10 @@ int gerar_buffers_circulares(short *sinal1, short *sinal2, int tamanho, int buff
             (*buffers_sinal2)[i][j] = sinal2[index];
         }
     }
+    printf("Tamanho da matriz buffers_sinal1: %d x %d\n", *num_buffers, buffer_size);
 
     return 0;  // Sucesso
 }
-
-// Função filtro_exemplo
-void filtro_exemplo(short *buffer, int buffer_size) {
-    for (int i = 1; i < buffer_size - 1; i++) {
-        buffer[i] = (buffer[i - 1] + buffer[i] + buffer[i + 1]) / 3;
-    }
-}
-
 
 // Função para salvar o arquivo WAV com o sinal filtrado em estéreo
 int escrever_wav_estereo(const char *filename, short *sinal, int tamanho) {
@@ -296,7 +289,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         // Aplicar o filtro FIR para o sinal 1
         if ((*buffers_sinal1)[i] != NULL) {
             // Obter coeficientes para o filtro FIR para o sinal 1 com base no índice de fc1
-            float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1
+            float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1           
             aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro_1, ORDER);
         }
 

@@ -12,9 +12,6 @@ void gerar_pontos_logaritmicos(float frequencias_log[N_FREQUENCIES]) {
 
     for (int i = 0; i < N_FREQUENCIES; i++) {
         frequencias_log[i] = fc1_min * powf(10.0f, (log10f(fc1_max / fc1_min)) * i / (N_FREQUENCIES - 1));
-        
-        // Imprime o progresso a cada iteração
-        printf("Ponto %d: Frequência = %.2f Hz\n", i + 1, frequencias_log[i]);
     }
 
     printf("Geração de pontos logarítmicos concluída!\n");
@@ -29,9 +26,9 @@ void generate_hamming_highpass_filter(int filter_order, float cutoff_frequency, 
     // Gerar a resposta ideal do filtro passa-altas
     for (int n = 0; n < filter_order; n++) {
         if (n == M) {
-            h[n] = 2 * normalized_cutoff;  // Resposta para o centro (n = M)
+            h[n] = 1 - normalized_cutoff;  // Resposta para o centro (n = M) passa-altas
         } else {
-            h[n] = sinf(M_PI * (n - M) * normalized_cutoff) / (M_PI * (n - M));  // Resposta ideal
+            h[n] = -sinf(M_PI * (n - M) * normalized_cutoff) / (M_PI * (n - M));  // Inverte a resposta ideal
         }
     }
 

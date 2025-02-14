@@ -41,9 +41,8 @@ void read_analog_values(int fd, int *analogValue0, int *analogValue1) {
     
     // Realizar múltiplas leituras e somá-las
     for (int i = 0; i < num_samples; i++) {
-        sum0 += wiringPiI2CReadReg8(fd, 0x40);  // Leitura de AIN0
-        sum1 += wiringPiI2CReadReg8(fd, 0x41);  // Leitura de AIN1
-        // Um pequeno delay pode ser adicionado, mas como você mencionou, é importante não retardar o processamento
+        sum0 += wiringPiI2CReadReg8(fd, 0x41);  // Leitura de AIN1
+        sum1 += wiringPiI2CReadReg8(fd, 0x40);  // Leitura de AIN0
     }
 
     // Calcular a média das leituras

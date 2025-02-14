@@ -21,9 +21,6 @@ int ler_dois_wav_estereo(short **sinal1, short **sinal2, int *tamanho1, int *tam
 // Função para gerar buffers circulares a partir dos sinais de áudio
 int gerar_buffers_circulares(short *sinal1, short *sinal2, int tamanho, int buffer_size, short ***buffers_sinal1, short ***buffers_sinal2, int *num_buffers);
 
-// Função exemplo de filtro simples
-void filtro_exemplo(short *buffer, int buffer_size);
-
 // Função para processar os buffers com filtro
 int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal2, int num_buffers, int buffer_size);
 
