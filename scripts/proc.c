@@ -257,6 +257,90 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         }
     }
 
+    // Alocar buffers para os quatro canais (sem o 'filtrado' no nome)
+    short **buffers_sinal1_left = (short **)malloc(num_buffers * sizeof(short *));
+    short **buffers_sinal1_right = (short **)malloc(num_buffers * sizeof(short *));
+    short **buffers_sinal2_left = (short **)malloc(num_buffers * sizeof(short *));
+    short **buffers_sinal2_right = (short **)malloc(num_buffers * sizeof(short *));
+
+    if (!buffers_sinal1_left || !buffers_sinal1_right ||
+        !buffers_sinal2_left || !buffers_sinal2_right) {
+        printf("Erro: falha ao alocar buffers de sinal.\n");
+        return -1;  // Retorna erro
+    } else {
+        printf("Sucesso ao alocar buffers de canais\n");
+    }
+
+    // Definir buffer_channel_size como metade de buffer_size
+    int buffer_channel_size = buffer_size / 2;
+
+    // Inicializar buffers para os quatro canais
+    for (int i = 0; i < num_buffers; i++) {
+        buffers_sinal1_left[i] = (short *)malloc(buffer_channel_size * sizeof(short));
+        buffers_sinal1_right[i] = (short *)malloc(buffer_channel_size * sizeof(short));
+        buffers_sinal2_left[i] = (short *)malloc(buffer_channel_size * sizeof(short));
+        buffers_sinal2_right[i] = (short *)malloc(buffer_channel_size * sizeof(short));
+
+        if (!buffers_sinal1_left[i] || !buffers_sinal1_right[i] ||
+            !buffers_sinal2_left[i] || !buffers_sinal2_right[i]) {
+            printf("Erro: falha ao alocar memória para buffer de sinal.\n");
+            return -1;  // Retorna erro
+        }
+
+        // Verifica se o último buffer foi alocado
+        if (i == num_buffers - 1) {
+            printf("Sucesso ao alocar memória para buffers de sinais de canais\n");
+        }
+
+        // Loop para separar valores pares e ímpares de (*buffers_sinal1) e (*buffers_sinal2)
+        int left_index_sinal1 = 0;  // Índice para buffers_sinal1_left
+        int right_index_sinal1 = 0; // Índice para buffers_sinal1_right
+        int left_index_sinal2 = 0;  // Índice para buffers_sinal2_left
+        int right_index_sinal2 = 0; // Índice para buffers_sinal2_right
+
+        for (int j = 0; j < buffer_size; j++) {
+            // Processamento de buffers_sinal1
+            if (j % 2 == 0) { // Verifica se o índice é par
+                buffers_sinal1_left[i][left_index_sinal1++] = (*buffers_sinal1)[i][j];
+            } else { // Caso o índice seja ímpar
+                buffers_sinal1_right[i][right_index_sinal1++] = (*buffers_sinal1)[i][j];
+            }
+
+            // Processamento de buffers_sinal2
+            if (j % 2 == 0) { // Verifica se o índice é par
+                buffers_sinal2_left[i][left_index_sinal2++] = (*buffers_sinal2)[i][j];
+            } else { // Caso o índice seja ímpar
+                buffers_sinal2_right[i][right_index_sinal2++] = (*buffers_sinal2)[i][j];
+            }
+        }
+
+                // Verificando se os buffers estão vazios
+        if (left_index_sinal1 == 0 && right_index_sinal1 == 0) {
+            printf("O buffer sinal1 está vazio!\n");
+        }
+
+        if (left_index_sinal2 == 0 && right_index_sinal2 == 0) {
+            printf("O buffer sinal2 está vazio!\n");
+        }
+
+        if (left_index_sinal1 == 0 && right_index_sinal1 == 0) {
+            printf("O buffer sinal1 esquerdo está vazio!\n");
+        }
+
+        if (left_index_sinal2 == 0 && right_index_sinal2 == 0) {
+            printf("O buffer sinal2 direito está vazio!\n");
+        }
+
+    }
+
+        // Exibir o tamanho de cada buffer ao final
+    printf("O buffer do sinal 1, canal esquerdo possui %d buffers de %d amostras.\n", num_buffers, buffer_size / 2);
+    printf("O buffer do sinal 1, canal direito possui %d buffers de %d amostras.\n", num_buffers, buffer_size / 2);
+    printf("O buffer do sinal 2, canal esquerdo possui %d buffers de %d amostras.\n", num_buffers, buffer_size / 2);
+    printf("O buffer do sinal 2, canal direito possui %d buffers de %d amostras.\n", num_buffers, buffer_size / 2);
+
+    //exit(0);
+
     // Alocar array para o sinal completo (todos os buffers combinados)
     int tamanho_total_sinal = num_buffers * buffer_size;  // Total de amostras no sinal final
     short *sinal_completo = (short *)malloc(tamanho_total_sinal * sizeof(short));
@@ -268,7 +352,51 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
     // Processar os buffers, aplicar o filtro FIR e o delay
     int posicao = 0;  // Variável para controle da posição no sinal_completo
 
+    // Criar os buffers temporários filtrados
+    short *buffer_sinal1_left_filtrado = (short *)malloc(buffer_channel_size * sizeof(short));
+    short *buffer_sinal1_right_filtrado = (short *)malloc(buffer_channel_size * sizeof(short));
+    short *buffer_sinal2_left_filtrado = (short *)malloc(buffer_channel_size * sizeof(short));
+    short *buffer_sinal2_right_filtrado = (short *)malloc(buffer_channel_size * sizeof(short));
+
+    // Verificar se a alocação foi bem-sucedida
+    if (!buffer_sinal1_left_filtrado || 
+        !buffer_sinal1_right_filtrado || 
+        !buffer_sinal2_left_filtrado || 
+        !buffer_sinal2_right_filtrado) {
+        printf("Erro: falha ao alocar memória para buffers filtrados.\n");
+        return -1;  // Retorna erro e encerra a execução
+    }
+
+    // Alocar buffers temporários para a média dos sinais filtrados (direita e esquerda)
+    float *media_buffer_right = (float *)malloc(buffer_channel_size * sizeof(float));  // Alocar buffer temporário para a média do canal direito
+    float *media_buffer_left = (float *)malloc(buffer_channel_size * sizeof(float));   // Alocar buffer temporário para a média do canal esquerdo
+    float *media_buffer = (float *)malloc(buffer_channel_size * sizeof(float));   // Alocar buffer temporário para a média dos sinais
+
+    short *buffer_reproduzivel = (short *)malloc(buffer_size * sizeof(short));
+
+    if (buffer_reproduzivel == NULL) {
+    printf("Erro na alocação de memória para o buffer!\n");
+    return -1;
+    }
+
+    // Verificar se a alocação foi bem-sucedida
+    if (!media_buffer_right) {
+        printf("Erro: falha ao alocar memória para media_buffer_right.\n");
+        return -1;
+    }
+    if (!media_buffer_left) {
+        printf("Erro: falha ao alocar memória para media_buffer_left.\n");
+        return -1;
+    }
+    if (!media_buffer) {
+        printf("Erro: falha ao alocar memória para media_buffer.\n");
+        return -1;
+    }
+
+
     for (int i = 0; i < num_buffers; i++) {
+
+
         // Atualizar coeficientes a cada 10 buffers (se necessário)
         if (i % 10 == 0) {
             read_analog_values(fd, &analogValue0, &analogValue1);
@@ -286,36 +414,98 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
                 frequencias_log[analogValue0], frequencias_log[255 - analogValue0], efeito, wetness);
         }
 
-        // Aplicar o filtro FIR para o sinal 1
-        if ((*buffers_sinal1)[i] != NULL) {
-            // Obter coeficientes para o filtro FIR para o sinal 1 com base no índice de fc1
-            float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1           
-            aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro_1, ORDER);
-        }
 
-        // Aplicar o filtro FIR para o sinal 2
-        if ((*buffers_sinal2)[i] != NULL) {
-            // Obter coeficientes para o filtro FIR para o sinal 2 com base no índice de fc2
-            float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
-            aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro_2, ORDER);
-        }
+        // CRIAR FUNÇÃO PARA RODAR O PROCESSO ABAIXO PARA A ESQUERDA E PARA A DIREITA
+            // PARA LEFT USE TAIS BUFFERS
+            // PARA RIGHT USE TAIS BUFFERS
+            // RETORNE MEDIA_BUF_L E MEDIA_BUF_R
+                    /*
+                    // Aplicar o filtro FIR para o sinal 1
+                    if ((*buffers_sinal1)[i] != NULL) {
+                        // Obter coeficientes para o filtro FIR para o sinal 1 com base no índice de fc1
+                        float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1           
+                        aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro_1, ORDER);
+                    }
 
-        // Calcular a média dos buffers filtrados e preencher media_buffers
-        float *media_buffer = (float *)malloc(buffer_size * sizeof(float));  // Alocar buffer temporário para a média do buffer atual
-        for (int j = 0; j < buffer_size; j++) {
-            media_buffer[j] = (float)(buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2.0f;
-        }
+                    // Aplicar o filtro FIR para o sinal 2
+                    if ((*buffers_sinal2)[i] != NULL) {
+                        // Obter coeficientes para o filtro FIR para o sinal 2 com base no índice de fc2
+                        float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
+                        aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro_2, ORDER);
+                    }
+                    */
 
-        // Avaliar o valor de sel_Fx e aplicar o efeito correspondente
-        if (digitalValue == 0) {
-            // Se sel_Fx for 0, aplicar o efeito de delay
-            aplicar_delay(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do delay conforme necessário
-        } else if (digitalValue == 1) {
-            // Se sel_Fx for 1, aplicar o efeito de reverb
-            applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do reverb conforme necessário
-        }
+                    // Obter coeficientes para o filtro FIR para o sinal 1, ambos os canais
+                    float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1
 
-        // Normalizar o buffer de média para o intervalo -1.0 a 1.0
+                
+                    // Aplicar o filtro FIR para o sinal 1, canal esquerdo
+                    if ((buffers_sinal1_left)[i] != NULL) {
+                        aplicar_filtro_FIR_buffer((buffers_sinal1_left)[i], buffer_sinal1_left_filtrado, buffer_channel_size, coeficientes_filtro_1, ORDER);
+                    }
+                    
+                    // Aplicar o filtro FIR para o sinal 1, canal direito
+                    if ((buffers_sinal1_right)[i] != NULL) {
+                        aplicar_filtro_FIR_buffer((buffers_sinal1_right)[i], buffer_sinal1_right_filtrado, buffer_channel_size, coeficientes_filtro_1, ORDER);
+                    }
+
+                    // Obter coeficientes para o filtro FIR para o sinal 2, ambos os canais
+                    float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
+
+                    // Aplicar o filtro FIR para o sinal 2, canal esquerdo
+                    if ((buffers_sinal2_left)[i] != NULL) {
+                        aplicar_filtro_FIR_buffer((buffers_sinal2_left)[i], buffer_sinal2_left_filtrado, buffer_channel_size, coeficientes_filtro_2, ORDER);
+                    }
+
+                    // Aplicar o filtro FIR para o sinal 2, canal direito
+                    if ((buffers_sinal2_right)[i] != NULL) {
+                        aplicar_filtro_FIR_buffer((buffers_sinal2_right)[i], buffer_sinal2_right_filtrado, buffer_channel_size, coeficientes_filtro_2, ORDER);
+                    }
+                    /*
+                    // Calcular a média dos buffers filtrados e preencher media_buffers
+                    float *media_buffer = (float *)malloc(buffer_size * sizeof(float));  // Alocar buffer temporário para a média do buffer atual
+                    for (int j = 0; j < buffer_size; j++) {
+                        media_buffer[j] = (float)(buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2.0f;
+                    }
+                    */
+                    // Calcular a média entre os sinais filtrados para cada canal
+                    for (int j = 0; j < buffer_channel_size; j++) {
+                        // Para o canal direito
+                        media_buffer_right[j] = (float)((buffer_sinal1_right_filtrado[j] + buffer_sinal2_right_filtrado[j])) / 2.0f;
+
+                        // Para o canal esquerdo
+                        media_buffer_left[j] = (float)((buffer_sinal1_left_filtrado[j] + buffer_sinal2_left_filtrado[j])) / 2.0f;
+                    }
+
+                    /*
+                    // Avaliar o valor de sel_Fx e aplicar o efeito correspondente
+                    if (digitalValue == 0) {
+                        // Se sel_Fx for 0, aplicar o efeito de delay
+                        aplicar_delay(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do delay conforme necessário
+                    } else if (digitalValue == 1) {
+                        // Se sel_Fx for 1, aplicar o efeito de reverb
+                        applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do reverb conforme necessário
+                    }
+                    */
+                   
+                    // Avaliar o valor de sel_Fx e aplicar o efeito correspondente para os dois canais
+                    if (digitalValue == 0) {
+                        // Se sel_Fx for 0, aplicar o efeito de delay
+                        aplicar_delay(media_buffer_left, buffer_channel_size, wetness, 0.6f);  // Aplicar delay no canal esquerdo
+                        aplicar_delay(media_buffer_right, buffer_channel_size, wetness, 0.6f);  // Aplicar delay no canal direito
+                    } else if (digitalValue == 1) {
+                        // Se sel_Fx for 1, aplicar o efeito de reverb
+                        applyReverbEffectBuffer(media_buffer_left, buffer_channel_size, wetness, 0.6f);  // Aplicar reverb no canal esquerdo
+                        applyReverbEffectBuffer(media_buffer_right, buffer_channel_size, wetness, 0.6f);  // Aplicar reverb no canal direito
+                    }
+
+        // Preencher o media_buffer alternando os sinais entre os buffers esquerdo e direito
+        for (int j = 0; j < buffer_channel_size; j++) {
+            media_buffer[2 * j] = media_buffer_left[j];   // Posição 2j recebe o sinal do canal esquerdo
+            media_buffer[2 * j + 1] = media_buffer_right[j];  // Posição 2j+1 recebe o sinal do canal direito
+        }
+        
+        // Normalizar o buffer de média para o intervalo -1.0 a 1.0 com limitação suave
         float max_value = 0.0f;
         for (int j = 0; j < buffer_size; j++) {
             // Encontrar o valor máximo absoluto no buffer
@@ -324,16 +514,23 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
             }
         }
 
-        // Se o valor máximo for maior que 1.0, normaliza os valores
+        // Se o valor máximo for maior que 1.0, normaliza os valores de forma mais suave
         if (max_value > 1.0f) {
-            float normalizing_factor = 1.0f / max_value;
-            for (int j = 0; j < buffer_size; j++) {
-                media_buffer[j] *= normalizing_factor;
+            // Limitar o valor máximo para evitar distorção excessiva
+            float limit = 0.7f; // Ou algum valor inferior a 1.0, dependendo do seu caso
+            if (max_value > limit) {
+                float normalizing_factor = limit / max_value;
+                for (int j = 0; j < buffer_size; j++) {
+                    media_buffer[j] *= normalizing_factor;
+                }
             }
         }
 
+        
         // Conversão de float para short para reprodução com ALSA
-        short *buffer_reproduzivel = (short *)malloc(buffer_size * sizeof(short));
+
+
+
         for (int j = 0; j < buffer_size; j++) {
             // Converte cada valor float para short (PCM de 16 bits)
             // Multiplicando por 32767.0f para mapear o intervalo de -1.0 a 1.0 para o intervalo de -32767 a 32767
@@ -352,15 +549,15 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
             sinal_completo[posicao++] = (short)media_buffer[j];  // Converter de volta para short antes de adicionar ao sinal completo
         }
 
-        free(media_buffer);
+        //free(media_buffer);
     }
-
+    /*
     // Salvar o sinal completo no arquivo WAV
-    if (escrever_wav_estereo(filename, sinal_completo, tamanho_total_sinal) != 0) {
+    if (escrever_wav_estereo(filename, sinal_completo, tamanho_total_sinal/2) != 0) {
         printf("Erro ao salvar o arquivo WAV.\n");
         return -1;  // Retorna erro
     }
-
+    */
     // Liberação dos buffers filtrados e sinal completo
     for (int i = 0; i < num_buffers; i++) {
         free(buffers_sinal1_filtrado[i]);

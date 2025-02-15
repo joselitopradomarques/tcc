@@ -9,7 +9,10 @@
 #define MAX_16BIT 32767
 #define MIN_16BIT -32768
 #define SAMPLE_RATE 44100
-
+#define SINAL_1 0
+#define SINAL_2 1
+#define CANAL_ESQUERDA 0
+#define CANAL_DIREITA 1
 
 int escrever_wav_estereo(const char *filename, short *sinal, int tamanho);
 // Função para ler arquivo WAV estéreo
