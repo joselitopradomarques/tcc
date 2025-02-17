@@ -28,13 +28,13 @@ void generate_hamming_highpass_filter(int filter_order, float cutoff_frequency, 
         if (n == M) {
             h[n] = 1 - normalized_cutoff;  // Resposta para o centro (n = M) passa-altas
         } else {
-            h[n] = -sinf(M_PI * (n - M) * normalized_cutoff) / (M_PI * (n - M));  // Inverte a resposta ideal
+            h[n] = -sinf(PI * (n - M) * normalized_cutoff) / (PI * (n - M));  // Inverte a resposta ideal
         }
     }
 
     // Aplicar a janela de Hamming
     for (int n = 0; n < filter_order; n++) {
-        float window = 0.54f - 0.46f * cosf(2 * M_PI * n / (filter_order - 1));  // Janela de Hamming
+        float window = 0.54f - 0.46f * cosf(2 * PI * n / (filter_order - 1));  // Janela de Hamming
         h[n] *= window;
     }
 }

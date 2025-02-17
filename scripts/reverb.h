@@ -18,5 +18,6 @@ void freeReverb(Reverb* reverb);
 void applyReverbEffectBuffer(float* buffer, int numSamples, float wetness, float feedback);
 void applyGain(float* buffer, int numSamples, float gain);
 void normalize(float* buffer, int numSamples);
+float highPassFilter(float wetSignal, float cutoffFreq);
 
 #endif

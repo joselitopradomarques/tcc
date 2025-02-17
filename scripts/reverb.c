@@ -7,7 +7,6 @@
 #define BUFFER_SIZE 1024  // Tamanho do buffer (exemplo: 1 segundo de áudio a 44.1kHz)
 #define SAMPLE_RATE 44100
 
-
 void applyReverbEffectBuffer(float* buffer, int numSamples, float wetness, float feedback) {
     int maxDelay = 22050;  // Aproximadamente 0.5 segundos de delay para 44.1kHz
     static float *delayBuffer = NULL;  // Buffer de delay (estático para manter o estado entre as chamadas)
@@ -26,6 +25,9 @@ void applyReverbEffectBuffer(float* buffer, int numSamples, float wetness, float
             delayBuffer[i] = 0.0f;
         }
     }
+
+    // Limitar o feedback a um valor seguro
+    feedback = fminf(fmaxf(feedback, 0.2f), 0.7f);  // Feedback deve estar entre 0.2 e 0.7
 
     // Processar o buffer de áudio e aplicar o reverb
     for (int i = 0; i < numSamples; i++) {

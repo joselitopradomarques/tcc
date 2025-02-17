@@ -41,7 +41,7 @@ void aplicar_delay(float *buffer, int buffer_size, float wetness, float feedback
         float output_sample = (1.0f - wetness) * buffer[i] + wetness * delayed_sample;
 
         // Aplicar feedback (realimentação) ao sinal atrasado
-        float feedback_sample = delayed_sample * feedback;
+        float feedback_sample = delayed_sample * feedback*0.9f;
 
         // Atualizar o buffer de delay com a amostra atual somada ao feedback
         delay_buffer[delay_buffer_pos] = buffer[i] + feedback_sample;

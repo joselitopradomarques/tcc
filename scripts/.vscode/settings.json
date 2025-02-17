@@ -6,6 +6,8 @@
         "reverb.h": "c",
         "proc.h": "c",
         "delay.h": "c",
-        "capture.h": "c"
+        "capture.h": "c",
+        "audio.h": "c",
+        "filt.h": "c"
     }
 }

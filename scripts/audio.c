@@ -6,20 +6,12 @@
 #define BUFFER_SIZE 1024
 
 // Função de inicialização: Configura o dispositivo de áudio ALSA
-int inicializar(const char *device, snd_pcm_t **pcm_handle, char **buffer, snd_pcm_hw_params_t **hw_params) {
+int inicializar(const char *device, snd_pcm_t **pcm_handle, snd_pcm_hw_params_t **hw_params) {
     int err;
-
-    // Aloca o buffer
-    *buffer = (char *)malloc(BUFFER_SIZE);
-    if (!(*buffer)) {
-        fprintf(stderr, "Erro ao alocar memória para o buffer\n");
-        return -1;
-    }
 
     // Abre o dispositivo de áudio ALSA
     if ((err = snd_pcm_open(pcm_handle, device, SND_PCM_STREAM_PLAYBACK, 0)) < 0) {
         fprintf(stderr, "Erro ao abrir o dispositivo %s: %s\n", device, snd_strerror(err));
-        free(*buffer);
         return -1;
     }
 
@@ -35,7 +27,6 @@ int inicializar(const char *device, snd_pcm_t **pcm_handle, char **buffer, snd_p
     if ((err = snd_pcm_hw_params(*pcm_handle, *hw_params)) < 0) {
         fprintf(stderr, "Erro ao configurar parâmetros de hardware: %s\n", snd_strerror(err));
         snd_pcm_close(*pcm_handle);
-        free(*buffer);
         return -1;
     }
 
@@ -47,11 +38,11 @@ int inicializar(const char *device, snd_pcm_t **pcm_handle, char **buffer, snd_p
 
 
 // Função de reprodução: Reproduz o áudio de um buffer processado
-int reproduzir(snd_pcm_t *pcm_handle, char *media_buffer, size_t buffer_size) {
+int reproduzir(snd_pcm_t *pcm_handle, short *media_buffer, size_t buffer_size) {
     int err;
 
     // Reproduz o conteúdo do media_buffer
-    if ((err = snd_pcm_writei(pcm_handle, media_buffer, buffer_size / 4)) < 0) { // Divide por 4 (2 canais * 2 bytes por amostra)
+    if ((err = snd_pcm_writei(pcm_handle, media_buffer, buffer_size/4)) < 0) { // Divide por 4 (2 canais * 2 bytes por amostra)
         fprintf(stderr, "Erro ao escrever no dispositivo: %s\n", snd_strerror(err));
         return -1;
     }
@@ -60,7 +51,7 @@ int reproduzir(snd_pcm_t *pcm_handle, char *media_buffer, size_t buffer_size) {
 }
 
 // Função de finalização: Libera recursos e fecha dispositivos
-void finalizar(snd_pcm_t *pcm_handle, char *buffer) {
+void finalizar(snd_pcm_t *pcm_handle, short *buffer) {
     snd_pcm_drain(pcm_handle); // Drena o buffer de reprodução
     snd_pcm_close(pcm_handle); // Fecha o dispositivo de áudio
     free(buffer); // Libera o buffer
