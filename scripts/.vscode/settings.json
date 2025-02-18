@@ -1,6 +1,13 @@
 {
     "git.ignoreLimitWarning": true,
     "files.associations": {
-        "processamento_sinais.h": "c"
+        "processamento_sinais.h": "c",
+        "filter_final.h": "c",
+        "reverb.h": "c",
+        "proc.h": "c",
+        "delay.h": "c",
+        "capture.h": "c",
+        "audio.h": "c",
+        "filt.h": "c"
     }
 }

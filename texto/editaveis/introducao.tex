@@ -20,39 +20,36 @@ A proposta de utilizar um botão central para controlar dois canais oferece uma 
 Nessa seção, o objetivo geral e os objetivos específicos almejados por esse projeto são citados.
 
 \subsection{Objetivo Geral}
-Esse projeto visa a criação de um \textit{mixer} implementado em um sistema embarcado que facilite a mixagem de \textit{DJ}s tendo em vista os equipamentos disponíveis hoje no mercado.
+Esse projeto visa a criação de um \textit{mixer} implementado em um sistema embarcado que unifique o controle da mixagem feita por \textit{DJ}s em contrapartida ao modelo tradicional de mixagem baseado em equalização de três bandas.
 
 \subsection{Objetivos Específicos}
 
 Quanto aos objetivos específicos, elencou-se pontos ao longo do desenvolvimento desse sistemas que servirão como pontos de referência para garantir que o funcionamento do todo. 
 
 \begin{enumerate}
-    \item \label{item:leitura} Obter leituras de sinais analógicos de equipamentos como \textit{CDJs}
     \item \label{item:deslocamento} Realizar de forma automatizada o deslocamento de frequências de corte dos filtros passa-altas
     \item \label{item:efeitos} Implementar dois tipos de efeitos
     \item \label{item:conversao} Converter o sinal obtido após o processamento para analógico a fim de ser reproduzido por um sistema de som
-    \item \label{item:interface} Desenvolvimento de um sistema com uma interface amigável para um \textit{DJ}
 \end{enumerate}
-
-O Objetivo Específico \ref{item:leitura} visa garantir a obtenção dos sinais analógicos de equipamentos externos de forma que o sistema deve estar de acordo com as normas. 
 
 O Objetivo Específico \ref{item:deslocamento} envolve a obtenção dos sinais de controle, conversões de analógico para digitais, a atuação correta nos filtros passa-altas de ambos canais.
 
 Em relação aos efeitos, o Objetivo Específico \ref{item:efeitos} visa embarcar desde a concepção matemática, obtenção dos dados da frequência central e a conseguinte intensidade do efeito. 
 
-Uma vez que a conclusão dos Objetivos acima garante um sinal processado no domínio digital, é necessário garantir que o sinal seja adequadamente convertido para analógico, a fim de ser reproduzido em equipamentos externos. Portanto, o Objetivo Específico \ref{item:conversao} agrega a conversão do sinal de saída para que o sistema de som conectado ao sistema consiga reproduzir com potência adequada. 
-
-Por fim, para que o usuário consiga utilizar o equipamento e suas funcionalidades de forma plena, é necessário que a interface do usuário possibilite o usuário utilizar todas as funções disponíveis; requisitos englobados no Objetivo \ref{item:interface}.
+Uma vez que a conclusão dos Objetivos acima garante um sinal processado no domínio digital, é necessário garantir que o sinal seja adequadamente convertido para analógico, a fim de ser reproduzido em equipamentos externos. Portanto, o Objetivo Específico \ref{item:conversao} agrega a conversão do sinal de saída para que o sistema de som conectado ao sistema consiga reproduzir o canal de saída.
 
 \section{Estrutura do Documento}
 
 Esse documento parte do conceito de sinal e sistema para que o processo de amostragem e reconstrução de um sinal seja realizado. Posteriormente, uma conceituação acerca de som e música é realizada percorrendo o conceito físico e uma definição expandida utilizando o pensamento de John Cage.
 
-Além disso, uma retrospectiva do desenvolvimento de \textit{mixer}s utilizados por \textit{DJ}s desde sua criação até o momento presente é realizada, bem como um detalhamento acerca da interface utilizada, além dos conectores usualmente utilizados. Funcionalidades usuais de um \textit{mixer} são levantadas para que se delimitem os processos essenciais de um \textit{mixer}.
+Além disso, uma retrospectiva do desenvolvimento de \textit{mixers} utilizados por \textit{DJs} desde sua criação até o momento presente é realizada, bem como a exposição de funcionalidades usuais de um \textit{mixer} é descrita para que se delimitem os processos essenciais de um \textit{mixer}.
+
+[ESSA PARTE DEVE SER REESCRITA APÓS A ADAPTAÇÃO DOS REQUISITOS DO PROJETO]
 
 Em seguida, a metodologia do projeto é detalhada com um levantamento de requisitos do projeto. Um fluxograma geral e seus subfluxogramas são detalhados para que cada função fique clara quanto ao seu funcionamento.
 
 Uma seção correspondente à prova de conceito se encontra presente, na qual uma simulação do sistema foi realizada contando com suas almejadas funções de filtragem e efeitos.
+
 
 Para clarificar a proposta de implementação desse projeto, explanações acerca da interface de usuário e do processamento do sinal são realizadas.
 

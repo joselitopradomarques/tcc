@@ -1,0 +1,86 @@
+TCC2 - Tasks
+
+
+-----------------------------------------------------------------------------
+Legenda: FD - Fazer Depois significa que farei quando o texto estiver fechado
+-----------------------------------------------------------------------------
+
+
+-> Folha de aprovação: inserir a data de aprovação
+
+-> Dedicatória: FD
+
+-> Agradecimentos: FD
+
+-> Epígrafe: FD
+
+-----------------------------------------------------------------------------
+
+-> Resumo: FD
+
+-> Abstract: FD
+
+-----------------------------------------------------------------------------
+
+-> Introdução: FD
+
+-> Justificativa: manteve-se
+
+-> Objetivos
+	- Objetivo geral: atualizado
+	- Objetivos específicos: atualizado
+
+
+-> Estrutura do Documento
+	- A descrição do documento propriamente deverá ser realizado após a confeccção do resto do arquivo
+	
+-----------------------------------------------------------------------------
+
+-> Fundamentação Teórica e Estado da Arte
+
+	- Sinal: conceito - Manteve-se
+	- Sinal Contínuo - Manteve-se
+	- Filtros - Manteve-se
+	- Som e Música - Manteve-se
+	- Mixer - Manteve-se
+
+-----------------------------------------------------------------------------
+-> Metodologia: será totalmente modificado
+	Descrição modificada	
+	- Proposta Geral: modificada
+	- Levantamento de Requisitos: modificado
+	- Fluxograma do Mixer: modificado
+	- Prova de Conceito: modificado
+	- Proposta de Implementação: Ok
+		- Implementação em Hardware:
+			- Adicionar um diagrama de ligações - Ok
+			- Adicionar uma lista de materiais
+		- Implementação em Software
+-----------------------------------------------------------------------------
+-> Resultados
+	- Mantém os resultados do PureData
+	- Deixar claro a diferença entre os resultados da prova de conceito e do meu sistema
+-----------------------------------------------------------------------------
+-> Conclusão
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

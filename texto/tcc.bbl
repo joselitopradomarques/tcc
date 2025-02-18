@@ -45,13 +45,6 @@ ISBN 9788555911026. Dispon{\'\i}vel em:
   \url{https://br.mouser.com/new/amphenol/amphenol-audio-q-plugs/}.
 [Acessado em 03-09-2024].}
 
-\bibitem[Eletronik 2024]{eletroniklvEletronikComponentes}
-\abntrefinfo{Eletronik}{ELETRONIK}{2024}
-{ELETRONIK. \emph{Eletronik LV - Componentes Eletrônicos e Robótica ---
-  eletroniklv.com.br}. 2024.
-  \url{https://eletroniklv.com.br/conversor-analogico-digital-ads1115-16-bits-4-canais-adc?search=adc&description=true&page=2}.
-[Acessado em 29-10-2024].}
-
 \bibitem[Evea 2024]{evea}
 \abntrefinfo{Evea}{EVEA}{2024}
 {EVEA. \emph{Rotating Knob Button, 2 Fixed Positions}. 2024.
@@ -183,6 +176,12 @@ ISBN 9780262680820. Dispon{\'\i}vel em:
   \url{https://www.shutterstock.com/image-vector/sound-reflection-reverberation-260nw-1282003960.jpg}.
 [Acessado em 22-10-2024].}
 
+\bibitem[Saravati 2024]{saravaticomponentes}
+\abntrefinfo{Saravati}{SARAVATI}{2024}
+{SARAVATI. \emph{Módulo Conversor A/D e D/A - 8 Bits - PCF8591}. 2024.
+  \url{https://www.saravati.com.br/modulo-conversor-a-d-e-d-a-8-bits-pcf8591.html}.
+[Acessado em 30-01-2025].}
+
 \bibitem[Self 2013]{self2013audio}
 \abntrefinfo{Self}{SELF}{2013}
 {SELF, D. \emph{Audio Power Amplifier Design}. Focal Press, 2013.
@@ -206,12 +205,6 @@ Dispon{\'\i}vel em:
 {UBBS. \emph{The Story Behind the First Ever Mixer}. 2015.
   \url{https://stoneyroads.com/2015/05/the-story-behind-the-first-ever-mixer/}.
 [Acessado em 02-09-2024].}
-
-\bibitem[WalMart 2024]{walmartRobotHuman}
-\abntrefinfo{WalMart}{WALMART}{2024}
-{WALMART. \emph{Placa de Captura I2S ADC Audio I2S}. 2024.
-  \url{https://www.walmart.com/ip/Tersalle-I2S-ADC-Audio-I2S-Capture-Card-Module-Master-Slave-Mode-Development-Board-Lossless-Digital-Audio-I2S-ADC-Decoder/5742262214}.
-[Acessado em 03-09-2024].}
 
 \bibitem[Widrow, Kollar e Liu 1996]{widrow}
 \abntrefinfo{Widrow, Kollar e Liu}{WIDROW; KOLLAR; LIU}{1996}
