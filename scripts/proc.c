@@ -552,284 +552,21 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         return -1;
     }
 
-
-    // Teste 3: Verificação do sinal filtrado do sinal 1:
-        /*
-            - Aqui vão entrar os arquivos divididos por canais do sinal 1
-            - Eles serão filtrados
-            - Serão armazenados em um arquivo wav
-        */
-
-       /*
-        printf("Tamanho de buffer_sinal1_right_filtrado: %ld\n", num_buffers * buffer_channel_size * sizeof(short)); 
-        printf("Tamanho de buffer_sinal2_ right_filtrado: %ld\n", num_buffers * buffer_channel_size * sizeof(short));
-
-        int posicao3 = 0;  // Variável para controle da posição no sinal_completo
-        int tamanho_total_sinal3 = num_buffers * buffer_channel_size * 2;  // Total de amostras no sinal final (2 canais)
-        short *sinal_completo3 = (short *)malloc(tamanho_total_sinal3 * sizeof(short));
-
-        if (sinal_completo3 == NULL) {
-            printf("Erro ao alocar memória para o sinal completo.\n");
-            return -1;  // Erro de alocação
-        }
-
-        // Verifique se a alocação dos buffers de sinais filtrados está correta
-        if (buffers_sinal1_left_filtrado == NULL || buffers_sinal1_right_filtrado == NULL) {
-            printf("Erro: buffers_sinal1_left_filtrado ou buffers_sinal1_right_filtrado não foram alocados corretamente.\n");
-            return -1;
-        }
-
-        // Processamento dos buffers
-        for (int i = 0; i < num_buffers; i++) {
-            // Atualizar coeficientes a cada 10 buffers (se necessário)
-            if (i % 10 == 0) {
-                read_analog_values(fd, &analogValue0, &analogValue1);
-                wetness = analogValue1 / 255.0;
-                digitalValue = read_digital_value();
-
-                // Utilize os valores conforme necessário
-                printf("AIN0: %d | AIN1: %d | GPIO4: %d\n", analogValue0, analogValue1, digitalValue);
-
-                // Determinando o efeito com base no valor de digitalValue
-                char* efeito = (digitalValue == 0) ? "Delay" : (digitalValue == 1) ? "Reverb" : "Nenhum";
-
-                // Acessando os valores das frequências de corte diretamente e incluindo o efeito
-                printf("Frequência de corte 1: %.2f Hz | Frequência de corte 2: %.2f Hz | Efeito: %s | Wetness: %.2f\n", 
-                    frequencias_log[analogValue0], frequencias_log[255 - analogValue0], efeito, wetness);
-            }
-
-            // Coeficientes para o sinal 1
-            float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; 
-
-            // Aplicar o filtro FIR para o sinal 1, canal esquerdo e direito, e armazenar o sinal filtrado
-            if ((buffers_sinal1_left)[i] != NULL) {
-                aplicar_filtro_FIR_buffer((buffers_sinal1_left)[i], (buffers_sinal1_left_filtrado)[i], buffer_channel_size, coeficientes_filtro_1, ORDER);
-            }
-            if ((buffers_sinal1_right)[i] != NULL) {
-                aplicar_filtro_FIR_buffer((buffers_sinal1_right)[i], (buffers_sinal1_right_filtrado)[i], buffer_channel_size, coeficientes_filtro_1, ORDER);
-            }
-        }
-
-        // Reconstruir o sinal completo a partir dos buffers filtrados
-        for (int i = 0; i < num_buffers; i++) {
-            // Reconstrução do sinal filtrado
-            for (int j = 0; j < buffer_channel_size; j++) {
-                // Indices para o buffer de entrada
-                int index_left = i * buffer_channel_size + j;
-                int index_right = i * buffer_channel_size + j;
-
-                // Verificar se os índices estão dentro dos limites
-                if (index_left >= num_buffers * buffer_channel_size || index_right >= num_buffers * buffer_channel_size) {
-                    printf("Erro: índice fora dos limites. i: %d, j: %d\n", i, j);
-                    return -1;
-                }
-
-                // Reconstruir o sinal completo a partir dos buffers filtrados
-                sinal_completo3[posicao3++] = (buffers_sinal1_left_filtrado)[i][j];   // Canal esquerdo do sinal 1 filtrado
-                sinal_completo3[posicao3++] = (buffers_sinal1_right_filtrado)[i][j];  // Canal direito do sinal 1 filtrado
-            }
-        }
-
-        // Reconstruir o sinal completo a partir dos buffers originais (não filtrados)
-        int posicao2 = 0;  // Variável para controle da posição no sinal_completo
-        int tamanho_total_sinal2 = num_buffers * buffer_size;  // Total de amostras no sinal final
-        short *sinal_completo2 = (short *)malloc(tamanho_total_sinal2 * sizeof(short));
-
-        if (sinal_completo2 == NULL) {
-            printf("Erro ao alocar memória para o sinal completo.\n");
-            return -1;  // Erro de alocação
-        }
-
-        // Reconstruir o sinal completo a partir dos buffers originais
-        for (int i = 0; i < num_buffers; i++) {
-            int left_index_sinal1 = 0;  // Índice para buffers_sinal1_left
-            int right_index_sinal1 = 0; // Índice para buffers_sinal1_right
-
-            // Intercalação dos canais esquerdo e direito
-            for (int j = 0; j < buffer_size / 2; j++) {  // Considerando a intercalação de cada canal
-                // Canal esquerdo
-                sinal_completo2[posicao2++] = buffers_sinal1_left[i][left_index_sinal1++];
-                // Canal direito
-                sinal_completo2[posicao2++] = buffers_sinal1_right[i][right_index_sinal1++];
-            }
-        }
-
-        // Salvar o sinal reconstruído no arquivo WAV
-        if (escrever_wav_estereo("sinal_etapa3_origin.wav", sinal_completo2, tamanho_total_sinal2 / 2) != 0) {
-            printf("Erro ao salvar o arquivo WAV.\n");
-            free(sinal_completo2);  // Liberar a memória alocada antes de retornar
-            return -1;
-        }
-
-        free(sinal_completo2);  // Liberar a memória alocada após o processamento
+    int tamanho_total_sinal5 = num_buffers * buffer_size;  // Total de amostras no sinal final
+    int posicao5_1 = 0, posicao5_2 = 0, posicao5 = 0, posicao6 = 0;  // Variáveis para controle da posição nos sinais
+    short *sinal_completo5_1 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
+    short *sinal_completo5_2 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
+    short *sinal_completo5 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
+    short *sinal_completo6 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
 
 
-
-                // Salvar o sinal reconstruído no arquivo WAV
-                if (escrever_wav_estereo("sinal_etapa3_c_reflexao_at_22000.wav", sinal_completo3, tamanho_total_sinal3 / 2) != 0) {
-                    printf("Erro ao salvar o arquivo WAV.\n");
-                    free(sinal_completo3);  // Liberar a memória alocada antes de retornar
-                    return -1;
-                }
-
-                free(sinal_completo3);  // Liberar a memória alocada após o processamento
-                return 0;  // Sucesso
-
-
-
-        */
-    // Fim do teste 3
-
-
-    
-    // Teste 4: Verificar se ambos canais conseguem ser filtrados 
-        /*
-            - Realizar a filtragem em ambos canais
-            - Obter o sinal de saída de ambos canais
-        */
-
-        // Para o sinal 4a
-        /*
-        int posicao4a = 0;  // Variável para controle da posição no sinal_completo4a
-        int tamanho_total_sinal4a = num_buffers * buffer_channel_size * 2;  // Total de amostras no sinal 4a (2 canais)
-        short *sinal_completo4a = (short *)malloc(tamanho_total_sinal4a * sizeof(short));
-
-        if (sinal_completo4a == NULL) {
-            printf("Erro ao alocar memória para o sinal completo 4a.\n");
-            return -1;  // Erro de alocação
-        }
-
-        // Para o sinal 4b
-        int posicao4b = 0;  // Variável para controle da posição no sinal_completo4b
-        int tamanho_total_sinal4b = num_buffers * buffer_channel_size * 2;  // Total de amostras no sinal 4b (2 canais)
-        short *sinal_completo4b = (short *)malloc(tamanho_total_sinal4b * sizeof(short));
-
-        if (sinal_completo4b == NULL) {
-            printf("Erro ao alocar memória para o sinal completo 4b.\n");
-            return -1;  // Erro de alocação
-        }
-
-
-
-       for (int i = 0; i < num_buffers; i++) {
-
-
-        // Atualizar coeficientes a cada 10 buffers (se necessário)
-        if (i % 10 == 0) {
-            read_analog_values(fd, &analogValue0, &analogValue1);
-            wetness = analogValue1 / 255.0;
-            digitalValue = read_digital_value();
-
-            // Utilize os valores conforme necessário
-            printf("AIN0: %d | AIN1: %d | GPIO4: %d\n", analogValue0, analogValue1, digitalValue);
-
-            // Determinando o efeito com base no valor de digitalValue
-            char* efeito = (digitalValue == 0) ? "Delay" : (digitalValue == 1) ? "Reverb" : "Nenhum";
-
-            // Acessando os valores das frequências de corte diretamente e incluindo o efeito
-            printf("Frequência de corte 1: %.2f Hz | Frequência de corte 2: %.2f Hz | Efeito: %s | Wetness: %.2f\n", 
-                frequencias_log[analogValue0], frequencias_log[255 - analogValue0], efeito, wetness);
-        }
-
-                    // Obter coeficientes para o filtro FIR para o sinal 1, ambos os canais
-            float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1
-
-            if ((buffers_sinal1_left)[i] != NULL) {
-                aplicar_filtro_FIR_buffer((buffers_sinal1_left)[i], (buffers_sinal1_left_filtrado)[i], buffer_channel_size, coeficientes_filtro_1, ORDER);
-            }
-            if ((buffers_sinal1_right)[i] != NULL) {
-                aplicar_filtro_FIR_buffer((buffers_sinal1_right)[i], (buffers_sinal1_right_filtrado)[i], buffer_channel_size, coeficientes_filtro_1, ORDER);
-            }
-
-
-            // Obter coeficientes para o filtro FIR para o sinal 2, ambos os canais
-            float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
-
-            // Aplicar o filtro FIR para o sinal 2, canal esquerdo
-            if ((buffers_sinal2_left)[i] != NULL) {
-                aplicar_filtro_FIR_buffer((buffers_sinal2_left)[i], (buffers_sinal2_right_filtrado)[i], buffer_channel_size, coeficientes_filtro_2, ORDER);
-            }
-
-            // Aplicar o filtro FIR para o sinal 2, canal direito
-            if ((buffers_sinal2_right)[i] != NULL) {
-                aplicar_filtro_FIR_buffer((buffers_sinal2_right)[i], (buffers_sinal2_left_filtrado)[i], buffer_channel_size, coeficientes_filtro_2, ORDER);
-            }
-
-        }
-
-
-        // Reconstruir os sinais completos 4a e 4b a partir dos buffers filtrados
-        for (int i = 0; i < num_buffers; i++) {
-            int left_index_sinal4a = 0;  // Índice para buffers_sinal1_left_filtrado (4a)
-            int right_index_sinal4a = 0; // Índice para buffers_sinal1_right_filtrado (4a)
-            int left_index_sinal4b = 0;  // Índice para buffers_sinal2_left_filtrado (4b)
-            int right_index_sinal4b = 0; // Índice para buffers_sinal2_right_filtrado (4b)
-
-            // Intercalação dos canais esquerdo e direito para ambos os sinais
-            for (int j = 0; j < buffer_size / 2; j++) {  // Considerando a intercalação de cada canal
-                // Sinal 4a (canal esquerdo e direito)
-                sinal_completo4a[posicao4a++] = buffers_sinal1_left_filtrado[i][left_index_sinal4a++];
-                sinal_completo4a[posicao4a++] = buffers_sinal1_right_filtrado[i][right_index_sinal4a++];
-
-                // Sinal 4b (canal esquerdo e direito)
-                sinal_completo4b[posicao4b++] = buffers_sinal2_left_filtrado[i][left_index_sinal4b++];
-                sinal_completo4b[posicao4b++] = buffers_sinal2_right_filtrado[i][right_index_sinal4b++];
-            }
-        }
-
-        // Salvar o sinal reconstruído 4a no arquivo WAV
-        if (escrever_wav_estereo("sinal_etapa4a_filtered.wav", sinal_completo4a, tamanho_total_sinal4a / 2) != 0) {
-            printf("Erro ao salvar o arquivo WAV para o sinal 4a.\n");
-            free(sinal_completo4a);  // Liberar a memória alocada antes de retornar
-            free(sinal_completo4b);  // Liberar também o sinal 4b
-            return -1;
-        }
-
-        // Salvar o sinal reconstruído 4b no arquivo WAV
-        if (escrever_wav_estereo("sinal_etapa4b_filtered.wav", sinal_completo4b, tamanho_total_sinal4b / 2) != 0) {
-            printf("Erro ao salvar o arquivo WAV para o sinal 4b.\n");
-            free(sinal_completo4a);  // Liberar o sinal 4a
-            free(sinal_completo4b);  // Liberar a memória alocada antes de retornar
-            return -1;
-        }
-            -> Fim do teste 4: essa parte foi comentada para reutilização do código 
-        
-
-
-    exit(0);
-        */
-    // Fim do teste 4: verificação dos arquivos filtrados em cada sinal. 
-        /*
-            - Os sinais pós filtragem foram unidos em cada sinal
-            - E foram unificados
-            - Testados
-            - e aprovados
-        */
-
-
-    // Teste 5: - Realizar a unificação dos dois sinais filtraods
-    /*
-        - Percorrer os buffers
-        - Realizar a unificação dos sinais de cada canal
-        - Unir os sinais
-        - Ouvir a média
-    */
-
-        int tamanho_total_sinal5 = num_buffers * buffer_size;  // Total de amostras no sinal final
-        int posicao5_1 = 0, posicao5_2 = 0, posicao5 = 0, posicao6 = 0;  // Variáveis para controle da posição nos sinais
-        short *sinal_completo5_1 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
-        short *sinal_completo5_2 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
-        short *sinal_completo5 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
-        short *sinal_completo6 = (short *)malloc(tamanho_total_sinal5 * sizeof(short));
-
-
-        float buffer_media_left[buffer_channel_size];
-        float buffer_media_right[buffer_channel_size];
-        float buffer_media_estereo[buffer_size];
-        float buffer_fx_left[buffer_channel_size];
-        float buffer_fx_right[buffer_channel_size];
-        short buffer_audio[buffer_size];
-        short buffer_media_estereo_short[buffer_size];
+    float buffer_media_left[buffer_channel_size];
+    float buffer_media_right[buffer_channel_size];
+    float buffer_media_estereo[buffer_size];
+    float buffer_fx_left[buffer_channel_size];
+    float buffer_fx_right[buffer_channel_size];
+    short buffer_audio[buffer_size];
+    short buffer_media_estereo_short[buffer_size];
 
 
 
@@ -885,6 +622,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
 
             // Para cada amostra de ambos os canais (esquerdo e direito)
             for (int j = 0; j < buffer_channel_size; j++) {
+                /* -> sinais de teste
                 // Intercalação do sinal 1 (canal esquerdo e direito)
                 sinal_completo5_1[posicao5_1++] = (short)buffers_sinal1_left_filtrado[i][j];   // Canal esquerdo de sinal 1
                 sinal_completo5_1[posicao5_1++] = (short)buffers_sinal1_right_filtrado[i][j];  // Canal direito de sinal 1
@@ -900,7 +638,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
                 // Transferir o conteúdo do buffer_estereo para sinal_completo5 diretamente
                 sinal_completo5[posicao5++] = (short)buffer_media_estereo[2 * j];      // Canal esquerdo
                 sinal_completo5[posicao5++] = (short)buffer_media_estereo[2 * j + 1];  // Canal direito
-
+                */
                 // Média dos canais esquerdo e direito filtrados
                 buffer_media_left[j] = ((float)buffers_sinal1_left_filtrado[i][j] + (float)buffers_sinal2_left_filtrado[i][j]) / 2.0f; 
                 buffer_media_right[j] = ((float)buffers_sinal1_right_filtrado[i][j] + (float)buffers_sinal2_right_filtrado[i][j]) / 2.0f;
@@ -944,34 +682,8 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
 
 
         }
-    // Salvar o sinal 5_1 (sinal 1 - esquerda e direita intercalados) em um arquivo WAV
-    if (escrever_wav_estereo("sinal_etapa5_1.wav", sinal_completo5_1, tamanho_total_sinal5 / 2) != 0) {
-        printf("Erro ao salvar o arquivo WAV para o sinal 5_1.\n");
-        free(sinal_completo5_1);
-        free(sinal_completo5_2);
-        free(sinal_completo5);
-        return -1;
-    }
-
-    // Salvar o sinal 5_2 (sinal 2 - esquerda e direita intercalados) em um arquivo WAV
-    if (escrever_wav_estereo("sinal_etapa5_2.wav", sinal_completo5_2, tamanho_total_sinal5 / 2) != 0) {
-        printf("Erro ao salvar o arquivo WAV para o sinal 5_2.\n");
-        free(sinal_completo5_1);
-        free(sinal_completo5_2);
-        free(sinal_completo5);
-        return -1;
-    }
-
+    /*
     // Salvar o sinal completo 5 (média dos sinais 1 e 2) em um arquivo WAV
-    if (escrever_wav_estereo("sinal_etapa5.wav", sinal_completo5, tamanho_total_sinal5 / 2) != 0) {
-        printf("Erro ao salvar o arquivo WAV para o sinal completo 5.\n");
-        free(sinal_completo5_1);
-        free(sinal_completo5_2);
-        free(sinal_completo5);
-        return -1;
-    }
-
-        // Salvar o sinal completo 5 (média dos sinais 1 e 2) em um arquivo WAV
     if (escrever_wav_estereo("sinal_etapa6.wav", sinal_completo6, tamanho_total_sinal5 / 2) != 0) {
         printf("Erro ao salvar o arquivo WAV para o sinal completo 5.\n");
         free(sinal_completo5_1);
@@ -979,192 +691,7 @@ int processar_buffers_circulares(short ***buffers_sinal1, short ***buffers_sinal
         free(sinal_completo5);
         return -1;
     }
-
-
-    exit(0);
-
-    // Fim do teste 5: 
-
-    for (int i = 0; i < num_buffers; i++) {
-
-
-        // Atualizar coeficientes a cada 10 buffers (se necessário)
-        if (i % 10 == 0) {
-            read_analog_values(fd, &analogValue0, &analogValue1);
-            wetness = analogValue1 / 255.0;
-            digitalValue = read_digital_value();
-
-            // Utilize os valores conforme necessário
-            printf("AIN0: %d | AIN1: %d | GPIO4: %d\n", analogValue0, analogValue1, digitalValue);
-
-            // Determinando o efeito com base no valor de digitalValue
-            char* efeito = (digitalValue == 0) ? "Delay" : (digitalValue == 1) ? "Reverb" : "Nenhum";
-
-            // Acessando os valores das frequências de corte diretamente e incluindo o efeito
-            printf("Frequência de corte 1: %.2f Hz | Frequência de corte 2: %.2f Hz | Efeito: %s | Wetness: %.2f\n", 
-                frequencias_log[analogValue0], frequencias_log[255 - analogValue0], efeito, wetness);
-        }
-
-
-        // CRIAR FUNÇÃO PARA RODAR O PROCESSO ABAIXO PARA A ESQUERDA E PARA A DIREITA
-            // PARA LEFT USE TAIS BUFFERS
-            // PARA RIGHT USE TAIS BUFFERS
-            // RETORNE MEDIA_BUF_L E MEDIA_BUF_R
-                    /*
-                    // Aplicar o filtro FIR para o sinal 1
-                    if ((*buffers_sinal1)[i] != NULL) {
-                        // Obter coeficientes para o filtro FIR para o sinal 1 com base no índice de fc1
-                        float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1           
-                        aplicar_filtro_FIR_buffer((*buffers_sinal1)[i], buffers_sinal1_filtrado[i], buffer_size, coeficientes_filtro_1, ORDER);
-                    }
-
-                    // Aplicar o filtro FIR para o sinal 2
-                    if ((*buffers_sinal2)[i] != NULL) {
-                        // Obter coeficientes para o filtro FIR para o sinal 2 com base no índice de fc2
-                        float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
-                        aplicar_filtro_FIR_buffer((*buffers_sinal2)[i], buffers_sinal2_filtrado[i], buffer_size, coeficientes_filtro_2, ORDER);
-                    }
-                    */
-
-                    // Obter coeficientes para o filtro FIR para o sinal 1, ambos os canais
-                    float *coeficientes_filtro_1 = matriz_coeficientes[analogValue0]; // Coeficientes para o sinal 1
-
-                    if ((buffers_sinal1_left)[i] != NULL) {
-                        aplicar_filtro_FIR_buffer((buffers_sinal1_left)[i], (buffers_sinal1_left_filtrado)[i], buffer_channel_size, coeficientes_filtro_1, ORDER);
-                    }
-                    if ((buffers_sinal1_right)[i] != NULL) {
-                        aplicar_filtro_FIR_buffer((buffers_sinal1_right)[i], (buffers_sinal1_right_filtrado)[i], buffer_channel_size, coeficientes_filtro_1, ORDER);
-                    }
-
-
-                    // Obter coeficientes para o filtro FIR para o sinal 2, ambos os canais
-                    float *coeficientes_filtro_2 = matriz_coeficientes[255 - analogValue0]; // Coeficientes para o sinal 2
-
-                    // Aplicar o filtro FIR para o sinal 2, canal esquerdo
-                    if ((buffers_sinal2_left)[i] != NULL) {
-                        aplicar_filtro_FIR_buffer((buffers_sinal2_left)[i], (buffers_sinal2_right_filtrado)[i], buffer_channel_size, coeficientes_filtro_2, ORDER);
-                    }
-
-                    // Aplicar o filtro FIR para o sinal 2, canal direito
-                    if ((buffers_sinal2_right)[i] != NULL) {
-                        aplicar_filtro_FIR_buffer((buffers_sinal2_right)[i], (buffers_sinal2_left_filtrado)[i], buffer_channel_size, coeficientes_filtro_2, ORDER);
-                    }
-                    
-                    /*
-                    // Calcular a média dos buffers filtrados e preencher media_buffers
-                    float *media_buffer = (float *)malloc(buffer_size * sizeof(float));  // Alocar buffer temporário para a média do buffer atual
-                    for (int j = 0; j < buffer_size; j++) {
-                        media_buffer[j] = (float)(buffers_sinal1_filtrado[i][j] + buffers_sinal2_filtrado[i][j]) / 2.0f;
-                    }
-                    */
-
-                   /*
-                    // Calcular a média entre os sinais filtrados para cada canal
-                    for (int j = 0; j < buffer_channel_size; j++) {
-                        // Para o canal direito
-                        media_buffer_right[j] = (float)((buffer_sinal1_right_filtrado[j] + buffer_sinal2_right_filtrado[j])) / 2.0f;
-
-                        // Para o canal esquerdo
-                        media_buffer_left[j] = (float)((buffer_sinal1_left_filtrado[j] + buffer_sinal2_left_filtrado[j])) / 2.0f;
-                    }
-                    */
-                    /*
-                    // Avaliar o valor de sel_Fx e aplicar o efeito correspondente
-                    if (digitalValue == 0) {
-                        // Se sel_Fx for 0, aplicar o efeito de delay
-                        aplicar_delay(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do delay conforme necessário
-                    } else if (digitalValue == 1) {
-                        // Se sel_Fx for 1, aplicar o efeito de reverb
-                        applyReverbEffectBuffer(media_buffer, buffer_size, wetness, 0.6f);  // Ajuste o valor do reverb conforme necessário
-                    }
-                    */
-                   
-                    // Avaliar o valor de sel_Fx e aplicar o efeito correspondente para os dois canais
-                    if (digitalValue == 0) {
-                        // Se sel_Fx for 0, aplicar o efeito de delay
-                        aplicar_delay(media_buffer_left, buffer_channel_size, wetness, 0.6f);  // Aplicar delay no canal esquerdo
-                        aplicar_delay(media_buffer_right, buffer_channel_size, wetness, 0.6f);  // Aplicar delay no canal direito
-                    } else if (digitalValue == 1) {
-                        // Se sel_Fx for 1, aplicar o efeito de reverb
-                        applyReverbEffectBuffer(media_buffer_left, buffer_channel_size, wetness, 0.6f);  // Aplicar reverb no canal esquerdo
-                        applyReverbEffectBuffer(media_buffer_right, buffer_channel_size, wetness, 0.6f);  // Aplicar reverb no canal direito
-                    }
-
-        // Preencher o media_buffer alternando os sinais entre os buffers esquerdo e direito
-        for (int j = 0; j < buffer_channel_size; j++) {
-            media_buffer[2 * j] = media_buffer_left[j];   // Posição 2j recebe o sinal do canal esquerdo
-            media_buffer[2 * j + 1] = media_buffer_right[j];  // Posição 2j+1 recebe o sinal do canal direito
-        }
-        
-        // Normalizar o buffer de média para o intervalo -1.0 a 1.0 com limitação suave
-        float max_value = 0.0f;
-        for (int j = 0; j < buffer_size; j++) {
-            // Encontrar o valor máximo absoluto no buffer
-            if (fabs(media_buffer[j]) > max_value) {
-                max_value = fabs(media_buffer[j]);
-            }
-        }
-
-        // Se o valor máximo for maior que 1.0, normaliza os valores de forma mais suave
-        if (max_value > 1.0f) {
-            // Limitar o valor máximo para evitar distorção excessiva
-            float limit = 0.7f; // Ou algum valor inferior a 1.0, dependendo do seu caso
-            if (max_value > limit) {
-                float normalizing_factor = limit / max_value;
-                for (int j = 0; j < buffer_size; j++) {
-                    media_buffer[j] *= normalizing_factor;
-                }
-            }
-        }
-
-        
-        // Conversão de float para short para reprodução com ALSA
-
-
-
-        for (int j = 0; j < buffer_size; j++) {
-            // Converte cada valor float para short (PCM de 16 bits)
-            // Multiplicando por 32767.0f para mapear o intervalo de -1.0 a 1.0 para o intervalo de -32767 a 32767
-            buffer_reproduzivel[j] = (short)(media_buffer[j] * 32767.0f);  // 32767 é o valor máximo para PCM de 16 bits
-        }
-        
-    
-
-/*
-        // Reproduzir o buffer processado
-        if (reproduzir(pcm_handle, buffer_reproduzivel, buffer_size*sizeof(short)) != 1) {
-            printf("Erro ao reproduzir áudio\n");
-            //free(buffer_reproduzivel);
-            return -1;  // Retorna erro se falhar na reprodução
-        }
-*/
-
-
-
-        // Copiar o buffer processado para o sinal completo
-        for (int j = 0; j < buffer_size; j++) {
-            sinal_completo[posicao++] = (short)media_buffer[j];  // Converter de volta para short antes de adicionar ao sinal completo
-        }
-
-        //free(media_buffer);
-    }
-    
-    // Salvar o sinal completo no arquivo WAV
-    if (escrever_wav_estereo(filename, sinal_completo, tamanho_total_sinal/2) != 0) {
-        printf("Erro ao salvar o arquivo WAV.\n");
-        return -1;  // Retorna erro
-    }
-    
-    // Liberação dos buffers filtrados e sinal completo
-    for (int i = 0; i < num_buffers; i++) {
-        free(buffers_sinal1_filtrado[i]);
-        free(buffers_sinal2_filtrado[i]);
-    }
-    free(buffers_sinal1_filtrado);
-    free(buffers_sinal2_filtrado);
-    free(sinal_completo);
-    // Liberar memória do buffer de média após o uso
-
+    */
 
     return 0;  // Retorna sucesso
 }

@@ -2,6 +2,7 @@
 #include <wiringPiI2C.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>  // Para a função qsort
 
 // Configurações iniciais
 int setup_sensors() {
@@ -26,8 +27,6 @@ int setup_sensors() {
 
     return fd;
 }
-
-#include <stdlib.h>  // Para a função qsort
 
 // Função para comparar dois números (necessária para qsort)
 int compare(const void *a, const void *b) {
