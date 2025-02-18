@@ -36,3 +36,8 @@ Abaixo estão as principais pastas e arquivos do repositório:
    ```bash
     gcc -o princ princ.c proc.c delay.c adc.c filt.c audio.c reverb.c -lpthread -lm -lwiringPi -lasound
     ./princ
+
+# Vídeo de Teste
+
+Assista ao vídeo de teste do sistema em funcionamento, onde é demonstrada a utilização do equipamento de mixagem, incluindo os efeitos e filtros aplicados ao áudio.
+
