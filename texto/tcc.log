@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  17 FEB 2025 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  17 FEB 2025 22:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,7 +797,7 @@ Package epstopdf Info: Source file: <figuras/capa.eps>
 (epstopdf)                    date: 2024-04-12 13:20:54
 (epstopdf)                    size: 12409969 bytes
 (epstopdf)             Output file: <figuras/capa-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:42:57
 (epstopdf)                    size: 1515774 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/capa-eps-converted-to.pdf figuras/capa.eps>
 (epstopdf)             \includegraphics on input line 15.
@@ -931,7 +931,7 @@ Package epstopdf Info: Source file: <figuras/fig01.eps>
 (epstopdf)                    date: 2024-04-12 13:20:54
 (epstopdf)                    size: 274267 bytes
 (epstopdf)             Output file: <figuras/fig01-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:42:58
 (epstopdf)                    size: 11584 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig01-eps-converted-to.pdf figuras/fig01.eps>
 (epstopdf)             \includegraphics on input line 22.
@@ -949,7 +949,7 @@ Package epstopdf Info: Source file: <figuras/fig02.eps>
 (epstopdf)                    date: 2024-04-12 13:20:54
 (epstopdf)                    size: 310305 bytes
 (epstopdf)             Output file: <figuras/fig02-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:42:58
 (epstopdf)                    size: 18574 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig02-eps-converted-to.pdf figuras/fig02.eps>
 (epstopdf)             \includegraphics on input line 35.
@@ -964,7 +964,7 @@ Package epstopdf Info: Source file: <figuras/fig03.eps>
 (epstopdf)                    date: 2024-04-12 13:20:56
 (epstopdf)                    size: 205302 bytes
 (epstopdf)             Output file: <figuras/fig03-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:42:59
 (epstopdf)                    size: 17340 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig03-eps-converted-to.pdf figuras/fig03.eps>
 (epstopdf)             \includegraphics on input line 64.
@@ -981,7 +981,7 @@ Package epstopdf Info: Source file: <figuras/fig04.eps>
 (epstopdf)                    date: 2024-04-12 13:20:56
 (epstopdf)                    size: 683542 bytes
 (epstopdf)             Output file: <figuras/fig04-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:42:59
 (epstopdf)                    size: 21150 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig04-eps-converted-to.pdf figuras/fig04.eps>
 (epstopdf)             \includegraphics on input line 95.
@@ -1005,8 +1005,8 @@ Package epstopdf Info: Source file: <figuras/fig08.eps>
 (epstopdf)                    date: 2024-04-12 13:20:56
 (epstopdf)                    size: 2193422 bytes
 (epstopdf)             Output file: <figuras/fig08-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
-(epstopdf)                    size: 104984 bytes
+(epstopdf)                    date: 2025-02-17 22:43:00
+(epstopdf)                    size: 104990 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig08-eps-converted-to.pdf figuras/fig08.eps>
 (epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
@@ -1027,7 +1027,7 @@ Package epstopdf Info: Source file: <figuras/fig10.eps>
 (epstopdf)                    date: 2024-04-12 13:20:56
 (epstopdf)                    size: 1273606 bytes
 (epstopdf)             Output file: <figuras/fig10-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:43:01
 (epstopdf)                    size: 67194 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig10-eps-converted-to.pdf figuras/fig10.eps>
 (epstopdf)             \includegraphics on input line 173.
@@ -1047,7 +1047,7 @@ Package epstopdf Info: Source file: <figuras/fig15.eps>
 (epstopdf)                    date: 2024-06-01 21:19:08
 (epstopdf)                    size: 2242162 bytes
 (epstopdf)             Output file: <figuras/fig15-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:43:02
 (epstopdf)                    size: 114108 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig15-eps-converted-to.pdf figuras/fig15.eps>
 (epstopdf)             \includegraphics on input line 193.
@@ -1062,7 +1062,7 @@ Package epstopdf Info: Source file: <figuras/fig13.eps>
 (epstopdf)                    date: 2024-06-01 21:02:34
 (epstopdf)                    size: 12484675 bytes
 (epstopdf)             Output file: <figuras/fig13-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:43:08
 (epstopdf)                    size: 374429 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig13-eps-converted-to.pdf figuras/fig13.eps>
 (epstopdf)             \includegraphics on input line 204.
@@ -1076,7 +1076,7 @@ Package epstopdf Info: Source file: <figuras/fig16.eps>
 (epstopdf)                    date: 2024-06-01 21:27:30
 (epstopdf)                    size: 2922621 bytes
 (epstopdf)             Output file: <figuras/fig16-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:43:09
 (epstopdf)                    size: 114283 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig16-eps-converted-to.pdf figuras/fig16.eps>
 (epstopdf)             \includegraphics on input line 213.
@@ -1102,7 +1102,7 @@ Package epstopdf Info: Source file: <figuras/fig09.eps>
 (epstopdf)                    date: 2024-04-12 13:20:56
 (epstopdf)                    size: 3481702 bytes
 (epstopdf)             Output file: <figuras/fig09-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:43:12
 (epstopdf)                    size: 105933 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig09-eps-converted-to.pdf figuras/fig09.eps>
 (epstopdf)             \includegraphics on input line 256.
@@ -1125,7 +1125,7 @@ Package epstopdf Info: Source file: <figuras/fig11.eps>
 (epstopdf)                    date: 2024-04-12 13:20:56
 (epstopdf)                    size: 658386 bytes
 (epstopdf)             Output file: <figuras/fig11-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:43:12
 (epstopdf)                    size: 21256 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig11-eps-converted-to.pdf figuras/fig11.eps>
 (epstopdf)             \includegraphics on input line 304.
@@ -1139,7 +1139,7 @@ Package epstopdf Info: Source file: <figuras/fig12.eps>
 (epstopdf)                    date: 2024-04-12 13:20:56
 (epstopdf)                    size: 683900 bytes
 (epstopdf)             Output file: <figuras/fig12-eps-converted-to.pdf>
-(epstopdf)                    date: 2025-02-17 21:43:11
+(epstopdf)                    date: 2025-02-17 22:43:13
 (epstopdf)                    size: 24777 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/fig12-eps-converted-to.pdf figuras/fig12.eps>
 (epstopdf)             \includegraphics on input line 313.
@@ -1538,7 +1538,7 @@ Here is how much of TeX's memory you used:
  26 hyphenation exceptions out of 8191
  80i,13n,96p,1831b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (85 pages, 14383201 bytes).
+Output written on tcc.pdf (85 pages, 14383182 bytes).
 PDF statistics:
  1639 PDF objects out of 1728 (max. 8388607)
  1352 compressed objects within 14 object streams
