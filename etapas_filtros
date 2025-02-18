@@ -1,9 +1,0 @@
-- Etapas para avaliação de filtros
-
-
-- Testar se a atenuação de -26 dB está adequada
-- Se estiver, obter a ordem de cada janelamento que gera essa atenuação
-- Para cada ordem dessa, verificar se aos ouvidos está satisfatória a banda de transição
-- Verificar quais estão e partir para teste de tempo de implementação em C
-- Qual obtiver o melhor desempenho, será o filtro escolhido
-

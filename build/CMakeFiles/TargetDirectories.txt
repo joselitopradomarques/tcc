@@ -1,4 +1,0 @@
-/home/joselito/git/tcc/build/CMakeFiles/libpd_static.dir
-/home/joselito/git/tcc/build/CMakeFiles/libpd.dir
-/home/joselito/git/tcc/build/CMakeFiles/edit_cache.dir
-/home/joselito/git/tcc/build/CMakeFiles/rebuild_cache.dir
