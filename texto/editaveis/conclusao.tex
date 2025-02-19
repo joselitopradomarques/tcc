@@ -1,9 +1,17 @@
-\chapter[Conclusão]{Conclusão}
+\chapter[Conclusões]{Conclusões}
 
-Este projeto visa o desenvolvimento de um dispositivo para \textit{DJs} que permita a leitura de sinais provenientes de reprodutores de música e a realização de mixagens automáticas. O dispositivo modificará a frequência de corte de dois filtros passa-altas para realizar a transição entre músicas de forma suave e direta. Além disso, serão incorporados dois efeitos: \textit{reverb} e \textit{delay}, com parâmetros ajustáveis, como dB após 1s e ms de atraso.
+A evolução dos equipamentos relacionados à mixagem de \textit{DJs} anda de mãos dadas com o próprio desenvolvimento da eletrônica como um campo maior, sendo as inovações feitas por pessoas que se interessavam tanto pela eletrônica quanto por música, e a partir de suas vontades e anseios, decidiam desenvolver novas soluções com o que a eletrônica oferecia.
 
-O equipamento utilizará uma \textit{Raspberry Pi} e um \textit{Arduino Uno} para leitura, processamento de sinais e conversões necessárias. Toda a lógica de processamento será implementada em linguagem C para garantir alta velocidade e minimizar a latência.
+Assim, esse trabalho visou a criação de um \textit{mixer} que lesse dois arquivos \textit{wavs} localizados dentro de uma \textit{Raspberry Pi}, de forma que um potenciômetro fosse o responsável pelo controle de duas frequências de corte, cada uma para um canal de áudio. Além disso, o projeto integrou dois efeitos, \textit{delay} e \textit{reverb}, ao processamento desses sinais. E por fim, o sinal resultante pôde ser reproduzido em um sistema de áudio através da interface de áudio via cabo 3,5 mm já integrado à placa.
 
-O dispositivo será montado em uma caixa com uma interface de usuário composta por botões \textit{sliders} horizontais e um botão de duas posições.
+Os resultados obtidos contribuíram para a validação de um sistema unificado de filtragem de sinais de áudio a partir de apenas um controle. Os sinais obtidos em relação à filtragem demonstraram um bom funcionamento visto que, para cada frequência de corte, esperava-se que determinados elementos na composição de uma música fossem atenuados, o que torna a transição entre uma música e outra mais suave e natural.
 
-Para assegurar a usabilidade efetiva do equipamento, serão realizados testes detalhados com usuários e coletados \textit{feedbacks} para aprimorar o desempenho e a funcionalidade dos filtros e efeitos.
+Além disso, os resultados obtidos em relação aos efeitos permitiram com que, através de um código simples, a implementação gerasse resultados satisfatórios, dando ao usuário a opção de escolher a presença do efeito ao sinal final. 
+
+Esse trabalho tem o potencial de contribuir para uma área de prototipagem de equipamentos eletrônicos que tem ganhado espaço no mercado relacionados a pequenos \textit{makers}. Esse é um espaço que tem crescido e coexistido ao lado de grandes mercados existentes.
+
+No entanto, essa pesquisa e desenvolvimento se limitou a utilizar sinais advindos de arquivos \textit{wav}. Dessa forma, por não utilizar entradas de equipamentos como \textit{CDJs} ou toca-discos, sua utilização é menos ampla do que poderia ser. Além disso, as implementações da filtragem e efeitos utilizaram certas configurações e lógicas, de forma que esses resultados devem ser restringidos ao serem analisados a outras configurações ou plataformas.
+
+Trabalhos futuros podem utilizar a entrada de sinais advindos de equipamentos e explorar a otimização do código ao utilizar \textit{threads} e sincronizações de chamadas às funções. Além disso, inúmeras formas de mixagem ou efeitos podem ser desenvolvidos e encapsulados em um dispositivo portátil como uma \textit{Raspberry Pi}.
+
+Em suma, esse trabalho visa alimentar a inovação em um ramo da eletrônica voltada à música cuja presença tem aumentado, modificando formas usuais através das quais se tem estabelecido do que é uma mixagem e do que ela pode ser, sendo uma ferramenta para potencializar a criatividade do artista diante da plateia. 

@@ -1,19 +1,15 @@
 \chapter[Introdução]{Introdução}
 
-Sons são formados por elementos que estão presentes em faixas de frequências. Muitas vezes, deseja-se o controle desses elementos. Assim, a manipulação dessas bandas é realizada através de filtros com ganhos e atenuações. O equipamento responsável por esse manuseio é o \textit{mixer}.
-Ao se analisar a história desse equipamento, percebe-se que a forma de mixagem parte do controle de bandas de frequência. Inicialmente, cortes bruscos entre canais eram realizados e reproduções eram feitas utilizando toca-discos com um microfone captando esse sinal.
+A música eletrônica e a cultura \textit{DJ} possuem um papel fundamental no cenário musical contemporâneo, ampliando a forma como a música pode ser apreciada. O desenvolvimento de tecnologias específicas para esse público caminha lado a lado com a evolução da eletrônica, permitindo que a habilidade de selecionar, alterar e misturar músicas ofereça novas experiências ao público. Nesse contexto, o \textit{mixer} se destaca como o dispositivo central na mixagem de sons, processando e combinando múltiplos canais de áudio para criar uma nova composição sonora. A crescente demanda por equipamentos de áudio que permitam maior controle criativo tem impulsionado o desenvolvimento de novas tecnologias de mixagem, porém, as novas soluções surgidas têm como norte a integração a telas, expansão de quantidade de canais e acesso à nuvem, de forma que a lógica basal de mixagem se encontra enrijescida.
 
-Ao longo da segunda metade do século XX, o progresso da eletrônica permitiu a sofisticação de cada processo envolvido no ato de mixagem. Inicialmente, utilizou-se vinis e hoje se pode utilizar um banco de músicas hospedado na nuvem enquanto se utiliza óculos de realidade aumentada para realizar a mixagem.
-
-O processo de mixagem evoluiu ao longo do tempo, porém a ideia de utilizar recortes de músicas para criar uma ambientação única permanece e permeia toda a história, e norteia o futuro do trabalho realizado por um \textit{DJ}.
+Dessa forma, esse projeto visa a exploração da lógica de mixagem, basal para a expansão da compreensão do processo criativo do \textit{DJ}. Ao buscar novas formas de personalização e controle, o protótipo desenvolvido propõe um \textit{mixer} mais flexível, que se adapta às necessidades específicas dos profissionais, permitindo uma maior interação com os elementos sonoros e oferecendo novas possibilidades para a criação musical.
 
 \section{Justificativa}
+O mercado de equipamentos para \textit{DJs} é amplamente dominado por grandes empresas, mas existe uma crescente demanda por dispositivos que fogem à norma estabelecida. Nesse contexto, surgem pequenas empresas e \textit{boutiques} especializadas que desenvolvem soluções inovadoras, atendendo a \textit{DJs} que buscam mais controle criativo e flexibilidade em suas performances. Percebe-se que há uma necessidade crescente de equipamentos que ofereçam mais versatilidade e personalização, permitindo aos \textit{DJs} explorar suas habilidades de forma mais livre, mantendo, no entanto, a praticidade e aplicabilidade. A solução proposta busca responder a essa demanda por novos recursos, oferecendo uma abordagem simples e funcional, que se adapta facilmente ao uso cotidiano de um \textit{DJ}.
 
-Ao se analisar o desenvolvimento dos equipamentos utilizados para mixar músicas, percebe-se uma constante quanto aos parâmetros utilizados para realizar transições entre músicas, que reside na alteração do ganho de bandas de frequências, usualmente três: baixas, médias e altas frequências.
+Através da análise do processo de transição entre faixas, observou-se que os \textit{mixers} tradicionais funcionam com a manipulação independente dos controles de frequências para cada canal. A transição típica envolve a diminuição dos graves de uma faixa, enquanto aumenta-se os elementos agudos da próxima faixa, de modo a suavizar a mudança diferentes elementos para que não haja uma variação brusca nos elementos. Ao perceber esse padrão de manipulação, surgiu a ideia de unificar os controles, permitindo um controle mais intuitivo e direto, sem perder a capacidade de personalização.
 
-Além disso, o uso combinado de filtragem e \textit{crossfader}r é amplamente empregado na prática de mixagem. Essa combinação pode simplificar o trabalho do \textit{DJ}, proporcionando uma transição mais suave e eficiente entre as faixas. 
-
-A proposta de utilizar um botão central para controlar dois canais oferece uma vantagem adicional ao permitir um controle mais intuitivo e centralizado dos efeitos aplicados. Isso pode facilitar a aplicação e ajuste de efeitos de forma mais direta e rápida, aumentando a flexibilidade e a criatividade durante a mixagem.
+Com essa unificação, a solução proposta modifica o conceito tradicional de controle de frequências. Em vez de ajustar bandas de frequência separadamente, a ideia é utilizar um controle único de corte de frequências, que atuaria de forma simultânea nos dois canais, permitindo uma transição mais fluida e simplificada. Essa abordagem não só facilita o trabalho do \textit{DJ}, mas também oferece uma nova maneira de explorar as possibilidades sonoras durante a performance. Essa inovação visa, portanto, ampliar as opções criativas disponíveis de forma que possa ser facilmente aplicável a um sistema atual. 
 
 \section{Objetivos}
 
@@ -27,30 +23,32 @@ Esse projeto visa a criação de um \textit{mixer} implementado em um sistema em
 Quanto aos objetivos específicos, elencou-se pontos ao longo do desenvolvimento desse sistemas que servirão como pontos de referência para garantir que o funcionamento do todo. 
 
 \begin{enumerate}
-    \item \label{item:deslocamento} Realizar de forma automatizada o deslocamento de frequências de corte dos filtros passa-altas
+    \item \label{item:deslocamento} Realizar de forma automatizada o controle da frequência de corte de dois canais a partir de um controle
     \item \label{item:efeitos} Implementar dois tipos de efeitos
-    \item \label{item:conversao} Converter o sinal obtido após o processamento para analógico a fim de ser reproduzido por um sistema de som
+    \item \label{item:conversao} Converter o sinal obtido após o processamento para analógico para ser reproduzido por um sistema de som
 \end{enumerate}
 
 O Objetivo Específico \ref{item:deslocamento} envolve a obtenção dos sinais de controle, conversões de analógico para digitais, a atuação correta nos filtros passa-altas de ambos canais.
 
-Em relação aos efeitos, o Objetivo Específico \ref{item:efeitos} visa embarcar desde a concepção matemática, obtenção dos dados da frequência central e a conseguinte intensidade do efeito. 
+Em relação aos efeitos, o Objetivo Específico \ref{item:efeitos} visa embarcar desde a concepção matemática, implementação do código para cada efeito e sua implementação para que o efeito seja aplicado ao sinal.
 
 Uma vez que a conclusão dos Objetivos acima garante um sinal processado no domínio digital, é necessário garantir que o sinal seja adequadamente convertido para analógico, a fim de ser reproduzido em equipamentos externos. Portanto, o Objetivo Específico \ref{item:conversao} agrega a conversão do sinal de saída para que o sistema de som conectado ao sistema consiga reproduzir o canal de saída.
 
 \section{Estrutura do Documento}
 
-Esse documento parte do conceito de sinal e sistema para que o processo de amostragem e reconstrução de um sinal seja realizado. Posteriormente, uma conceituação acerca de som e música é realizada percorrendo o conceito físico e uma definição expandida utilizando o pensamento de John Cage.
+O presente trabalho está organizado em capítulos que abordam os diferentes aspectos da história, desenvolvimento e implementação do protótipo de \textit{mixer} para \textit{DJs} com controle unificado de frequência. A seguir, é apresentada a estrutura do documento.
 
-Além disso, uma retrospectiva do desenvolvimento de \textit{mixers} utilizados por \textit{DJs} desde sua criação até o momento presente é realizada, bem como a exposição de funcionalidades usuais de um \textit{mixer} é descrita para que se delimitem os processos essenciais de um \textit{mixer}.
+% O primeiro capítulo, \textbf{Introdução}, faz um delineamento do contexto no qual surgiu a demanda por novas abordagens. Nele, há uma descrição sobre o mercado de equipamentos focados em \textit{DJs} e uma breve explicação sobre como a mixagem é realizada e como esse processo pode ser automatizado. Em seguida, são apresentados os objetivos geral e específicos que guiarão as etapas subsequentes, seguidos de uma descrição sobre a estrutura do texto, detalhando o que cada capítulo aborda para garantir um documento coeso.
+No segundo capítulo, \textbf{Fundamentação Teórica e Estado da Arte}, são explorados os conceitos físicos e matemáticos fundamentais, como sinais e sistemas nos domínios contínuo e discreto, % transformações matemáticas e conceitos essenciais para a transição entre os mundos analógico e digital, fundamentais para o tratamento dos sinais provenientes do mundo analógico, que precisam ser convertidos novamente para esse formato. Em seguida, são apresentadas explicações teóricas sobre funcionalidades como filtragem. O capítulo continua explorando
+bem como o som, tanto do ponto de vista físico quanto da percepção humana dessa grandeza. Também é realizada uma pesquisa histórica sobre a evolução da mixagem e dos dispositivos utilizados, oferecendo uma compreensão sobre a magnitude e a atuação de um \textit{DJ}, culminando nas formas contemporâneas de mixagem.
+% Ainda no segundo capítulo, é detalhada a maneira como o som é trabalhado, destacando como os sinais podem ser compreendidos a partir de duas bandas e como esse parâmetro se relaciona com os elementos que compõem uma música. Além disso, uma pesquisa técnica sobre as conexões entre dispositivos é apresentada, a fim de consolidar a forma como um dispositivo pode interagir com o mundo real.
+% Em seguida, 
 
-[ESSA PARTE DEVE SER REESCRITA APÓS A ADAPTAÇÃO DOS REQUISITOS DO PROJETO]
+No terceiro capítulo, \textbf{Metodologia}, a proposta do projeto é descrita a partir de requisitos funcionais e não-funcionais, %, conceitos emprestados da engenharia de \textit{software}. O capítulo se divide 
+em duas grandes subseções: prova de conceito e proposta de implementação.
+Na prova de conceito, a proposta foi testada utilizando um \textit{software} chamado \textit{PureData}, no qual a lógica de filtragem e efeitos, bem como suas interações, foram implementadas. % Diagramas e descrições detalhadas de cada etapa do processamento são apresentados.
+Na proposta de implementação, a solução final é explorada com o detalhamento dos componentes eletrônicos e da solução \textit{software} utilizados.
 
-Em seguida, a metodologia do projeto é detalhada com um levantamento de requisitos do projeto. Um fluxograma geral e seus subfluxogramas são detalhados para que cada função fique clara quanto ao seu funcionamento.
+Para validar tanto a prova de conceito quanto a proposta de implementação, o capítulo \textbf{Resultados} analisa os sinais obtidos a partir da variação dos parâmetros de entrada, de modo a validar o comportamento do sistema para além da simples escuta do sinal final gerado. %Para isso, gráficos no domínio do tempo e da frequência foram utilizados. Com esses resultados, foi possível validar o bom funcionamento da configuração dos filtros utilizados, bem como dos efeitos implementados.
 
-Uma seção correspondente à prova de conceito se encontra presente, na qual uma simulação do sistema foi realizada contando com suas almejadas funções de filtragem e efeitos.
-
-
-Para clarificar a proposta de implementação desse projeto, explanações acerca da interface de usuário e do processamento do sinal são realizadas.
-
-Ao fim, os resultados obtidos da simulação do sistema foram explanados e a conclusão do objetivo final esperado para esse projeto foi realizada.
+Com o projeto implementado, o capítulo \textbf{Conclusão} realiza uma visão geral de todo o trabalho, destacando a integração de todas as etapas que compuseram o projeto. %Nessa seção, a implementação de um sistema que propõe a alteração e unificação do sistema de mixagem tradicionalmente utilizado pela indústria foi validada por meio da análise dos resultados obtidos.
