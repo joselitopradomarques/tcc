@@ -40,4 +40,5 @@ Abaixo estão as principais pastas e arquivos do repositório:
 # Vídeo de Teste
 
 Assista ao vídeo de teste do sistema em funcionamento, onde é demonstrada a utilização do equipamento de mixagem, incluindo os efeitos e filtros aplicados ao áudio.
+https://youtu.be/0udQA0VLunk
 
