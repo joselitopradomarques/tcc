@@ -35,6 +35,7 @@ Abaixo estão as principais pastas e arquivos do repositório:
 
    ```bash
     gcc -o princ princ.c proc.c delay.c adc.c filt.c audio.c reverb.c -lpthread -lm -lwiringPi -lasound
+    
     ./princ
 
 # Vídeo de Teste
