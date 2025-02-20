@@ -32,14 +32,37 @@ As Figs. a seguir mostram as representações em função da frequência de cort
 
 Na Fig. \ref{fig40}, é mostrada a janela do arquivo de áudio no domínio do tempo, evidenciando a presença de \textit{kicks} e elementos de maiores frequências. Na mesma Fig., a STFT da mesma janela revela uma maior presença de elementos em baixa frequência. Também é possível observar a variação de elementos agudos ao longo da música.
 
-
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig40.png}
-    \includegraphics[width=0.75\textwidth]{figuras/fig41.png}
-    \caption{Gráfico de intervalo da Música 1 no domínio do tempo e no domínio da frequência, ambos sem filtragem.}
+    % Subfigura a
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig40.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Domínio do tempo.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig41.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Domínio da frequência.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Gráfico de intervalo da Música 1 no domínio do tempo (a) e no domínio da frequência (b), ambos sem filtragem.}
     \label{fig40}
 \end{figure}
+
+
+
+
+
+
+
+
 \begin{figure}[htpb]
     \centering
     \includegraphics[width=0.7\textwidth]{figuras/fig28.png}
