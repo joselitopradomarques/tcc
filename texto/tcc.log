@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  20 FEB 2025 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.12)  21 FEB 2025 11:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1352,215 +1352,213 @@ Overfull \hbox (27.37138pt too wide) in paragraph at lines 367--369
 <figuras/fig40.png, id=894, 1011.78pt x 433.62pt>
 File: figuras/fig40.png Graphic file (type png)
 <use figuras/fig40.png>
-Package pdftex.def Info: figuras/fig40.png  used on input line 38.
+Package pdftex.def Info: figuras/fig40.png  used on input line 40.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 <figuras/fig41.png, id=895, 1011.78pt x 433.62pt>
 File: figuras/fig41.png Graphic file (type png)
 <use figuras/fig41.png>
-Package pdftex.def Info: figuras/fig41.png  used on input line 39.
-(pdftex.def)             Requested size: 341.25pt x 146.25111pt.
+Package pdftex.def Info: figuras/fig41.png  used on input line 49.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 <figuras/fig28.png, id=896, 1011.78pt x 433.62pt>
 File: figuras/fig28.png Graphic file (type png)
 <use figuras/fig28.png>
-Package pdftex.def Info: figuras/fig28.png  used on input line 45.
+Package pdftex.def Info: figuras/fig28.png  used on input line 70.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 <figuras/fig29.png, id=897, 1011.78pt x 433.62pt>
 File: figuras/fig29.png Graphic file (type png)
 <use figuras/fig29.png>
-Package pdftex.def Info: figuras/fig29.png  used on input line 46.
-(pdftex.def)             Requested size: 341.25pt x 146.25111pt.
+Package pdftex.def Info: figuras/fig29.png  used on input line 79.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 <figuras/fig26.png, id=898, 1011.78pt x 433.62pt>
 File: figuras/fig26.png Graphic file (type png)
 <use figuras/fig26.png>
-Package pdftex.def Info: figuras/fig26.png  used on input line 53.
+Package pdftex.def Info: figuras/fig26.png  used on input line 95.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 <figuras/fig27.png, id=899, 1011.78pt x 433.62pt>
 File: figuras/fig27.png Graphic file (type png)
 <use figuras/fig27.png>
-Package pdftex.def Info: figuras/fig27.png  used on input line 54.
-(pdftex.def)             Requested size: 341.25pt x 146.25111pt.
+Package pdftex.def Info: figuras/fig27.png  used on input line 104.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 <figuras/fig30.png, id=900, 1011.78pt x 433.62pt>
 File: figuras/fig30.png Graphic file (type png)
 <use figuras/fig30.png>
-Package pdftex.def Info: figuras/fig30.png  used on input line 61.
+Package pdftex.def Info: figuras/fig30.png  used on input line 119.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 <figuras/fig31.png, id=901, 1011.78pt x 433.62pt>
 File: figuras/fig31.png Graphic file (type png)
 <use figuras/fig31.png>
-Package pdftex.def Info: figuras/fig31.png  used on input line 62.
-(pdftex.def)             Requested size: 341.25pt x 146.25111pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [58 <./figuras/fig40.png> <./figuras/fig41.png>] [59 <./figuras/fig28.png> <./figuras/fig29.png> <./figuras/fig26.png> <./figuras/fig27.png>]
-<figuras/fig66.png, id=923, 1011.78pt x 433.62pt>
+Package pdftex.def Info: figuras/fig31.png  used on input line 128.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
+ [58 <./figuras/fig40.png> <./figuras/fig41.png>]
+<figuras/fig66.png, id=914, 1011.78pt x 433.62pt>
 File: figuras/fig66.png Graphic file (type png)
 <use figuras/fig66.png>
-Package pdftex.def Info: figuras/fig66.png  used on input line 163.
+Package pdftex.def Info: figuras/fig66.png  used on input line 238.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig67.png, id=924, 1011.78pt x 433.62pt>
+<figuras/fig67.png, id=915, 1011.78pt x 433.62pt>
 File: figuras/fig67.png Graphic file (type png)
 <use figuras/fig67.png>
-Package pdftex.def Info: figuras/fig67.png  used on input line 164.
+Package pdftex.def Info: figuras/fig67.png  used on input line 247.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig68.png, id=925, 1011.78pt x 433.62pt>
+<figuras/fig68.png, id=916, 1011.78pt x 433.62pt>
 File: figuras/fig68.png Graphic file (type png)
 <use figuras/fig68.png>
-Package pdftex.def Info: figuras/fig68.png  used on input line 165.
+Package pdftex.def Info: figuras/fig68.png  used on input line 257.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig69.png, id=926, 1011.78pt x 433.62pt>
+<figuras/fig69.png, id=917, 1011.78pt x 433.62pt>
 File: figuras/fig69.png Graphic file (type png)
 <use figuras/fig69.png>
-Package pdftex.def Info: figuras/fig69.png  used on input line 166.
+Package pdftex.def Info: figuras/fig69.png  used on input line 266.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Float too large for page by 2.86351pt on input line 274.
 
-[60 <./figuras/fig30.png> <./figuras/fig31.png>]
-<figuras/fig70.png, id=938, 1011.78pt x 433.62pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59 <./figuras/fig28.png> <./figuras/fig29.png>]
+<figuras/fig70.png, id=929, 1011.78pt x 433.62pt>
 File: figuras/fig70.png Graphic file (type png)
 <use figuras/fig70.png>
-Package pdftex.def Info: figuras/fig70.png  used on input line 212.
+Package pdftex.def Info: figuras/fig70.png  used on input line 321.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig71.png, id=939, 1011.78pt x 433.62pt>
+<figuras/fig71.png, id=930, 1011.78pt x 433.62pt>
 File: figuras/fig71.png Graphic file (type png)
 <use figuras/fig71.png>
-Package pdftex.def Info: figuras/fig71.png  used on input line 213.
+Package pdftex.def Info: figuras/fig71.png  used on input line 330.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig72.png, id=940, 1011.78pt x 433.62pt>
+<figuras/fig72.png, id=931, 1011.78pt x 433.62pt>
 File: figuras/fig72.png Graphic file (type png)
 <use figuras/fig72.png>
-Package pdftex.def Info: figuras/fig72.png  used on input line 214.
+Package pdftex.def Info: figuras/fig72.png  used on input line 340.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig73.png, id=941, 1011.78pt x 433.62pt>
+<figuras/fig73.png, id=932, 1011.78pt x 433.62pt>
 File: figuras/fig73.png Graphic file (type png)
 <use figuras/fig73.png>
-Package pdftex.def Info: figuras/fig73.png  used on input line 215.
+Package pdftex.def Info: figuras/fig73.png  used on input line 349.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
- [61 <./figuras/fig66.png> <./figuras/fig67.png> <./figuras/fig68.png> <./figuras/fig69.png>]
-<figuras/fig74.png, id=951, 1011.78pt x 433.62pt>
+<figuras/fig74.png, id=934, 1011.78pt x 433.62pt>
 File: figuras/fig74.png Graphic file (type png)
 <use figuras/fig74.png>
-Package pdftex.def Info: figuras/fig74.png  used on input line 258.
+Package pdftex.def Info: figuras/fig74.png  used on input line 401.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig75.png, id=952, 1011.78pt x 433.62pt>
+<figuras/fig75.png, id=935, 1011.78pt x 433.62pt>
 File: figuras/fig75.png Graphic file (type png)
 <use figuras/fig75.png>
-Package pdftex.def Info: figuras/fig75.png  used on input line 259.
+Package pdftex.def Info: figuras/fig75.png  used on input line 410.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig76.png, id=953, 1011.78pt x 433.62pt>
+<figuras/fig76.png, id=936, 1011.78pt x 433.62pt>
 File: figuras/fig76.png Graphic file (type png)
 <use figuras/fig76.png>
-Package pdftex.def Info: figuras/fig76.png  used on input line 260.
+Package pdftex.def Info: figuras/fig76.png  used on input line 420.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig77.png, id=954, 1011.78pt x 433.62pt>
+<figuras/fig77.png, id=937, 1011.78pt x 433.62pt>
 File: figuras/fig77.png Graphic file (type png)
 <use figuras/fig77.png>
-Package pdftex.def Info: figuras/fig77.png  used on input line 261.
+Package pdftex.def Info: figuras/fig77.png  used on input line 429.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 
+Underfull \vbox (badness 5217) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[62 <./figuras/fig70.png> <./figuras/fig71.png> <./figuras/fig72.png> <./figuras/fig73.png>]
-Underfull \vbox (badness 5637) has occurred while \output is active []
-
- [63 <./figuras/fig74.png> <./figuras/fig75.png> <./figuras/fig76.png> <./figuras/fig77.png>]
-<figuras/fig81.png, id=973, 1011.78pt x 433.62pt>
+ [60 <./figuras/fig26.png> <./figuras/fig27.png>]
+<figuras/fig81.png, id=947, 1011.78pt x 433.62pt>
 File: figuras/fig81.png Graphic file (type png)
 <use figuras/fig81.png>
-Package pdftex.def Info: figuras/fig81.png  used on input line 307.
+Package pdftex.def Info: figuras/fig81.png  used on input line 484.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig82.png, id=974, 1011.78pt x 433.62pt>
+<figuras/fig82.png, id=948, 1011.78pt x 433.62pt>
 File: figuras/fig82.png Graphic file (type png)
 <use figuras/fig82.png>
-Package pdftex.def Info: figuras/fig82.png  used on input line 308.
+Package pdftex.def Info: figuras/fig82.png  used on input line 493.
 (pdftex.def)             Requested size: 341.25pt x 146.25111pt.
-<figuras/fig83.png, id=975, 1011.78pt x 433.62pt>
+<figuras/fig83.png, id=949, 1011.78pt x 433.62pt>
 File: figuras/fig83.png Graphic file (type png)
 <use figuras/fig83.png>
-Package pdftex.def Info: figuras/fig83.png  used on input line 315.
+Package pdftex.def Info: figuras/fig83.png  used on input line 509.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig84.png, id=976, 1011.78pt x 433.62pt>
+<figuras/fig84.png, id=950, 1011.78pt x 433.62pt>
 File: figuras/fig84.png Graphic file (type png)
 <use figuras/fig84.png>
-Package pdftex.def Info: figuras/fig84.png  used on input line 316.
+Package pdftex.def Info: figuras/fig84.png  used on input line 518.
 (pdftex.def)             Requested size: 341.25pt x 146.25111pt.
-<figuras/fig85.png, id=977, 1011.78pt x 433.62pt>
+<figuras/fig85.png, id=951, 1011.78pt x 433.62pt>
 File: figuras/fig85.png Graphic file (type png)
 <use figuras/fig85.png>
-Package pdftex.def Info: figuras/fig85.png  used on input line 322.
+Package pdftex.def Info: figuras/fig85.png  used on input line 534.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig86.png, id=978, 1011.78pt x 433.62pt>
+<figuras/fig86.png, id=952, 1011.78pt x 433.62pt>
 File: figuras/fig86.png Graphic file (type png)
 <use figuras/fig86.png>
-Package pdftex.def Info: figuras/fig86.png  used on input line 323.
+Package pdftex.def Info: figuras/fig86.png  used on input line 543.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig87.png, id=979, 1011.78pt x 433.62pt>
+<figuras/fig87.png, id=953, 1011.78pt x 433.62pt>
 File: figuras/fig87.png Graphic file (type png)
 <use figuras/fig87.png>
-Package pdftex.def Info: figuras/fig87.png  used on input line 330.
+Package pdftex.def Info: figuras/fig87.png  used on input line 559.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig88.png, id=980, 1011.78pt x 433.62pt>
+<figuras/fig88.png, id=954, 1011.78pt x 433.62pt>
 File: figuras/fig88.png Graphic file (type png)
 <use figuras/fig88.png>
-Package pdftex.def Info: figuras/fig88.png  used on input line 331.
+Package pdftex.def Info: figuras/fig88.png  used on input line 568.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
- [64 <./figuras/fig81.png> <./figuras/fig82.png>] [65 <./figuras/fig83.png> <./figuras/fig84.png> <./figuras/fig85.png> <./figuras/fig86.png>]
+ [61 <./figuras/fig30.png> <./figuras/fig31.png>] [62 <./figuras/fig66.png> <./figuras/fig67.png> <./figuras/fig68.png> <./figuras/fig69.png>] [63 <./figuras/fig70.png> <./figuras/fig71.png> <./figuras/fig72.png> <./figuras/fig73.png>] [64 <./figuras/fig74.png> <./figuras/fig75.png> <./figuras/fig76.png> <./figuras/fig77.png>] [65 <./figuras/fig81.png> <./figuras/fig82.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66 <./figuras/fig87.png> <./figuras/fig88.png>]
-<figuras/fig89.png, id=1009, 1011.78pt x 433.62pt>
+ [66 <./figuras/fig83.png> <./figuras/fig84.png>]
+<figuras/fig89.png, id=1005, 1011.78pt x 433.62pt>
 File: figuras/fig89.png Graphic file (type png)
 <use figuras/fig89.png>
-Package pdftex.def Info: figuras/fig89.png  used on input line 421.
+Package pdftex.def Info: figuras/fig89.png  used on input line 667.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig90.png, id=1010, 1011.78pt x 433.62pt>
+<figuras/fig90.png, id=1006, 1011.78pt x 433.62pt>
 File: figuras/fig90.png Graphic file (type png)
 <use figuras/fig90.png>
-Package pdftex.def Info: figuras/fig90.png  used on input line 422.
+Package pdftex.def Info: figuras/fig90.png  used on input line 676.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig91.png, id=1011, 1011.78pt x 433.62pt>
+<figuras/fig91.png, id=1007, 1011.78pt x 433.62pt>
 File: figuras/fig91.png Graphic file (type png)
 <use figuras/fig91.png>
-Package pdftex.def Info: figuras/fig91.png  used on input line 423.
+Package pdftex.def Info: figuras/fig91.png  used on input line 686.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig92.png, id=1012, 1011.78pt x 433.62pt>
+<figuras/fig92.png, id=1008, 1011.78pt x 433.62pt>
 File: figuras/fig92.png Graphic file (type png)
 <use figuras/fig92.png>
-Package pdftex.def Info: figuras/fig92.png  used on input line 424.
+Package pdftex.def Info: figuras/fig92.png  used on input line 695.
 (pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[67] [68 <./figuras/fig89.png> <./figuras/fig90.png> <./figuras/fig91.png> <./figuras/fig92.png>] [69]
-<figuras/fig93.png, id=1040, 1011.78pt x 433.62pt>
-File: figuras/fig93.png Graphic file (type png)
-<use figuras/fig93.png>
-Package pdftex.def Info: figuras/fig93.png  used on input line 479.
-(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig94.png, id=1041, 1011.78pt x 433.62pt>
-File: figuras/fig94.png Graphic file (type png)
-<use figuras/fig94.png>
-Package pdftex.def Info: figuras/fig94.png  used on input line 480.
-(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-<figuras/fig95.png, id=1042, 1011.78pt x 433.62pt>
-File: figuras/fig95.png Graphic file (type png)
-<use figuras/fig95.png>
-Package pdftex.def Info: figuras/fig95.png  used on input line 481.
-(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
-File: figuras/fig95.png Graphic file (type png)
-<use figuras/fig95.png>
-Package pdftex.def Info: figuras/fig95.png  used on input line 482.
-(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
- [70 <./figuras/fig93.png> <./figuras/fig94.png> <./figuras/fig95.png>]) (./editaveis/conclusao.tex [71] [72
-
-])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [73] (./tcc.bbl (./tcc.brf)
+ [67 <./figuras/fig85.png> <./figuras/fig86.png>] [68 <./figuras/fig87.png> <./figuras/fig88.png>] [69 <./figuras/fig89.png> <./figuras/fig90.png> <./figuras/fig91.png> <./figuras/fig92.png>]
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+ [70]
+<figuras/fig93.png, id=1044, 1011.78pt x 433.62pt>
+File: figuras/fig93.png Graphic file (type png)
+<use figuras/fig93.png>
+Package pdftex.def Info: figuras/fig93.png  used on input line 759.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
+<figuras/fig94.png, id=1045, 1011.78pt x 433.62pt>
+File: figuras/fig94.png Graphic file (type png)
+<use figuras/fig94.png>
+Package pdftex.def Info: figuras/fig94.png  used on input line 768.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
+<figuras/fig95.png, id=1046, 1011.78pt x 433.62pt>
+File: figuras/fig95.png Graphic file (type png)
+<use figuras/fig95.png>
+Package pdftex.def Info: figuras/fig95.png  used on input line 778.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
+<figuras/fig96.png, id=1047, 1011.78pt x 433.62pt>
+File: figuras/fig96.png Graphic file (type png)
+<use figuras/fig96.png>
+Package pdftex.def Info: figuras/fig96.png  used on input line 787.
+(pdftex.def)             Requested size: 318.49861pt x 136.49838pt.
+) (./editaveis/conclusao.tex [71] [72 <./figuras/fig93.png> <./figuras/fig94.png> <./figuras/fig95.png> <./figuras/fig96.png>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73
+
+] (./tcc.bbl (./tcc.brf)
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
@@ -1592,21 +1590,21 @@ AED: lastpage setting LastPage
 
  (./tcc.aux)
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: EA626857AE078A25F7CE0A132D825913;4756.
+(rerunfilecheck)             Checksum: CBC07D5F323D3FDE1022F7902B52FB1C;4756.
  ) 
 Here is how much of TeX's memory you used:
- 17623 strings out of 480247
- 282916 string characters out of 5896151
- 615324 words of memory out of 5000000
- 34867 multiletter control sequences out of 15000+600000
+ 17630 strings out of 480247
+ 283058 string characters out of 5896151
+ 615431 words of memory out of 5000000
+ 34873 multiletter control sequences out of 15000+600000
  545219 words of font info for 68 fonts, out of 8000000 for 9000
  26 hyphenation exceptions out of 8191
  80i,13n,96p,2315b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (79 pages, 16978662 bytes).
+Output written on tcc.pdf (79 pages, 17259860 bytes).
 PDF statistics:
- 1504 PDF objects out of 1728 (max. 8388607)
+ 1506 PDF objects out of 1728 (max. 8388607)
  1211 compressed objects within 13 object streams
  248 named destinations out of 1000 (max. 500000)
- 890 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 895 words of extra memory for PDF output out of 10000 (max. 10000000)
 

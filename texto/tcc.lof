@@ -31,16 +31,16 @@
 \contentsline {figure}{\numberline {30}{\ignorespaces Soma dos sinais filtrados e dos efeitos no \textit {PureData}}}{53}{figure.3.30}%
 \contentsline {figure}{\numberline {31}{\ignorespaces Botão do tipo \textit {knob} para frequência central e efeitos \cite {robocore}, e chave para seleção do efeito \cite {evea}.}}{54}{figure.3.31}%
 \contentsline {figure}{\numberline {32}{\ignorespaces Diagrama de Conexões}}{55}{figure.3.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Gráfico de intervalo da Música 1 no domínio do tempo e no domínio da frequência, ambos sem filtragem.}}{58}{figure.4.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com uma frequência de corte de 300 Hz.}}{59}{figure.4.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com uma frequência de corte de 4 kHz.}}{59}{figure.4.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com uma frequência de corte de 22 kHz.}}{60}{figure.4.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a volumes de valores 0.0, 0,3312, 0,6625 e 1,0.}}{61}{figure.4.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Sinal com efeitos de \textit {reverb} a 0, 25, 50 e 100 dB após 1 segundo.}}{62}{figure.4.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Sinal com efeitos de \textit {delay} de 0, 250, 500 e 1000 ms.}}{63}{figure.4.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com filtro de 20 Hz.}}{64}{figure.4.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 303 Hz.}}{65}{figure.4.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte 4015 Hz.}}{65}{figure.4.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Música 1 nos domínios do tempo e da frequênca, com frequência de corte 22050 Hz.}}{66}{figure.4.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Música 1 com \textit {delay} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{68}{figure.4.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Música 1 com \textit {reverb} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{70}{figure.4.45}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Gráfico de intervalo da Música 1 no domínio do tempo (a) e no domínio da frequência (b), ambos sem filtragem.}}{58}{figure.4.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 300 Hz.}}{59}{figure.4.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 4 kHz.}}{60}{figure.4.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 22 kHz.}}{61}{figure.4.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a volumes de 0.0, 0.3312, 0.6625 e 1.0.}}{62}{figure.4.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Sinal com efeitos de \textit {reverb} a 0, 25, 50 e 100 dB após 1 segundo.}}{63}{figure.4.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Sinal com efeitos de \textit {delay} de 0, 250, 500 e 1000 ms.}}{64}{figure.4.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com filtro de 20 Hz.}}{65}{figure.4.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 303 Hz.}}{66}{figure.4.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 4015 Hz.}}{67}{figure.4.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 22050 Hz.}}{68}{figure.4.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Música 1 com \textit {delay} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{69}{figure.4.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Música 1 com \textit {reverb} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{72}{figure.4.45}%

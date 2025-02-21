@@ -56,9 +56,9 @@
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{57}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Prova de Conceito}{57}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Filtragem}{57}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Efeitos}{60}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Sistema definitivo}{63}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Filtragem}{64}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.1.2}Efeitos}{59}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Sistema definitivo}{61}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Filtragem}{61}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Efeitos}{67}{subsection.4.2.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões}}{73}{chapter.5}%

@@ -230,15 +230,49 @@ Primeiramente, simulou-se o volume do efeito em função da posição do botão 
 
 \subsubsection*{Automação de Efeitos}
 
-\begin{figure}[h]
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig66.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig67.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig68.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig69.png}
-    \caption{Canal de efeito \textit{reverb} isolado com música 1 a volumes de valores 0.0, 0,3312, 0,6625 e 1,0.}
+    % Subfigura a - Volume 0.0
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig66.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Volume 0.0.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Volume 0.3312
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig67.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Volume 0.3312.
+    \end{minipage}
+    
+    \vspace{0.5cm} % Espaço vertical entre as linhas de figuras
+
+    % Subfigura c - Volume 0.6625
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig68.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (c) Volume 0.6625.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura d - Volume 1.0
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig69.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (d) Volume 1.0.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Canal de efeito \textit{reverb} isolado com música 1 a volumes de 0.0, 0.3312, 0.6625 e 1.0.}
     \label{fig66}
 \end{figure}
+
 
 Para validar o controle automático do volume, isolou-se a saída dos efeitos e variaram-se as frequências, que geram diferentes volumes de efeitos, %. Os sinais no domínio do tempo foram analisados, 
 conforme mostrado na Fig. \ref{fig66}.
@@ -279,15 +313,49 @@ Para validar o controle do efeito de \textit{reverb}, o botão central foi posic
 Nas Fig. \ref{fig70}, são apresentadas representações do sinal no domínio do tempo, ilustrando a variação desse parâmetro. O intervalo de dB proposto no sistema varia de 0 a 100 dB. O efeito de \textit{reverb} foi cada vez mais pronunciado, resultando em um som com pouca definição no último gráfico, comprometendo a clareza da música.
 
 
-\begin{figure}[h]
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig70.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig71.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig72.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig73.png}
+    % Subfigura a - 0 dB
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig70.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) 0 dB após 1 segundo.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - 25 dB
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig71.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) 25 dB após 1 segundo.
+    \end{minipage}
+    
+    \vspace{0.5cm} % Espaço vertical entre as linhas de figuras
+
+    % Subfigura c - 50 dB
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig72.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (c) 50 dB após 1 segundo.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura d - 100 dB
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig73.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (d) 100 dB após 1 segundo.
+    \end{minipage}
+
+    % Legenda geral
     \caption{Sinal com efeitos de \textit{reverb} a 0, 25, 50 e 100 dB após 1 segundo.}
     \label{fig70}
 \end{figure}
+
 
 % Na Figura \ref{fig70}, a posição inicial do botão de quantidade de efeito resulta em 0 dB após 1 segundo. Portanto, a forma de onda esperada também é nula, o que foi confirmado pelos resultados obtidos.
 
@@ -325,12 +393,45 @@ Nas Fig. \ref{fig70}, são apresentadas representações do sinal no domínio do
 O efeito de \textit{delay} consiste em repetir o sinal após um determinado intervalo de tempo. A Fig. \ref{fig74} ilustra o comportamento do efeito com diferentes configurações de atraso.
 
 %\newpage
-\begin{figure}[h]
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig74.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig75.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig76.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig77.png}
+    % Subfigura a - Delay 0 ms
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig74.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Delay 0 ms.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Delay 250 ms
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig75.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Delay 250 ms.
+    \end{minipage}
+    
+    \vspace{0.5cm} % Espaço vertical entre as linhas de figuras
+
+    % Subfigura c - Delay 500 ms
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig76.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (c) Delay 500 ms.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura d - Delay 1000 ms
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig77.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (d) Delay 1000 ms.
+    \end{minipage}
+
+    % Legenda geral
     \caption{Sinal com efeitos de \textit{delay} de 0, 250, 500 e 1000 ms.}
     \label{fig74}
 \end{figure}
@@ -374,36 +475,106 @@ Nessa seção dos resultados, serão apresentadas as metodologias utilizadas par
 \subsection{Filtragem}
 
 
+% Conjunto 1 - Filtro de 20 Hz
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig81.png}
-    \includegraphics[width=0.75\textwidth]{figuras/fig82.png}
+    % Subfigura a - Domínio do Tempo
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig81.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Música 1 no domínio do tempo com filtro de 20 Hz.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Domínio da Frequência
+    \begin{minipage}[b]{0.75\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig82.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Música 1 no domínio da frequência com filtro de 20 Hz.
+    \end{minipage}
+
+    % Legenda geral
     \caption{Música 1 nos domínios do tempo e da frequência, com filtro de 20 Hz.}
     \label{fig81}
 \end{figure}
 
+% Conjunto 2 - Filtro de 303 Hz
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig83.png}
-    \includegraphics[width=0.75\textwidth]{figuras/fig84.png}
+    % Subfigura a - Domínio do Tempo
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig83.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Música 1 no domínio do tempo com frequência de corte de 303 Hz.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Domínio da Frequência
+    \begin{minipage}[b]{0.75\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig84.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Música 1 no domínio da frequência com frequência de corte de 303 Hz.
+    \end{minipage}
+
+    % Legenda geral
     \caption{Música 1 nos domínios do tempo e da frequência, com frequência de corte de 303 Hz.}
     \label{fig83}
 \end{figure}
+
+% Conjunto 3 - Filtro de 4015 Hz
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig85.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig86.png}
-    \caption{Música 1 nos domínios do tempo e da frequência, com frequência de corte 4015 Hz.}
+    % Subfigura a - Domínio do Tempo
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig85.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Música 1 no domínio do tempo com frequência de corte de 4015 Hz.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Domínio da Frequência
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig86.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Música 1 no domínio da frequência com frequência de corte de 4015 Hz.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Música 1 nos domínios do tempo e da frequência, com frequência de corte de 4015 Hz.}
     \label{fig85}
 \end{figure}
 
+% Conjunto 4 - Filtro de 22050 Hz
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig87.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig88.png}
-    \caption{Música 1 nos domínios do tempo e da frequênca, com frequência de corte 22050 Hz.}
+    % Subfigura a - Domínio do Tempo
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig87.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Música 1 no domínio do tempo com frequência de corte de 22050 Hz.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Domínio da Frequência
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig88.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Música 1 no domínio da frequência com frequência de corte de 22050 Hz.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Música 1 nos domínios do tempo e da frequência, com frequência de corte de 22050 Hz.}
     \label{fig87}
 \end{figure}
+
 
 Como a conversão analógico digital de 8 \textit{bits} das frequências de corte limita a quantidade de pontos possíveis, para que essa análise se assemelhe àquela feita na prova de conceito, utilizou-se frequências de corte que se aproximassem mais daquelas utilizadas, que foram: 20 Hz, 300 Hz, 4 kHz e 22050 Hz, de forma que as frequências de corte utilizadas nesta análise foram: 20 Hz, 303 Hz, 4015 Hz e 22050 Hz. Nos resultados da prova de conceito, a filtragem foi analisada no ponto 0 Hz, mas como o filtro foi implementado para funcionar na banda de som audível, ou seja, entre 20 e 22050 Hz, a análise neste ponto não foi possível, mas como os sinais são confinados na banda de som audível, o resultado esperado para 0 Hz seria o mesmo daquele obtido para 20 Hz. 
 
@@ -488,15 +659,49 @@ Os resultados em relação aos efeitos na prova de conceito foram obtidos varian
 \subsubsection*{\textit{Delay}}
 
 
-\begin{figure}[h]
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig89.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig90.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig91.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig92.png}
+    % Subfigura a - Wetness 0.0
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig89.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Música 1 com \textit{delay} e wetness 0.0.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Wetness 0.33
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig90.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Música 1 com \textit{delay} e wetness 0.33.
+    \end{minipage}
+    
+    \vspace{0.5cm} % Espaço vertical entre as linhas de figuras
+
+    % Subfigura c - Wetness 0.66
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig91.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (c) Música 1 com \textit{delay} e wetness 0.66.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura d - Wetness 1.0
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig92.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (d) Música 1 com \textit{delay} e wetness 1.0.
+    \end{minipage}
+
+    % Legenda geral
     \caption{Música 1 com \textit{delay} a valores de \textit{wetness} de 0,0, 0,33, 0,66 e 1,0.}
     \label{fig89}
 \end{figure}
+
 
 
 Para atestar a efetividade da implementação do código para o \textit{delay}, obteve-se os sinais de saída para cada valor do parâmetro \textit{wetness}. Como esse efeito é baseado na repetição de amostras anteriores, ou o atraso de reprodução de cópias correntes, a representação no domínio do tempo se mostra suficiente para se verificar a atuação do efeito em função do parâmetro de mistura entre o sinal original e o processado pelo efeito. 
@@ -546,15 +751,49 @@ A primeira representação dos sinais processados dessa seção, Fig. \ref{fig93
 Devido à construção desse efeito que, em comparação com o \textit{delay}, possui um \textit{feedback} mais suave e distribuído, o sinal resultante não demonstra com clareza a execução do efeito. Porém, pode-se observar a atuação do parâmetro \textit{wetness}, que faz com que a amplitude do sinal original seja atenuada. Nesse caso, como os \textit{delays} são mais numerosos mas mais suaves, a presença do efeito se dá de forma efetiva na escuta do sinal resultante, o que foi comprovado em sua escuta.
 % Seguindo a mesma lógica da Figura \ref{fig94}, é possível observar na Figura \ref{fig95} a repetição de grandes blocos de amostras. O som se torna menos definido, fato comprovado na escuta do arquivo final. Além disso, na escuta pôde se observar a intensificação do efeito de reverberação.
 
-\begin{figure}[h]
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.7\textwidth]{figuras/fig93.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig94.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig95.png}
-    \includegraphics[width=0.7\textwidth]{figuras/fig95.png}
+    % Subfigura a - Wetness 0.0
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig93.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Música 1 com \textit{reverb} e wetness 0.0.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Wetness 0.33
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig94.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Música 1 com \textit{reverb} e wetness 0.33.
+    \end{minipage}
+    
+    \vspace{0.5cm} % Espaço vertical entre as linhas de figuras
+
+    % Subfigura c - Wetness 0.66
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig95.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (c) Música 1 com \textit{reverb} e wetness 0.66.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura d - Wetness 1.0 (erro na repetição de fig95 corrigido)
+    \begin{minipage}[b]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig96.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (d) Música 1 com \textit{reverb} e wetness 1.0.
+    \end{minipage}
+
+    % Legenda geral
     \caption{Música 1 com \textit{reverb} a valores de \textit{wetness} de 0,0, 0,33, 0,66 e 1,0.}
     \label{fig93}
 \end{figure}
+
 
 
 % \begin{figure}[h]
