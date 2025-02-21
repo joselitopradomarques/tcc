@@ -14,7 +14,7 @@
 \contentsline {figure}{\numberline {13}{\ignorespaces \textit {Rotary mixer} \cite {electroniquespectacleampAUDIO}}}{38}{figure.2.13}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Espectro de áudio \cite {headphonestyAudioFrequency}}}{39}{figure.2.14}%
 \contentsline {figure}{\numberline {15}{\ignorespaces Transmissão com fios desbalanceados e balanceados \cite {proaudiospQualDiferena}.}}{41}{figure.2.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Conectores de 1/4", 1/8" e de 2,5 mm \cite {mouser}}}{42}{figure.2.16}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Conectores de 1/4", 1/8" e de 2,5 mm \cite {mouser}.}}{42}{figure.2.16}%
 \contentsline {figure}{\numberline {17}{\ignorespaces Conectores RCA e XLR \cite {rs}.}}{42}{figure.2.17}%
 \contentsline {figure}{\numberline {18}{\ignorespaces Fluxograma geral do \textit {mixer}}}{46}{figure.3.18}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Bloco de leitura de sinais}}{47}{figure.3.19}%
@@ -29,7 +29,7 @@
 \contentsline {figure}{\numberline {28}{\ignorespaces Variação da amplitude dos efeitos no \textit {PureData}.}}{52}{figure.3.28}%
 \contentsline {figure}{\numberline {29}{\ignorespaces Implementação da variação da amplitude dos efeitos no \textit {PureData}}}{53}{figure.3.29}%
 \contentsline {figure}{\numberline {30}{\ignorespaces Soma dos sinais filtrados e dos efeitos no \textit {PureData}}}{53}{figure.3.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Botão do tipo \textit {knob} para frequência central e efeitos \cite {robocore}, e chave para seleção do efeito \cite {evea}.}}{54}{figure.3.31}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Botão do tipo \textit {knob} para frequência central e efeitos, e chave para seleção do efeito.}}{54}{figure.3.31}%
 \contentsline {figure}{\numberline {32}{\ignorespaces Diagrama de Conexões}}{55}{figure.3.32}%
 \contentsline {figure}{\numberline {33}{\ignorespaces Gráfico de intervalo da Música 1 no domínio do tempo (a) e no domínio da frequência (b), ambos sem filtragem.}}{58}{figure.4.33}%
 \contentsline {figure}{\numberline {34}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 300 Hz.}}{59}{figure.4.34}%

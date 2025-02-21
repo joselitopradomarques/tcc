@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {2.5.3}Conectores}{41}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Amplificação de Potência}{42}{subsection.2.5.4}%
 \contentsline {subsection}{\numberline {2.5.5}Equalização}{42}{subsection.2.5.5}%
-\contentsline {subsection}{\numberline {2.5.6}\textit {Trim} e Volume}{42}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.6}\textit {Trim} e Volume}{43}{subsection.2.5.6}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{45}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Proposta Geral}{45}{section.3.1}%
@@ -51,7 +51,7 @@
 \contentsline {subsection}{\numberline {3.3.4}Efeitos}{51}{subsection.3.3.4}%
 \contentsline {section}{\numberline {3.4}Sistema definitivo}{53}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}\textit {Hardware}}{53}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}\textit {Software}}{54}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.2}\textit {Software}}{55}{subsection.3.4.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{57}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Prova de Conceito}{57}{section.4.1}%

@@ -300,13 +300,30 @@ Outra entrada comum é a \textit{line}, que já apresenta sinais em nível de li
 Condutores desbalanceados possuem um fio para transmitir o sinal e um terra comum para referência.
 Por outro lado, condutores balanceados utilizam dois condutores para transmitir o sinal, cobrindo-os com uma blindagem. 
 
-\begin{figure}[h]
-	\centering
-    \includegraphics[scale=0.4]{figuras/fig11.eps}
-    \includegraphics[scale=0.4]{figuras/fig12.eps}
-	\caption{Transmissão com fios desbalanceados e balanceados \cite{proaudiospQualDiferena}.}
-	\label{fig12}
+\begin{figure}[htpb]
+    \centering
+    % Subfigura a - Fios desbalanceados
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig11.eps}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Transmissão com fios desbalanceados.
+    \end{minipage}
+    \hspace{0.5cm} % Espaço horizontal entre as figuras
+
+    % Subfigura b - Fios balanceados
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig12.eps}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Transmissão com fios balanceados.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Transmissão com fios desbalanceados e balanceados \cite{proaudiospQualDiferena}.}
+    \label{fig12}
 \end{figure}
+
 
 Ao final da transmissão, um diferenciador é usado para reduzir o ruído adquirido durante a transmissão \cite{bartlett}.
 A Figura \ref{fig12} ilustra a transmissão de um sinal com ruído através de cabos desbalanceados e balanceados.
@@ -331,14 +348,37 @@ O conector \textit{1/8"},% (Figura \ref{fig20}),
 também conhecido como 3,5 mm, é muito encontrado em celulares, dispositivos de reprodução de música e alto-falantes. Internamente, ele possui a mesma construção do conector de 1/4" e pode transmitir os mesmos tipos de sinais.
 O conector de 2,5 mm, frequentemente utilizado em \textit{headsets} para adicionar um microfone, possui três fios em vez de dois. A Figura \ref{fig19} ilustra esses tipos de conectores.
 
-\begin{figure}[h]
-	\centering
-    \includegraphics[scale=0.15]{figuras/fig19.png}
-    \includegraphics[scale=0.15]{figuras/fig20.png}
-    \includegraphics[scale=0.15]{figuras/fig21.png}
-	\caption{Conectores de 1/4", 1/8" e de 2,5 mm \cite{mouser}}
-	\label{fig19}
+\begin{figure}[htpb]
+    \centering
+    % Primeira linha - Subfiguras a e b
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig19.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Conector de 1/4".
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig20.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Conector de 1/8".
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig21.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (c) Conector de 2,5 mm.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Conectores de 1/4", 1/8" e de 2,5 mm \cite{mouser}.}
+    \label{fig19}
 \end{figure}
+
+
+
 
 
 % \begin{figure}[h]
@@ -366,13 +406,29 @@ amplamente utilizado nos primórdios dos sistemas de telefonia e também conheci
 
 O conector XLR, inicialmente chamado de Cannon, foi desenvolvido pela empresa de mesmo nome para a transmissão de sinais balanceados em aplicações profissionais, oferecendo boa rejeição a ruídos e mantendo a integridade do sinal.
 
-\begin{figure}[h]
-	\centering
-    \includegraphics[scale=0.08]{figuras/fig22.png}
-    \includegraphics[scale=0.16]{figuras/fig23.png}
-	\caption{Conectores RCA e XLR \cite{rs}.}
-	\label{fig22}
+\begin{figure}[htpb]
+    \centering
+    % Primeira linha - Subfiguras a e b
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig22.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Conector RCA.
+    \end{minipage}
+    \hspace{1cm}
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figuras/fig23.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Conector XLR.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Conectores RCA e XLR \cite{rs}.}
+    \label{fig22}
 \end{figure}
+
+
 
 % Caso um cabo RCA (Figura \ref{fig22}) mono seja conectado, ele pode ser automaticamente duplicado para os dois canais, permitindo que o sinal mono seja transmitido por ambos os canais de áudio \cite{bartlett}.
 

@@ -15,8 +15,6 @@
 \backcite {proaudiospQualDiferena}{{11}{(document)}{Doc-Start}}
 \backcite {mouser}{{11}{(document)}{Doc-Start}}
 \backcite {rs}{{11}{(document)}{Doc-Start}}
-\backcite {robocore}{{11}{(document)}{Doc-Start}}
-\backcite {evea}{{11}{(document)}{Doc-Start}}
 \backcite {oppenheim2010sinais}{{25}{2.1}{section.2.1}}
 \backcite {oppenheim2010sinais}{{25}{2.1}{section.2.1}}
 \backcite {oppenheim2010sinais}{{25}{2.2}{figure.2.1}}
@@ -74,8 +72,8 @@
 \backcite {rs}{{42}{17}{figure.2.17}}
 \backcite {self2013audio}{{42}{2.5.4}{subsection.2.5.4}}
 \backcite {puredata}{{49}{3.3.1}{subsection.3.3.1}}
-\backcite {robocore}{{54}{31}{figure.3.31}}
-\backcite {evea}{{54}{31}{figure.3.31}}
+\backcite {robocore}{{54}{3.4.1}{subsection.3.4.1}}
+\backcite {evea}{{54}{3.4.1}{subsection.3.4.1}}
 \backcite {saravaticomponentes}{{54}{3.4.1}{figure.3.31}}
 \backcite {adrenalineDisplaysLanar}{{54}{3.4.1}{figure.3.31}}
 \backcite {track01}{{57}{4.1.1}{subsection.4.1.1}}

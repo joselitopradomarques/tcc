@@ -274,13 +274,28 @@ Esta seção descreve a proposta de implementação em \textit{hardware} para o 
 A interação do usuário é crucial para ajustar parâmetros como frequência de corte, quantidade de efeitos e seleção do efeito desejado. Para isso, foram utilizados dois \textit{knobs} para a escolha da frequência central e para o ajuste da quantidade de efeitos, e uma chave para a seleção de efeitos, conforme a Fig. \ref{fig61}. Os \textit{knobs} oferecem uma leitura analógica, e a chave, uma leitura digital.
 
 
-\begin{figure}[h]
+\begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.2\textwidth]{figuras/fig61.jpg}
-     \includegraphics[width=0.2\textwidth]{figuras/fig62.png}
-    \caption{Botão do tipo \textit{knob} para frequência central e efeitos \cite{robocore}, e chave para seleção do efeito \cite{evea}.}
+    % Primeira linha - Subfiguras a e b
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{figuras/fig61.jpg}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (a) Botão do tipo \textit{knob} para frequência central e efeitos \cite{robocore}.
+    \end{minipage}
+    \hspace{2cm} % Espaço horizontal reduzido entre as figuras
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{figuras/fig62.png}
+        \vspace{0.3cm} % Espaço entre imagem e sublegenda
+        (b) Chave para seleção do efeito \cite{evea}.
+    \end{minipage}
+
+    % Legenda geral
+    \caption{Botão do tipo \textit{knob} para frequência central e efeitos, e chave para seleção do efeito.}
     \label{fig61}
 \end{figure}
+
 
 
 
