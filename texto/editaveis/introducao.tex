@@ -1,8 +1,17 @@
 \chapter[Introdução]{Introdução}
 
-A música eletrônica e a cultura \textit{DJ} possuem um papel fundamental no cenário musical contemporâneo, ampliando a forma como a música pode ser apreciada. O desenvolvimento de tecnologias específicas para esse público caminha lado a lado com a evolução da eletrônica, permitindo que a habilidade de selecionar, alterar e misturar músicas ofereça novas experiências ao público. Nesse contexto, o \textit{mixer} se destaca como o dispositivo central na mixagem de sons, processando e combinando múltiplos canais de áudio para criar uma nova composição sonora. A crescente demanda por equipamentos de áudio que permitam maior controle criativo tem impulsionado o desenvolvimento de novas tecnologias de mixagem, porém, as novas soluções surgidas têm como norte a integração a telas, expansão de quantidade de canais e acesso à nuvem, de forma que a lógica basal de mixagem se encontra enrijescida.
+A música eletrônica e a cultura \textit{DJ} têm desempenhado um papel essencial na transformação do cenário musical contemporâneo, desde o surgimento dos primeiros equipamentos de mixagem nos anos 70 até os sofisticados sistemas digitais da atualidade. A figura do \textit{DJ}, em sua origem limitada a um curador de faixas, evoluiu para um artista completo, que utiliza a tecnologia para manipular sons em tempo real, criando experiências sonoras únicas e imersivas. No centro dessa transformação está o \textit{mixer}, que, ao longo das décadas, se tornou uma ferramenta indispensável para performances, permitindo a combinação de múltiplos canais de áudio em uma nova e coesa composição musical.
 
-Dessa forma, esse projeto visa a exploração da lógica de mixagem, basal para a expansão da compreensão do processo criativo do \textit{DJ}. Ao buscar novas formas de personalização e controle, o protótipo desenvolvido propõe um \textit{mixer} mais flexível, que se adapta às necessidades específicas dos profissionais, permitindo uma maior interação com os elementos sonoros e oferecendo novas possibilidades para a criação musical.
+A evolução dos equipamentos de mixagem, no entanto, não explorou as formas de compreensão de uma faixa, de forma que o entendimento da composição de uma música permanece constante desde a criação dos primeiros equipamentos, baseado no controle de ganho em 3 filtros passa-bandas. Embora as inovações tecnológicas tenham ampliado a quantidade de canais, a integração com telas digitais e a conectividade em nuvem, a lógica básica da mixagem permanece rígida, muitas vezes limitando o potencial criativo dos artistas. Atualmente, muitos DJs enfrentam desafios para personalizar suas performances de forma mais orgânica e adaptativa, sendo obrigados a trabalhar dentro das limitações dos sistemas disponíveis.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figuras/fig97.jpg}
+    \caption{Protótipo de \textit{mixer}}
+    \label{fig97}
+\end{figure}
+
+Neste cenário, surge a necessidade de uma abordagem que não apenas expanda as possibilidades técnicas, mas também permita uma maior flexibilidade no controle e manipulação dos elementos sonoros. O presente projeto visa justamente explorar novas formas de explorações e controle no processo de mixagem, desenvolvendo um protótipo de \textit{mixer} que se adapte de maneira mais natural às necessidades dos profissionais. Com o foco em oferecer uma otimização da forma como uma transição é feita, o protótipo, presenta na Figura tal, propõe um \textit{mixer} que unifica a forma de controle sob os canais, tradicionalmente conhecida pelo ganho em três bandas por canal, ao utilizar filtro passa-altas que deslizam ao longo de toda a banda, para que o controle dos elementos sonoros, ao invés de três botões por canal, utilize um, de forma que ambos canais sejam controlados de forma unificada, promovendo assim um novo paradigma de como se pensar a mixagem na cultura \textit{DJ}.
 
 \section{Justificativa}
 O mercado de equipamentos para \textit{DJs} é amplamente dominado por grandes empresas, mas existe uma crescente demanda por dispositivos que fogem à norma estabelecida. Nesse contexto, surgem pequenas empresas e \textit{boutiques} especializadas que desenvolvem soluções inovadoras, atendendo a \textit{DJs} que buscam mais controle criativo e flexibilidade em suas performances. Percebe-se que há uma necessidade crescente de equipamentos que ofereçam mais versatilidade e personalização, permitindo aos \textit{DJs} explorar suas habilidades de forma mais livre, mantendo, no entanto, a praticidade e aplicabilidade. A solução proposta busca responder a essa demanda por novos recursos, oferecendo uma abordagem simples e funcional, que se adapta facilmente ao uso cotidiano de um \textit{DJ}.
@@ -24,7 +33,7 @@ Quanto aos objetivos específicos, elencou-se pontos ao longo do desenvolvimento
 
 \begin{enumerate}
     \item \label{item:deslocamento} Realizar de forma automatizada o controle da frequência de corte de dois canais a partir de um controle
-    \item \label{item:efeitos} Implementar dois tipos de efeitos
+    \item \label{item:efeitos} Implementar dois tipos de efeitos: \textit{delay} e \textit{reverb}
     \item \label{item:conversao} Converter o sinal obtido após o processamento para analógico para ser reproduzido por um sistema de som
 \end{enumerate}
 

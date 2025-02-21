@@ -105,20 +105,39 @@ A quantização, o processo de digitalizar a amplitude, é descrita pelo Teorema
 
 \section{Filtros}
 
+Os filtros são sistemas essenciais que desempenham um papel de modificação seletiva de componentes durante o processamento de sinais \cite{oppenheim2013processamento}. Um filtro ideal deixaria certas frequências passarem sem modificações (banda de passagem), enquanto bloquearia completamente outras (banda de rejeição) \cite{oppenheim2013processamento}. No entanto, em um filtro real, a região de transição entre a banda de passagem e a de rejeição, conhecida como banda de transição, não funciona de maneira ideal, havendo atenuações e amplificações variáveis ao longo dessa faixa de frequências \cite{oppenheim2013processamento}.
 
-Os filtros são sistemas essenciais que desempenham um papel de modificação seletiva de componentes durante um processamento de sinais \cite{oppenheim2013processamento}, de forma que, um filtro ideal deixaria que certas frequências passassem sem modificações (banda de passagem), enquanto bloquearia completamente outras (banda de rejeição) \cite{oppenheim2013processamento}. Porém, em um filtro real, o comportamento na região da modificação entre as bandas de passagem e rejeição, denominada de banda de transição, não funciona idealmente, havendo na verdade atenuações e amplificações em diferentes graus ao longo desse intervalo de frequência \cite{oppenheim2013processamento}.
+Filtros podem ser implementados de duas maneiras: por meio de circuitos analógicos ou digitais. Filtros digitais, usados no processamento de sinais digitais, possuem algumas vantagens em relação aos analógicos: são reprogramáveis, oferecem reprodutibilidade com alta precisão, são mais resistentes a ruídos, e permitem a implementação de funções mais complexas que seriam difíceis de alcançar em um sistema analógico \cite{oppenheim2013processamento}.
 
-A implementação de filtros pode se dar de duas formas: através de circuitos analógicos ou digitais, sendo este utilizado no processamento de sinais digitais, de maneira que a sua lógica de circuitaria digital pode ser transformada em uma lógica de programação \cite{oppenheim2013processamento}. Circuitos digitais oferecem algumas vantagens em relação aos analógicos, como: a flexibilidade de serem reprogramados de forma simples conforme haja novas necessidades; reprodutibilidade, de maneira que filtros digitais podem ser reproduzidos garantindo alta precisão para que os seus resultados sejam consistentes; imunidade a ruídos devido aos componentes utilizados em um circuito digital em relação ao analógico; e a possibilidade de implementar funções extremamente complexas cujo comportamento analógico pode ser extremamente difícil de ser alcançado \cite{oppenheim2013processamento}.
+A classificação dos filtros digitais pode ser feita com base na resposta no domínio da frequência, observando o comportamento das bandas de passagem e rejeição \cite{oppenheim2013processamento}. Os filtros podem ser categorizados como passa-baixa (LPF), passa-alta (HPF), passa-banda (BPF) e rejeita-faixa (BRF), de acordo com as frequências que permitem ou bloqueiam \cite{oppenheim2013processamento}.
 
-Dentro da categoria de filtros digitais, há inúmeras formas de classificar os tipos existentes. Primeiramente, classifica-se em função da resposta no domínio da frequência observando onde há um comportamento de banda passante e banda de rejeição \cite{oppenheim2013processamento}. Além disso, "baixas", "altas" e "banda" são termos que se referem a uma determinada banda sendo, respectivamente, um intervalo entre zero e determinada frequência, uma determinada banda entre duas frequências e, ao final, a banda entre uma frequência até o final da banda existente \cite{oppenheim2013processamento}. A combinação das duas classificações gera os inúmeros filtros como: passa-baixa, \textit{low pass filter (LPF)}; passa-altas, \textit{high pass filter (HPF)}; passa-banda, \textit{band pass filter (BPF)}; rejeita-faixa, \textit{band-reject filter (BRF)} e outros \cite{oppenheim2013processamento}.
+Outra classificação fundamental está relacionada à resposta do filtro a um impulso. Um filtro pode ter uma Resposta Finita ao Impulso (FIR) ou uma Resposta Infinita ao Impulso (IIR), o que influencia o comportamento do filtro em termos de linearidade da fase e eficiência computacional \cite{oppenheim2013processamento}. A escolha entre FIR e IIR depende das características desejadas, como a necessidade de uma fase linear ou o consumo de recursos computacionais.
 
-Há outra classificação extremamente importante ditada em função da resposta do filtro ao ser excitado por um impulso, podendo ser finita, denominada de Resposta Finita ao Impulso (\textit{Finite Impulse Response} - FIR), ou infinita, Resposta Infinita ao Impulso (\textit{Infinite Impulse Response} - IIR) \cite{oppenheim2013processamento}. Algumas características de cada filtro são essenciais para a escolha do filtro ideal para uma aplicação a um sistema de áudio, por exemplo, a resposta da linearidade da fase e do recurso computacional necessário para cada caso.
+O projeto de filtros envolve etapas específicas. Primeiramente, é preciso determinar o tipo e a classificação do filtro com base no comportamento desejado \cite{oppenheim2013processamento}. Em seguida, definem-se especificações detalhadas, como a banda de transição, a frequência de corte e as ondulações aceitáveis na banda de passagem e rejeição, além de considerações sobre a resposta de fase e os recursos computacionais disponíveis \cite{oppenheim2013processamento}.
 
-Ao se realizar um projeto de filtros, primeiramente, deve-se saber qual tipo e classificação se deseja em um filtro a partir do comportamento geral desejado \cite{oppenheim2013processamento}. Em uma etapa posterior, em especificações mais precisas, deseja-se projetar um filtro com uma banda de transição específica, em uma determinada frequência de corte, com comportamentos delineados acerca de ondulações na transição, erros de aproximações e resposta da fase \cite{oppenheim2013processamento}.
+Especificações como a frequência de corte (limite entre a banda de passagem e a banda de rejeição), largura da banda de transição, erros de aproximação (diferenças entre a resposta real e a ideal), e resposta de fase (atraso de grupo e distorções de fase) são cruciais no design de um filtro \cite{oppenheim2013processamento}. O desempenho do filtro também deve ser avaliado quanto à sua complexidade computacional, principalmente em aplicações de tempo real.
 
-Algumas especificações são essenciais, como: frequência de corte, frequência que delimita o comportamento da banda de rejeição e da banda passante; largura da banda de transição, faixa de frequência adequada da transição entre a banda passante e a de rejeição; erros de aproximação, desvios máximos aceitáveis para ganho ou atenuação em relação à resposta ideal; resposta em fase, especificações de atraso de grupo e distorções de fase; complexidade computacional, desempenho do processamento em tempo real \cite{oppenheim2013processamento}.
+A análise da adequação de um filtro para uma aplicação específica envolve a avaliação de suas vantagens e desvantagens, bem como o uso de parâmetros quantitativos como resposta em frequência (magnitude e fase), atraso de grupo, resposta ao impulso, e frequência de corte \cite{oppenheim2013processamento}. Esses fatores ajudam a otimizar o desempenho do sistema e garantem a melhor escolha de filtro para a aplicação.
 
-Para se analisar qual o filtro ideal para determinada aplicação, deve-se saber as vantagens e desvantagens de cada tipo e classificação que se adequem à situação \cite{oppenheim2013processamento}. Além disso, pode-se utilizar parâmetros quantitativos e qualitativos para uma análise mais precisa, como a resposta em frequência (magnitude e fase), atraso de grupo, diagramas de Bode, resposta ao impulso, resposta ao degrau, frequência de corte, atenuação da faixa de rejeição, ondulação da faixa de passagem e erro quadrático médio aplicados a diferentes filtros, para que se obtenha o melhor desempenho possível, além da avaliação qualitativa \cite{oppenheim2013processamento}.
+\subsection{Filtros FIR - \textit{Finite Impulse Response}}
+
+Filtros com Resposta Finita ao Impulso (FIR) são uma classe de filtros que possuem diversas vantagens para aplicações de áudio e processamento de sinais. Eles são conhecidos por sua estabilidade e por oferecerem uma resposta de fase linear, o que é particularmente importante em aplicações onde a preservação da forma de onda do sinal é essencial \cite{oppenheim2013processamento}. Além disso, ao contrário dos filtros com Resposta Infinita ao Impulso (IIR), os FIR podem ser projetados para ter um comportamento de fase exato em uma ampla faixa de frequências, o que os torna ideais para projetos que exigem alta fidelidade na reprodução do sinal.
+
+O projeto de um filtro FIR segue etapas bem definidas, que garantem o seu desempenho nas aplicações desejadas. O processo começa com a especificação do filtro, onde são definidos o comportamento desejado e as faixas de frequência que devem ser passadas ou rejeitadas \cite{oppenheim2013processamento}. Além disso, parâmetros como a tolerância de erros máximos nas faixas de passagem ($\delta_1$) e rejeição ($\delta_2$) são estabelecidos, e esses fatores determinam a ordem do filtro.
+
+Com as especificações definidas, gera-se uma resposta em frequência ideal, a partir da qual se obtém a resposta ao impulso correspondente. Essa resposta ao impulso é usada como base para o restante do processo de projeto.
+
+Na etapa seguinte, aplica-se uma janela de ponderação à resposta ao impulso ideal, como, por exemplo, as janelas retangular, \textit{Bartlett}, \textit{Blackman}, \textit{Hamming}, \textit{Hanning} ou \textit{Kaiser}. A aplicação da janela é essencial para atenuar o efeito de \textit{Gibbs}, que surge devido às descontinuidades na transição entre as bandas do filtro. Na Figura \ref{fig98}, é possível comparar o comportamento de coeficientes entre os diferentes tipos de janelas, sendo $w[n]$, o coeficiente para cada janela, enquanto \textit{M} é a quantidade total de coeficientes e \textit{n} é o índice dos coeficientes \cite{oppenheim2013processamento}.
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[scale=0.6]{figuras/fig98.png}
+	\caption{Janelas comumente utilizadas \cite{oppenheim2013processamento}}
+	\label{fig98}
+\end{figure}
+
+
+Assim, o projeto de filtros FIR segue esse conjunto de etapas para garantir uma resposta de fase linear e preservar a forma de onda do sinal, características essenciais em muitas aplicações de processamento de áudio e sinais.
 
 \section{Som e Música}
 Nesta seção, será apresentada uma abordagem histórica, conceitual e técnica sobre a natureza do som e a mixagem realizada por um \textit{DJ}. A partir do som, a música será definida e grandezas físicas serão abordadas. Posteriormente, serão discutidos cenários históricos e técnicos sobre o início das gravações musicais e da discotecagem. Em seguida, com um enfoque mais atual, será apresentado um contexto contemporâneo acerca da mixagem realizada por um \textit{DJ}, que realiza uma seleção musical com base nas características de cada música e faz transições para criar uma experiência musical única.
@@ -261,19 +280,18 @@ O equalizador foi criado, segundo Izhaki \cite{mixing}, pelos \textit{Bell Labs}
 Para a produção musical, considera-se a equalização em sete bandas:
 
 \begin{itemize}
-	\item Subgrave: entre 20 e 60 Hz, onde estão elementos como bumbo e baixo.
-	\item Graves baixos: entre 60 e 120 Hz, tonalidades associadas ao bumbo e ao baixo.
-	\item Médios graves: entre 120 e 250 Hz, onde estão as frequências fundamentais que definem os tons naturais dos instrumentos.
-	\item Médios: entre 250 Hz e 2 kHz, onde estão os harmônicos de baixa ordem de vários instrumentos.
-	\item Médios altos: entre 2 e 6 kHz, onde há harmônicos complexos.
-	\item Agudos ou Brilho: entre 9 e 20 kHz, onde há pouca energia para muitos instrumentos, mas essa banda é importante por estar associada ao brilho na música.
+	\item Subgrave: entre 20 e 60 Hz,  onde estão elementos como bumbo e baixo.
+	\item Graves baixos: entre 60 e 200 Hz, tonalidades associadas ao bumbo e ao baixo.
+	\item Médios graves: entre 200 e 500 Hz, onde estão as frequências fundamentais que definem os tons naturais dos instrumentos.
+	\item Médios centrais: entre 500 Hz e 2 kHz, onde estão os harmônicos de baixa ordem de vários instrumentos.
+	\item Médios altos: entre 2 e 4 kHz, onde há harmônicos complexos.
+	\item Presença: entre 4 e 7 kHz, onde estão pratos e brilho de vozes.
+	\item Agudos ou Brilho: entre 7 e 22 kHz, onde há pouca energia para muitos instrumentos, mas essa banda é importante por estar associada ao brilho na música.
 \end{itemize}
 
-A quantidade de bandas e a definição dos intervalos podem variar entre teóricos e equipamentos, portanto, esses intervalos não são uma regra fixa. No entanto, para \textit{DJs}, a maioria dos equipamentos divide o espectro de áudio em três bandas: graves (de 20 a 250 Hz), médios (de 250 Hz a 4 kHz) e agudos (de 4 kHz a 20 kHz).
+A quantidade de bandas e a definição dos intervalos podem variar entre teóricos e equipamentos, portanto, esses intervalos não são uma regra fixa. No entanto, para \textit{DJs}, a maioria dos equipamentos divide o espectro de áudio em três bandas: graves (de 20 a 250 Hz), médios (de 250 Hz a 4 kHz) e agudos (de 4 kHz a 22 kHz).
 
 Essa escolha de bandas reduzidas deve-se à necessidade de simplicidade e rapidez no uso, além de que, em cada uma dessas três bandas, há elementos semelhantes bem definidos, que auxiliam na construção de uma boa mixagem.
-
-
 
 \subsection{Equipamentos}
 

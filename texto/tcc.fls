@@ -1034,6 +1034,11 @@ INPUT editaveis/introducao.tex
 INPUT ./editaveis/introducao.tex
 INPUT ./editaveis/introducao.tex
 INPUT editaveis/introducao.tex
+INPUT ./figuras/fig97.jpg
+INPUT ./figuras/fig97.jpg
+INPUT figuras/fig97.jpg
+INPUT ./figuras/fig97.jpg
+INPUT ./figuras/fig97.jpg
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmss17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT ./editaveis/fundamentacao.tex
@@ -1088,6 +1093,11 @@ INPUT ./figuras/fig04.eps
 INPUT ./figuras/fig04-eps-converted-to.pdf
 INPUT ./figuras/fig04-eps-converted-to.pdf
 INPUT ./figuras/fig04-eps-converted-to.pdf
+INPUT ./figuras/fig98.png
+INPUT ./figuras/fig98.png
+INPUT figuras/fig98.png
+INPUT ./figuras/fig98.png
+INPUT ./figuras/fig98.png
 INPUT ./figuras/fig07.png
 INPUT ./figuras/fig07.png
 INPUT figuras/fig07.png

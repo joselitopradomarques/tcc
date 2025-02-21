@@ -363,8 +363,10 @@ Outro componente utilizado foi a chave de duas posições, no diagrama \ref{fig8
 O processamento de sinais de áudio foi implementado utilizando várias bibliotecas, disponíveis na pasta \textit{scripts}, na \textit{branch main} no \textit{link}: \href{https://github.com/joselitopradomarques/tcc}{Repositório do projeto}, cada uma com funções específicas para cada etapa do processamento: %Inicialmente, realizou-se a leitura de arquivos de áudio no formato \textit{.wav}, segmentados em \textit{buffers} para permitir um processamento contínuo e eficiente.  Em seguida, a filtragem e os efeitos foram aplicados, e os sinais foram reproduzidos. Parâmetros de controle, como frequência de corte e intensidade dos efeitos, foram ajustados em tempo real, de acordo com a aquisição dos sinais de controle:
 
 \begin{description}
-    \item[Alocação de memória] Inicialmente, foram declarados ponteiros para armazenar os sinais de áudio e \textit{buffers} de 1024 amostras para o processamento em blocos.
-    \item [Aquisição] Os sinais de áudio foram adquiridos através da leitura de arquivos \textit{.wav} locais.%, através de  funções principais: \verb|ler_wav_estereo| para ler um arquivo e \verb|ler_dois_wav_estereo| para ler dois arquivos.
+
+\item[Alocação de memória] Inicialmente, foram declarados ponteiros para armazenar os sinais de áudio e \textit{buffers} de 1024 amostras para o processamento em blocos.
+
+\item [Aquisição] Os sinais de áudio foram adquiridos através da leitura de arquivos \textit{.wav} locais.
 
 \item [Geração dos Buffers]
 
@@ -380,7 +382,7 @@ A frequência de corte para o canal 2 foi calculada como 255 menos a frequência
 \item [Matriz de Coeficientes do Filtro FIR]
 
 O filtro FIR foi carregado diretamente em memória, para evitar o recálculo a cada ciclo. Este filtro foi projetado empiricamente utilizando uma música de referência e o \textit{software} \textit{PureData}. A ordem do filtro foi determinada como 121, e o janelamento \textit{Hamming} foi escolhido para melhor desempenho.
-% Os coeficientes do filtro FIR são pré-calculados para todas as 256 frequências de corte possíveis, evitando o recálculo a cada ciclo.
+
 
 \item [Aplicação do Filtro FIR]
 
@@ -396,7 +398,7 @@ O efeito de \textit{reverb} foi implementado de forma semelhante ao \textit{dela
 
 \item [Reprodução dos Buffers]
 
-A reprodução dos buffers foi realizada utilizando a biblioteca \textit{PortAudio} ou \textit{ALSA}, dependendo da plataforma. As funções \verb|inicializar_audio| e \verb|reproduzir_buffer| são usadas para configurar e reproduzir o áudio.
+A reprodução dos buffers foi realizada utilizando a biblioteca \textit{ALSA}. As funções \verb|inicializar_audio| e \verb|reproduzir_buffer| são usadas para configurar e reproduzir o áudio.
 
 \item [Processamento dos Buffers]
 
