@@ -1,18 +1,18 @@
 # Fdb version 3
-["bibtex tcc"] 1740168686 "tcc.aux" "tcc.bbl" "tcc" 1740168700
+["bibtex tcc"] 1740171429 "tcc.aux" "tcc.bbl" "tcc" 1740174610
   "/usr/share/texlive/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1357081713 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1543183680 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "bibliografia.bib" 1739833680 10433 909aef5908ffe6c4e39f7cc976a8efed ""
-  "tcc.aux" 1740168700 58741 15befc90243b8985aeb2a0aeac4edf91 "pdflatex"
+  "bibliografia.bib" 1740171114 10727 3f6a0ab1868bd490e5f1b2e5c7cafa66 ""
+  "tcc.aux" 1740174609 59676 9c3efcdc40f3e98279d8682e1cb72a0c "pdflatex"
   (generated)
   "tcc.bbl"
   "tcc.blg"
-["makeindex tcc.idx"] 1740162434 "tcc.idx" "tcc.ind" "tcc" 1740168700
-  "tcc.idx" 1740168695 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex tcc.idx"] 1740162434 "tcc.idx" "tcc.ind" "tcc" 1740174610
+  "tcc.idx" 1740174604 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "tcc.ilg"
   "tcc.ind"
-["pdflatex"] 1740168694 "/home/joselito/git/tcc/texto/tcc.tex" "tcc.pdf" "tcc" 1740168700
+["pdflatex"] 1740174604 "/home/joselito/git/tcc/texto/tcc.tex" "tcc.pdf" "tcc" 1740174610
   "/etc/texmf/web2c/texmf.cnf" 1712929699 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/joselito/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1712930075 1405654 07c26131251a961f34e5581db826d8da ""
   "/home/joselito/git/tcc/texto/tcc.tex" 1740156386 1087 451de19bb2bf055375dbd8a19465d3ca ""
@@ -172,11 +172,11 @@
   "editaveis/abstract.tex" 1740162486 1880 94b6fa21eb72fe452d612a1c78156a17 ""
   "editaveis/conclusao.tex" 1740156386 3021 c062edd2b9b401623da54a7ede9875c3 ""
   "editaveis/epigrafe.tex" 1740156386 241 46d0b637c57bcf2711866a454e2faf03 ""
-  "editaveis/fundamentacao.tex" 1740168694 45108 bb4a2d9d47c3bdb5341b4fa001615fe7 ""
+  "editaveis/fundamentacao.tex" 1740171457 45726 c210b9296a88fa2f83ffbc0039dd71bb ""
   "editaveis/informacoes.tex" 1740160489 667 731fa741b7baad08870b7b612929ecf8 ""
   "editaveis/introducao.tex" 1740163059 10374 14bbcaadcb8c23a9b556a54160d9c94d ""
-  "editaveis/metodologia.tex" 1740160269 55345 8be335b1cd1a4e184593c5fa4d066d4c ""
-  "editaveis/resultados.tex" 1740156634 47058 6807b8dfe853d21644df174bed3a6f27 ""
+  "editaveis/metodologia.tex" 1740170542 56051 6132efedc4b4f1f550ffed4c3a316572 ""
+  "editaveis/resultados.tex" 1740174606 47022 f5e25ddf329bca2e40b4d650caf45535 ""
   "editaveis/resumo.tex" 1740162285 2167 b573171e61d7fa5cf9edc38272dbd1d4 ""
   "editaveis/simbolos.tex" 1725391363 943 4308f761b7f1f9ede1c54485430a3e1e ""
   "figuras/capa.eps" 1712938854 12409969 8adf8db307009057d753a69068f4ebb9 ""
@@ -188,6 +188,7 @@
   "figuras/fig08.eps" 1712938856 2193422 f99905bc3b389ca08cdb96daf772d3ee ""
   "figuras/fig09.eps" 1712938856 3481702 f6d80f7b07141a0709af3f3b8ebadaf2 ""
   "figuras/fig10.eps" 1712938856 1273606 0974f714a38c3346d1bddec3e56bf04b ""
+  "figuras/fig100.jpg" 1740170961 149813 114b0948984958e87adc326a1180976b ""
   "figuras/fig11.eps" 1712938856 658386 33b25c6a530c82e026a651cd6307bc2f ""
   "figuras/fig12.eps" 1712938856 683900 72146f391d58036a1a55f79545700e4a ""
   "figuras/fig13.eps" 1717286554 12484675 879778c593508cfd1620f4a67ab39b5d ""
@@ -255,6 +256,7 @@
   "figuras/fig96.png" 1740156731 89225 91406ec991e47b4178df668aa6cf987e ""
   "figuras/fig97.jpg" 1740163039 192411 484cf9562c3bf5867a442ddadeb230ae ""
   "figuras/fig98.png" 1740168391 30607 c2cd989bb9713e1e2a56d7d35fb20322 ""
+  "figuras/fig99.jpg" 1740170334 182412 106fb11432798b5083e1f124bd8f235b ""
   "fixos/comandos.tex" 1712938854 250 0517c76a22743c281a2165d57c3ab0ce ""
   "fixos/customizacoes.sty" 1712938854 2147 eb06633e48969a8130d88f2c66050219 ""
   "fixos/fichaCatalografica.tex" 1712938854 833 1d7fd0bce7ad27389b6618023a70f96a ""
@@ -264,14 +266,14 @@
   "fixos/listasAutomaticas.tex" 1712938854 140 3d9123a8ba3eeb3da4258aa67285a406 ""
   "fixos/pacotes.tex" 1740079100 414 0b8c3b9b81f07ab1dc541ae93fa49788 ""
   "fixos/setup.tex" 1712937132 641 ad68ffb8f767383eb90edeeb2a1db271 ""
-  "tcc.aux" 1740168700 58741 15befc90243b8985aeb2a0aeac4edf91 "pdflatex"
-  "tcc.bbl" 1740168686 9179 2721c7ad02b9f20453c2acfcae8d3c97 "bibtex tcc"
-  "tcc.brf" 1740168700 4830 22f9cb0a36a97de79596598cef466705 "pdflatex"
+  "tcc.aux" 1740174609 59676 9c3efcdc40f3e98279d8682e1cb72a0c "pdflatex"
+  "tcc.bbl" 1740171429 9466 f127f23d9768526a9f04d88dc0f57730 "bibtex tcc"
+  "tcc.brf" 1740174609 4924 4ae77dd30981f8ed41d4a241f545b325 "pdflatex"
   "tcc.ind" 1740162434 0 d41d8cd98f00b204e9800998ecf8427e "makeindex tcc.idx"
-  "tcc.lof" 1740168700 6526 b3818c4e860cb8e0a0035e5e06f04c95 "pdflatex"
-  "tcc.lot" 1740168700 29 9a4c7bc9daf7936d0a55d1536c7c4aff "pdflatex"
+  "tcc.lof" 1740174609 6763 b22470f2307075e060748ad927c13c1c "pdflatex"
+  "tcc.lot" 1740174609 29 9a4c7bc9daf7936d0a55d1536c7c4aff "pdflatex"
   "tcc.tex" 1740156386 1087 451de19bb2bf055375dbd8a19465d3ca ""
-  "tcc.toc" 1740168700 5764 e1a2a5fa6d4e2b5b6f651ca3c2732f81 "pdflatex"
+  "tcc.toc" 1740174609 5764 a5a170aff6eb3b483bda51e44a844e0f "pdflatex"
   (generated)
   "tcc.aux"
   "tcc.brf"

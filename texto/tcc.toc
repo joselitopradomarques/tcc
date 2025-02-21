@@ -27,16 +27,16 @@
 \contentsline {subsection}{\numberline {2.4.1}Conceito físico}{32}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Audição Humana}{32}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}História da Gravação e Reprodução de Som}{33}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}\textit {Disc Jockeys} (DJs)}{33}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.4}\textit {Disc Jockeys} (DJs)}{34}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Parâmetros físicos}{39}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Equipamentos}{40}{subsection.2.4.6}%
+\contentsline {subsection}{\numberline {2.4.6}Equipamentos}{41}{subsection.2.4.6}%
 \contentsline {section}{\numberline {2.5}Mixer}{41}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Potência de Sinal de Áudio}{41}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Cabeamento}{41}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.2}Cabeamento}{42}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Conectores}{42}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Amplificação de Potência}{43}{subsection.2.5.4}%
 \contentsline {subsection}{\numberline {2.5.5}Equalização}{43}{subsection.2.5.5}%
-\contentsline {subsection}{\numberline {2.5.6}\textit {Trim} e Volume}{43}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.6}\textit {Trim} e Volume}{44}{subsection.2.5.6}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Metodologia}}{45}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Proposta Geral}{45}{section.3.1}%
@@ -51,18 +51,18 @@
 \contentsline {subsection}{\numberline {3.3.3}Filtragem}{50}{subsection.3.3.3}%
 \contentsline {subsection}{\numberline {3.3.4}Efeitos}{51}{subsection.3.3.4}%
 \contentsline {section}{\numberline {3.4}Sistema definitivo}{53}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}\textit {Hardware}}{53}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}\textit {Software}}{55}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.1}\textit {Hardware}}{54}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}\textit {Software}}{56}{subsection.3.4.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{57}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Prova de Conceito}{57}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Filtragem}{57}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Efeitos}{59}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Sistema definitivo}{61}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Filtragem}{61}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Efeitos}{67}{subsection.4.2.2}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Prova de Conceito}{59}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Filtragem}{59}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Efeitos}{61}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Sistema definitivo}{63}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Filtragem}{63}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Efeitos}{69}{subsection.4.2.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões}}{73}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Conclusões}}{75}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{75}{section*.20}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{77}{section*.20}%

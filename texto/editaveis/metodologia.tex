@@ -165,14 +165,19 @@ Inicialmente, foi realizada a leitura de dois arquivos de música no formato WAV
 
 
 Para aplicar a filtragem, utilizou-se a função \texttt{hip\textasciitilde}, que implementa um filtro passa-altas. No entanto, o argumento da função deve variar entre o canal 1 e o canal 2. Como mostrado na Figura \ref{fig44}, o canal 1 ("FC do HPF1") recebeu diretamente o parâmetro \textit{fc}, proveniente do \textit{slider} azul, e o filtro passa-altas do canal 2 ("FC do HPF2") utilizou um valor ajustado %por uma expressão anterior, 
-conforme a Equação \ref{eq:05}, que descreve um círculo com raio igual à frequência de amostragem, com o botão centralizado no ponto (22050, 22050). Esse ajuste assegura que uma pequena variação em \textit{fc$_{1}$} resulte em uma grande variação em \textit{fc$_{2}$}, e vice-versa. Além disso, em frequências centrais, a variação entre os canais torna-se mais semelhante. % A Equação \ref{eq:05} descreve um círculo com raio igual à frequência de amostragem, com o botão centralizado no ponto (22050, 22050).
+conforme a Equação \ref{eq:05}, que descreve um círculo com raio igual à frequência de amostragem, com o botão centralizado no ponto (22050, 22050). 
+
+
+Para a obtenção dessa expressão que realiza a obtenção da frequência de corte 2 a partir da frequência de corte 1, partiu-se de uma função linear, que para \textit{fc$_{1}$} sendo 22050, a \textit{fc$_{2}$} deveria ser 0, e reciprocamente. Porém, esse comportamento linear não corresponde ao comportamento logarítmico de mudanças de frequência presente no som. Para isso, transformou-se a expressão linear em uma expressão derivada do terceiro quadrante da equação do círculo, de forma que, ao isolar a \textit{fc$_{2}$}, obteve-se a expressão \ref{eq:05}.
+
+Esse ajuste assegura que uma pequena variação em \textit{fc$_{1}$} resulte em uma grande variação em \textit{fc$_{2}$}, e vice-versa. Além disso, em frequências centrais, a variação entre os canais torna-se mais semelhante.
 
 \begin{equation}  \label{eq:05}
     fc_2 = 22050 - \sqrt{22050^2 - (fc - 22050)^2}
 \end{equation}
 
-O ajuste na Equação \ref{eq:05} é projetado para ponderar mudanças nas frequências, pois mudanças lineares não são eficazes com um controle centralizado, como demonstrado pelas frequências dos canais na Figura \ref{fig45}.
-Mudanças na ordem de centenas no canal 1 têm pouco impacto no canal 2, uma vez que as baixas frequências têm um ganho maior em relação às altas frequências. Essa lógica também se aplica ao outro extremo do controle de frequência.
+
+Mudanças na ordem de centenas no canal 1 têm pouco impacto no canal 2, uma vez que as baixas frequências têm um ganho maior em relação às altas frequências. Essa lógica também se aplica ao outro extremo do controle de frequência. 
 
 \begin{figure}[h]
     \centering
@@ -181,9 +186,8 @@ Mudanças na ordem de centenas no canal 1 têm pouco impacto no canal 2, uma vez
     \label{fig45}
 \end{figure}
 
-% Na Figura \ref{fig44}, a frequência obtida do botão central, denotada como \( f_c \), varia de 0.2 a 22050 Hz. A frequência de corte do canal 1, referida como FC do HPF1, é equivalente a \( f_c \). A frequência de corte do canal 2, identificada como FC do HPF2, é calculada pela Equação \ref{eq:05}. O sinal resultante, \texttt{send\textasciitilde\ music}, é a soma dos sinais filtrados dos canais 1 e 2.
+Assim, garante-se que, enquanto variações em baixas frequências devem ter passos lentos, simultaneamente, mudanças em frequências altas devem ter passos largos. 
 
-% \newpage
 \subsection{Efeitos}
 
 A implementação dos efeitos utiliza três parâmetros principais: um botão \texttt{toggle} para alternar entre os efeitos \textit{delay} e \textit{reverb}; um \textit{slider} para ajustar parâmetros internos dos efeitos; e a frequência de corte do botão central, que automatiza o volume do efeito.
@@ -357,6 +361,13 @@ No circuito integrado PCF8591, as entradas A0, A1 e A2 definem o seu endereço I
 Outro componente utilizado foi a chave de duas posições, no diagrama \ref{fig80}, denominado de \textit{SW1}. %Essa chave é capaz de mandar ao GPIO da \textit{Raspberry} o nível lógico alto (3V3) ou baixo (GND). Com esses níveis, é possível descobrir se o usuário deseja que o efeito 1 ou o 2 seja executado naquele momento.
 
 % Para a reprodução do sinal de saída, utilizou-se a entrada de 3,5 m nativa da \textit{Raspberry}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figuras/fig99.jpg}
+    \caption{Implementação em \textit{hardware} do protótipo}
+    \label{fig80}
+\end{figure}
  
 \subsection{\textit{Software}}
 
@@ -387,6 +398,7 @@ O filtro FIR foi carregado diretamente em memória, para evitar o recálculo a c
 \item [Aplicação do Filtro FIR]
 
 A função \verb|aplicar_filtro_FIR_buffer| aplicou o filtro FIR a cada amostra do sinal, garantindo que os valores filtrados não ultrapassem os limites de 16 bits.
+O projeto do filtro levou em consideração a atenuação necessária na banda de rejeição obtida através de teste no \textit{PureData}. Com isso, obteve-se a ordem de 121 com sendo a mínima para o desempenho adequado do filtro. Além disso, testes que iteraram possíveis ordens com diferentes tipos de janela indicaram que a melhor janela a ser utilizada para essa aplicação seria a \textit{Hamming}. Esse código de aplicação de filtro contém uma implementação de uma convolução das amostras com os coeficientes para determinada frequência de corte.
 
 \item [Efeito - Delay]
 

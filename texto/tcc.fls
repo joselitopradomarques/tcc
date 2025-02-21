@@ -1103,6 +1103,11 @@ INPUT ./figuras/fig07.png
 INPUT figuras/fig07.png
 INPUT ./figuras/fig07.png
 INPUT ./figuras/fig07.png
+INPUT ./figuras/fig100.jpg
+INPUT ./figuras/fig100.jpg
+INPUT figuras/fig100.jpg
+INPUT ./figuras/fig100.jpg
+INPUT ./figuras/fig100.jpg
 INPUT ./figuras/fig08.eps
 INPUT ./figuras/fig08.eps
 INPUT figuras/fig08.eps
@@ -1328,6 +1333,11 @@ INPUT ./figuras/fig80.png
 INPUT figuras/fig80.png
 INPUT ./figuras/fig80.png
 INPUT ./figuras/fig80.png
+INPUT ./figuras/fig99.jpg
+INPUT ./figuras/fig99.jpg
+INPUT figuras/fig99.jpg
+INPUT ./figuras/fig99.jpg
+INPUT ./figuras/fig99.jpg
 INPUT ./editaveis/resultados.tex
 INPUT ./editaveis/resultados.tex
 INPUT ./editaveis/resultados.tex
