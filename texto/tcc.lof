@@ -1,50 +1,50 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Protótipo de \textit {mixer}}}{21}{figure.1.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Sinal de tempo contínuo \cite {oppenheim2010sinais}}}{26}{figure.2.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Sinal de tempo discreto \cite {oppenheim2010sinais}}}{26}{figure.2.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Espectro do sinal amostrado com $W_s > 2W_m$ \cite {oppenheim2010sinais}}}{27}{figure.2.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Quantização de amplitudes em tempo discreto \cite {oppenheim2010sinais}}}{29}{figure.2.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Janelas comumente utilizadas \cite {oppenheim2013processamento}}}{31}{figure.2.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Ciclo de propagação do som \cite {shutterstock}}}{32}{figure.2.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Escala de decibéis \cite {vecteezy}}}{33}{figure.2.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Rosnie - inventado por Alex Rosner \cite {stoneyroadsStoryBehind}}}{35}{figure.2.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces CMA-10-2DL - primeiro mixer estéreo comercial \cite {electronicaptBozak102}}}{36}{figure.2.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Toca-disco SL-1200 \cite {wikimediaFileTechnicsSL1200MK22jpg}}}{36}{figure.2.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces \textit {Mixer} criado pela Rane \cite {ranecommercialMixerEvolution}}}{37}{figure.2.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces CDJ-300 - primeira CDJ da \textit {Pioneer} \cite {cdj300}}}{37}{figure.2.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Mixagem virtual com o \textit {Apple Vision Pro}o \cite {macmagazineDesenvolvedorFala}}}{38}{figure.2.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Configuração mais encontrada \cite {pioneerdjDJMA94channel}}}{38}{figure.2.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces \textit {Rotary mixer} \cite {electroniquespectacleampAUDIO}}}{39}{figure.2.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Espectro de áudio \cite {headphonestyAudioFrequency}}}{40}{figure.2.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Transmissão com fios desbalanceados e balanceados \cite {proaudiospQualDiferena}.}}{42}{figure.2.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Conectores de 1/4", 1/8" e de 2,5 mm \cite {mouser}.}}{43}{figure.2.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Conectores RCA e XLR \cite {rs}.}}{43}{figure.2.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Fluxograma geral do \textit {mixer}}}{46}{figure.3.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Bloco de leitura de sinais}}{47}{figure.3.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Bloco de filtragem}}{48}{figure.3.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Bloco de efeitos}}{49}{figure.3.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Bloco de conversão digital-analógico}}{49}{figure.3.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Lógica de funcionamento do botão central no \textit {PureData}}}{50}{figure.3.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Expressão para a \textit {fc$_{2}$}}}{51}{figure.3.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Botão de seleção de efeito no \textit {PureData}}}{51}{figure.3.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Botão de quantidade de efeito no \textit {PureData}}}{52}{figure.3.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Lógica de seleção de efeito no \textit {PureData}}}{52}{figure.3.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Variação da amplitude dos efeitos no \textit {PureData}.}}{52}{figure.3.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Implementação da variação da amplitude dos efeitos no \textit {PureData}}}{53}{figure.3.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Soma dos sinais filtrados e dos efeitos no \textit {PureData}}}{53}{figure.3.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Botão do tipo \textit {knob} para frequência central e efeitos, e chave para seleção do efeito.}}{54}{figure.3.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Diagrama de Conexões}}{55}{figure.3.35}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Implementação em \textit {hardware} do protótipo}}{55}{figure.3.36}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Gráfico de intervalo da Música 1 no domínio do tempo (a) e no domínio da frequência (b), ambos sem filtragem.}}{60}{figure.4.37}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 300 Hz.}}{61}{figure.4.38}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 4 kHz.}}{62}{figure.4.39}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 22 kHz.}}{63}{figure.4.40}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a volumes de 0.0, 0.3312, 0.6625 e 1.0.}}{64}{figure.4.41}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Sinal com efeitos de \textit {reverb} a 0, 25, 50 e 100 dB após 1 segundo.}}{65}{figure.4.42}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Sinal com efeitos de \textit {delay} de 0, 250, 500 e 1000 ms.}}{66}{figure.4.43}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com filtro de 20 Hz.}}{67}{figure.4.44}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 303 Hz.}}{68}{figure.4.45}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 4015 Hz.}}{69}{figure.4.46}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 22050 Hz.}}{70}{figure.4.47}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Música 1 com \textit {delay} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{71}{figure.4.48}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Música 1 com \textit {reverb} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{74}{figure.4.49}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Protótipo de \textit {mixer}}}{25}{figure.1.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Sinal de tempo contínuo \cite {oppenheim2010sinais}}}{30}{figure.2.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Sinal de tempo discreto \cite {oppenheim2010sinais}}}{30}{figure.2.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Espectro do sinal amostrado com $W_s > 2W_m$ \cite {oppenheim2010sinais}}}{31}{figure.2.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Quantização de amplitudes em tempo discreto \cite {oppenheim2010sinais}}}{33}{figure.2.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Janelas comumente utilizadas \cite {oppenheim2013processamento}}}{35}{figure.2.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Ciclo de propagação do som \cite {shutterstock}}}{36}{figure.2.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Escala de decibéis \cite {vecteezy}}}{37}{figure.2.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Rosnie - inventado por Alex Rosner \cite {stoneyroadsStoryBehind}}}{39}{figure.2.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces CMA-10-2DL - primeiro mixer estéreo comercial \cite {electronicaptBozak102}}}{40}{figure.2.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Toca-disco SL-1200 \cite {wikimediaFileTechnicsSL1200MK22jpg}}}{40}{figure.2.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces \textit {Mixer} criado pela Rane \cite {ranecommercialMixerEvolution}}}{41}{figure.2.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces CDJ-300 - primeira CDJ da \textit {Pioneer} \cite {cdj300}}}{41}{figure.2.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Mixagem virtual com o \textit {Apple Vision Pro}o \cite {macmagazineDesenvolvedorFala}}}{42}{figure.2.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Configuração mais encontrada \cite {pioneerdjDJMA94channel}}}{42}{figure.2.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces \textit {Rotary mixer} \cite {electroniquespectacleampAUDIO}}}{43}{figure.2.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Espectro de áudio \cite {headphonestyAudioFrequency}}}{44}{figure.2.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Transmissão com fios desbalanceados e balanceados \cite {proaudiospQualDiferena}.}}{46}{figure.2.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Conectores de 1/4", 1/8" e de 2,5 mm \cite {mouser}.}}{47}{figure.2.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Conectores RCA e XLR \cite {rs}.}}{47}{figure.2.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Fluxograma geral do \textit {mixer}}}{50}{figure.3.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Bloco de leitura de sinais}}{51}{figure.3.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Bloco de filtragem}}{52}{figure.3.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Bloco de efeitos}}{53}{figure.3.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Bloco de conversão digital-analógico}}{53}{figure.3.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Lógica de funcionamento do botão central no \textit {PureData}}}{54}{figure.3.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Expressão para a \textit {fc$_{2}$}}}{55}{figure.3.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Botão de seleção de efeito no \textit {PureData}}}{55}{figure.3.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Botão de quantidade de efeito no \textit {PureData}}}{56}{figure.3.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Lógica de seleção de efeito no \textit {PureData}}}{56}{figure.3.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Variação da amplitude dos efeitos no \textit {PureData}.}}{56}{figure.3.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Implementação da variação da amplitude dos efeitos no \textit {PureData}}}{57}{figure.3.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Soma dos sinais filtrados e dos efeitos no \textit {PureData}}}{57}{figure.3.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Botão do tipo \textit {knob} para frequência central e efeitos, e chave para seleção do efeito.}}{58}{figure.3.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Diagrama de Conexões}}{59}{figure.3.35}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Implementação em \textit {hardware} do protótipo}}{59}{figure.3.36}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Gráfico de intervalo da Música 1 no domínio do tempo (a) e no domínio da frequência (b), ambos sem filtragem.}}{64}{figure.4.37}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 300 Hz.}}{65}{figure.4.38}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 4 kHz.}}{66}{figure.4.39}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Música 1 nos domínios do tempo (a) e da frequência (b), com uma frequência de corte de 22 kHz.}}{67}{figure.4.40}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Canal de efeito \textit {reverb} isolado com música 1 a volumes de 0.0, 0.3312, 0.6625 e 1.0.}}{68}{figure.4.41}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Sinal com efeitos de \textit {reverb} a 0, 25, 50 e 100 dB após 1 segundo.}}{69}{figure.4.42}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Sinal com efeitos de \textit {delay} de 0, 250, 500 e 1000 ms.}}{70}{figure.4.43}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com filtro de 20 Hz.}}{71}{figure.4.44}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 303 Hz.}}{72}{figure.4.45}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 4015 Hz.}}{73}{figure.4.46}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Música 1 nos domínios do tempo e da frequência, com frequência de corte de 22050 Hz.}}{74}{figure.4.47}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Música 1 com \textit {delay} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{75}{figure.4.48}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Música 1 com \textit {reverb} a valores de \textit {wetness} de 0,0, 0,33, 0,66 e 1,0.}}{78}{figure.4.49}%
